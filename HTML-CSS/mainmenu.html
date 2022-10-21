@@ -2,11 +2,36 @@
 
 <html>
     <head>
-
-
+        <meta content="width=device-width, initial-scale=1">
+        <link "styleheaderbar.css">  
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <p>test</p>
+        <!-- Create navbar class navigation bar on top, supposedly responsive-->
+        <nav class="navbar" id="myNavbar">
+            <img class="logo" src="logo nurse-e 1.png">
+            <a  href="#accueil" class="active">Accueil</a>
+            <a href="#about">About</a>
+            <a href="#produit">Produit</a>
+            <a href="#contact">Contact</a>
+            <a href="#Help">Help</a>
+            <a href="javascript:void(0);" class="icon" onclick="AssemblyGroupingNavbar()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <!-- Create function to group -->
+        <script>
+            function AssemblyGroupingNavbar() {
+              var x = document.getElementById("myNavbar");
+              if (x.className === "navbar") {
+                x.className += " responsive";
+              } else {
+                x.className = "navbar";
+              }
+            }
+        </script>      
     </body>
 </html>
