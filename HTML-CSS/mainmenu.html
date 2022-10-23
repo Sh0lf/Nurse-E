@@ -12,26 +12,37 @@
         <!-- Create navbar class navigation bar on top, supposedly responsive-->
         <nav class="navbar" id="myNavbar">
             <img class="logo" src="logo nurse-e 1.png">
-            <a  href="#accueil" class="active">Accueil</a>
-            <a href="#about">About</a>
-            <a href="#produit">Produit</a>
-            <a href="#contact">Contact</a>
-            <a href="#Help">Help</a>
+            <a href="javascript:void(0)" class="active">Accueil</a>
+            <a href="javascript:void(0)">About</a>
+            <a href="javascript:void(0)">Produit</a>
+            <a href="javascript:void(0)">Contact</a>
+            <a href="javascript:void(0)">Help</a>
             <a href="javascript:void(0);" class="icon" onclick="AssemblyGroupingNavbar()">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
 
-        <!-- Create function to group -->
+        <!-- Create function to group and sticky-->
         <script>
+            var x = document.getElementById("myNavbar");
+            var sticky = navbar.offsetTop;
+            window.onscroll = function() {stickyfunction()};
+
             function AssemblyGroupingNavbar() {
-              var x = document.getElementById("myNavbar");
               if (x.className === "navbar") {
                 x.className += " responsive";
               } else {
                 x.className = "navbar";
               }
             }
-        </script>      
+
+          function stickyfunction() {
+            if (window.pageYOffset >= sticky) {
+              x.classList.add("sticky")
+            } else {
+              x.classList.remove("sticky")
+            }
+          }
+        </script>    
     </body>
 </html>

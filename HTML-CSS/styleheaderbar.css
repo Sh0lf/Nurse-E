@@ -10,29 +10,29 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: #7D8184;
+    background-color: #86B684;
 }
-  
+
 .navbar a {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 20px;
     text-decoration: none;
     font-size: 17px;
 }
 
 /* Define Hover on selection color */ 
 .navbar a:hover {
-    background-color: #86B684;
-    color: black;
+    background-color: #4FB24C;
+    color: #424949;
 }
 
-/* Add split class to add possibility seperation in navbar */ 
+/* Add split class to add possibility seperation in navbar, doesn't necessarily have an use, but just in case*/ 
 .navbar a.split {
     float: right;
     background-color: #86B684;
-    color: black;
+    color: #424949;
 }
   
 /* Add active class to highlight current page*/
@@ -44,6 +44,20 @@ body {
 /* Hide the link that should open and close the navbar on small screens */
 .navbar .icon {
     display: none;
+}
+
+.content {
+    padding: 16px;
+}
+  
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .content {
+    padding-top: 60px;
 }
 
 /* Responsive ==> Hamburger button */
