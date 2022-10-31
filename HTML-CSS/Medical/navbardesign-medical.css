@@ -7,6 +7,7 @@ body {
     font-family: Jua, Century Gothic, sans-serif;
 }
 
+<<<<<<< HEAD
 h1 {
     display: flex;
     font-size: 48px;
@@ -28,6 +29,8 @@ h1 {
 }
 
 
+=======
+>>>>>>> 962de50 (Update: comments in codes)
 /* Defining top navigation bar */
 .navbar {
     display: flex;
