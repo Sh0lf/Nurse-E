@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta content="width=device-width, initial-scale=1">
-        <link "styleheaderbar.css">  
+        <link rel="stylesheet" href="styleheaderbar.css">  
         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -11,23 +11,31 @@
     <body>
         <!-- Create navbar class navigation bar on top, supposedly responsive-->
         <nav class="navbar" id="myNavbar">
-            <img class="logo" src="logo nurse-e 1.png">
-            <a href="javascript:void(0)" class="active">Accueil</a>
-            <a href="javascript:void(0)">About</a>
-            <a href="javascript:void(0)">Produit</a>
-            <a href="javascript:void(0)">Contact</a>
-            <a href="javascript:void(0)">Help</a>
+            <a href="#accueil" class="active">Accueil</a>
+            <a href="#about">About</a>
+            <a href="#produit">Produit</a>
+            <a href="#contact">Contact</a>
+            <a href="#help">Help</a>
             <a href="javascript:void(0);" class="icon" onclick="AssemblyGroupingNavbar()">
                 <i class="fa fa-bars"></i>
             </a>
         </nav>
-
-        <!-- Create function to group and sticky-->
+        
+        <div class="content">
+          <h3>Sticky Navigation Example</h3>
+          <p>The navbar will stick to the top when you reach its scroll position.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+          <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        </div>
+        
+        <!-- Create function to group (allocate to navbar the responsive class)-->
         <script>
             var x = document.getElementById("myNavbar");
-            var sticky = navbar.offsetTop;
-            window.onscroll = function() {stickyfunction()};
-
             function AssemblyGroupingNavbar() {
               if (x.className === "navbar") {
                 x.className += " responsive";
@@ -35,14 +43,6 @@
                 x.className = "navbar";
               }
             }
-
-          function stickyfunction() {
-            if (window.pageYOffset >= sticky) {
-              x.className += " sticky";
-            } else {
-              x.className = "navbar";
-            }
-          }
         </script>    
     </body>
 </html>

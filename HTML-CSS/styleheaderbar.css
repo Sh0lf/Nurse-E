@@ -2,15 +2,12 @@ body {
     margin: 0;
     font-family: Jua, Century Gothic, sans-serif;
 }
-  
-.logo {
-    display: inline-block;
-    vertical-align: top;
-}
 
 .navbar {
     overflow: hidden;
     background-color: #86B684;
+    position: -webkit-sticky;
+    top: 0;
 }
 
 .navbar a {
@@ -18,8 +15,14 @@ body {
     color: #f2f2f2;
     text-align: center;
     padding: 16px 20px;
+    text-align: center;
     text-decoration: none;
     font-size: 17px;
+}
+
+.logo {
+    width: 33px;
+    height: 33px;
 }
 
 /* Define Hover on selection color */ 
@@ -44,20 +47,6 @@ body {
 /* Hide the link that should open and close the navbar on small screens */
 .navbar .icon {
     display: none;
-}
-
-.content {
-    padding: 16px;
-}
-  
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-  
-.sticky + .content {
-    padding-top: 60px;
 }
 
 /* Responsive ==> Hamburger button */
