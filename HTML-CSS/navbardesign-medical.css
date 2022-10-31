@@ -12,7 +12,7 @@ body {
     top: 0;
     justify-content: space-between;
     align-items: center;
-    background-color: #86B684;
+    background-color: #43b1f8;
     font-size: 16px;
     position: sticky;
 }
@@ -53,13 +53,13 @@ body {
 
 /* Define Hover on selection color */ 
 .navbar a:hover {
-    background-color: #4FB24C;
-    color: #424949;
+    background-color: #8FAFC1;
+    color: white;
 }
 
 /* Add active class to highlight current page*/
 .navbar a.active {
-    background-color: #4FB24C;
+    background-color: #8FAFC1;
     color: white;
 }
 
@@ -90,7 +90,7 @@ body {
     bottom: 0;
     align-self: flex-end;
     align-items: flex-start;
-    background-color: #86B684;
+    background-color: #43b1f8;
     font-size: 12px;
     position: sticky;
 }
@@ -105,12 +105,12 @@ body {
 
 /* Define Hover on selection color */ 
 .bottombar a:hover {
-    background-color: #4FB24C;
-    color: #424949;
+    background-color: #8FAFC1;
+    color: white;
 }
 
 /* Add active class to highlight current page*/
 .bottombar a.active {
-    background-color: #4FB24C;
+    background-color: #8FAFC1;
     color: white;
 }
