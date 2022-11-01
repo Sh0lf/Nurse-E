@@ -57,7 +57,7 @@ body {
 /* Define Hover on selection color */ 
 .navbar a:hover {
     background-color: #8FAFC1;
-    color: white;
+    color: #424949;
 }
 
 /* Add active class to highlight current page */
@@ -111,7 +111,7 @@ body {
 /* Define Hover on selection color */ 
 .bottombar a:hover {
     background-color: #8FAFC1;
-    color: white;
+    color: #424949;
 }
 
 /* Add active class to highlight current page */
