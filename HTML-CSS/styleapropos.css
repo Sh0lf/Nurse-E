@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.scroller{
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+}
+
+body{
+    background-color: white;
+    font-family: Jua, Century Gothic, sans-serif;
+    overflow: auto;
+    }
+
+h1{
+    color: #43B1F8;
+    left: 15px;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-left: 40px;
+    font-family: "Century Gothic", serif;   
+    }
+h2{
+    color: #43B1F8;
+    left: 20px;
+    top: 20px;
+    margin-top: 30px;
+    margin-left: 50px;
+    font-family: "Century Gothic";
+    font-size: 20px;
+    border: 1px transparent solid ;
+    border-left: 20px;
+    border-radius: 60px/20px;
+    width: 150px;
+    height: 40px;
+    position: relative;
+    background-color: #73b8dd65;
+}
+span{
+    position: relative;
+    left: 25px;
+    top: 5px;
+
+}
+
+p{
+    text-align: center;
+    color: #424949;
+    font-family: "Century Gothic";
+    font-size: 15px;
+    left: 15px;
+    margin: auto;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    shape-margin: 40px;
+    }
+
+  
+
+
+.row{
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    flex-basis: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.column{
+    order: 3;
+    flex-basis: auto;
+
+}
+
+
+
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+/* Defining top navigation bar */
+.navbar {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #43b1f8;
+    font-size: 16px;
+    position: sticky;
+}
+
+.navbar .logo {
+    display: flex;
+    align-self: flex-start;
+    left: 10px;
+    top: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+/* To make a cleaner list; as well as modifiable */
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list .list-item {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+/* Defining colors when active */
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.icon {
+    display: flex;
+    right: 10px;
+    top: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+/* Define Hover on selection color */ 
+.navbar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.navbar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}
+
+.content {
+    padding: 16px;
+}
+
+/* responsive: changing the top navbar flexbox in column */
+@media all and (max-width: 550px) {
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+    .nav-list .list-item{
+        display: block;
+        text-align: left;
+        border-top: 1px solid white;
+    }
+    .nav-list{
+        list-style-type: none;
+        width: 80%;
+        text-align: center;
+        padding-top: 5px;
+    }
+}
+
+/* Defining bottom navigation bar */
+.bottombar {
+    display: flex;
+    bottom: 0;
+    align-self: flex-end;
+    align-items: flex-start;
+    background-color: #43b1f8;
+    font-size: 12px;
+    font-family: "Century Gothic";
+    padding: 12px 12px;
+    position: sticky;
+    color: whitesmoke;
+    border:  none;
+}
+
+.bottombar a {
+    color: white;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Define Hover on selection color */ 
+.bottombar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.bottombar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}
