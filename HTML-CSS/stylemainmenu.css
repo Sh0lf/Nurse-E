@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0px;
+}
+
+body {
+    font-family: Jua, Century Gothic, sans-serif;
+}
+
+h1 {
+    display: flex;
+    font-size: 48px;
+    align-self: center;
+    justify-content: center;
+}
+
+.div1 {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+.p1 {
+    display: flex;
+    font-size: 24px;
+    align-self: center;
+    justify-content: center;
+}
+
+
+/* Defining top navigation bar */
+.navbar {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #43b1f8;
+    font-size: 16px;
+    position: sticky;
+}
+
+.navbar .logo {
+    display: flex;
+    align-self: flex-start;
+    left: 10px;
+    top: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+/* To make a cleaner list; as well as modifiable */
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list .list-item {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+/* Defining colors when active */
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.icon {
+    display: flex;
+    right: 10px;
+    top: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+/* Define Hover on selection color */ 
+.navbar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.navbar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}
+
+.content {
+    padding: 16px;
+}
+
+/* responsive: changing the top navbar flexbox in column */
+@media all and (max-width: 550px) {
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+    .nav-list .list-item{
+        display: block;
+        text-align: left;
+        border-top: 1px solid white;
+    }
+    .nav-list{
+        list-style-type: none;
+        width: 80%;
+        text-align: center;
+        padding-top: 5px;
+    }
+}
+
+/* Defining bottom navigation bar */
+.bottombar {
+    display: flex;
+    bottom: 0;
+    align-self: flex-end;
+    align-items: flex-start;
+    background-color: #43b1f8;
+    font-size: 12px;
+    position: sticky;
+}
+
+.bottombar a {
+    color: white;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Define Hover on selection color */ 
+.bottombar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.bottombar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}
