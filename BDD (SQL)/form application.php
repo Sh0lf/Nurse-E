@@ -75,14 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   if (empty($_POST["medSpe"])) {
     $medSpe = "";
-  } else {
-    $medSpe = test_input($_POST["medSpe"]);
-  }
-
-  if $medSpe = "" {
     $role = "client";
   } else {
-    $role = "medecin"
-  } 
+    $medSpe = test_input($_POST["medSpe"]);
+    $role = "medecin";
+  }
 }
 ?>
