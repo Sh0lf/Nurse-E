@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="styleaccueil.css">
+  </head>
+
+  <body>
+  </body>  
+<!-- php script for database connection communication -->
 <?php
 // define variables and set to empty values
 $usernameErr = $passwordErr = $nomErr = $prenomErr = $sexeErr = $emailErr = $NumdeTelErr  = $medSpeErr = $roleErr = "";
@@ -13,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["username"]);
     // check if username only contains letters, special characters and whitespace
     if (!preg_match("/^[-a-z0-9+&@#\/%?=~_|!:,.;]*$/",$username)) {
-      $usernameErr = "Seulement les caracteres, les symboles et les espaces sont autorises";
+      $usernameErr = "Seulement les caractères, les symboles et les espaces sont autorisés";
     }
   }
 
@@ -23,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = test_input($_POST["password"]);
     // check if password only contains letters, special characters and whitespace
     if (!preg_match("/^[0-9+&@#\/%?=~_|!:,.;]*$/",$password)) {
-      $passwordErr = "Seulement les caracteres et les espaces sont autorises";
+      $passwordErr = "Seulement les caractères et les espaces sont autorisés";
     }
   }
 
@@ -33,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = test_input($_POST["nom"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$nom)) {
-      $nomErr = "Seulement les caracteres et les espaces sont autorises";
+      $nomErr = "Seulement les caractères et les espaces sont autorisés";
     }
   }
 
@@ -43,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = test_input($_POST["prenom"]);
     // check if name only contains letters and whitespace
     if (!preg_match("/^[a-zA-Z-' ]*$/",$prenom)) {
-      $prenomErr = "Seulement les caracteres et les espaces sont autorises";
+      $prenomErr = "Seulement les caractères et les espaces sont autorisés";
     }
   }
   
@@ -64,12 +77,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   
   if (empty($_POST["NumdeTel"])) {
-    $NumdeTelErr = "Un numero de telephone est requis";
+    $NumdeTelErr = "Un numéro de téléphone est requis";
   } else {
     $NumdeTel = test_input($_POST["NumdeTel"]);
     // check if phone number is well formed with only numbers
-    if (!preg_match("/^[0-9+]*$/",$NumdeTel)) {
-      $NumdeTelErr = "Seulement les caracteres et les espaces sont autorises";
+    if (!preg_match("/^[0-9+ ]*$/",$NumdeTel)) {
+      $NumdeTelErr = "Seulement les chiffres sont autorisés";
     }
   }
 
@@ -82,3 +95,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 ?>
+
+</html>
