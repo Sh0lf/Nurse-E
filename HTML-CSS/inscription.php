@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    
   </body>  
 <!-- php script for database connection communication -->
 <?php
@@ -94,6 +95,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $role = "medecin";
   }
 }
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
 ?>
 
 </html>
