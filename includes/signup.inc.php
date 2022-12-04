@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-
-<html>
-  <head>
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-    <link rel="stylesheet" href="styleheaderbar.css">
-  </head>
-
-  <body>
-    <header>
-      <!-- Defining in header a top navigation bar-->
-      <?php
-        include_once 'header.php';
-      ?>
-    </header>
-
-    <section class="signup-form">
-      <h2>Connection</h2>
-      <form action="login.inc.php" method="post">
-        <input type="text" name="name" placeholder="Username/Email...">
-        <input type="password" name="pwd" placeholder="Mot de passe...">
-        <button type="submit" name="submit">Confirmer</button>
-
-      </form>
-
-    </section>
-
-    <footer>
-      <!-- Defining in footer a small navigation bar-->
-      <?php
-        include_once 'footer.php';
-      ?>
-    </footer>
-  </body>  
 <!-- php script for database connection communication -->
 <?php
+
+if (isset($_POST["submit"])){
+    echo "Work in progress ...";
+}
 // define variables and set to empty values
-$usernameErr = $passwordErr = $nomErr = $prenomErr = $sexeErr = $emailErr = $NumdeTelErr  = $medSpeErr = $roleErr = "";
-$username = $password = $nom = $prenom = $sexe = $email = $NumdeTel  = $medSpe = $role = "";
-
-
+$usernameErr = $passwordErr = $passwordrepeatErr = $nomErr = $prenomErr = $sexeErr = $emailErr = $NumdeTelErr  = $medSpeErr = $roleErr = "";
+$username = $password = $passwordrepeat = $nom = $prenom = $sexe = $email = $NumdeTel  = $medSpe = $role = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -50,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = test_input($_POST["username"]);
     // check if username only contains letters, special characters and whitespace
     if (!preg_match("/^[-a-z0-9+&@#\/%?=~_|!:,.;]*$/",$username)) {
-      $usernameErr = "Seulement les caractères, les symboles et les espaces sont autorisés";
+        $usernameErr = "Seulement les caractères, les chiffres et les symboles sont autorisés";
     }
   }
 
@@ -60,7 +26,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = test_input($_POST["password"]);
     // check if password only contains letters, special characters and whitespace
     if (!preg_match("/^[0-9+&@#\/%?=~_|!:,.;]*$/",$password)) {
-      $passwordErr = "Seulement les caractères et les espaces sont autorisés";
+        $passwordErr = "Seulement les caractères, les chiffres et les symboles sont autorisés";
+    }
+  }
+
+  if (empty($_POST["password-repeat"])) {
+    $passwordrepeatErr = "Il est nécessaire de réecrire votre mot de passe";
+  } else {
+    $passwordrepeat = test_input($_POST["password-repeat"]);
+    // check if password only contains letters, special characters and whitespace + if it's the same as the one before
+    if (!preg_match("/^[0-9+&@#\/%?=~_|!:,.;]*$/",$password)) {
+        $passwordrepeatErr = "Seulement les caractères, les chiffres et les symboles sont autorisés";
     }
   }
 
@@ -75,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["prenom"])) {
-    $prenomErr = "Votre prenom est requis";
+    $prenomErr = "Votre prénom est requis";
   } else {
     $prenom = test_input($_POST["prenom"]);
     // check if name only contains letters and whitespace
@@ -96,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = test_input($_POST["email"]);
     // check if e-mail address is well-formed
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Format de l'email pas valide";
+        $emailErr = "Format de l'email pas valide";
     }
   }
   
@@ -106,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $NumdeTel = test_input($_POST["NumdeTel"]);
     // check if phone number is well formed with only numbers
     if (!preg_match("/^[0-9+ ]*$/",$NumdeTel)) {
-      $NumdeTelErr = "Seulement les chiffres sont autorisés";
+        $NumdeTelErr = "Seulement les chiffres sont autorisés";
     }
   }
 
@@ -126,6 +102,6 @@ function test_input($data) {
   return $data;
 }
 
-?>
 
-</html>
+
+?>
