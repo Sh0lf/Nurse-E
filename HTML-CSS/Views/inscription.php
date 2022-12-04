@@ -18,17 +18,19 @@
 
     <section class="signup-form">
       <h2>Inscription</h2>
-      <form action="signup.inc.php" method="post">
+      <form action="../includes/signup.inc.php" method="post">
         <input type="text" name="nom" placeholder="Nom...">
         <input type="text" name="prenom" placeholder="Prenom...">
         <input type="email" name="email" placeholder="Email...">
         <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{9}">
+        <input type="radio" name="sexe" value="Male">
+        <label>Male</label><br>
+        <input type="radio" name="sexe" value="Femme">
+        <label>Femme</label><br>
         <input type="text" name="username" placeholder="Username...">
-        <input type="password" name="password" placeholder="Mot de passe...">
-        <input type="password" name="password-repeat" placeholder="Répéter Mot de passe...">
-        <input type="text" name="nom" placeholder="Nom...">
-        <input type="text" name="nom" placeholder="Nom...">
-
+        <input type="password" name="pwd" placeholder="Mot de passe...">
+        <input type="password" name="pwdrep" placeholder="Répéter Mot de passe...">
+        <input type="text" name="SpeMed" placeholder="Votre spé médical si vous en avez un...">
       </form>
 
     </section>
