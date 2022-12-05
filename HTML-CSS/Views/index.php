@@ -3,16 +3,17 @@
 <html>
   <head>
     <!--Setting up styles and the responsive factor-->
-    <meta content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Importing corresponding css style file-->
-    <link rel="stylesheet" href="styleheaderbar.css">  
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
+    <link rel ="stylesheet" href="navbar.css">
   </head>
 
   <body>
     <header>
       <!-- Defining in header a top navigation bar-->
       <?php
-          include_once 'header.php';
+        include_once 'header.php';
       ?>
     </header>
 
