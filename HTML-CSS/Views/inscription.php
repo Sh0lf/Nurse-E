@@ -31,10 +31,34 @@
         <input type="password" name="pwd" placeholder="Mot de passe...">
         <input type="password" name="pwdrep" placeholder="Répéter Mot de passe...">
         <input type="text" name="SpeMed" placeholder="Votre spé médical si vous en avez un...">
+        <button type="submit" name="submit">Confirmer</button>
       </form>
-
+      <?php
+        if (isset($_GET["error"])){
+          if ($_GET["error"] == "emptyinput") {
+            echo "<p> Veuillez remplir chaque compartiments !</p>";
+          } 
+          else if ($_GET["error"] == "invaliduid") {
+            echo "<p> Veuillez essayer un nouveau username !</p>";
+          } 
+          else if ($_GET["error"] == "invalidemail") {
+            echo "<p> Veuillez mettre un email valide !</p>";
+          } 
+          else if ($_GET["error"] == "pwdmissmatch") {
+            echo "<p> Les mots de passes ne sont pas les mêmes </p>";
+          } 
+          else if ($_GET["error"] == "uidexists") {
+            echo "<p> Veuillez essayer un nouveau username, il existe déjà</p>";
+          } 
+          else if ($_GET["error"] == "stmtfailed") {
+            echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
+          } 
+          else if ($_GET["error"] == "none") {
+            echo "<p> Succès !</p>";
+          } 
+        } 
+      ?>
     </section>
-
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php

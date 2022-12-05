@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
   require_once 'dbh.inc.php';
   require_once 'functions.inc.php';
 
-  if (emptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe) !== false){
+  if (EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe) !== false){
     header("location: ../Views/inscription.php?error=emptyinput");
     exit();
   }
@@ -36,24 +36,17 @@ if (isset($_POST["submit"])) {
     exit();
   }
 
-  if (UidExists($username) !== false){
-    header("location: ../Views/inscription.php?error=invaliduid");
+  if (UidExists($conn, $username, $email) !== false){
+    header("location: ../Views/inscription.php?error=uidexists");
     exit();
   }
 
-  if(emptyInputSignup($conn, $SpeMed) == true){
-    $role="client";
-  } else {
-    $role="medecin";
-  }
+  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe, $SpeMed, $role);
 
-  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe) {
-    
-  }
-
-} else {
+} 
+else {
   header("location: ../Views/inscription.php");
+  exit();
 }
-
 
 ?>
