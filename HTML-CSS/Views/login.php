@@ -22,9 +22,20 @@
         <input type="text" name="name" placeholder="Username/Email...">
         <input type="password" name="pwd" placeholder="Mot de passe...">
         <button type="submit" name="submit">Confirmer</button>
-
       </form>
-
+      <?php
+        if (isset($_GET["error"])){
+          if ($_GET["error"] == "emptyinput") {
+            echo "<p> Veuillez remplir chaque compartiments !</p>";
+          } 
+          else if ($_GET["error"] == "wronglogin") {
+            echo "<p> Veuillez réessayer, mauvais identifiant et/ou mot de passe</p>";
+          }
+          else if ($_GET["error"] == "none") {
+            echo "<p> Succès !</p>";
+          } 
+        } 
+      ?>
     </section>
 
     <footer>

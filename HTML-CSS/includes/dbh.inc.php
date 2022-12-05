@@ -3,7 +3,7 @@
 $serverName="85.159.213.31";
 $dbUsername="adminG5B";
 $dbPassword="adminG5B";
-$dbName="medicobot";
+$dbName="Projet_BDD_APP";
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
 
