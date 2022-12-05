@@ -1,5 +1,6 @@
 <!-- php script for database connection communication -->
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
@@ -21,20 +22,49 @@ if (isset($_POST["submit"])) {
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) !== false){
     header("location: ../views/loginsys/signup.php?error=emptyinput");
+=======
+
+if (isset($_POST["submit"])) {
+  $username = $_POST["username"];
+  $pwd = $_POST["pwd"];
+  $pwdrep = $_POST["pwdrep"];
+  $nom = $_POST["nom"];
+  $prenom = $_POST["prenom"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+  $sexe = $_POST["sexe"];
+  $SpeMed = $_POST["SpeMed"];
+  $role = "";
+
+  require_once 'dbh.inc.php';
+  require_once 'functions.inc.php';
+
+  if (EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe) !== false){
+    header("location: ../Views/inscription.php?error=emptyinput");
+>>>>>>> 28487d0 (update php MVC partiel login system)
     exit();
   }
 
   if (invalidUid($username) !== false){
+<<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=invaliduid");
+=======
+    header("location: ../Views/inscription.php?error=invaliduid");
+>>>>>>> 28487d0 (update php MVC partiel login system)
     exit();
   }
   
   if (invalidEmail($email) !== false){
+<<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=invalidemail");
+=======
+    header("location: ../Views/inscription.php?error=invalidemail");
+>>>>>>> 28487d0 (update php MVC partiel login system)
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
+<<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=pwdmissmatch");
     exit();
   }
@@ -61,6 +91,22 @@ if (isset($_GET["code"])) {
 
 else {
   header("location: ../views/loginsys/signup.php");
+=======
+    header("location: ../Views/inscription.php?error=pwdmissmatch");
+    exit();
+  }
+
+  if (UidExists($conn, $username, $email) !== false){
+    header("location: ../Views/inscription.php?error=uidexists");
+    exit();
+  }
+
+  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe, $SpeMed, $role);
+
+} 
+else {
+  header("location: ../Views/inscription.php");
+>>>>>>> 28487d0 (update php MVC partiel login system)
   exit();
 }
 

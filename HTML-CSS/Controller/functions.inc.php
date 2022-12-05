@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once '../model/SQL-loginsystem.php';
 include_once './dbh.inc.php';
@@ -27,6 +28,12 @@ function pwdStrengthChecker($pwd){
     $number    = preg_match('@[0-9]@', $pwd);
     $specialChars = preg_match('@[^\w]@', $pwd);
     if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($pwd) < 8){
+=======
+
+function EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe){
+    $result = "";
+    if (empty($username) || empty($$pwd) || empty($pwdrep) || empty($nom) || empty($prenom) || empty($email) || empty($phone) || empty($sexe)) {
+>>>>>>> 28487d0 (update php MVC partiel login system)
         $result = true;
     } else {
         $result = false; 
@@ -36,7 +43,11 @@ function pwdStrengthChecker($pwd){
 
 function invalidUid($username){
     $result = "";
+<<<<<<< HEAD
     if (!preg_match("/^[-a-zA-Z0-9+&@#\/%?=~_|!:,.;]*$/",$username)) {
+=======
+    if (!preg_match("/^[-a-z0-9+&@#\/%?=~_|!:,.;]*$/",$username)) {
+>>>>>>> 28487d0 (update php MVC partiel login system)
         $result = true;
     } else {
         $result = false;
@@ -64,9 +75,56 @@ function pwdMatch($pwd, $pwdrep){
     return $result;
 }
 
+<<<<<<< HEAD
 function EmptyInputLogin($username, $pwd){
     $result = "";
     if (empty($username) or empty($pwd)) {
+=======
+function uidExists($conn, $username, $email){
+    $sql = "SELECT * FROM User WHERE Username = ? OR Email = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../Views/inscription.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)){
+        return $row;
+    }
+    else {
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
+function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $SpeMed, $role){
+    $sql = "INSERT INTO user (username, familyname, name, email, phone, sexe, password, speMed, role) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../Views/inscription.php?error=stmtfailed");
+        exit();
+    }
+
+    $hashedpwd = password_hash($pwd, PASSWORD_BCRYPT);
+
+    mysqli_stmt_bind_param($stmt, "ssssissss", $username, $nom, $prenom, $email, $phone, $sexe, $hashedpwd, $SpeMed, $role);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../Views/inscription.php?error=none");
+    exit();
+}
+
+function EmptyInputLogin($username, $pwd){
+    $result = "";
+    if (empty($username) || empty($$pwd)) {
+>>>>>>> 28487d0 (update php MVC partiel login system)
         $result = true;
     } else {
         $result = false; 
@@ -75,6 +133,7 @@ function EmptyInputLogin($username, $pwd){
 }
 
 function loginUser($conn, $username, $pwd){
+<<<<<<< HEAD
     $checkAcc_Verified = checkAcc_Verified($conn, $username, $username);
 
     if ($checkAcc_Verified === false) {
@@ -106,10 +165,33 @@ function loginUser($conn, $username, $pwd){
         $_SESSION["idkit"]=$checkAcc_Verified["KitDiagnostiqueidKitDiagnostique"];
 
         header("location: ../views/mainmenu.php");
+=======
+    $uidExists = uidExists($conn, $username, $username);
+
+    if ($uidExists == false) {
+        header("location: ../Views/login.php?error=wronglogin");
+        exit();
+    }
+
+    $hashedpwd = $uidExists["password"];
+    $checkpwd = password_verify($pwd, $hashedpwd);
+
+    if ($checkpwd == false) {
+        header("location: ../Views/login.php?error=wronglogin");
+        exit();
+    }
+
+    else if ($checkpwd == true) {
+        session_start();
+        $_SESSION["iduser"]=$uidExists["iduser"];
+        $_SESSION["username"]=$uidExists["username"];
+        header("location: ../Views/index.php");
+>>>>>>> 28487d0 (update php MVC partiel login system)
         exit();
     }
 }
 
+<<<<<<< HEAD
 function EmpytInputpwdReset($pwd, $pwdrep){
     $result = "";
     if (empty($pwd) or empty($pwdrep)) {
@@ -140,6 +222,8 @@ function EmptyInputModif($iduser, $username, $familyname, $name, $email, $phone,
     return $result;
 }
 
+=======
+>>>>>>> 28487d0 (update php MVC partiel login system)
 //In case
 /* 
 // define variables and set to empty values
@@ -286,4 +370,8 @@ function test_input($data) {
 }
 */
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 28487d0 (update php MVC partiel login system)
