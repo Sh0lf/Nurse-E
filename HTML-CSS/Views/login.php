@@ -18,8 +18,8 @@
 
     <section class="signup-form">
       <h2>Connection</h2>
-      <form action="../includes/login.inc.php" method="post">
-        <input type="text" name="name" placeholder="Username/Email...">
+      <form action="../Controller/login.inc.php" method="post">
+        <input type="text" name="username" placeholder="Username/Email...">
         <input type="password" name="pwd" placeholder="Mot de passe...">
         <button type="submit" name="submit">Confirmer</button>
       </form>
