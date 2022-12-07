@@ -1,6 +1,7 @@
 <?php
 
 require '../Model/SQL-Functions.php';
+require 'dbh.inc.php';
 
 function EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe){
     $result = "";
