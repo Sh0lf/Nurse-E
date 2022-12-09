@@ -1,14 +1,13 @@
+
 * {
     padding: 0;
     margin: 0;
 }
 
 
-.scroller{
-    width: 300px;
-    height: 100px;
-    overflow-y: scroll;
-}
+
+
+/* Définition du corps, des titres et des paragraphes */
 
 body{
     background-color: white;
@@ -25,24 +24,21 @@ h1{
     margin-bottom: 10px;
     padding: 10px;
     }
+
 h2{
     color: #43B1F8;
-    left: 50px;
-    top: 20px;
-    margin-top: 50px;
-    margin-left: 40px;
+    margin-top: 10%;
+    margin-left: 10%;
     border: 1px transparent solid ;
-    border-radius: 60px/20px;
+    border-radius: 45%;
     width: 150px;
-    height: 40px;
+    height: 43px;
     text-align: center;
     font-family: "Century Gothic";
-    font-size: 22px;
+    font-size: 20px;
     position: relative;
     background-color: #73b8dd65;
 }
-
-
 
 p{
     text-align: center;
@@ -50,11 +46,14 @@ p{
     font-family: "Century Gothic";
     font-size: 17px;
     left: 15px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-right-left: 20%;
     shape-margin: 40px;
-    padding: 50Px;
+    padding: 50px;
     }
+
+
+
+/* Définition de la position des paragraphes */
 
 .paragraphe{
     display: inline-block;
@@ -62,6 +61,23 @@ p{
     padding: 10px;
 }
 
+
+/* Définition de la position des composants de la partie "Nos valeurs" */
+.row{
+    display: flex;
+    flex-flow: wrap;
+    flex-basis: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.column{
+    flex-basis: auto;
+    width: 33.33%;
+}
+
+
+
+/* Elément de décoration de la page */
 .dot{
     height: 10px;
     width: 10px;
@@ -71,22 +87,13 @@ p{
     text-align: center;
 }
 
-.row{
-    display: flex;
-    flex-direction: column;
-    flex-flow: wrap;
-    flex-basis: auto;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.column{
-    flex-basis: auto;
-    width: 33%;
-}
-
-
+/* responsive: changement de la taille des paragraphes et titres,
+changement de la partie "Nos valeurs" en une colonne */
 
 @media screen and (max-width:600px) {
+  .row{
+    flex-direction: column;
+  }
   .column {
     width: 100%;
   }
@@ -98,9 +105,12 @@ p{
   }
    h1{
     font-size: 25px;
+    justify-content: center;
   }
     h2{
     font-size: 20px;
+    margin-left: 10%;
+    margin-top: 10%;
   }
     p{
     font-size: 15px;
