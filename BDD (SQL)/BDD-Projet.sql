@@ -38,6 +38,10 @@ CREATE TABLE IF NOT EXISTS `Projet_BDD_APP`.`user` (
   `phone` INT NOT NULL,
   `sexe` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
+<<<<<<< HEAD
+=======
+  `speMed` VARCHAR(45) NOT NULL,
+>>>>>>> 96b0494 (Add files via upload)
   `role` VARCHAR(45) NOT NULL,
   `KitDiagnostique_idKitDiagnostique` INT NOT NULL,
   PRIMARY KEY (`iduser`, `KitDiagnostique_idKitDiagnostique`),
@@ -98,6 +102,27 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+<<<<<<< HEAD
+=======
+-- Table `Projet_BDD_APP`.`Questionnaire`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Projet_BDD_APP`.`Questionnaire` (
+  `idQuestionnaire` INT NOT NULL AUTO_INCREMENT,
+  `Question` VARCHAR(45) NULL,
+  `Reponse` VARCHAR(45) NULL,
+  `Diagnostique_idDiagnostique` INT NOT NULL,
+  PRIMARY KEY (`idQuestionnaire`),
+  INDEX `fk_Questionnaire_Diagnostique1_idx` (`Diagnostique_idDiagnostique` ASC),
+  CONSTRAINT `fk_Questionnaire_Diagnostique1`
+    FOREIGN KEY (`Diagnostique_idDiagnostique`)
+    REFERENCES `Projet_BDD_APP`.`Diagnostique` (`idDiagnostique`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+>>>>>>> 96b0494 (Add files via upload)
 -- Table `Projet_BDD_APP`.`Arbre`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Projet_BDD_APP`.`Arbre` (
