@@ -1,14 +1,10 @@
 <?php
 
-$serverName="85.159.213.31";
-$dbUsername="adminG5B";
-$dbPassword="adminG5B";
-$dbName="Projet_BDD_APP";
+$conn = new mysqli("85.159.213.31", "adminG5B", "adminG5B", "Projet_BDD_APP");
 
-$conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
-
-if (!$conn) {
-    die("connection failed: " . mysqli_connect_error());
+if ($mysqli -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+    exit();
 }
 
 ?>

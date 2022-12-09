@@ -83,9 +83,9 @@ nav .bouton{
     margin-top: 18px;;
     font-size: 17px;
     color: #43B1F8;
-  }
+}
 
-.show,input,.icon {
+nav .show ,input, .icon {
     display:none;
 }
 
@@ -120,7 +120,7 @@ nav .bouton{
     nav ul ul li a{
         font-size:18px;
     }
-    .show {
+    nav .show {
         display:block;
         color:white;
         font-size:18px;
@@ -128,11 +128,11 @@ nav .bouton{
         line-height: 70px;
         cursor:pointer;
     }
-    .show:hover{
+    nav .show:hover{
         text-decoration: underline;
         font-weight: bold;
     }
-    .icon{
+    nav .icon{
         display:block;
         color:white;
         position: absolute;
@@ -141,10 +141,41 @@ nav .bouton{
         font-size:35px;
         cursor:pointer;
     }
-    .show + a, ul{
+    nav .show + a, ul{
         display: none;
     }
     [id^=btn]:checked + ul{
         display: block;
     }
+}
+
+/* Defining bottom navigation bar */
+.bottombar {
+    display: flex;
+    bottom: 0;
+    align-self: flex-end;
+    align-items: flex-start;
+    background-color: #43b1f8;
+    font-size: 12px;
+    position: sticky;
+}
+
+.bottombar a {
+    color: white;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Define Hover on selection color */ 
+.bottombar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.bottombar a.active {
+    background-color: #8FAFC1;
+    color: white;
 }

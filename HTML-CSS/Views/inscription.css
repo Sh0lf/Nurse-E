@@ -5,8 +5,16 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
-signup-form {
+.container {
     display: flex;
     justify-self: center;
-    justify-content: start;
+    justify-content: center;
+    padding: 16px;
 }
+
+form input {
+    display: inline;
+}
+
+.error {color: #FF0000;}
+
