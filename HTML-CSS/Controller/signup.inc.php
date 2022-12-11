@@ -11,7 +11,6 @@ if (isset($_POST["submit"])) {
   $phone = $_POST["phone"];
   $sexe = $_POST["sexe"];
   $role = $_POST["role"];
-  $idkit = $_POST["idkit"];
 
   include_once 'dbh.inc.php';
   include_once 'functions.inc.php';
@@ -41,7 +40,7 @@ if (isset($_POST["submit"])) {
     exit();
   }
 
-  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe, $role, $idkit);
+  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe, $role);
 
 } 
 else {
