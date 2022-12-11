@@ -35,8 +35,8 @@ if (isset($_POST["submit"])) {
   $sexe = $_POST["sexe"];
   $role = $_POST["role"];
 
-  include 'dbh.inc.php';
-  include 'functions.inc.php';
+  include_once 'dbh.inc.php';
+  include_once 'functions.inc.php';
 
   if (EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe) !== false){
     header("location: ../Views/inscription.php?error=emptyinput");
