@@ -1,7 +1,7 @@
 <?php
 
-require '../Controller/functions.inc.php';
-require '../Controller/dbh.inc.php';
+include_once '../Controller/functions.inc.php';
+include_once '../Controller/dbh.inc.php';
 
 function uidExists($conn, $username, $email){
     $sql = "SELECT * FROM User WHERE Username = ? OR Email = ?;";

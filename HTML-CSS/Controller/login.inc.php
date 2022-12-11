@@ -4,8 +4,8 @@ if (isset($_POST["submit"])){
     $username = $POST["username"];
     $pwd = $POST["pwd"];
 
-    require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
+    include_once 'dbh.inc.php';
+    include_once 'functions.inc.php';
 
     if (EmptyInputLogin($username, $pwd) !== false){
         header("location: ../Views/login.php?error=emptyinput");
