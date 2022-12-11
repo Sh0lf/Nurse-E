@@ -2,15 +2,16 @@
 <?php
 
 if (isset($_POST["submit"])) {
-  $username = $_GET["username"];
-  $pwd = $_GET["pwd"];
-  $pwdrep = $_GET["pwdrep"];
-  $nom = $_GET["nom"];
-  $prenom = $_GET["prenom"];
-  $email = $_GET["email"];
-  $phone = $_GET["phone"];
-  $sexe = $_GET["sexe"];
-  $role = $_GET["role"];
+  $username = $_POST["username"];
+  $pwd = $_POST["pwd"];
+  $pwdrep = $_POST["pwdrep"];
+  $nom = $_POST["nom"];
+  $prenom = $_POST["prenom"];
+  $email = $_POST["email"];
+  $phone = $_POST["phone"];
+  $sexe = $_POST["sexe"];
+  $role = $_POST["role"];
+  $idkit = $_POST["idkit"];
 
   include_once 'dbh.inc.php';
   include_once 'functions.inc.php';
@@ -40,7 +41,7 @@ if (isset($_POST["submit"])) {
     exit();
   }
 
-  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe, $role);
+  createUser($conn, $username, $pwd, $nom, $prenom, $email, $phone, $sexe, $role, $idkit);
 
 } 
 else {
