@@ -25,20 +25,20 @@ if (isset($_POST["submit"])) {
 =======
 
 if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $pwd = $_POST["pwd"];
-  $pwdrep = $_POST["pwdrep"];
-  $nom = $_POST["nom"];
-  $prenom = $_POST["prenom"];
-  $email = $_POST["email"];
-  $phone = $_POST["phone"];
-  $sexe = $_POST["sexe"];
-  $role = $_POST["role"];
+  $username = $_GET["username"];
+  $pwd = $_GET["pwd"];
+  $pwdrep = $_GET["pwdrep"];
+  $nom = $_GET["nom"];
+  $prenom = $_GET["prenom"];
+  $email = $_GET["email"];
+  $phone = $_GET["phone"];
+  $sexe = $_GET["sexe"];
+  $role = $_GET["role"];
 
   include_once 'dbh.inc.php';
   include_once 'functions.inc.php';
 
-  if (EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe) !== false){
+  if (EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe, $role) != false){
     header("location: ../Views/inscription.php?error=emptyinput");
 >>>>>>> 28487d0 (update php MVC partiel login system)
     exit();
