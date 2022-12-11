@@ -7,7 +7,7 @@ if (isset($_POST["submit"])){
     include_once 'dbh.inc.php';
     include_once 'functions.inc.php';
 
-    if (EmptyInputLogin($username, $pwd) !== false){
+    if (EmptyInputLogin($username, $pwd) != false){
         header("location: ../Views/login.php?error=emptyinput");
         exit();
     }
