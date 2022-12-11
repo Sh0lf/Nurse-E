@@ -46,7 +46,7 @@ function pwdMatch($pwd, $pwdrep){
 
 function EmptyInputLogin($username, $pwd){
     $result = "";
-    if (empty($username) || empty($$pwd)) {
+    if (empty($username) or empty($pwd)) {
         $result = true;
     } else {
         $result = false; 
