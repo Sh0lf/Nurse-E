@@ -38,8 +38,9 @@
         <label>Oui</label><br>
         <button type="submit" name="submit">Confirmer</button>
       </form>
-    </div>  
-    <?php
+    </div>
+    <div class="container">
+      <?php
       if (isset($_GET["error"])){
         if ($_GET["error"] == "emptyinput") {
           echo "<p> Veuillez remplir chaque compartiments !</p>";
@@ -63,8 +64,8 @@
           echo "<p> Succès !</p>";
         } 
       } 
-    ?>
-
+      ?>
+    </div>  
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php
