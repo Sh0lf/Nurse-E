@@ -15,16 +15,17 @@ function uidExists($conn, $username, $email){
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
+    $row = mysqli_fetch_assoc($resultData);
 
-    if ($row = mysqli_fetch_assoc($resultData)){
+    mysqli_stmt_close($stmt);
+
+    if ($row){
         return $row;
     }
     else {
         $result = false;
         return $result;
     }
-
-    mysqli_stmt_close($stmt);
 }
 
 function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role){
