@@ -36,6 +36,7 @@
         <label>Non</label><br>
         <input type="radio" name="role" value="médecin">
         <label>Oui</label><br>
+        <input type="number" name="idkit" placeholder="id de votre kit ?"><br>
         <button type="submit" name="submit">Confirmer</button>
       </form>
     </div>
