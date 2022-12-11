@@ -5,7 +5,8 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="styleheaderbar.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="login.css">
   </head>
 
   <body>
@@ -16,7 +17,7 @@
       ?>
     </header>
 
-    <section class="signup-form">
+    <div class="container">
       <h2>Connection</h2>
       <form action="../Controller/login.inc.php" method="post">
         <input type="text" name="username" placeholder="Username/Email...">
@@ -36,7 +37,7 @@
           } 
         } 
       ?>
-    </section>
+    </div>
 
     <footer>
       <!-- Defining in footer a small navigation bar-->

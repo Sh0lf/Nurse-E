@@ -8,7 +8,7 @@ include_once '../Controller/dbh.inc.php';
 >>>>>>> 06adc99 (small update; some modifications)
 
 function uidExists($conn, $username, $email){
-    $sql = "SELECT * FROM User WHERE Username = ? OR Email = ?;";
+    $sql = "SELECT * FROM user_test WHERE username = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../Views/inscription.php?error=stmtfailed");
