@@ -3,9 +3,9 @@
 include_once '../Model/SQL-loginsystem.php';
 include_once 'dbh.inc.php';
 
-function EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe, $role){
+function EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe, $role, $idkit){
     $result = "";
-    if (empty($username) or empty($pwd) or empty($pwdrep) or empty($nom) or empty($prenom) or empty($email) or empty($phone) or empty($sexe) or empty($role)) {
+    if (empty($username) or empty($pwd) or empty($pwdrep) or empty($nom) or empty($prenom) or empty($email) or empty($phone) or empty($sexe) or empty($role) or empty($idkit)) {
         $result = true;
     } else {
         $result = false; 
