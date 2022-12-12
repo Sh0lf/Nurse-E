@@ -17,15 +17,15 @@
       ?>
     </header>
 
-    <div class="div1">
+    <div class="container">
       <!--Our body content / text-->
       <h1>
         <p>Médicobot: le diagnostique médical à portée de main !</p>
       </h1>
     </div>
 
-    <div class="div1">
-      <p class="p1">A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés.
+    <div class="container">
+      <p>A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés.
         Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient.
         De ce fait, nous avons décidé de créer un produit afin de remédier à ça.
         Ce produit est MédicoBot, c’est le premier produit créé par notre entreprise Nurse-E.
