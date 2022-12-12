@@ -18,12 +18,16 @@
     </header>
 
     <div class="container">
-      <h2>Connection</h2>
+      <h2>Connection</h2><br>
+    </div>
+    <div class="container">
       <form action="../Controller/login.inc.php" method="post">
-        <input type="text" name="username" placeholder="Username/Email...">
-        <input type="password" name="pwd" placeholder="Mot de passe...">
-        <button type="submit" name="submit">Confirmer</button>
+        <input type="text" name="username" placeholder="Username/Email..."><br>
+        <input type="password" name="pwd" placeholder="Mot de passe..."><br>
+      <button type="submit" name="submit">Confirmer</button>
       </form>
+    </div>
+    <div class="container">
       <?php
         if (isset($_GET["error"])){
           if ($_GET["error"] == "emptyinput") {
