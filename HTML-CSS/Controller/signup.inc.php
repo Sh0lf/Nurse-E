@@ -11,11 +11,12 @@ if (isset($_POST["submit"])) {
   $pwd = $_POST["pwd"];
   $pwdrep = $_POST["pwdrep"];
   $role = $_POST["role"];
+  $idkit = $_POST["idkit"];
 
   include_once 'dbh.inc.php';
   include_once 'functions.inc.php';
 
-  if (EmptyInputSignup($username,  $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role) != false){
+  if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
     header("location: ../Views/inscription.php?error=emptyinput");
     exit();
   }
@@ -40,7 +41,7 @@ if (isset($_POST["submit"])) {
     exit();
   }
 
-  createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role);
+  createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
 
 } 
 else {
