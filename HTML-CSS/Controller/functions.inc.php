@@ -72,8 +72,9 @@ function loginUser($conn, $username, $pwd){
 
     else if ($checkpwd == true) {
         session_start();
-        $_SESSION["iduser_test"]=$uidExists["iduser_test"];
+        $_SESSION["iduser"]=$uidExists["iduser"];
         $_SESSION["username"]=$uidExists["username"];
+        
         header("location: ../Views/index.php");
         exit();
     }
