@@ -19,7 +19,12 @@
       <h1>INSCRIPTION</h1><br>
     </div>
     <div class="container">
+    <h3>Vous ne pouvez que vous inscrire si vous possédez un kit. Veuillez noter l'id de votre kit:</h3><br>
+    </div>
+    <div class="container">
       <form action="../Controller/signup.inc.php" method="post">
+        <input type="number" name="idkit" placeholder="id de votre kit"><br>
+        <br>
         <input type="text" name="nom" placeholder="Nom..."><br>
         <input type="text" name="prenom" placeholder="Prenom..."><br>
         <input type="email" name="email" placeholder="Email..."><br>
