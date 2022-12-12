@@ -1,6 +1,6 @@
 <?php
 
-include_once '../Model/SQL-Functions.php';
+include_once '../Model/SQL-loginsystem.php';
 include_once 'dbh.inc.php';
 
 function EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe, $role){
