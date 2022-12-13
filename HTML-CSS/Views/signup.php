@@ -47,29 +47,23 @@
     </div>
     <div class="container">
       <?php
-      if (isset($_GET["error"])){
+      if (isset($_GET["error"])) {
         if ($_GET["error"] == "emptyinput") {
           echo "<p> Veuillez remplir chaque compartiments !</p>";
-        } 
-        else if ($_GET["error"] == "invaliduid") {
+        } else if ($_GET["error"] == "invaliduid") {
           echo "<p> Veuillez essayer un nouveau username !</p>";
-        } 
-        else if ($_GET["error"] == "invalidemail") {
+        } else if ($_GET["error"] == "invalidemail") {
           echo "<p> Veuillez mettre un email valide !</p>";
-        } 
-        else if ($_GET["error"] == "pwdmissmatch") {
+        } else if ($_GET["error"] == "pwdmissmatch") {
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
-        } 
-        else if ($_GET["error"] == "uidexists") {
+        } else if ($_GET["error"] == "uidexists") {
           echo "<p> Veuillez essayer un nouveau username, il existe déjà</p>";
-        } 
-        else if ($_GET["error"] == "stmtfailed") {
+        } else if ($_GET["error"] == "stmtfailed") {
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
-        } 
-        else if ($_GET["error"] == "none") {
+        } else if ($_GET["error"] == "none") {
           echo "<p> Succès !</p>";
-        } 
-      } 
+        }
+      }
       ?>
     </div>  
     <footer>

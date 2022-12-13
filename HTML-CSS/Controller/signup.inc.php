@@ -40,30 +40,43 @@ if (isset($_POST["submit"])) {
   include_once 'functions.inc.php';
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
+<<<<<<< HEAD
     header("location: ../Views/inscription.php?error=emptyinput");
 >>>>>>> 28487d0 (update php MVC partiel login system)
+=======
+    header("location: ../Views/signup.php?error=emptyinput");
+>>>>>>> b1f0779 (update: commit changes)
     exit();
   }
 
   if (invalidUid($username) !== false){
 <<<<<<< HEAD
+<<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=invaliduid");
 =======
     header("location: ../Views/inscription.php?error=invaliduid");
 >>>>>>> 28487d0 (update php MVC partiel login system)
+=======
+    header("location: ../Views/signup.php?error=invaliduid");
+>>>>>>> b1f0779 (update: commit changes)
     exit();
   }
   
   if (invalidEmail($email) !== false){
 <<<<<<< HEAD
+<<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=invalidemail");
 =======
     header("location: ../Views/inscription.php?error=invalidemail");
 >>>>>>> 28487d0 (update php MVC partiel login system)
+=======
+    header("location: ../Views/signup.php?error=invalidemail");
+>>>>>>> b1f0779 (update: commit changes)
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=pwdmissmatch");
     exit();
@@ -93,20 +106,28 @@ else {
   header("location: ../views/loginsys/signup.php");
 =======
     header("location: ../Views/inscription.php?error=pwdmissmatch");
+=======
+    header("location: ../Views/signup.php?error=pwdmissmatch");
+>>>>>>> b1f0779 (update: commit changes)
     exit();
   }
 
   if (UidExists($conn, $username, $email) !== false){
-    header("location: ../Views/inscription.php?error=uidexists");
+    header("location: ../Views/signup.php?error=uidexists");
     exit();
   }
 
   createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
 
+  //createUser($conn, "Sh0lf", "yoplait", "VinSang", "vyvincentyap@gmail.com", 778266459, "Homme", "mdpaupif", "client", 1);
 } 
 else {
+<<<<<<< HEAD
   header("location: ../Views/inscription.php");
 >>>>>>> 28487d0 (update php MVC partiel login system)
+=======
+  header("location: ../Views/signup.php");
+>>>>>>> b1f0779 (update: commit changes)
   exit();
 }
 
