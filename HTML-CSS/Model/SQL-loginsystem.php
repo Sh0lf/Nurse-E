@@ -4,10 +4,10 @@ include_once '../Controller/functions.inc.php';
 include_once '../Controller/dbh.inc.php';
 
 function uidExists($conn, $username, $email){
-    $sql = "SELECT * FROM user_test WHERE username = ? OR email = ?;";
+    $sql = "SELECT * FROM user WHERE username = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Views/inscription.php?error=stmtfailed");
+        header("location: ../Views/signup.php?error=stmtfailed");
         exit();
     }
 
@@ -29,7 +29,7 @@ function uidExists($conn, $username, $email){
 }
 
 function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit){
-    $sql = "INSERT INTO user_test(username, familyname, name, email, phone, sexe, password, role, KitDiagnostiqueidKitDiagnostique) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+    $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, KitDiagnostique_idKitDiagnostique) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     // print_r($stmt);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -39,7 +39,7 @@ function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd
 
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssssisss", $username, $nom, $prenom, $email, $phone, $sexe, $hashedpwd, $role, $idkit);
+    mysqli_stmt_bind_param($stmt, "ssssisssi", $username, $nom, $prenom, $email, $phone, $sexe, $hashedpwd, $role, $idkit);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../Views/signup.php?error=none");
