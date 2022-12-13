@@ -41,15 +41,20 @@ if (isset($_POST["submit"])) {
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
 <<<<<<< HEAD
+<<<<<<< HEAD
     header("location: ../Views/inscription.php?error=emptyinput");
 >>>>>>> 28487d0 (update php MVC partiel login system)
 =======
     header("location: ../Views/signup.php?error=emptyinput");
 >>>>>>> b1f0779 (update: commit changes)
+=======
+    header("location: ../Views/loginsys/signup.php?error=emptyinput");
+>>>>>>> 9a3888f (organization update, to change stylesheets)
     exit();
   }
 
   if (invalidUid($username) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=invaliduid");
@@ -59,10 +64,14 @@ if (isset($_POST["submit"])) {
 =======
     header("location: ../Views/signup.php?error=invaliduid");
 >>>>>>> b1f0779 (update: commit changes)
+=======
+    header("location: ../Views/loginsys/signup.php?error=invaliduid");
+>>>>>>> 9a3888f (organization update, to change stylesheets)
     exit();
   }
   
   if (invalidEmail($email) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=invalidemail");
@@ -72,10 +81,14 @@ if (isset($_POST["submit"])) {
 =======
     header("location: ../Views/signup.php?error=invalidemail");
 >>>>>>> b1f0779 (update: commit changes)
+=======
+    header("location: ../Views/loginsys/signup.php?error=invalidemail");
+>>>>>>> 9a3888f (organization update, to change stylesheets)
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     header("location: ../views/loginsys/signup.php?error=pwdmissmatch");
@@ -109,11 +122,14 @@ else {
 =======
     header("location: ../Views/signup.php?error=pwdmissmatch");
 >>>>>>> b1f0779 (update: commit changes)
+=======
+    header("location: ../Views/loginsys/signup.php?error=pwdmissmatch");
+>>>>>>> 9a3888f (organization update, to change stylesheets)
     exit();
   }
 
   if (UidExists($conn, $username, $email) !== false){
-    header("location: ../Views/signup.php?error=uidexists");
+    header("location: ../Views/loginsys/signup.php?error=uidexists");
     exit();
   }
 

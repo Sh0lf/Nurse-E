@@ -108,8 +108,16 @@
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php
+<<<<<<< HEAD
         include_once '../navbar/footer.php';
       ?>
     </footer>
   </body>  
+=======
+        include_once 'footer.php';
+      ?>
+    </footer>
+  </body>  
+
+>>>>>>> 9a3888f (organization update, to change stylesheets)
 </html>

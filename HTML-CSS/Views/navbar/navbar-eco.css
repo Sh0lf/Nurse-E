@@ -112,7 +112,11 @@
     }
     nav .logo{
         margin-right: 150px;
+<<<<<<< HEAD
         width:90px;
+=======
+        width:75px;
+>>>>>>> 9a3888f (organization update, to change stylesheets)
     }
     nav ul li, nav ul ul li {
         display:block;

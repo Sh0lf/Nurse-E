@@ -1,5 +1,4 @@
-/* mettre marge à 0 pour tous les éléments*/
-* {
+*{
     margin: 0;
     padding:0;
     box-sizing:border-box;
@@ -136,7 +135,11 @@
     nav ul ul li a{
         font-size:18px;
     }
+<<<<<<< HEAD
     .show {
+=======
+    nav .show {
+>>>>>>> 9a3888f (organization update, to change stylesheets)
         display:block;
         color:white;
         font-size:18px;
@@ -144,11 +147,19 @@
         line-height: 70px;
         cursor:pointer;
     }
+<<<<<<< HEAD
     .show:hover{
         text-decoration: underline;
         font-weight: bold;
     }
     .icon{
+=======
+    nav .show:hover{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    nav .icon{
+>>>>>>> 9a3888f (organization update, to change stylesheets)
         display:block;
         color:white;
         position: absolute;
