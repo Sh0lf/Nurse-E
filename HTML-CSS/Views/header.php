@@ -1,5 +1,5 @@
 <nav>
-    <img class="logo" src="logo.png">
+    <img class="logo" src="Logo-medicobot.png">
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>

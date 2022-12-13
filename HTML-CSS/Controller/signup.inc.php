@@ -17,35 +17,36 @@ if (isset($_POST["submit"])) {
   include_once 'functions.inc.php';
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
-    header("location: ../Views/inscription.php?error=emptyinput");
+    header("location: ../Views/signup.php?error=emptyinput");
     exit();
   }
 
   if (invalidUid($username) !== false){
-    header("location: ../Views/inscription.php?error=invaliduid");
+    header("location: ../Views/signup.php?error=invaliduid");
     exit();
   }
   
   if (invalidEmail($email) !== false){
-    header("location: ../Views/inscription.php?error=invalidemail");
+    header("location: ../Views/signup.php?error=invalidemail");
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
-    header("location: ../Views/inscription.php?error=pwdmissmatch");
+    header("location: ../Views/signup.php?error=pwdmissmatch");
     exit();
   }
 
   if (UidExists($conn, $username, $email) !== false){
-    header("location: ../Views/inscription.php?error=uidexists");
+    header("location: ../Views/signup.php?error=uidexists");
     exit();
   }
 
   createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
 
+  //createUser($conn, "Sh0lf", "yoplait", "VinSang", "vyvincentyap@gmail.com", 778266459, "Homme", "mdpaupif", "client", 1);
 } 
 else {
-  header("location: ../Views/inscription.php");
+  header("location: ../Views/signup.php");
   exit();
 }
 
