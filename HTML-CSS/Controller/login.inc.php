@@ -8,7 +8,7 @@ if (isset($_POST["submit"])){
     include_once 'functions.inc.php';
 
     if (EmptyInputLogin($username, $pwd) != false){
-        header("location: ../Views/login.php?error=emptyinput");
+        header("location: ../Views/loginsys/login.php?error=emptyinput");
         exit();
     }
 
@@ -16,6 +16,6 @@ if (isset($_POST["submit"])){
 }
 
 else {
-    header("location:../Views/login.php");
+    header("location:../Views/loginsys/login.php");
     exit();
 }

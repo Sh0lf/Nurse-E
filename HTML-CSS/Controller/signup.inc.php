@@ -17,27 +17,27 @@ if (isset($_POST["submit"])) {
   include_once 'functions.inc.php';
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
-    header("location: ../Views/signup.php?error=emptyinput");
+    header("location: ../Views/loginsys/signup.php?error=emptyinput");
     exit();
   }
 
   if (invalidUid($username) !== false){
-    header("location: ../Views/signup.php?error=invaliduid");
+    header("location: ../Views/loginsys/signup.php?error=invaliduid");
     exit();
   }
   
   if (invalidEmail($email) !== false){
-    header("location: ../Views/signup.php?error=invalidemail");
+    header("location: ../Views/loginsys/signup.php?error=invalidemail");
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
-    header("location: ../Views/signup.php?error=pwdmissmatch");
+    header("location: ../Views/loginsys/signup.php?error=pwdmissmatch");
     exit();
   }
 
   if (UidExists($conn, $username, $email) !== false){
-    header("location: ../Views/signup.php?error=uidexists");
+    header("location: ../Views/loginsys/signup.php?error=uidexists");
     exit();
   }
 

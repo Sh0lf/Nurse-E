@@ -1,0 +1,193 @@
+nav{
+    background-color:#4FB24C;
+}
+ 
+/* Permet de pouvoir afficher toute la navbar et pas seulement les endroits où il y a des éléments */
+nav:after{
+    content:'';
+    clear: both;
+    display:table;
+}
+ 
+nav ul{
+    float:right;
+    list-style-type: none;
+    margin-right:40px;
+    position:relative;
+}
+ 
+/* Permet de choisir l'écart entre tous les éléments de la navbar */
+nav ul li{
+    float:left;
+    margin:0 10px; /* en haut et en bas 0, à droite et à gauche 10px */
+    background-color:#4FB24C;
+}
+ 
+/* définir les propriétés du texte dans la navbar */
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size:18px;
+    padding: 8px 17px;
+}
+ 
+/* permet de définir ce qu'il se passe lorsque la souris passe sur le txt de la navabr */
+nav ul li a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+ 
+/* ul ul définit ce qu'il se passe dans le sous-menu des éléments txt de la navbar */
+nav ul ul {
+    position: absolute;
+    top:90px;
+    border-top: 3px solid white;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+ 
+/* le > permet de cibler directement les enfants du sous-menu */
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+ 
+}
+
+nav ul ul li{
+    position: relative;
+    margin:0;
+    width: 150px;
+    float:none;
+    display: list-item ;
+    border-bottom: 1px solid white;
+}
+ 
+nav ul ul li a {
+    font-size: 10px;;
+}
+ 
+nav .logo {
+    float:left;
+    height:auto;
+    margin-left:45px;
+    width:65px;
+}
+ 
+nav .bouton{
+    display: inline-block;
+    padding: 5px 15px;
+    margin-left: 20px;
+    margin-top: 18px;;
+    font-size: 17px;
+    color: white;
+    border:1px solid white;
+    background-color: #4FB24C;
+    cursor:pointer;
+}
+ 
+  nav .bouton:hover{
+    border: 2px solid white;
+    font-weight:bold;
+}
+ 
+nav .show,input,.icon {
+    display:none;
+}
+ 
+@media all and (max-width: 968px) {
+    nav ul{
+        margin-right:0px;
+        float:left;
+    }
+    nav .logo{
+        margin-right: 150px;
+        width:75px;
+    }
+    nav ul li, nav ul ul li {
+        display:block;
+        width:100%;
+    }
+    nav ul ul{
+        top:70px;
+        position:static;
+        border-top:none;
+        float:none;
+        display:none;
+        opacity:1;
+        visibility: visible;
+    }
+    nav ul ul a{
+        padding-left:40px;
+    }
+    nav ul ul li{
+        border-bottom:none;
+    }
+    nav ul ul li a{
+        font-size:18px;
+    }
+    .show {
+        display:block;
+        color:white;
+        font-size:18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor:pointer;
+    }
+    .show:hover{
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .icon{
+        display:block;
+        color:white;
+        position: absolute;
+        right:40px;
+        line-height: 90px;
+        font-size:35px;
+        cursor:pointer;
+    }
+    .show + a, ul{
+        display: none;
+    }
+    [id^=btn]:checked + ul{   /*permet d'identifier quand la checkbox est cochée dans le responsive afin d'activer le menu déroulant */
+        display: block;
+    }
+ 
+    nav .bouton{
+        margin-bottom:10px;
+    }
+}
+
+/* Defining bottom navigation bar */
+.bottombar {
+    display: flex;
+    bottom: 0;
+    align-self: flex-end;
+    align-items: flex-start;
+    background-color: #4FB24C;
+    font-size: 12px;
+    position: sticky;
+}
+
+.bottombar a {
+    color: white;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Define Hover on selection color */ 
+.bottombar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.bottombar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}

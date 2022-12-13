@@ -58,7 +58,7 @@ function loginUser($conn, $username, $pwd){
     $uidExists = uidExists($conn, $username, $username);
 
     if ($uidExists == false) {
-        header("location: ../Views/login.php?error=wronglogin");
+        header("location: ../Views/loginsys/login.php?error=wronglogin");
         exit();
     }
 
@@ -66,7 +66,7 @@ function loginUser($conn, $username, $pwd){
     $checkpwd = password_verify($pwd, $hashedpwd);
 
     if ($checkpwd == false) {
-        header("location: ../Views/login.php?error=wronglogin");
+        header("location: ../Views/loginsys/login.php?error=wronglogin");
         exit();
     }
 
@@ -74,7 +74,7 @@ function loginUser($conn, $username, $pwd){
         session_start();
         $_SESSION["iduser"]=$uidExists["iduser"];
         $_SESSION["username"]=$uidExists["username"];
-        
+
         header("location: ../Views/index.php");
         exit();
     }

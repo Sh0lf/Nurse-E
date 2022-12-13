@@ -7,7 +7,7 @@ function uidExists($conn, $username, $email){
     $sql = "SELECT * FROM user WHERE username = ? OR email = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Views/signup.php?error=stmtfailed");
+        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
         exit();
     }
 
@@ -33,7 +33,7 @@ function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd
     $stmt = mysqli_stmt_init($conn);
     // print_r($stmt);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Views/signup.php?error=stmtfailed");
+        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
         exit();
     }
 
@@ -42,7 +42,7 @@ function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd
     mysqli_stmt_bind_param($stmt, "ssssisssi", $username, $nom, $prenom, $email, $phone, $sexe, $hashedpwd, $role, $idkit);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../Views/signup.php?error=none");
+    header("location: ../Views/loginsys/signup.php?error=none");
     exit();
 }
 

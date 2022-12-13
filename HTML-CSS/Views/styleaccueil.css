@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+ 
+
+/* élément CSS de la page */
+div.contact {
+    width:300px;
+    height:600px;
+    padding:10px;
+    margin-top: 50px;
+    margin-right: 50px;
+    border: 2px solid #424949;
+    text-align:center;
+    line-height: 2em;
+    float:right;
+}
+
+div.contact_bis {
+    display:none;
+    width:300px;
+    height:600px;
+    padding:10px;
+    margin-top: 50px;
+    margin-right: 50px;
+    border: 2px solid #424949;
+    text-align:center;
+    line-height: 2em;
+    float:right;
+}
+
+h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.p1 {
+    text-align: justify;
+    color: #424949;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 500px;
+    font-size:x-large;
+    line-height:2em;
+    letter-spacing: 3px;
+}
+
+.p2 {
+    text-align: justify;
+    color: #424949;
+    font-family: Arial, Helvetica, sans-serif;
+    width : 75%;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size:x-large;
+    line-height:2em;
+    letter-spacing: 3px;
+}
+
+h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #43B1F8;
+    font-size: xx-large;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+div.produit {
+    width:400px;
+    height:400px;
+    padding:20px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right:auto;
+    border: 2px solid #43B1F8;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.styled {
+    margin-top: 30px;
+    border: 2px solid #8fafc1;
+    line-height: 2.5;
+    color: #fff;
+    padding: 0 100px;
+    font-size: 2rem;
+    text-align: center;
+    background-color:#43B1F8;
+}
+
+.styled:hover {
+    color: #424949;
+    background-color: #8fafc1;
+    border: 2px solid #424949;
+}
+
+@media screen and (max-width:968px) {
+   div.contact {
+      display:none;
+   }
+
+   div.contact_bis {
+      display:block;
+      float:none;
+      width:75%;
+      margin: 50px auto;
+   }
+   .p1 {
+      letter-spacing:normal;
+      margin: 30px;
+   }
+}
