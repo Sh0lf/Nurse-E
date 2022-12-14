@@ -32,9 +32,9 @@
     </div>
     <div class="container_form">
       <form action="../../Controller/login.inc.php" method="post">
-        <label>Votre pseudo ou votre Email</label><br>
+        <label><u>Votre pseudo ou votre Email</u></label><br>
         <input type="text" name="username" placeholder="Username/Email..."><br><br>
-        <label>Votre mot de passe</label><br>
+        <label><u>Votre mot de passe</u></label><br>
         <div class="eyes">
           <input type="password" name="pwd" placeholder="Mot de passe...">
           <i class="fa-solid fa-eye"></i><br>
