@@ -91,24 +91,31 @@
       <form action="../../Controller/signup.inc.php" method="post">
         <label><u>Veuillez noter l'id de votre kit:</u></label><br>
         <input type="number" name="idkit" placeholder="id de votre kit"><br>
+
         <label><u>Votre nom de famille:</u></label><br>
         <input type="text" name="nom" placeholder="Nom..."><br>
+
         <label><u>Votre prénom:</u></label><br>
         <input type="text" name="prenom" placeholder="Prenom..."><br>
+
         <label><u>Votre email:</u></label><br>
         <input type="email" name="email" placeholder="Email..."><br>
+
         <label><u>Votre numéro de teléphone:</u></label><br>
         <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{10}"><br>
+
         <label><u>Votre sexe:</u></label><br>
         <input type="radio" name="sexe" value="Homme">
         <label>Homme</label><br>
         <input type="radio" name="sexe" value="Femme">
         <label>Femme</label><br>
+
         <label><u>Votre pseudo:</u></label><br>
         <input type="text" name="username" placeholder="Username..."><br>
         <label><u>Notez votre mot de passe:</u></label><br>
         <input type="password" name="pwd" placeholder="Mot de passe..."><br>
         <input type="password" name="pwdrep" placeholder="Répéter Mot de passe..."><br>
+        
         <label><u>Etes-vous un médecin ?</u></label><br>
         <input type="radio" name="role" value="client">
         <label>Non</label><br>

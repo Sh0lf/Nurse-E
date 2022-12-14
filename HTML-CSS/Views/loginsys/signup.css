@@ -41,6 +41,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container_form {
     display: block;
     flex-direction: column;
@@ -73,6 +74,12 @@
 #lastpwd{
     margin-bottom:18px;
 =======
+=======
+.container_form form{
+    padding:14px;
+}
+
+>>>>>>> 3199ed3 (mainly organization / css clean)
 .container_form p{
     align-self: flex-end;
     justify-content: end;
@@ -82,8 +89,12 @@
 
 form input {
     display: inline;
+<<<<<<< HEAD
     float: center;
     justify-content:left;
+=======
+    padding: 5px;
+>>>>>>> 3199ed3 (mainly organization / css clean)
 }
 .centerbox .confbutton{
     padding: 5px 15px;
