@@ -214,7 +214,6 @@ function uidExists($conn, $username, $email){
 function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit){
     $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, KitDiagnostique_idKitDiagnostique) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
-    // print_r($stmt);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../Views/loginsys/signup.php?error=stmtfailed");
         exit();
