@@ -5,36 +5,43 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../navbar/navbar-main.css">
     <link rel="stylesheet" href="signup.css">
   </head>
 
   <body>
     <header>
+      <!-- Defining in header a top navigation bar-->
       <?php
-        include_once 'header.php';
+        include_once '../navbar/header-main-notlogged.php';
       ?>
     </header>
 
+
     <div class="container">
       <h1>INSCRIPTION</h1><br>
+      <h2>Vous ne pouvez que vous inscrire si vous possédez un kit.</h2>
     </div>
-    <div class="container">
-    <h3>Vous ne pouvez que vous inscrire si vous possédez un kit. Veuillez noter l'id de votre kit:</h3><br>
-    </div>
-    <div class="container">
+    <div class="container_form">
       <form action="../../Controller/signup.inc.php" method="post">
+        <label>Veuillez noter l'id de votre kit:</label><br>
         <input type="number" name="idkit" placeholder="id de votre kit"><br>
-        <br>
+        <label>Votre nom de famille:</label><br>
         <input type="text" name="nom" placeholder="Nom..."><br>
+        <label>Votre prénom:</label><br>
         <input type="text" name="prenom" placeholder="Prenom..."><br>
+        <label>Votre email:</label><br>
         <input type="email" name="email" placeholder="Email..."><br>
-        <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{9}"><br>
+        <label>Votre numéro de teléphone:</label><br>
+        <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{10}"><br>
+        <label>Votre sexe:</label><br>
         <input type="radio" name="sexe" value="Homme">
         <label>Homme</label><br>
         <input type="radio" name="sexe" value="Femme">
         <label>Femme</label><br>
+        <label>Votre pseudo:</label><br>
         <input type="text" name="username" placeholder="Username..."><br>
+        <label>Notez votre mot de passe:</label><br>
         <input type="password" name="pwd" placeholder="Mot de passe..."><br>
         <input type="password" name="pwdrep" placeholder="Répéter Mot de passe..."><br>
         <label>Etes-vous un médecin ?</label><br>
@@ -69,9 +76,8 @@
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php
-        include_once 'footer.php';
+        include_once '../navbar/footer.php';
       ?>
     </footer>
   </body>  
-
 </html>

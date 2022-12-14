@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="../navbar/navbar-main.css">
     <link rel="stylesheet" href="login.css">
   </head>
 
@@ -14,19 +14,41 @@
     <header>
       <!-- Defining in header a top navigation bar-->
       <?php
-        include_once 'header.php';
+        include_once '../navbar/header-main-notlogged.php';
       ?>
     </header>
-
     <div class="container">
       <h2>Connection</h2><br>
     </div>
-    <div class="container">
+    <div class="container_form">
       <form action="../../Controller/login.inc.php" method="post">
-        <input type="text" name="username" placeholder="Username/Email..."><br>
-        <input type="password" name="pwd" placeholder="Mot de passe..."><br>
-      <button type="submit" name="submit">Confirmer</button>
+        <label>Votre pseudo ou votre Email</label><br>
+        <input type="text" name="username" placeholder="Username/Email..."><br><br>
+        <label>Votre mot de passe</label><br>
+        <div class="eyes">
+          <input type="password" name="pwd" placeholder="Mot de passe...">
+          <i class="fa-solid fa-eye"></i><br>
+        </div>
+        <br>
+        <button type="submit" name="submit">Confirmer</button><br>
       </form>
+      <p><a href="">Mot de passe oublié?</a></p>
+      <p><a href="signup.php">Inscription</a></p>
+    </div>
+    <script>
+      let input = document.querySelector('.eyes input');
+      let showBtn = document.querySelector('.eyes i');
+      showBtn.onclick =function(){
+          if(input.type == "password"){
+            input.type = "text";
+            showBtn.classList.add('active');
+          }else {
+            input.type = "password";
+            showBtn.classList.remove('active');
+          }
+
+      }
+    </script>
     </div>
     <div class="container">
       <?php
@@ -48,7 +70,7 @@
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php
-        include_once 'footer.php';
+        include_once '../navbar/footer.php';
       ?>
     </footer>
   </body>  

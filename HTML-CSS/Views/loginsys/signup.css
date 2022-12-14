@@ -12,9 +12,27 @@
     padding: 16px;
 }
 
+.container_form{
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 24px;
+    border:2px #000000 solid;
+    border-radius:20px;
+    background-color:white;
+    width: fit-content;
+    margin: auto;
+}
+
+.container_form p{
+    align-self: flex-end;
+    justify-content: end;
+    justify-self: flex-end;
+}
+
 form input {
     display: inline;
 }
-
-.error {color: #FF0000;}
-
