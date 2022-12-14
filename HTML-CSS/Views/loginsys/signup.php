@@ -14,11 +14,16 @@
     <header>
       <!-- Defining in header a top navigation bar-->
       <?php
+<<<<<<< HEAD
         include_once '../navbar/header-main.php';
+=======
+        include_once '../navbar/header-main-notlogged.php';
+>>>>>>> 1592d6f (updated login sys views (help me))
       ?>
     </header>
 
 
+<<<<<<< HEAD
     <div class="centerbox">
       <h1>INSCRIPTION</h1>
       <h2>Vous ne pouvez que vous inscrire si vous possédez un kit.</h2>
@@ -77,6 +82,41 @@
       <div class="centerbox"> 
         <button type="submit" form="signup-form" name="submit" class="confbutton">Confirmer</button>
       </div>
+=======
+    <div class="container">
+      <h1>INSCRIPTION</h1><br>
+      <h2>Vous ne pouvez que vous inscrire si vous possédez un kit.</h2>
+    </div>
+    <div class="container_form">
+      <form action="../../Controller/signup.inc.php" method="post">
+        <label>Veuillez noter l'id de votre kit:</label><br>
+        <input type="number" name="idkit" placeholder="id de votre kit"><br>
+        <label>Votre nom de famille:</label><br>
+        <input type="text" name="nom" placeholder="Nom..."><br>
+        <label>Votre prénom:</label><br>
+        <input type="text" name="prenom" placeholder="Prenom..."><br>
+        <label>Votre email:</label><br>
+        <input type="email" name="email" placeholder="Email..."><br>
+        <label>Votre numéro de teléphone:</label><br>
+        <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{10}"><br>
+        <label>Votre sexe:</label><br>
+        <input type="radio" name="sexe" value="Homme">
+        <label>Homme</label><br>
+        <input type="radio" name="sexe" value="Femme">
+        <label>Femme</label><br>
+        <label>Votre pseudo:</label><br>
+        <input type="text" name="username" placeholder="Username..."><br>
+        <label>Notez votre mot de passe:</label><br>
+        <input type="password" name="pwd" placeholder="Mot de passe..."><br>
+        <input type="password" name="pwdrep" placeholder="Répéter Mot de passe..."><br>
+        <label>Etes-vous un médecin ?</label><br>
+        <input type="radio" name="role" value="client">
+        <label>Non</label><br>
+        <input type="radio" name="role" value="médecin">
+        <label>Oui</label><br>
+        <button type="submit" name="submit">Confirmer</button>
+      </form>
+>>>>>>> 1592d6f (updated login sys views (help me))
     </div>
     <div class="centerbox">
       <?php
@@ -109,6 +149,7 @@
       <!-- Defining in footer a small navigation bar-->
       <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
         include_once '../navbar/footer.php';
       ?>
     </footer>
@@ -120,4 +161,10 @@
   </body>  
 
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+        include_once '../navbar/footer.php';
+      ?>
+    </footer>
+  </body>  
+>>>>>>> 1592d6f (updated login sys views (help me))
 </html>
