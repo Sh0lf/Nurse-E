@@ -30,6 +30,10 @@
     margin: auto;
 }
 
+.container_form form{
+    padding:14px;
+}
+
 .container_form p{
     align-self: flex-end;
     justify-content: end;
@@ -38,4 +42,5 @@
 
 form input {
     display: inline;
+    padding: 5px;
 }
