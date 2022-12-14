@@ -74,6 +74,13 @@ function loginUser($conn, $username, $pwd){
         session_start();
         $_SESSION["iduser"]=$uidExists["iduser"];
         $_SESSION["username"]=$uidExists["username"];
+        $_SESSION["familyname"]=$uidExists["familyname"];
+        $_SESSION["name"]=$uidExists["name"];
+        $_SESSION["email"]=$uidExists["email"];
+        $_SESSION["phone"]=$uidExists["phone"];
+        $_SESSION["sexe"]=$uidExists["sexe"];
+        $_SESSION["role"]=$uidExists["role"];
+        $_SESSION["idkit"]=$uidExists["KitDiagnostiqueidKitDiagnostique"];
 
         header("location: ../Views/index.php");
         exit();
