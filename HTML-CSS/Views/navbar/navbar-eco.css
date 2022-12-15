@@ -5,11 +5,7 @@
     padding:0;
     box-sizing:border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-nav{
-    background-color:#4FB24C;
-}
+ }
  
  nav{
     background-color:#4FB24C;
@@ -117,10 +113,14 @@ nav{
     nav .logo{
         margin-right: 150px;
 <<<<<<< HEAD
+<<<<<<< HEAD
         width:90px;
 =======
         width:75px;
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+        width:90px;
+>>>>>>> 8054378 (updated changes navbar)
     }
     nav ul li, nav ul ul li {
         display:block;

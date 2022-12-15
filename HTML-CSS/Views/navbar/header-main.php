@@ -102,7 +102,7 @@
         <li><a href="#apropos">A propos</a></li>
         <?php
         if(isset($_SESSION["username"])) {
-            echo '<li><button href="#profil">Mon profil</button></li>';
+            echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
         } else {
             echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
