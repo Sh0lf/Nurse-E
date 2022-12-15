@@ -14,17 +14,17 @@
     <ul>
         <?php
             if (isset($_SESSION["username"])){
-                echo '<li><a href="#accueil">Accueil</a></li>';
+                echo '<li><a href="../index.php">Accueil</a></li>';
             } else {
             echo '<li>
                     <label for="btn-1" class="show">Accueil +</label>
                     <a href="#home">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
-                        <li><a href="#">Comment ça marche ?</a></li>
-                        <li><a href="#">Notre produit</a></li>
-                        <li><a href="#">Les updates</a></li>
-                        <li><a href="#">Vos questions</a></li>                                
+                        <li><a href="../index.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="../index.php#produit">Notre produit</a></li>
+                        <li><a href="../index.php#updates">Les updates</a></li>
+                        <li><a href="../index.php#questions">Vos questions</a></li>                                
                     </ul>
                 </li>';
             }

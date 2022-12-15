@@ -55,7 +55,7 @@
     </p>
  
     <h2>
-        <a id="produits">Notre produit</a>
+        <a id="produit">Notre produit</a>
     </h2>
     <div class="produit">
         <img src="exempleproduit.jpg" alt="exemple produit" style="width:350px;height:350px;" >
