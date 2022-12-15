@@ -1,96 +1,110 @@
+/* Afin de mettre tous les éléments à 0 avec une police pour toute la page */
 *{
     margin: 0;
     padding:0;
     box-sizing:border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-nav{
+ }
+ 
+ nav{
     background-color:#43B1F8;
-}
-
-/* Permet de pouvoir afficher toute la navbar et pas seulement les endroits où il y a des éléments */
-nav:after{
+ }
+ 
+ /* Permet de pouvoir afficher toute la navbar et pas seulement les endroits où il y a des éléments */
+ nav:after{
     content:'';
     clear: both;
     display:table;
- } 
-
-nav ul{
+ }
+ 
+ nav ul{
     float:right;
     list-style-type: none;
     margin-right:40px;
     position:relative;
-}
-
-nav ul li{
+ }
+ 
+ /* Permet de choisir l'écart entre tous les éléments de la navbar */
+ nav ul li{
     float:left;
-    margin:0 10px;
+    margin:0 10px; /* en haut et en bas 0, à droite et à gauche 10px */
     background-color:#43B1F8;
-}
-
-nav ul li a{
+ }
+ 
+ /* définir les propriétés du texte dans la navbar */
+ nav ul li a{
     color:white;
     text-decoration: none;
     line-height: 70px;
     font-size:18px;
     padding: 8px 17px;
-}
-
-nav ul li a:hover{
+ }
+ 
+ /* permet de définir ce qu'il se passe lorsque la souris passe sur le txt de la navabr */
+ nav ul li a:hover{
     text-decoration: underline;
     font-weight: bold;
-}
-
-nav ul ul {
+ }
+ 
+ /* ul ul définit ce qu'il se passe dans le sous-menu des éléments txt de la navbar */
+ nav ul ul {
     position: absolute;
     top:90px;
     border-top: 3px solid white;
     opacity: 0;
     visibility: hidden;
     transition: top .3s;
-}
-
-nav ul li:hover > ul{
+ }
+ 
+ /* le > permet de cibler directement les enfants du sous-menu */
+ nav ul li:hover > ul{
     top: 70px;
     opacity: 1;
     visibility: visible;
-
-}
-nav ul ul li{
+ 
+ }
+ nav ul ul li{
     position: relative;
     margin:0;
     width: 150px;
     float:none;
     display: list-item ;
     border-bottom: 1px solid white;
-}
-
-nav ul ul li a {
+ }
+ 
+ nav ul ul li a {
     font-size: 10px;;
-}
-
-nav .logo {
+ }
+ 
+ nav .logo {
     float:left;
     height:auto;
     margin-left:45px;
     width:75px;
   }
-
-nav .bouton{
+ 
+ nav .bouton{
     display: inline-block;
     padding: 5px 15px;
     margin-left: 20px;
     margin-top: 18px;;
     font-size: 17px;
-    color: #43B1F8;
-}
-
-nav .show ,input, .icon {
+    color: white;
+    border:1px solid white;
+    background-color: #43B1F8;
+    cursor:pointer;
+  }
+ 
+  nav .bouton:hover{
+    border: 2px solid white;
+    font-weight:bold;
+  }
+ 
+ .show,input,.icon {
     display:none;
-}
-
-@media all and (max-width: 968px) {
+ }
+ 
+ @media all and (max-width: 968px) {
     nav ul{
         margin-right:0px;
         float:left;
@@ -121,7 +135,7 @@ nav .show ,input, .icon {
     nav ul ul li a{
         font-size:18px;
     }
-    nav .show {
+    .show {
         display:block;
         color:white;
         font-size:18px;
@@ -129,11 +143,11 @@ nav .show ,input, .icon {
         line-height: 70px;
         cursor:pointer;
     }
-    nav .show:hover{
+    .show:hover{
         text-decoration: underline;
         font-weight: bold;
     }
-    nav .icon{
+    .icon{
         display:block;
         color:white;
         position: absolute;
@@ -142,17 +156,17 @@ nav .show ,input, .icon {
         font-size:35px;
         cursor:pointer;
     }
-    nav .show + a, ul{
+    .show + a, ul{
         display: none;
     }
-    [id^=btn]:checked + ul{
+    [id^=btn]:checked + ul{   /*permet d'identifier quand la checkbox est cochée dans le responsive afin d'activer le menu déroulant */
         display: block;
     }
-
+ 
     nav .bouton{
-        margin-bottom:15px;
+        margin-bottom:10px;
     }
-}
+ }
 
 /* Defining bottom navigation bar */
 .bottombar {
