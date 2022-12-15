@@ -77,4 +77,9 @@
       ?>
     </footer>
   </body>
+<<<<<<< HEAD
 </html>	
+=======
+</html>
+	
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)

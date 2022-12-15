@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+  body
+  {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+  }
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
   .bleu
   {
     text-align: center;
@@ -9,6 +17,10 @@
     color: #43b1f8;
 
   }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
 
   .info {
     max-width: 100%;
@@ -31,12 +43,21 @@
     margin-top:50px ;
     width: 100%;
     height: 25vw;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
     background-color: #ffffff;
     overflow: hidden;
     transition: width 2s;
     display: flex;
     flex-direction: row;
     border-radius: 40px;
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
   }
   
   .oe{
@@ -47,7 +68,13 @@
     position: relative;
   }
 
+<<<<<<< HEAD
   .analyse { 
+=======
+  .analyse {
+    
+    
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
     margin-left:auto;
     margin-right: auto;
     display: block;
@@ -107,6 +134,10 @@
       bottom: 12.5 vw;
       color: #43b1f8;
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
   }
 
   .pres{
@@ -161,6 +192,11 @@
     margin-top: 20%;
   }
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
   .bouton:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;

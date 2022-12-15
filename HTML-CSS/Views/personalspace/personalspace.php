@@ -2,7 +2,11 @@
 
 <?php
 if (!isset($_SESSION['id'])){
+<<<<<<< HEAD
   header('location: ../mainmenu.php');
+=======
+  header('Location: index.php');
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
   exit;
 }
 

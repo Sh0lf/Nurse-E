@@ -3,7 +3,11 @@
 
   <head>
     <meta charset="UTF-8">    <!-- Implémente tous les symboles* -->
+<<<<<<< HEAD
     <title>Questionnaire-Client</title>
+=======
+    <title>FAQ</title>
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
     <link rel="stylesheet" href="questionnaire.css">
     <link rel="stylesheet" href="../navbar/navbar-main.css">

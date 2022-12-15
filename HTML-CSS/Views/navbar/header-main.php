@@ -126,8 +126,12 @@
 =======
             </ul></li>';
         } else {
+<<<<<<< HEAD
             echo '<li><a href="#medicobot">Médicobot</a></li>';
 >>>>>>> 31cd901 (changes updated navbar)
+=======
+            echo '<li><a href="//localhost:8888/Views/medicalbot/medicobot.php">Médicobot</a></li>';
+>>>>>>> e028cf2 (added medicobot/question+ reorganizing)
         }
         ?>    
         <?php
