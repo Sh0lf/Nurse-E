@@ -42,6 +42,7 @@
             if (isset($_SESSION["username"])){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo '<li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php">Accueil</a></li>';
             } else {
             echo '<li>
@@ -58,12 +59,16 @@
 =======
                 echo '<li><a href="../index.php">Accueil</a></li>';
 >>>>>>> 54bd77f (linking pages between them help me rompiche)
+=======
+                echo '<li><a href="Views/index.php">Accueil</a></li>';
+>>>>>>> 4498229 (small changes on the hrefs)
             } else {
             echo '<li>
                     <label for="btn-1" class="show">Accueil +</label>
                     <a href="#home">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                         <li><a href="#">Comment ça marche ?</a></li>
                         <li><a href="#">Notre produit</a></li>
@@ -76,6 +81,12 @@
                         <li><a href="../index.php#updates">Les updates</a></li>
                         <li><a href="../index.php#questions">Vos questions</a></li>                                
 >>>>>>> 54bd77f (linking pages between them help me rompiche)
+=======
+                        <li><a href="Views/index.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="Views/index.php#produit">Notre produit</a></li>
+                        <li><a href="Views/index.php#updates">Les updates</a></li>
+                        <li><a href="Views/index.php#questions">Vos questions</a></li>                                
+>>>>>>> 4498229 (small changes on the hrefs)
                     </ul>
                 </li>';
             }
@@ -165,11 +176,15 @@
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
 =======
             echo '<li><a href="../loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
 >>>>>>> 038ffd2 (changements updates help me rompiche bien ?)
+=======
+            echo '<li><a href="Views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+>>>>>>> 4498229 (small changes on the hrefs)
         }
         ?>
     </ul>
