@@ -1,5 +1,13 @@
 <nav>
-    <img class="logo" src="logo.png">
+    <?php  
+    $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
+    if($curPageName = "ecologie.php") {
+        echo '<img class="logo" src="nurse.png">';
+    }  else {
+        echo '<img class="logo" src="logo.png">';
+    }
+    ?>   
+    
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>
@@ -22,17 +30,33 @@
                 </li>';
             }
         ?>
-        
-        <li>
-            <label for="btn-2" class="show">MédicoBot +</label>
+        <?php
+        if(isset($_SESSION["username"])) {
+            echo '<li><label for="btn-2" class="show">MédicoBot +</label>
             <a href="#produits">MédicoBot <i class="fas fa-caret-down"></i></a>
             <input type="checkbox" id="btn-2">
             <ul>
                 <li><a href="#">Vos analyses</a></li>
                 <li><a href="#">Votre dossier</a></li>
-            </ul>    
-        </li>      
-        <li><a href="#questions">Ecologie</a></li>
+            </ul></li>';
+        } else {
+            echo '<li><a href="#medicobot">Médicobot</a></li>';
+        }
+        ?>    
+        <?php
+        if(isset($_SESSION["username"])) {
+            echo '<li>
+                    <label for="btn-3" class="show">Ecologie +</label>
+                    <a href="eco">Ecologie <i class="fas fa-caret-down"></i></a>
+                    <input type="checkbox" id="btn-3">
+                    <ul>
+                        <li><a href="#">Votre arbre</a></li>
+                    </ul>
+                </li>';
+        } else {
+            echo '<li><a href="#questions">Ecologie</a></li>';
+        }
+        ?>
         <li><a href="#apropos">A propos</a></li>
         <?php
         if(isset($_SESSION["username"])) {
