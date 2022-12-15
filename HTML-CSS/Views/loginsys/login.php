@@ -14,7 +14,7 @@
     <header>
       <!-- Defining in header a top navigation bar-->
       <?php
-        include_once '../navbar/header-main-notlogged.php';
+        include_once '../navbar/header-main.php';
       ?>
     </header>
     <div class="container">

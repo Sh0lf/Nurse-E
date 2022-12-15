@@ -13,7 +13,7 @@
     <header>
       <!-- Defining in header a top navigation bar-->
       <?php
-        include_once '../navbar/header-main-notlogged.php';
+        include_once '../navbar/header-main.php';
       ?>
     </header>
 
@@ -50,7 +50,7 @@
         <label><u>Notez votre mot de passe:</u></label><br>
         <input type="password" name="pwd" placeholder="Mot de passe..."><br>
         <input type="password" name="pwdrep" placeholder="Répéter Mot de passe..."><br>
-        
+
         <label><u>Etes-vous un médecin ?</u></label><br>
         <input type="radio" name="role" value="client">
         <label>Non</label><br>
