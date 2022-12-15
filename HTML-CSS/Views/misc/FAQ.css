@@ -1,0 +1,84 @@
+/* Partie FAQ */
+
+section{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(67,177,248,0.1);
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    background-color: rgb(67,177,248,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+
+.container-faq{
+    width: 100%;
+    max-width: 900px;
+    min-width: 70px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.question {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-color: black;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 5px 2px 5px rgb(0,0,0,0.1);
+}
+
+.accordeon-lien {
+    font-size: 1.6;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.accordeon-lien i {
+    padding: 5px;
+
+}
+
+.accordeon-lien .ion-md-remove {
+    display:none;
+}
+
+.toggle-pannel {
+    padding: 15px;
+    background-color: rgb(152, 243, 243,0.2);
+    border-radius: 20px;
+    border-color: black;
+}
+
+.toggle-pannel h4 {
+    font-size: 1.5;
+    padding-left: 20px;
+}
+
+
+.accordeon-lien:target .toggle-pannel {
+    max-height: 200px;
+    display:content;
+}
+
+.question .visible-pannel h2{
+    padding-left: 2em;
+}
+
+.question .toggle-pannel form{
+    padding-left: 1em;
+}
+
+footer{
+    justify-content: bottom;
+}
