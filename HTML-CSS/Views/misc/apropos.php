@@ -5,10 +5,14 @@
         <meta http-equiv="refresh" content="30">
         <meta content="width=device-width, initial-scale=1.0">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <title>Notre histoire</title>
 =======
         <title>notre histoire</title>
 >>>>>>> 8044b22 (updates css styling + pages)
+=======
+        <title>Notre histoire</title>
+>>>>>>> bd7f60d (updates: title)
         <link rel="stylesheet" href ="../navbar/navbar-main.css">
         <link rel="stylesheet" href ="apropos.css">
 
