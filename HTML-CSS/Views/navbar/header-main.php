@@ -56,7 +56,6 @@
             echo '<li><a href="#questions">Ecologie</a></li>';
         }
         ?>
-        <li><a href="#apropos">A propos</a></li>
         <?php
         if(isset($_SESSION["username"])) {
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
