@@ -1,4 +1,4 @@
-<nav>
+<nav>  
     <?php  
     $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
     if($curPageName = "ecologie.php") {
@@ -6,8 +6,7 @@
     }  else {
         echo '<img class="logo" src="logo.png">';
     }
-    ?>   
-    
+    ?> 
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>

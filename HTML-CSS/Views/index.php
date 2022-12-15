@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Importing corresponding css style file-->
     <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
-    <link rel ="stylesheet" href="navbar/navbar-eco.css">
+    <link rel ="stylesheet" href="navbar/navbar-main.css">
   </head>
 
   <body>
