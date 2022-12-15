@@ -6,12 +6,12 @@
 }
 
 /* élément CSS de la page */
-div.contact {
-    width:300px;
+.contact {
+    width:fit-content;
     height:600px;
     padding:10px;
     margin-top: 50px;
-    margin-right: 50px;
+    margin-right: 20px;
     border: 2px solid #424949;
     text-align:center;
     line-height: 2em;

@@ -117,6 +117,7 @@
                 </li>';
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<li><a href="#ecologie">Ecologie</a></li>';
         }
         ?>
@@ -138,6 +139,9 @@
         <li><a href="#questions">Ecologie</a></li>
 =======
             echo '<li><a href="#questions">Ecologie</a></li>';
+=======
+            echo '<li><a href="#ecologie">Ecologie</a></li>';
+>>>>>>> 038ffd2 (changements updates help me rompiche bien ?)
         }
         ?>
 <<<<<<< HEAD
@@ -149,8 +153,12 @@
         if(isset($_SESSION["username"])) {
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
         } else {
+<<<<<<< HEAD
             echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
+=======
+            echo '<li><a href="../loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+>>>>>>> 038ffd2 (changements updates help me rompiche bien ?)
         }
         ?>
     </ul>
