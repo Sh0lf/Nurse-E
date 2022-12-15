@@ -140,8 +140,11 @@
             echo '<li><a href="#questions">Ecologie</a></li>';
         }
         ?>
+<<<<<<< HEAD
 >>>>>>> 31cd901 (changes updated navbar)
         <li><a href="#apropos">A propos</a></li>
+=======
+>>>>>>> d997cab (changes navbar)
         <?php
         if(isset($_SESSION["username"])) {
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
