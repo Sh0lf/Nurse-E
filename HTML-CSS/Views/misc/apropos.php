@@ -4,7 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="refresh" content="30">
         <meta content="width=device-width, initial-scale=1.0">
-        <title>notre histoire</title>
+        <title>Notre histoire</title>
         <link rel="stylesheet" href ="../navbar/navbar-main.css">
         <link rel="stylesheet" href ="apropos.css">
 
