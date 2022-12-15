@@ -39,7 +39,7 @@
                 <li><a href="#">Votre dossier</a></li>
             </ul></li>';
         } else {
-            echo '<li><a href="#medicobot">Médicobot</a></li>';
+            echo '<li><a href="//localhost:8888/Views/medicalbot/medicobot.php">Médicobot</a></li>';
         }
         ?>    
         <?php

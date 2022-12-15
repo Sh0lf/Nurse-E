@@ -1,0 +1,69 @@
+.question{
+    border: solid 3px #43b1f8;
+    border-radius: 15px;
+    margin: 5%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.instructions{
+    background-color: #43b1f8;
+    border: #43b1f8 solid 5px;
+    border-radius: 15px;
+    outline: #43b1f8 2px solid;
+}
+
+.pres{
+    font-size: 25px;
+    text-align: center;
+    color: #ffffff;
+}
+
+form{
+    padding: 5% 5%;
+    text-align: center;
+}
+
+option{
+    border: #43b1f8 2px solid;
+    border-radius: 5px;
+}
+
+option:hover{
+    background-color: #126196;
+}
+
+form label{
+    color: #000000;
+    font-size: 1.5vw;
+    margin: 1vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 3% 3%;
+    flex-wrap: nowrap;
+    display: flex;
+}
+select{
+    color: #ffffff;
+    background-color: #43b1f8;
+    width: 150PX;
+    border-radius:15px;
+    text-align: center;
+    font-size: 20px;
+    border: #43b1f8 5px solid;
+}
+form input{
+    margin-top: 10%;
+    font-size: 25px;
+    color: #43b1f8;
+    background-color: #ffffff;
+    border-radius: 15px ;
+    border: #ffffff solid;
+    padding: 3% 10%;
+}
+form input:hover{
+    background-color: #43b1f8;
+    text-decoration: underline;
+    color: #ffffff;
+}
