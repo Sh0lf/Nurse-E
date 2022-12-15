@@ -37,7 +37,7 @@
     <footer>
         <!--Defining our bottom navigation bar in footer, for aesthetics purpose-->
         <?php
-        include_once 'footer.php';
+        include_once '/navbar/footer.php';
         ?>
     </footer>
   </body>

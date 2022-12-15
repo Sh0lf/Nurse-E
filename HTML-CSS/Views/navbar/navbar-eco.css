@@ -1,117 +1,118 @@
-*{
+
+ /* mettre marge à 0 pour tous les éléments*/
+ * {
     margin: 0;
     padding:0;
     box-sizing:border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-
-nav{
-    background-color:#4FB24C;
-}
+ }
  
-/* Permet de pouvoir afficher toute la navbar et pas seulement les endroits où il y a des éléments */
-nav:after{
+ nav{
+    background-color:#4FB24C;
+    box-shadow: 0px 5px 25px #4FB24C;
+ }
+ 
+ nav:after{
     content:'';
     clear: both;
     display:table;
-}
+ }
  
-nav ul{
+ nav ul{
     float:right;
     list-style-type: none;
     margin-right:40px;
     position:relative;
-}
+ }
  
-/* Permet de choisir l'écart entre tous les éléments de la navbar */
-nav ul li{
+ nav ul li{
     float:left;
-    margin:0 10px; /* en haut et en bas 0, à droite et à gauche 10px */
+    margin:0 10px;
     background-color:#4FB24C;
-}
+ }
  
-/* définir les propriétés du texte dans la navbar */
-nav ul li a{
+ nav ul li a{
     color:white;
     text-decoration: none;
     line-height: 70px;
     font-size:18px;
     padding: 8px 17px;
-}
+ }
  
-/* permet de définir ce qu'il se passe lorsque la souris passe sur le txt de la navabr */
-nav ul li a:hover{
+ nav ul li a:hover{
     text-decoration: underline;
     font-weight: bold;
-}
+ }
  
-/* ul ul définit ce qu'il se passe dans le sous-menu des éléments txt de la navbar */
-nav ul ul {
+ nav ul ul {
     position: absolute;
     top:90px;
     border-top: 3px solid white;
     opacity: 0;
     visibility: hidden;
     transition: top .3s;
-}
+ }
  
-/* le > permet de cibler directement les enfants du sous-menu */
-nav ul li:hover > ul{
+ nav ul li:hover > ul{
     top: 70px;
     opacity: 1;
     visibility: visible;
  
-}
-
-nav ul ul li{
+ }
+ nav ul ul li{
     position: relative;
     margin:0;
     width: 150px;
     float:none;
     display: list-item ;
     border-bottom: 1px solid white;
-}
+ }
  
-nav ul ul li a {
-    font-size: 10px;;
-}
+ nav ul ul li a {
+    font-size: 10px;
+ }
  
-nav .logo {
+ nav ul ul li a:hover {
+    text-decoration: underline;
+    font-weight: lighter;
+ }
+ 
+ nav .logo {
     float:left;
     height:auto;
     margin-left:45px;
-    width:65px;
-}
+    width:75px;
+  }
  
-nav .bouton{
-    display: inline-block;
-    padding: 5px 15px;
-    margin-left: 20px;
-    margin-top: 18px;;
-    font-size: 17px;
-    color: white;
-    border:1px solid white;
-    background-color: #4FB24C;
-    cursor:pointer;
-}
+ nav .bouton{
+   display: inline-block;
+   padding: 5px 15px;
+   margin-left: 20px;
+   margin-top: 18px;;
+   font-size: 17px;
+   color: white;
+   border:1px solid white;
+   background-color: #4FB24C;
+   cursor:pointer;
+  }
  
   nav .bouton:hover{
-    border: 2px solid white;
-    font-weight:bold;
-}
+   border: 2px solid white;
+   font-weight:bold;
+ }
  
-nav .show,input,.icon {
+ .show,input,.icon {
     display:none;
-}
+ }
  
-@media all and (max-width: 968px) {
+ @media all and (max-width: 968px) {
     nav ul{
         margin-right:0px;
         float:left;
     }
     nav .logo{
         margin-right: 150px;
-        width:75px;
+        width:90px;
     }
     nav ul li, nav ul ul li {
         display:block;
@@ -159,12 +160,11 @@ nav .show,input,.icon {
     .show + a, ul{
         display: none;
     }
-    [id^=btn]:checked + ul{   /*permet d'identifier quand la checkbox est cochée dans le responsive afin d'activer le menu déroulant */
+    [id^=btn]:checked + ul{
         display: block;
     }
- 
     nav .bouton{
-        margin-bottom:10px;
+       margin-bottom:15px;
     }
 }
 
