@@ -4,10 +4,14 @@
   <head>
     <meta charset="UTF-8">    <!-- Implémente tous les symboles* -->
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title>Conditions générales d'utilisation</title>
 =======
     <title>Accueil</title>
 >>>>>>> ab961c6 (nouveau cgu help)
+=======
+    <title>Conditions générales d'utilisation</title>
+>>>>>>> 36b80d8 (updating : title)
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
     <link rel="stylesheet" href="cgu.css">
     <link rel="stylesheet" href="../navbar/navbar-main.css">
@@ -21,6 +25,7 @@
     </header>
 
     <div class="container">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <h1 class="titre1">Conditions générales d'utilisation</h1>
 
@@ -45,8 +50,11 @@
         <h2 class="titre2">Modification des conditions d'utilisation</h2>
 =======
         <h1>Conditions d'utilisation</h1>
+=======
+        <h1><u>Conditions d'utilisation</u></h1>
+>>>>>>> 36b80d8 (updating : title)
 
-        <p>En utilisant notre site web et notre boitier d'autodiagnostique médical, vous acceptez les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site web ni notre boitier.</p>
+        <p><u>En utilisant notre site web et notre boitier d'autodiagnostique médical, vous acceptez les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre site web ni notre boitier.</u></p>
 
         <h2>Utilisation du site web et du boitier</h2>
 
