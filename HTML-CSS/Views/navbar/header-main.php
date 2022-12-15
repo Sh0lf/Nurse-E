@@ -53,14 +53,14 @@
                     </ul>
                 </li>';
         } else {
-            echo '<li><a href="#questions">Ecologie</a></li>';
+            echo '<li><a href="#ecologie">Ecologie</a></li>';
         }
         ?>
         <?php
         if(isset($_SESSION["username"])) {
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
         } else {
-            echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
+            echo '<li><a href="../loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
         }
         ?>
     </ul>
