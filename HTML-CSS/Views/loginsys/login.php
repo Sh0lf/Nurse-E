@@ -28,7 +28,7 @@
       ?>
     </header>
     <div class="container">
-      <h2>Connection</h2><br>
+      <h2>Connexion</h2><br>
     </div>
     <div class="container_form">
       <form action="../../Controller/login.inc.php" method="post">

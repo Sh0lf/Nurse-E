@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <nav>  
     <?php
     session_start();  
@@ -15,6 +16,9 @@
     <img class="logo" src="logo.png">
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
 =======
+=======
+<nav>  
+>>>>>>> 268dd83 (Updates)
     <?php  
     $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
     if($curPageName = "ecologie.php") {
@@ -22,9 +26,13 @@
     }  else {
         echo '<img class="logo" src="logo.png">';
     }
+<<<<<<< HEAD
     ?>   
     
 >>>>>>> 31cd901 (changes updated navbar)
+=======
+    ?> 
+>>>>>>> 268dd83 (Updates)
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>
