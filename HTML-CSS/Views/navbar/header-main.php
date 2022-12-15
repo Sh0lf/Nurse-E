@@ -21,10 +21,10 @@
                     <a href="#home">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
-                        <li><a href="Views/index.php#comment">Comment ça marche ?</a></li>
-                        <li><a href="Views/index.php#produit">Notre produit</a></li>
-                        <li><a href="Views/index.php#updates">Les updates</a></li>
-                        <li><a href="Views/index.php#questions">Vos questions</a></li>                                
+                        <li><a href="//localhost:8888/Views/index.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="//localhost:8888/Views/index.php#produit">Notre produit</a></li>
+                        <li><a href="//localhost:8888/Views/index.php#updates">Les updates</a></li>
+                        <li><a href="//localhost:8888/Views/index.php#questions">Vos questions</a></li>                                
                     </ul>
                 </li>';
             }
@@ -60,7 +60,7 @@
         if(isset($_SESSION["username"])) {
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
         } else {
-            echo '<li><a href="Views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+            echo '<li><a href="//localhost:8888/Views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
         }
         ?>
     </ul>
