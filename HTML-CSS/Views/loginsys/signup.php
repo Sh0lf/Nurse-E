@@ -15,10 +15,14 @@
       <!-- Defining in header a top navigation bar-->
       <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
         include_once '../navbar/header-main.php';
 =======
         include_once '../navbar/header-main-notlogged.php';
 >>>>>>> 1592d6f (updated login sys views (help me))
+=======
+        include_once '../navbar/header-main.php';
+>>>>>>> 909d4c8 (update includes)
       ?>
     </header>
 
@@ -115,7 +119,7 @@
         <label><u>Notez votre mot de passe:</u></label><br>
         <input type="password" name="pwd" placeholder="Mot de passe..."><br>
         <input type="password" name="pwdrep" placeholder="Répéter Mot de passe..."><br>
-        
+
         <label><u>Etes-vous un médecin ?</u></label><br>
         <input type="radio" name="role" value="client">
         <label>Non</label><br>
