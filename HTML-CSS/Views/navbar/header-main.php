@@ -70,6 +70,7 @@
                     <ul>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <li><a href="#">Comment ça marche ?</a></li>
                         <li><a href="#">Notre produit</a></li>
                         <li><a href="#">Les updates</a></li>
@@ -87,6 +88,12 @@
                         <li><a href="Views/index.php#updates">Les updates</a></li>
                         <li><a href="Views/index.php#questions">Vos questions</a></li>                                
 >>>>>>> 4498229 (small changes on the hrefs)
+=======
+                        <li><a href="//localhost:8888/Views/index.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="//localhost:8888/Views/index.php#produit">Notre produit</a></li>
+                        <li><a href="//localhost:8888/Views/index.php#updates">Les updates</a></li>
+                        <li><a href="//localhost:8888/Views/index.php#questions">Vos questions</a></li>                                
+>>>>>>> ab961c6 (nouveau cgu help)
                     </ul>
                 </li>';
             }
@@ -177,6 +184,7 @@
         } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
 =======
@@ -185,6 +193,9 @@
 =======
             echo '<li><a href="Views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
 >>>>>>> 4498229 (small changes on the hrefs)
+=======
+            echo '<li><a href="//localhost:8888/Views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+>>>>>>> ab961c6 (nouveau cgu help)
         }
         ?>
     </ul>
