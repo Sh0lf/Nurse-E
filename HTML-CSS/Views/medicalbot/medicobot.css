@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   body
   {
@@ -6,6 +7,8 @@
     margin: 0;
   }
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+>>>>>>> 4c2a37b (updates...)
   .bleu
   {
     text-align: center;
@@ -18,9 +21,12 @@
 
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+>>>>>>> 4c2a37b (updates...)
 
   .info {
     max-width: 100%;
@@ -44,9 +50,12 @@
     width: 100%;
     height: 25vw;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+>>>>>>> 4c2a37b (updates...)
     background-color: #ffffff;
     overflow: hidden;
     transition: width 2s;
@@ -54,10 +63,13 @@
     flex-direction: row;
     border-radius: 40px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+>>>>>>> 4c2a37b (updates...)
   }
   
   .oe{
@@ -69,12 +81,16 @@
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   .analyse { 
 =======
   .analyse {
     
     
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+  .analyse { 
+>>>>>>> 4c2a37b (updates...)
     margin-left:auto;
     margin-right: auto;
     display: block;
@@ -135,9 +151,12 @@
       color: #43b1f8;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+>>>>>>> 4c2a37b (updates...)
   }
 
   .pres{
@@ -193,10 +212,13 @@
   }
   
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+>>>>>>> 4c2a37b (updates...)
   .bouton:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;

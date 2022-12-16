@@ -184,8 +184,12 @@
    font-weight:bold;
  }
  
+<<<<<<< HEAD
  .show,input,.icon {
 >>>>>>> 8044b22 (updates css styling + pages)
+=======
+ nav .show,input,.icon {
+>>>>>>> 4c2a37b (updates...)
     display:none;
  }
  
