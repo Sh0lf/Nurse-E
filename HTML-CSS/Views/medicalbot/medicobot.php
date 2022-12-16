@@ -78,8 +78,12 @@
     </footer>
   </body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>	
 =======
 </html>
 	
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+</html>	
+>>>>>>> 6c33266 (updates...)
