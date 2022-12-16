@@ -1,0 +1,240 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* Définition du corps, des titres et des paragraphes */
+
+body{
+    background-color: white;
+    font-family: Jua, Century Gothic, sans-serif;
+    overflow: auto;
+    }
+
+.titre{
+    color: #43B1F8;
+    font-size: 30px;
+    font-family: "Century Gothic", serif;   
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    }
+
+.sstitre{
+    color: #43B1F8;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: 1px transparent solid ;
+    border-radius: 45%;
+    width: 150px;
+    height: 43px;
+    text-align: center;
+    font-family: "Century Gothic";
+    font-size: 20px;
+    position: relative;
+    background-color: #73b8dd65;
+}
+
+.para{
+    text-align: center;
+    color: #424949;
+    font-family: "Century Gothic";
+    font-size: 17px;
+    left: 15px;
+    margin-right-left: 20%;
+    shape-margin: 40px;
+    padding: 50px;
+    }
+
+
+
+/* Définition de la position des paragraphes */
+
+.paragraphe{
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/* Définition de la position des composants de la partie "Nos valeurs" */
+.row{
+    display: flex;
+    flex-flow: wrap;
+    flex-basis: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.column{
+    flex-basis: auto;
+    width: 33.33%;
+
+}
+
+
+
+/* Elément de décoration de la page */
+.dot{
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+/* responsive: changement de la taille des paragraphes et titres,
+changement de la partie "Nos valeurs" en une colonne */
+
+@media screen and (max-width:600px) {
+  .row{
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+  .paragraphe {
+    width: 100%;
+  }
+  .dot{
+    justify-content: center;
+  }
+   .titre{
+    font-size: 25px;
+    justify-content: center;
+  }
+    .sstitre{
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+    .para{
+    font-size: 15px;
+}
+
+}
+
+
+
+
+
+
+/* Defining top navigation bar */
+.navbar {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #43b1f8;
+    font-size: 16px;
+    position: sticky;
+}
+
+.navbar .logo {
+    display: flex;
+    align-self: flex-start;
+    left: 10px;
+    top: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+/* To make a cleaner list; as well as modifiable */
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list .list-item {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+/* Defining colors when active */
+.navbar a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.icon {
+    display: flex;
+    right: 10px;
+    top: 10px;
+    width: 75px;
+    height: 75px;
+}
+
+/* Define Hover on selection color */ 
+.navbar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.navbar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}
+
+
+/* responsive: changing the top navbar flexbox in column */
+@media all and (max-width: 550px) {
+    .navbar{
+        flex-direction: column;
+        position: relative;
+    }
+    .nav-list .list-item{
+        display: block;
+        text-align: left;
+        border-top: 1px solid white;
+    }
+    .nav-list{
+        list-style-type: none;
+        width: 80%;
+        text-align: center;
+        padding-top: 5px;
+    }
+}
+
+/* Defining bottom navigation bar */
+.bottombar {
+    display: flex;
+    bottom: 0;
+    align-self: flex-end;
+    align-items: flex-start;
+    background-color: #43b1f8;
+    font-size: 12px;
+    font-family: "Century Gothic";
+    padding: 12px 12px;
+    position: sticky;
+    color: whitesmoke;
+    border:  none;
+}
+
+.bottombar a {
+    color: white;
+    text-align: center;
+    padding: 12px 12px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* Define Hover on selection color */ 
+.bottombar a:hover {
+    background-color: #8FAFC1;
+    color: #424949;
+}
+
+/* Add active class to highlight current page */
+.bottombar a.active {
+    background-color: #8FAFC1;
+    color: white;
+}
+
