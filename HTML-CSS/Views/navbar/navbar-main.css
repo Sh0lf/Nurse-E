@@ -1,6 +1,5 @@
-
- /* mettre marge à 0 pour tous les éléments*/
- * {
+/* mettre marge à 0 pour tous les éléments*/
+* {
     margin: 0;
     padding:0;
     box-sizing:border-box;

@@ -1,10 +1,10 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "root", "Projet_BDD_APP");
-
-if ($conn -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $conn -> connect_error;
-    exit();
+$db_username = 'root';
+$db_password = 'root';
+$conn = new PDO( 'mysql:host=localhost;dbname=Projet_BDD_APP', $db_username, $db_password );
+if(!$conn){
+    die("Fatal Error: Connection Failed!");
 }
 
 ?>

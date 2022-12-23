@@ -3,46 +3,51 @@
 include_once '../Controller/functions.inc.php';
 include_once '../Controller/dbh.inc.php';
 
-function uidExists($conn, $username, $email){
-    $sql = "SELECT * FROM user WHERE username = ? OR email = ?;";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
-        exit();
-    }
+function uidExists($conn, $username, $email)
+{
+    try {
+        $sql = "SELECT * FROM user_test WHERE username = ? OR email = ?;";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+            exit();
+        }
 
-    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
-    mysqli_stmt_execute($stmt);
+        $stmt->execute(array($username, $email));
 
-    $resultData = mysqli_stmt_get_result($stmt);
-    $row = mysqli_fetch_assoc($resultData);
+        $row = $stmt->rowCount();
+        $fetchedRow = $stmt->fetch();
 
-    mysqli_stmt_close($stmt);
-
-    if ($row){
-        return $row;
-    }
-    else {
-        $result = false;
-        return $result;
+        if ($row > 0) {
+            return $fetchedRow;
+        } else {
+            $result = false;
+            return $result;
+        }
     }
 }
 
-function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit){
-    $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, KitDiagnostiqueidKitDiagnostique) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit)
+{
+    try {
+        $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+        
+        $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, KitDiagnostiqueidKitDiagnostique) VALUES ('$username', '$nom', '$prenom', '$email', '$phone', '$sexe', '$hashedpwd', '$role', '$idkit');";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+            exit();
+        }
+
+        $stmt->exec($sql); 
+        header("location: ../Views/loginsys/signup.php?error=none");
         exit();
     }
 
-    $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-
-    mysqli_stmt_bind_param($stmt, "ssssisssi", $username, $nom, $prenom, $email, $phone, $sexe, $hashedpwd, $role, $idkit);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header("location: ../Views/loginsys/signup.php?error=none");
-    exit();
+    catch(PDOException $e){
+        echo $e->getMessage();
+    }
+    
 }
 
 ?>

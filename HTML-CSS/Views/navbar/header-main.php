@@ -1,5 +1,6 @@
 <nav>  
-    <?php  
+    <?php
+    session_start();  
     $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
     if($curPageName = "ecologie.php") {
         echo '<img class="logo" src="nurse.png">';
