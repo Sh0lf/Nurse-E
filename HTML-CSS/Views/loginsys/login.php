@@ -75,6 +75,9 @@
           else if ($_GET["error"] == "wronglogin") {
             echo "<p> Veuillez réessayer, mauvais identifiant et/ou mot de passe</p>";
           }
+          else if ($_GET["error"] == "failedprocess") {
+            echo "<p> Quelque chose n'a pas marché, veuillez rééssayer ultérieurement</p>";
+          }
           else if ($_GET["error"] == "none") {
             echo "<p> Succès !</p>";
 
