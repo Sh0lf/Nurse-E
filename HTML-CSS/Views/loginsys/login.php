@@ -30,24 +30,26 @@
         include_once '../navbar/header-main.php';
       ?>
     </header>
-    <div class="container">
+    <div class="centerbox">
       <h2>Connexion</h2><br>
     </div>
-    <div class="container_form">
-      <form action="../../Controller/login.inc.php" method="post">
-        <label><u>Votre pseudo ou votre Email</u></label><br>
-        <input type="text" name="username" placeholder="Username/Email..."><br><br>
-
-        <label><u>Votre mot de passe</u></label><br>
-        <div class="eyes">
-          <input type="password" name="pwd" placeholder="Mot de passe...">
-          <i class="fa-solid fa-eye"></i><br>
-        </div>
-        
-        <button type="submit" name="submit">Confirmer</button><br>
-      </form>
-      <p><a href="">Mot de passe oublié?</a></p>
-      <p><a href="signup.php">Inscription</a></p>
+    <div class="container">
+      <div class="container_form">
+        <form action="../../Controller/login.inc.php" method="post">
+          <label><u>Votre pseudo ou votre Email</u></label><br><br>
+          <input type="text" name="username" placeholder="Username/Email..."><br><br>
+          <label><u>Votre mot de passe</u></label><br><br>
+          <div class="eyes">
+            <input type="password" name="pwd" placeholder="Mot de passe...">
+            <i class="fa-solid fa-eye"></i><br>
+          </div>
+          <div class="centerbox">
+            <button type="submit" name="submit" class="confbutton">Confirmer</button><br>
+          </div>
+        </form>
+        <p><a href="">Mot de passe oublié?</a></p>
+        <p><a href="signup.php">Inscription</a></p>
+      </div>
     </div>
     <script>
       let input = document.querySelector('.eyes input');
@@ -64,7 +66,7 @@
       }
     </script>
     </div>
-    <div class="container">
+    <div class="centerbox">
       <?php
         if (isset($_GET["error"])){
           if ($_GET["error"] == "emptyinput") {

@@ -16,6 +16,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container{
     display: flex;
     align-self: center;
@@ -26,12 +27,20 @@
 =======
 .container_form{
     overflow: hidden;
+=======
+.container{
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
     display: flex;
     align-self: center;
-    justify-self: center;
+    justify-self: flex-start;
+    justify-items: flex-start;
     justify-content: center;
+<<<<<<< HEAD
     flex-direction: column;
 >>>>>>> 1592d6f (updated login sys views (help me))
+=======
+    flex-wrap: wrap;
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
     padding: 24px;
     border:2px #000000 solid;
     border-radius:20px;
@@ -42,6 +51,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
 .container_form {
     display: block;
     flex-direction: column;
@@ -49,6 +61,7 @@
     width: 50%;
     justify-items: start;
     justify-content: center;
+<<<<<<< HEAD
 }
 
 .container_form form input[type=text]{
@@ -85,27 +98,63 @@
     justify-content: end;
     justify-self: flex-end;
 >>>>>>> 1592d6f (updated login sys views (help me))
+=======
+}
+
+.container_form form input[type=text]{
+    margin-bottom:18px;
+}
+
+.container_form form input[type=email]{
+    margin-bottom:18px;
+}
+
+.container_form form input[type=number]{
+    margin-bottom:18px;
+}
+
+.container_form form input[type=tel]{
+    margin-bottom:18px;
+}
+
+#lastsex {
+    margin-bottom:18px;
+}
+
+#lastpwd{
+    margin-bottom:18px;
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
 }
 
 form input {
     display: inline;
+<<<<<<< HEAD
 <<<<<<< HEAD
     float: center;
     justify-content:left;
 =======
     padding: 5px;
 >>>>>>> 3199ed3 (mainly organization / css clean)
+=======
+    float: center;
+    justify-content:left;
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
 }
 .centerbox .confbutton{
     padding: 5px 15px;
     margin-left: 20px;
+<<<<<<< HEAD
     margin-top: 18px;
+=======
+    margin-top: 18px;;
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
     font-size: 17px;
     color: white;
     border:1px solid white;
     background-color: #43B1F8;
     cursor:pointer;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 #note {
@@ -129,6 +178,8 @@ form input {
     content:'\f070';
     color:red;
 }
+=======
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
 
 @media screen and (max-width: 615px) {
     .container_form{
@@ -162,10 +213,13 @@ form input {
     #lastpwd{
         margin-bottom:13px;
     }
+<<<<<<< HEAD
 
     #note {
         font-size: 6px ;
     }
+=======
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
 }
 
 @media screen and (max-width: 490px) {
@@ -218,6 +272,7 @@ form input {
         margin-bottom:12px;
     }
     
+<<<<<<< HEAD
     #firstpwd{
         margin-bottom: 12px;
     }
@@ -232,3 +287,9 @@ form input {
 }
 =======
 >>>>>>> 1592d6f (updated login sys views (help me))
+=======
+    #lastpwd{
+        margin-bottom:12px;
+    }
+}
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)

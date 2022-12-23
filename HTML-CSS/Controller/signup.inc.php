@@ -25,16 +25,16 @@ if (isset($_POST["submit"])) {
 =======
 
 if (isset($_POST["submit"])) {
-  $username = $_POST["username"];
-  $nom = $_POST["nom"];
-  $prenom = $_POST["prenom"];
-  $email = $_POST["email"];
-  $phone = $_POST["phone"];
-  $sexe = $_POST["sexe"];
-  $pwd = $_POST["pwd"];
-  $pwdrep = $_POST["pwdrep"];
-  $role = $_POST["role"];
-  $idkit = $_POST["idkit"];
+  $username = htmlspecialchars($_POST["username"]);
+  $nom = htmlspecialchars($_POST["nom"]);
+  $prenom = htmlspecialchars($_POST["prenom"]);
+  $email = htmlspecialchars($_POST["email"]);
+  $phone = htmlspecialchars($_POST["phone"]);
+  $sexe = htmlspecialchars($_POST["sexe"]);
+  $pwd = htmlspecialchars($_POST["pwd"]);
+  $pwdrep = htmlspecialchars($_POST["pwdrep"]);
+  $role = htmlspecialchars($_POST["role"]);
+  $idkit = htmlspecialchars($_POST["idkit"]);
 
   include_once 'dbh.inc.php';
   include_once 'functions.inc.php';

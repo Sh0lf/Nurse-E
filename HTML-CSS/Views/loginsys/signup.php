@@ -28,6 +28,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div class="centerbox">
       <h1>INSCRIPTION</h1>
       <h2>Vous ne pouvez que vous inscrire si vous possédez un kit.</h2>
@@ -128,6 +129,64 @@
         <button type="submit" name="submit">Confirmer</button>
       </form>
 >>>>>>> 1592d6f (updated login sys views (help me))
+=======
+    <div class="centerbox">
+      <h1>INSCRIPTION</h1>
+      <h2>Vous ne pouvez que vous inscrire si vous possédez un kit.</h2>
+    </div>
+    <div class="container">
+      <div class="container_form">
+        <p><u>Veuillez noter l'id de votre kit :</u></p>
+        <br>
+        <p><u>Votre nom de famille :</u></p>
+        <br>
+        <p><u>Votre prénom :</u></p>
+        <br>
+        <p><u>Votre email :</u></p>
+        <br>
+        <p><u>Votre numéro de teléphone :</u></p>
+        <br>     
+        <p><u>Votre sexe :</u></p>
+        <br><br>
+        <p><u>Votre pseudo :</u></p>
+        <br>
+        <p><u>Notez votre mot de passe :</u></p>
+        <p><u>Répétez votre mot de passe :</u></p>
+        <br>
+        <p><u>Etes-vous un médecin ?</u></p>
+      </div>
+      <div class="container_form">
+        <form action="../../Controller/signup.inc.php" method="post">
+          <input type="number" name="idkit" placeholder="id de votre kit">
+          <br>
+          <input type="text" name="nom" placeholder="Nom...">
+          <br>
+          <input type="text" name="prenom" placeholder="Prenom...">
+          <br>
+          <input type="email" name="email" placeholder="Email...">
+          <br>
+          <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{10}">
+          <br>
+          <input type="radio" name="sexe" value="Homme">
+          <label>Homme</label><br>
+          <input type="radio" name="sexe" id="lastsex" value="Femme">
+          <label>Femme</label><br>
+          <input type="text" name="username" placeholder="Username...">
+          <br>
+          <input type="password" name="pwd" placeholder="Mot de passe..."><br>
+          <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
+          <br>
+          <input type="radio" name="role" value="client">
+          <label>Non</label><br>
+          <input type="radio" name="role" value="médecin">
+          <label>Oui</label>
+          <br><br>
+        </form>    
+      </div>
+      <div class="centerbox"> 
+        <button type="submit" name="submit" class="confbutton">Confirmer</button>
+      </div>
+>>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
     </div>
     <div class="centerbox">
       <?php
