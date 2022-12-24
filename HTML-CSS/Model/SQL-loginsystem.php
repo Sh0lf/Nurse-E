@@ -207,11 +207,9 @@ function uidExists($conn, $username, $email)
             $result = false;
             return $result;
         }
-    } else {
-        header("location: ../Views/loginsys/signup.php?error=failedprocess");
-        exit();
     }
-}
+} 
+
 
 function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit)
 {

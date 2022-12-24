@@ -128,7 +128,7 @@ else {
     exit();
   }
 
-  if (UidExists($conn, $username, $email) !== false){
+  if (uidExists($conn, $username, $email) !== false){
     header("location: ../Views/loginsys/signup.php?error=uidexists");
     exit();
   }
