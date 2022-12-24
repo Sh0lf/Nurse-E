@@ -15,6 +15,7 @@ if (isset($_POST["submit"])) {
 
   include_once 'dbh.inc.php';
   include_once 'functions.inc.php';
+  include_once '../Model/SQL-loginsystem.php';
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
     header("location: ../Views/loginsys/signup.php?error=emptyinput");

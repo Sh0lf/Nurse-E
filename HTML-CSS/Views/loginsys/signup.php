@@ -45,7 +45,7 @@
         <p><u>Etes-vous un médecin ?</u></p>
       </div>
       <div class="container_form">
-        <form action="../../Controller/signup.inc.php" method="post">
+        <form action="../../Controller/signup.inc.php" method="post" id="signup-form">
           <input type="number" name="idkit" placeholder="id de votre kit">
           <br>
           <input type="text" name="nom" placeholder="Nom...">
@@ -73,7 +73,7 @@
         </form>    
       </div>
       <div class="centerbox"> 
-        <button type="submit" name="submit" class="confbutton">Confirmer</button>
+        <button type="submit" form="signup-form" name="submit" class="confbutton">Confirmer</button>
       </div>
     </div>
     <div class="centerbox">
