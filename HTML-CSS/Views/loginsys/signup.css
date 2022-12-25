@@ -79,6 +79,12 @@ form input {
     cursor:pointer;
 }
 
+#note {
+    font-style: italic;
+    font-size: 8px;
+    color: red;
+}
+
 @media screen and (max-width: 615px) {
     .container_form{
         font-size: 12px;
@@ -110,6 +116,10 @@ form input {
     
     #lastpwd{
         margin-bottom:13px;
+    }
+
+    #note {
+        font-size: 6px ;
     }
 }
 
@@ -163,7 +173,15 @@ form input {
         margin-bottom:12px;
     }
     
+    #firstpwd{
+        margin-bottom: 12px;
+    }
+
     #lastpwd{
         margin-bottom:12px;
+    }
+
+    #note{
+        display: none;
     }
 }

@@ -40,6 +40,7 @@
         <p><u>Votre pseudo :</u></p>
         <br>
         <p><u>Notez votre mot de passe :</u></p>
+        <br>
         <p><u>Répétez votre mot de passe :</u></p>
         <br>
         <p><u>Etes-vous un médecin ?</u></p>
@@ -62,7 +63,8 @@
           <label>Femme</label><br>
           <input type="text" name="username" placeholder="Username...">
           <br>
-          <input type="password" name="pwd" placeholder="Mot de passe..."><br>
+          <input type="password" name="pwd" id="firstpwd" placeholder="Mot de passe..."><br>
+          <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial</p>
           <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
           <br>
           <input type="radio" name="role" value="client">
@@ -89,6 +91,8 @@
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
         } else if ($_GET["error"] == "uidexists") {
           echo "<p> Veuillez essayer un nouveau username, il existe déjà</p>";
+        } else if ($_GET["error"] == "pwdstrength") {
+          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         } else if ($_GET["error"] == "stmtfailed") {
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
         } else if ($_GET["error"] == "none") {
