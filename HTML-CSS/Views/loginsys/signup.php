@@ -95,14 +95,10 @@
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         } else if ($_GET["error"] == "verifyemail") {
           echo "<p> Inscription passée, veuillez vérifier votre email</p>";
-        } else if ($_GET["error"] == "accprocfailed") {
-          echo "<p> Quelque chose n'a pas marché, notamment dans l'envoi de l'email de vérification. Veuillez essayer ultérieurement</p>";
-        } else if ($_GET["error"] == "issueverif") {
-          echo "<p> Quelque chose n'a pas marché dans la vérification du compte, veuillez nous contacter</p>";
         } else if ($_GET["error"] == "stmtfailed") {
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
         } else if ($_GET["error"] == "none") {
-          echo "<p> Succès !</p>";
+          echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }
       }
       ?>

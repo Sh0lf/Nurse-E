@@ -50,22 +50,17 @@ if (isset($_POST["submit"])) {
     exit();
   }
 
-  else {
-    accVerif_sendingEmail($conn_sqli, $sendMl, $nom, $email, $code);
-  }
+  createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $sendMl);
 
-  if (isset($_GET['code'])) {
-    $id = $_GET['code'];
-    if (accVerif_verifyingCode($conn, $id) !== false){
-      header("location: ../Views/loginsys/signup.php?error=issueverif");
-      exit();
-    } else {
-      createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
-    }
-  }
+  
 
-  //createUser($conn, "Sh0lf", "yoplait", "VinSang", "vyvincentyap@gmail.com", 778266459, "Homme", "mdpaupif", "client", 1);
-} 
+}
+if (isset($_GET["code"])) {
+  $code = $_GET["code"];
+  $username = $_GET["username"];
+  accCompletion($conn, $username, $code);
+}
+
 else {
   header("location: ../Views/signup.php");
   exit();
