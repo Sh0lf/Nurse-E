@@ -93,6 +93,12 @@
           echo "<p> Veuillez essayer un nouveau username, il existe déjà</p>";
         } else if ($_GET["error"] == "pwdstrength") {
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
+        } else if ($_GET["error"] == "verifyemail") {
+          echo "<p> Inscription passée, veuillez vérifier votre email</p>";
+        } else if ($_GET["error"] == "accprocfailed") {
+          echo "<p> Quelque chose n'a pas marché, notamment dans le processus de création de compte. Veuillez essayer encore</p>";
+        } else if ($_GET["error"] == "issueverif") {
+          echo "<p> Quelque chose n'a pas marché dans la vérification du compte, veuillez nous contacter</p>";
         } else if ($_GET["error"] == "stmtfailed") {
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
         } else if ($_GET["error"] == "none") {
