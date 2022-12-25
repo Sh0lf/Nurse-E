@@ -96,7 +96,7 @@
         } else if ($_GET["error"] == "verifyemail") {
           echo "<p> Inscription passée, veuillez vérifier votre email</p>";
         } else if ($_GET["error"] == "accprocfailed") {
-          echo "<p> Quelque chose n'a pas marché, notamment dans le processus de création de compte. Veuillez essayer encore</p>";
+          echo "<p> Quelque chose n'a pas marché, notamment dans l'envoi de l'email de vérification. Veuillez essayer ultérieurement</p>";
         } else if ($_GET["error"] == "issueverif") {
           echo "<p> Quelque chose n'a pas marché dans la vérification du compte, veuillez nous contacter</p>";
         } else if ($_GET["error"] == "stmtfailed") {

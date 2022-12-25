@@ -5,6 +5,7 @@ include_once 'dbh.inc.php';
 include_once 'mysqli.dbh.php';
 include_once 'functions.inc.php';
 include_once '../Model/SQL-loginsystem.php';
+include_once 'sendEmail.php';
 
 if (isset($_POST["submit"])) {
   $code = rand();
@@ -50,7 +51,7 @@ if (isset($_POST["submit"])) {
   }
 
   else {
-    accVerif_sendingEmail($conn_sqli, $nom, $email, $code);
+    accVerif_sendingEmail($conn_sqli, $sendMl, $nom, $email, $code);
   }
 
   if (isset($_GET['code'])) {
@@ -62,7 +63,7 @@ if (isset($_POST["submit"])) {
       createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
     }
   }
-  
+
   //createUser($conn, "Sh0lf", "yoplait", "VinSang", "vyvincentyap@gmail.com", 778266459, "Homme", "mdpaupif", "client", 1);
 } 
 else {
