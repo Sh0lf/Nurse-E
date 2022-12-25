@@ -213,42 +213,11 @@ function uidExists($conn, $username, $email)
     }
 } 
 
-function accVerif_sendingEmail($conn_sqli, $sendMl, $nom, $email, $code){
-    $sql = "INSERT INTO user_verif ('nom', 'email', 'code') VALUES ('$nom', '$email', '$code')";
-    $result = mysqli_query($conn_sqli,$sql);
-
-    if ($result) {
-        $sendMl->send($code);
-        header("location: ../Views/loginsys/signup.php?error=verifyemail");
-        exit();
-    } else {
-        header("location: ../Views/loginsys/signup.php?error=accprocfailed");
-        exit();
-    }
-
-}
-
-function accVerif_verifyingCode($conn, $id){
-    $sql = "SELECT * FROM user_verif WHERE code='$id' AND is_verified = 0";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute(); 
-    $row = $stmt->rowCount();
-    if ($row == 1) {
-        $sql = "DELETE FROM user_verif WHERE code='$id'";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute(); 
-        return false;  
-    }
-    else {
-        return true;
-    }
-}
-
-function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit)
+function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $sendMl)
 {
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     
-    $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, KitDiagnostiqueidKitDiagnostique) VALUES ('$username', '$nom', '$prenom', '$email', '$phone', '$sexe', '$hashedpwd', '$role', '$idkit');";
+    $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, code, KitDiagnostiqueidKitDiagnostique) VALUES ('$username', '$nom', '$prenom', '$email', '$phone', '$sexe', '$hashedpwd', '$role', '$code', '$idkit');";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../Views/loginsys/signup.php?error=stmtfailed");
@@ -256,9 +225,17 @@ function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd
     }
 
     $stmt->execute(); 
+    $sendMl->send($code, $username, $nom, $prenom, $email);
+    header("location: ../Views/loginsys/signup.php?error=verifyemail");
+    exit();
+}
+
+function accCompletion($conn, $username, $code){
+    $sql = "UPDATE user SET is_verified = 1 WHERE username = '$username' AND code ='$code'";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(); 
     header("location: ../Views/loginsys/signup.php?error=none");
     exit();
-
 }
 
 <<<<<<< HEAD
