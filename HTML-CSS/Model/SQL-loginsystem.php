@@ -213,7 +213,7 @@ function uidExists($conn, $username, $email)
     }
 } 
 
-function accVerif_sendingEmail($conn_sqli, $nom, $email, $code){
+function accVerif_sendingEmail($conn_sqli, $sendMl, $nom, $email, $code){
     $sql = "INSERT INTO user_verif ('nom', 'email', 'code') VALUES ('$nom', '$email', '$code')";
     $result = mysqli_query($conn_sqli,$sql);
 
