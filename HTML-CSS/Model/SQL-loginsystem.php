@@ -184,7 +184,12 @@ require '../Controller/functions.inc.php';
 =======
 include_once '../Controller/functions.inc.php';
 include_once '../Controller/dbh.inc.php';
+<<<<<<< HEAD
 >>>>>>> 06adc99 (small update; some modifications)
+=======
+include_once '../Controller/mysqli.dbh.php';
+include_once '../Controller/sendEmail.php';
+>>>>>>> 6d2a226 (trying something new: acc verif by email.)
 
 function uidExists($conn, $username, $email)
 {
@@ -208,6 +213,36 @@ function uidExists($conn, $username, $email)
     }
 } 
 
+function accVerif_sendingEmail($conn_sqli, $nom, $email, $code){
+    $sql = "INSERT INTO user_verif ('nom', 'email', 'code') VALUES ('$nom', '$email', '$code')";
+    $result = mysqli_query($conn_sqli,$sql);
+
+    if ($result) {
+        $sendMl->send($code);
+        header("location: ../Views/loginsys/signup.php?error=verifyemail");
+        exit();
+    } else {
+        header("location: ../Views/loginsys/signup.php?error=accprocfailed");
+        exit();
+    }
+
+}
+
+function accVerif_verifyingCode($conn, $id){
+    $sql = "SELECT * FROM user_verif WHERE code='$id' AND is_verified = 0";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(); 
+    $row = $stmt->rowCount();
+    if ($row == 1) {
+        $sql = "DELETE FROM user_verif WHERE code='$id'";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute(); 
+        return false;  
+    }
+    else {
+        return true;
+    }
+}
 
 function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit)
 {
@@ -226,5 +261,9 @@ function createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd
 
 }
 
+<<<<<<< HEAD
 >>>>>>> fe02d72 (Updating on clarity)
+=======
+
+>>>>>>> 6d2a226 (trying something new: acc verif by email.)
 ?>
