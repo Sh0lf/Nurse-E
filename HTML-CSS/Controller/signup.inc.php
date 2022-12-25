@@ -24,21 +24,21 @@ if (isset($_POST["submit"])) {
     header("location: ../views/loginsys/signup.php?error=emptyinput");
 =======
 
-if (isset($_POST["submit"])) {
-  $username = htmlspecialchars($_POST["username"]);
-  $nom = htmlspecialchars($_POST["nom"]);
-  $prenom = htmlspecialchars($_POST["prenom"]);
-  $email = htmlspecialchars($_POST["email"]);
-  $phone = htmlspecialchars($_POST["phone"]);
-  $sexe = htmlspecialchars($_POST["sexe"]);
-  $pwd = htmlspecialchars($_POST["pwd"]);
-  $pwdrep = htmlspecialchars($_POST["pwdrep"]);
-  $role = htmlspecialchars($_POST["role"]);
-  $idkit = htmlspecialchars($_POST["idkit"]);
+include_once 'dbh.inc.php';
+require 'functions.inc.php';
+include_once '../Model/SQL-loginsystem.php';
 
-  include_once 'dbh.inc.php';
-  include_once 'functions.inc.php';
-  include_once '../Model/SQL-loginsystem.php';
+if (isset($_POST["submit"])) {
+  $username = test_input($_POST["username"]);
+  $nom = test_input($_POST["nom"]);
+  $prenom = test_input($_POST["prenom"]);
+  $email = test_input($_POST["email"]);
+  $phone = test_input($_POST["phone"]);
+  $sexe = test_input($_POST["sexe"]);
+  $pwd = test_input($_POST["pwd"]);
+  $pwdrep = test_input($_POST["pwdrep"]);
+  $role = test_input($_POST["role"]);
+  $idkit = test_input($_POST["idkit"]);
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
 <<<<<<< HEAD
@@ -131,6 +131,11 @@ else {
 
   if (uidExists($conn, $username, $email) !== false){
     header("location: ../Views/loginsys/signup.php?error=uidexists");
+    exit();
+  }
+
+  if (pwdStrengthChecker($pwd) !== false){
+    header("location: ../Views/loginsys/signup.php?error=pwdstrength");
     exit();
   }
 

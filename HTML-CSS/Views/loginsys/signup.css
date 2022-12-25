@@ -181,6 +181,12 @@ form input {
 =======
 >>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
 
+#note {
+    font-style: italic;
+    font-size: 8px;
+    color: red;
+}
+
 @media screen and (max-width: 615px) {
     .container_form{
         font-size: 12px;
@@ -214,12 +220,18 @@ form input {
         margin-bottom:13px;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50d48fc (Strengthened pwd requirements)
 
     #note {
         font-size: 6px ;
     }
+<<<<<<< HEAD
 =======
 >>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
+=======
+>>>>>>> 50d48fc (Strengthened pwd requirements)
 }
 
 @media screen and (max-width: 490px) {
@@ -273,6 +285,9 @@ form input {
     }
     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 50d48fc (Strengthened pwd requirements)
     #firstpwd{
         margin-bottom: 12px;
     }
@@ -284,6 +299,7 @@ form input {
     #note{
         display: none;
     }
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 1592d6f (updated login sys views (help me))
@@ -293,3 +309,6 @@ form input {
     }
 }
 >>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
+=======
+}
+>>>>>>> 50d48fc (Strengthened pwd requirements)

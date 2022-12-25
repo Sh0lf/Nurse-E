@@ -3,9 +3,30 @@
 include_once '../Model/SQL-loginsystem.php';
 include_once 'dbh.inc.php';
 
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
 function EmptyInputSignup($username, $pwd, $pwdrep, $nom, $prenom, $email, $phone, $sexe, $role, $idkit){
     $result = "";
     if (empty($username) or empty($pwd) or empty($pwdrep) or empty($nom) or empty($prenom) or empty($email) or empty($phone) or empty($sexe) or empty($role) or empty($idkit)) {
+        $result = true;
+    } else {
+        $result = false; 
+    }
+    return $result;
+}
+
+function pwdStrengthChecker($pwd){
+    $result = "";
+    $uppercase = preg_match('@[A-Z]@', $pwd);
+    $lowercase = preg_match('@[a-z]@', $pwd);
+    $number    = preg_match('@[0-9]@', $pwd);
+    $specialChars = preg_match('@[^\w]@', $pwd);
+    if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($pwd) < 8){
         $result = true;
     } else {
         $result = false; 
