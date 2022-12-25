@@ -2,10 +2,12 @@
 <?php
 
 include_once 'dbh.inc.php';
-require 'functions.inc.php';
+include_once 'mysqli.dbh.php';
+include_once 'functions.inc.php';
 include_once '../Model/SQL-loginsystem.php';
 
 if (isset($_POST["submit"])) {
+  $code = rand();
   $username = test_input($_POST["username"]);
   $nom = test_input($_POST["nom"]);
   $prenom = test_input($_POST["prenom"]);
@@ -47,8 +49,20 @@ if (isset($_POST["submit"])) {
     exit();
   }
 
-  createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
+  else {
+    accVerif_sendingEmail($conn_sqli, $nom, $email, $code);
+  }
 
+  if (isset($_GET['code'])) {
+    $id = $_GET['code'];
+    if (accVerif_verifyingCode($conn, $id) !== false){
+      header("location: ../Views/loginsys/signup.php?error=issueverif");
+      exit();
+    } else {
+      createUser($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $idkit);
+    }
+  }
+  
   //createUser($conn, "Sh0lf", "yoplait", "VinSang", "vyvincentyap@gmail.com", 778266459, "Homme", "mdpaupif", "client", 1);
 } 
 else {
