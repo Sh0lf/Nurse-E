@@ -185,9 +185,12 @@ require '../Controller/functions.inc.php';
 include_once '../Controller/functions.inc.php';
 include_once '../Controller/dbh.inc.php';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 06adc99 (small update; some modifications)
 =======
 include_once '../Controller/mysqli.dbh.php';
+=======
+>>>>>>> 66306bb (IT WORKS EMAIL VERIF IS GOOD)
 include_once '../Controller/sendEmail.php';
 >>>>>>> 6d2a226 (trying something new: acc verif by email.)
 

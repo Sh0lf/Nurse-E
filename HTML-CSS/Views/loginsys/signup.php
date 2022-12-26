@@ -211,7 +211,7 @@
         } else if ($_GET["error"] === "stmtfailed") {
 =======
         } else if ($_GET["error"] == "uidexists") {
-          echo "<p> Veuillez essayer un nouveau username, il existe déjà</p>";
+          echo "<p> Veuillez essayer un nouveau username ou un nouveau email, un compte existe déjà avec vos identifiants</p>";
         } else if ($_GET["error"] == "pwdstrength") {
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         } else if ($_GET["error"] == "verifyemail") {
