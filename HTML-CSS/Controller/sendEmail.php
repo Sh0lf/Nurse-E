@@ -1,8 +1,10 @@
 <?php
 
 use PHPMailer\PHPMailer\PHPMailer; 
-
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+
+require '../../bin/phpMyAdmin/vendor/autoload.php';
 
     class sendEmail
 
@@ -22,14 +24,16 @@ use PHPMailer\PHPMailer\Exception;
         $mail = new PHPMailer(true);                              
 
         try {
-            $mail-> SMTPDebug = 0;
+            //Enable verbose debug output
+            $mail->SMTPDebug = 1;//SMTP::DEBUG_SERVER;
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'nurse.medicobot@gmail.com';
-            $mail->Password = 'AdminG5B@';                        
+            $mail->Password = 'qliczfgrslfxmvof';                     
 
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;  // for encrypted connection                           
+            //Enable SSL encryption;
+            $mail->SMTPSecure = 'tls';                           
 
             $mail->Port = 587;   // port for SMTP     
 
@@ -41,15 +45,21 @@ use PHPMailer\PHPMailer\Exception;
 
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 
-            $mail->Subject = 'Email verification';
+            $mail->Subject = 'Verification du compte';
 
-            $mail->Body    = 'Please click this button to verify your account: <a http://localhost:8888/Controller/signup.inc.php?code='.$code.'&username='.$username.'>Verify</a>' ;
+            $mail->Body = '<h1>Veuillez cliquer sur le button pour valider votre compte:</h1>'
+                . "<br>"
+                . '<ul><a href="http://localhost:8888/Controller/signup.inc.php?code=' . $code . '&username=' . $username . '">'
+                . '<button style="padding: 5px 15px; margin-left: 20px; margin-top: 18px; font-size: 17px; color: white; border:1px solid white; background-color: #43B1F8;cursor:pointer;">'
+                . 'Validation</button></a></ul>';
 
  
 
             $mail->send();
 
             echo 'Message has been sent';
+
+            $mail->smtpClose();
 
         } catch (Exception $e) { // handle error.
 
@@ -62,5 +72,9 @@ use PHPMailer\PHPMailer\Exception;
     }
 
 $sendMl = new sendEmail();
+
+//app pwd: qliczfgrslfxmvof
+//Client ID: 161896444645-18duvb47sdjdct0674k8obcsl3fbic7t.apps.googleusercontent.com
+//Client secret: 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
 
 ?>

@@ -2,7 +2,6 @@
 <?php
 
 include_once 'dbh.inc.php';
-include_once 'mysqli.dbh.php';
 include_once 'functions.inc.php';
 include_once '../Model/SQL-loginsystem.php';
 include_once 'sendEmail.php';
@@ -51,9 +50,6 @@ if (isset($_POST["submit"])) {
   }
 
   createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $sendMl);
-
-  
-
 }
 if (isset($_GET["code"])) {
   $code = $_GET["code"];

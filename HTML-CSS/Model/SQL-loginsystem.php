@@ -2,7 +2,6 @@
 
 include_once '../Controller/functions.inc.php';
 include_once '../Controller/dbh.inc.php';
-include_once '../Controller/mysqli.dbh.php';
 include_once '../Controller/sendEmail.php';
 
 function uidExists($conn, $username, $email)
