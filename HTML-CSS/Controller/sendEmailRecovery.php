@@ -15,8 +15,12 @@ require '../../vendor/autoload.php';
 =======
 require '../../bin/phpMyAdmin/vendor/autoload.php';
 
+<<<<<<< HEAD
     class sendEmail
 >>>>>>> b14763e (made pwd recovery !)
+=======
+    class sendEmailRecovery
+>>>>>>> aafffe2 (need to test deeply)
 
     {
         function send($code, $email)
@@ -69,10 +73,14 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
             $mail->Body = '<h1>Veuillez cliquer sur le button pour modifier le mot de passe:</h1>'
                 . "<br>"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 . '<ul><a href="http://nurse-medicobot.wstr.fr/controller/resetpwd.inc.php?code=' . $code .'">'
 =======
                 . '<ul><a href="http://localhost:8888/Controller/resetpwd.php?code=' . $code .'">'
 >>>>>>> b14763e (made pwd recovery !)
+=======
+                . '<ul><a href="http://localhost:8888/Views/loginsys/resetpwd.php?code=' . $code .'">'
+>>>>>>> aafffe2 (need to test deeply)
                 . '<button style="padding: 5px 15px; margin-left: 20px; margin-top: 18px; font-size: 17px; color: white; border:1px solid white; background-color: #43B1F8;cursor:pointer;">'
                 . 'Validation</button></a></ul>';
 
@@ -95,7 +103,11 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 $sendMlrecov = new sendEmailRecovery();
 =======
 $sendMlrecov = new sendEmail();
 >>>>>>> b14763e (made pwd recovery !)
+=======
+$sendMlrecov = new sendEmailRecovery();
+>>>>>>> aafffe2 (need to test deeply)

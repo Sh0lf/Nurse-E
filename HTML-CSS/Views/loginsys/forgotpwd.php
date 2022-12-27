@@ -24,8 +24,13 @@
 
     <div class="container">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div class="container_form">
             <form method="post" action="../../controller/forgotpwd.inc.php">
+=======
+        <div class="container_form">
+            <form method="post" action="../../Controller/forgotpwd.inc.php">
+>>>>>>> aafffe2 (need to test deeply)
                 <label><u>Votre Email</u></label><br><br>
                 <input type="text" name="email" placeholder="Email..."><br><br>
                 <div class="centerbox">
@@ -33,6 +38,7 @@
                 </div>
             </form>
         </div>
+<<<<<<< HEAD
 =======
         <form method="post" action="../../Controller/forgotpwd.inc.php">
             <label><u>Votre Email</u></label><br><br>
@@ -42,6 +48,8 @@
             </div>
         </form>
 >>>>>>> b14763e (made pwd recovery !)
+=======
+>>>>>>> aafffe2 (need to test deeply)
     </div>
 
     <div class="centerbox">
