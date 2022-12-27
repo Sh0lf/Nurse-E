@@ -45,7 +45,7 @@
 }
 
 .container_form form input {
-    display: inline;
+    display: inline-block !important; 
     padding: 5px;
     margin-bottom: 36px;
 }
@@ -61,6 +61,3 @@
     cursor:pointer;
 }
 
-.hidden{
-    display: none;
-}
