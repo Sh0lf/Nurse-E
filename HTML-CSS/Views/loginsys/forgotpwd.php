@@ -23,6 +23,7 @@
     </div>
 
     <div class="container">
+<<<<<<< HEAD
         <div class="container_form">
             <form method="post" action="../../controller/forgotpwd.inc.php">
                 <label><u>Votre Email</u></label><br><br>
@@ -32,11 +33,21 @@
                 </div>
             </form>
         </div>
+=======
+        <form method="post" action="../../Controller/forgotpwd.inc.php">
+            <label><u>Votre Email</u></label><br><br>
+            <input type="text" name="email" placeholder="Email..."><br><br>
+            <div class="centerbox">
+                <button type="submit" name="submit_email" class="confbutton">Confirmer</button><br>
+            </div>
+        </form>
+>>>>>>> b14763e (made pwd recovery !)
     </div>
 
     <div class="centerbox">
         <?php
         if (isset($_GET["error"])){
+<<<<<<< HEAD
           if ($_GET["error"] === "accnotexist") {
             echo "<p> Ce compte n'existe pas; veuillez en créer un.</p>";
           }
@@ -48,6 +59,16 @@
           } 
           else if ($_GET["error"] === "outoftime"){
             echo "<p> Vous êtes trop en retard pour modifier votre mot de passe, veuillez réessayer mais cette fois ci plus rapidement !</p>";
+=======
+          if ($_GET["error"] == "accnotexist") {
+            echo "<p> Ce compte n'existe pas; veuillez en créer un.</p>";
+          }
+          else if ($_GET["error"] == "accnotverified") {
+            echo "<p> Ce compte n'est pas encore vérifié, veillez le vérifier avec l'email envoyé par nous</p>";
+          }
+          else if ($_GET["error"] == "verifyacc") {
+            echo "<p> Demande enregistré, veuillez vérifier votre boite email</p>";
+>>>>>>> b14763e (made pwd recovery !)
           }
         } 
         ?>

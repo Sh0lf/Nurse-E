@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
@@ -47,6 +48,24 @@ if (isset($_GET["code"])){
 
 } else {
     header("location: ../views/loginsys/login.php");
+=======
+
+include_once 'dbh.inc.php';
+include_once 'functions.inc.php';
+include_once '../Model/SQL-loginsystem.php';
+
+if (isset($_POST["submit_pwd"])){
+    $newpwd = $_POST["pwd"];
+    $code = $_POST["code"];
+    $result = changePwd($conn, $newpwd, $code);
+
+    if ($result == true){
+        header("location: ../Views/loginsys/login.php?error=remadepwd");
+        exit();
+    }
+} else {
+    header("location: ../Views/loginsys/login.php");
+>>>>>>> b14763e (made pwd recovery !)
     exit();
 }
 ?>

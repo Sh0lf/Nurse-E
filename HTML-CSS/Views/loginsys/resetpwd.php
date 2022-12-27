@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b14763e (made pwd recovery !)
 <html>
   <head>
     <meta charset="UTF-8">  
@@ -25,6 +30,7 @@
     </div>
 
     <div class="container">
+<<<<<<< HEAD
         <div class="container_form">
             <form method="post" action="../../controller/resetpwd.inc.php">
                 <input type="hidden" name="code" value='.$code.'><br>
@@ -49,6 +55,21 @@
             </div>';
     } else {
         header("location: ../views/mainmenu.php");
+=======
+        <div class="container_form"
+            <form method="post" action="../../Controller/resetpwd.inc.php">
+                <input type="number" name="code" class="hidden" default='.$code.'><br>
+                <label><u>Notez un nouveau mot de passe</u></label><br><br>
+                <input type="password" name="pwd" placeholder="Nouveau mot de passe..."><br><br>
+                <div class="centerbox">
+                    <button type="submit" name="submit_pwd" class="confbutton">Confirmer</button><br>
+                </div>
+            </form>
+        </div>
+    </div>';
+    } else {
+        header("location: ../Views/index.php");
+>>>>>>> b14763e (made pwd recovery !)
         exit();
     }
     ?>
