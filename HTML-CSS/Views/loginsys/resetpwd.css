@@ -46,6 +46,7 @@
 
 .container_form form input {
 <<<<<<< HEAD
+<<<<<<< HEAD
     display: inline-block !important; 
     padding: 5px;
 }
@@ -72,6 +73,9 @@
     color: red;
 =======
     display: inline;
+=======
+    display: inline-block !important; 
+>>>>>>> 9b29f78 (Updating small issues, need to test deeply)
     padding: 5px;
 >>>>>>> 99ba0ac (made pwd recovery !)
     margin-bottom: 36px;
@@ -89,6 +93,7 @@
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media screen and (max-width: 615px) {
     #note {
         font-size: 12px ;
@@ -104,3 +109,5 @@
     display: none;
 >>>>>>> 99ba0ac (made pwd recovery !)
 }
+=======
+>>>>>>> 9b29f78 (Updating small issues, need to test deeply)
