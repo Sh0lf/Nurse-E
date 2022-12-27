@@ -64,7 +64,6 @@ function pwdMatch($pwd, $pwdrep){
     return $result;
 }
 
-
 function EmptyInputLogin($username, $pwd){
     $result = "";
     if (empty($username) or empty($pwd)) {
@@ -76,14 +75,17 @@ function EmptyInputLogin($username, $pwd){
 }
 
 function loginUser($conn, $username, $pwd){
-    $uidExists = uidExists($conn, $username, $username);
+    $checkAcc_Verified = checkAcc_Verified($conn, $username, $username);
 
-    if ($uidExists == false) {
-        header("location: ../Views/loginsys/login.php?error=wronglogin");
+    if ($checkAcc_Verified == false) {
+        header("location: ../Views/loginsys/login.php?error=accnotverified");
+        exit();
+    } else if ($checkAcc_Verified == "notexist"){
+        header("location: ../Views/loginsys/login.php?error=accnotexist");
         exit();
     }
 
-    $hashedpwd = $uidExists["password"];
+    $hashedpwd = $checkAcc_Verified["password"];
     $checkpwd = password_verify($pwd, $hashedpwd);
 
     if ($checkpwd == false) {
@@ -93,15 +95,15 @@ function loginUser($conn, $username, $pwd){
 
     else if ($checkpwd == true) {
         session_start();
-        $_SESSION["iduser"]=$uidExists["iduser"];
-        $_SESSION["username"]=$uidExists["username"];
-        $_SESSION["familyname"]=$uidExists["familyname"];
-        $_SESSION["name"]=$uidExists["name"];
-        $_SESSION["email"]=$uidExists["email"];
-        $_SESSION["phone"]=$uidExists["phone"];
-        $_SESSION["sexe"]=$uidExists["sexe"];
-        $_SESSION["role"]=$uidExists["role"];
-        $_SESSION["idkit"]=$uidExists["KitDiagnostiqueidKitDiagnostique"];
+        $_SESSION["iduser"]=$checkAcc_Verified["iduser"];
+        $_SESSION["username"]=$checkAcc_Verified["username"];
+        $_SESSION["familyname"]=$checkAcc_Verified["familyname"];
+        $_SESSION["name"]=$checkAcc_Verified["name"];
+        $_SESSION["email"]=$checkAcc_Verified["email"];
+        $_SESSION["phone"]=$checkAcc_Verified["phone"];
+        $_SESSION["sexe"]=$checkAcc_Verified["sexe"];
+        $_SESSION["role"]=$checkAcc_Verified["role"];
+        $_SESSION["idkit"]=$checkAcc_Verified["KitDiagnostiqueidKitDiagnostique"];
 
         header("location: ../Views/index.php");
         exit();

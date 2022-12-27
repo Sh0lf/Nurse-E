@@ -3,6 +3,7 @@
 include_once '../Controller/functions.inc.php';
 include_once '../Controller/dbh.inc.php';
 include_once '../Controller/sendEmail.php';
+include_once '../Controller/sendEmailRecovery.php';
 
 function uidExists($conn, $username, $email)
 {
@@ -26,6 +27,31 @@ function uidExists($conn, $username, $email)
     }
 } 
 
+function checkAcc_Verified($conn, $username, $email)
+{
+    $sql = "SELECT * FROM user WHERE username = ? OR email = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+        exit();
+    }
+
+    $stmt->execute(array($username, $email));
+
+    $row = $stmt->rowCount();
+    $fetchedRow = $stmt->fetch();
+
+    if ($row > 0) {
+        if ($fetchedRow["is_verified"] == 1) {
+            return $fetchedRow;
+        } else {
+            return false;
+        }
+    } else {
+        return "notexist";
+    }
+}
+
 function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $sendMl)
 {
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -46,10 +72,55 @@ function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe,
 function accCompletion($conn, $username, $code){
     $sql = "UPDATE user SET is_verified = 1 WHERE username = '$username' AND code ='$code'";
     $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+        exit();
+    }
     $stmt->execute(); 
     header("location: ../Views/loginsys/signup.php?error=none");
     exit();
 }
 
+function pwdRecovery($conn, $email){
+    $sql = "SELECT * FROM user where email='$email'";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute();
+    $row = $stmt->rowCount();
+    $fetchedRow = $stmt->fetch();
+    if ($row > 0) {
+        if ($fetchedRow["is_verified"] == 1) {
+            $code=rand();
+            $sql = "UPDATE user SET code = '$code' where email='$email'";
+            $stmt = $conn->prepare($sql);
+            if (!$stmt) {
+                header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
+                exit();
+            }
+            $stmt->execute();
+            return $fetchedRow;
+        } else {
+            return false;
+        }
+    } else {
+        return "notexist";
+    }
+}
+
+function changePwd($conn, $pwd, $code){
+    $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+    $sql = "UPDATE user SET password = '$hashedpwd' where code = '$code'";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header('location: ../Views/index.php');
+        exit();
+    }
+    $stmt->execute();
+    return true;
+
+}
 
 ?>
