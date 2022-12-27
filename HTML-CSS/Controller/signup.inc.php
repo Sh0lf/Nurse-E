@@ -58,7 +58,7 @@ if (isset($_GET["code"])) {
 }
 
 else {
-  header("location: ../Views/signup.php");
+  header("location: ../Views/loginsys/signup.php");
   exit();
 }
 
