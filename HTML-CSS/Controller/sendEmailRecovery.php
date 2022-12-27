@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../../bin/phpMyAdmin/vendor/autoload.php';
 
-    class sendEmail
+    class sendEmailRecovery
 
     {
         function send($code, $email)
@@ -48,7 +48,7 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
 
             $mail->Body = '<h1>Veuillez cliquer sur le button pour modifier le mot de passe:</h1>'
                 . "<br>"
-                . '<ul><a href="http://localhost:8888/Controller/resetpwd.php?code=' . $code .'">'
+                . '<ul><a href="http://localhost:8888/Views/loginsys/resetpwd.php?code=' . $code .'">'
                 . '<button style="padding: 5px 15px; margin-left: 20px; margin-top: 18px; font-size: 17px; color: white; border:1px solid white; background-color: #43B1F8;cursor:pointer;">'
                 . 'Validation</button></a></ul>';
 
@@ -70,4 +70,4 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
 
     }
 
-$sendMlrecov = new sendEmail();
+$sendMlrecov = new sendEmailRecovery();

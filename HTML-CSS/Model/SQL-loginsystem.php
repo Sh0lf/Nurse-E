@@ -101,6 +101,7 @@ function pwdRecovery($conn, $email){
                 exit();
             }
             $stmt->execute();
+            $fetchedRow = $stmt->fetch();
             return $fetchedRow;
         } else {
             return false;
@@ -120,7 +121,6 @@ function changePwd($conn, $pwd, $code){
     }
     $stmt->execute();
     return true;
-
 }
 
 ?>

@@ -27,9 +27,9 @@
     </div>
 
     <div class="container">
-        <div class="container_form"
+        <div class="container_form">
             <form method="post" action="../../Controller/resetpwd.inc.php">
-                <input type="number" name="code" class="hidden" default='.$code.'><br>
+                <input type="hidden" name="code" default='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
                 <input type="password" name="pwd" placeholder="Nouveau mot de passe..."><br><br>
                 <div class="centerbox">

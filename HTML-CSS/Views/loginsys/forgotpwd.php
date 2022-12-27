@@ -23,13 +23,15 @@
     </div>
 
     <div class="container">
-        <form method="post" action="../../Controller/forgotpwd.inc.php">
-            <label><u>Votre Email</u></label><br><br>
-            <input type="text" name="email" placeholder="Email..."><br><br>
-            <div class="centerbox">
-                <button type="submit" name="submit_email" class="confbutton">Confirmer</button><br>
-            </div>
-        </form>
+        <div class="container_form">
+            <form method="post" action="../../Controller/forgotpwd.inc.php">
+                <label><u>Votre Email</u></label><br><br>
+                <input type="text" name="email" placeholder="Email..."><br><br>
+                <div class="centerbox">
+                    <button type="submit" name="submit_email" class="confbutton">Confirmer</button><br>
+                </div>
+            </form>
+        </div>
     </div>
 
     <div class="centerbox">
