@@ -151,11 +151,15 @@ if (isset($_GET["code"])) {
 
 else {
 <<<<<<< HEAD
+<<<<<<< HEAD
   header("location: ../Views/inscription.php");
 >>>>>>> 28487d0 (update php MVC partiel login system)
 =======
   header("location: ../Views/signup.php");
 >>>>>>> b1f0779 (update: commit changes)
+=======
+  header("location: ../Views/loginsys/signup.php");
+>>>>>>> 99ba0ac (made pwd recovery !)
   exit();
 }
 
