@@ -57,6 +57,7 @@ include_once '../Model/SQL-loginsystem.php';
 if (isset($_POST["submit_pwd"])){
     $newpwd = $_POST["pwd"];
     $code = $_POST["code"];
+    error_log(print_r($code, TRUE));
     $result = changePwd($conn, $newpwd, $code);
 
     if ($result == true){
