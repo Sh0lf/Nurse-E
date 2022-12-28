@@ -81,6 +81,22 @@
     margin-bottom: 36px;
 }
 
+.eyes i{
+    cursor: pointer;
+}
+
+.eyes
+{
+    width:293px;
+    margin:auto;
+}
+
+.eyes i.active::before
+{
+    content:'\f070';
+    color:red;
+}
+
 .centerbox .confbutton{
     padding: 5px 15px;
     margin-left: 20px;
@@ -94,9 +110,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 @media screen and (max-width: 615px) {
     #note {
         font-size: 12px ;
+=======
+@media screen and (max-width: 615px) {
+    #note {
+        font-size: 6px ;
+>>>>>>> 61a14bc (Full loginsys working, bonus: timestamps)
     }
 }
 
@@ -104,6 +126,7 @@
     #note{
         display: none;
     }
+<<<<<<< HEAD
 =======
 .hidden{
     display: none;
@@ -111,3 +134,6 @@
 }
 =======
 >>>>>>> 9b29f78 (Updating small issues, need to test deeply)
+=======
+}
+>>>>>>> 61a14bc (Full loginsys working, bonus: timestamps)

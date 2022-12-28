@@ -62,9 +62,13 @@
         <div class="container_form">
 >>>>>>> aafffe2 (need to test deeply)
             <form method="post" action="../../Controller/resetpwd.inc.php">
-                <input type="hidden" name="code" default='.$code.'><br>
+                <input type="hidden" name="code" value='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
-                <input type="password" name="pwd" placeholder="Nouveau mot de passe..."><br><br>
+                <div class="eyes">
+                  <input type="password" name="pwd" placeholder="Mot de passe...">
+                  <i class="fa-solid fa-eye"></i><br>
+                </div>
+                <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br> et un caractère spécial</p>
                 <div class="centerbox">
                     <button type="submit" name="submit_pwd" class="confbutton">Confirmer</button><br>
                 </div>
@@ -77,6 +81,21 @@
         exit();
     }
     ?>
+
+    <script>
+      let input = document.querySelector('.eyes input');
+      let showBtn = document.querySelector('.eyes i');
+      showBtn.onclick =function(){
+          if(input.type == "password"){
+            input.type = "text";
+            showBtn.classList.add('active');
+          }else {
+            input.type = "password";
+            showBtn.classList.remove('active');
+          }
+
+      }
+    </script>
 
     <footer>
       <!-- Defining in footer a small navigation bar-->
