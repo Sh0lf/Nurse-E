@@ -82,25 +82,33 @@ function accCompletion($conn, $username, $code){
 }
 
 function pwdRecovery($conn, $email){
-    $sql = "SELECT * FROM user where email='$email'";
+    $sql = "SELECT * FROM user where email= ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
         exit();
     }
-    $stmt->execute();
+    $stmt->execute(array($email));
     $row = $stmt->rowCount();
     $fetchedRow = $stmt->fetch();
+
     if ($row > 0) {
         if ($fetchedRow["is_verified"] == 1) {
             $code=rand();
-            $sql = "UPDATE user SET code = '$code' where email='$email'";
+            $sql = "UPDATE user SET code = ? where email= ?";
             $stmt = $conn->prepare($sql);
             if (!$stmt) {
                 header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
                 exit();
             }
-            $stmt->execute();
+            $stmt->execute(array($code, $email));
+            $sql = "SELECT * FROM user where email= ?";
+            $stmt = $conn->prepare($sql);
+            if (!$stmt) {
+                header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
+                exit();
+            }
+            $stmt->execute(array($email));
             $fetchedRow = $stmt->fetch();
             return $fetchedRow;
         } else {
@@ -113,13 +121,15 @@ function pwdRecovery($conn, $email){
 
 function changePwd($conn, $pwd, $code){
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-    $sql = "UPDATE user SET password = '$hashedpwd' where code = '$code'";
+    error_log(print_r($pwd, TRUE));
+    error_log(print_r($hashedpwd, TRUE));
+    $sql = "UPDATE user SET password = ? where code = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header('location: ../Views/index.php');
         exit();
     }
-    $stmt->execute();
+    $stmt->execute(array($hashedpwd, $code));
     return true;
 }
 

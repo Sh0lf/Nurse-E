@@ -41,7 +41,7 @@
             echo "<p> Ce compte n'existe pas; veuillez en créer un.</p>";
           }
           else if ($_GET["error"] == "accnotverified") {
-            echo "<p> Ce compte n'est pas encore vérifié, veillez le vérifier avec l'email envoyé par nous</p>";
+            echo "<p> Ce compte n'est pas encore vérifié, veuillez le vérifier avec l'email envoyé par nous</p>";
           }
           else if ($_GET["error"] == "verifyacc") {
             echo "<p> Demande enregistré, veuillez vérifier votre boite email</p>";
