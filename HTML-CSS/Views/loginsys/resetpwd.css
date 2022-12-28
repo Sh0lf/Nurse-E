@@ -50,6 +50,22 @@
     margin-bottom: 36px;
 }
 
+.eyes i{
+    cursor: pointer;
+}
+
+.eyes
+{
+    width:293px;
+    margin:auto;
+}
+
+.eyes i.active::before
+{
+    content:'\f070';
+    color:red;
+}
+
 .centerbox .confbutton{
     padding: 5px 15px;
     margin-left: 20px;
@@ -61,3 +77,14 @@
     cursor:pointer;
 }
 
+@media screen and (max-width: 615px) {
+    #note {
+        font-size: 6px ;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #note{
+        display: none;
+    }
+}

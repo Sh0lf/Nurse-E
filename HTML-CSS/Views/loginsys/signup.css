@@ -85,6 +85,22 @@ form input {
     color: red;
 }
 
+.eyes i{
+    cursor: pointer;
+}
+
+.eyes
+{
+    width:293px;
+    margin:auto;
+}
+
+.eyes i.active::before
+{
+    content:'\f070';
+    color:red;
+}
+
 @media screen and (max-width: 615px) {
     .container_form{
         font-size: 12px;
