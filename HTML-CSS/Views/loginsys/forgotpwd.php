@@ -29,8 +29,12 @@
             <form method="post" action="../../controller/forgotpwd.inc.php">
 =======
         <div class="container_form">
+<<<<<<< HEAD
             <form method="post" action="../../Controller/forgotpwd.inc.php">
 >>>>>>> aafffe2 (need to test deeply)
+=======
+            <form method="post" action="../../controller/forgotpwd.inc.php">
+>>>>>>> 9c68076 (Updates in organization)
                 <label><u>Votre Email</u></label><br><br>
                 <input type="text" name="email" placeholder="Email..."><br><br>
                 <div class="centerbox">

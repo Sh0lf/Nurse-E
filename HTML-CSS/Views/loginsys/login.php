@@ -35,7 +35,7 @@
     </div>
     <div class="container">
       <div class="container_form">
-        <form action="../../Controller/login.inc.php" method="post">
+        <form action="../../controller/login.inc.php" method="post">
           <label><u>Votre pseudo ou votre Email</u></label><br><br>
           <input type="text" name="username" placeholder="Username/Email..."><br><br>
           <label><u>Votre mot de passe</u></label><br><br>

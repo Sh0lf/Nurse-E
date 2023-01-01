@@ -74,6 +74,7 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
                 . "<br>"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 . '<ul><a href="http://nurse-medicobot.wstr.fr/controller/resetpwd.inc.php?code=' . $code .'">'
 =======
                 . '<ul><a href="http://localhost:8888/Controller/resetpwd.php?code=' . $code .'">'
@@ -81,6 +82,9 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
 =======
                 . '<ul><a href="http://localhost:8888/Views/loginsys/resetpwd.php?code=' . $code .'">'
 >>>>>>> aafffe2 (need to test deeply)
+=======
+                . '<ul><a href="http://localhost:8888/views/loginsys/resetpwd.php?code=' . $code .'">'
+>>>>>>> 9c68076 (Updates in organization)
                 . '<button style="padding: 5px 15px; margin-left: 20px; margin-top: 18px; font-size: 17px; color: white; border:1px solid white; background-color: #43B1F8;cursor:pointer;">'
                 . 'Validation</button></a></ul>';
 

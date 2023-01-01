@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> b14763e (made pwd recovery !)
+=======
+>>>>>>> 9c68076 (Updates in organization)
 <html>
   <head>
     <meta charset="UTF-8">  
@@ -76,8 +79,12 @@
         </div>
     </div>';
     } else {
+<<<<<<< HEAD
         header("location: ../Views/index.php");
 >>>>>>> b14763e (made pwd recovery !)
+=======
+        header("location: ../views/mainmenu.php");
+>>>>>>> 9c68076 (Updates in organization)
         exit();
     }
     ?>

@@ -26,7 +26,7 @@ if (isset($_POST["submit"])) {
 
 include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
-include_once '../Model/SQL-loginsystem.php';
+include_once '../model/SQL-loginsystem.php';
 include_once 'sendEmail.php';
 
 if (isset($_POST["submit"])) {
@@ -45,6 +45,7 @@ if (isset($_POST["submit"])) {
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     header("location: ../Views/inscription.php?error=emptyinput");
 >>>>>>> 28487d0 (update php MVC partiel login system)
 =======
@@ -53,10 +54,14 @@ if (isset($_POST["submit"])) {
 =======
     header("location: ../Views/loginsys/signup.php?error=emptyinput");
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+    header("location: ../views/loginsys/signup.php?error=emptyinput");
+>>>>>>> 9c68076 (Updates in organization)
     exit();
   }
 
   if (invalidUid($username) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,10 +75,14 @@ if (isset($_POST["submit"])) {
 =======
     header("location: ../Views/loginsys/signup.php?error=invaliduid");
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+    header("location: ../views/loginsys/signup.php?error=invaliduid");
+>>>>>>> 9c68076 (Updates in organization)
     exit();
   }
   
   if (invalidEmail($email) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -87,10 +96,14 @@ if (isset($_POST["submit"])) {
 =======
     header("location: ../Views/loginsys/signup.php?error=invalidemail");
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+    header("location: ../views/loginsys/signup.php?error=invalidemail");
+>>>>>>> 9c68076 (Updates in organization)
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,16 +141,19 @@ else {
 =======
     header("location: ../Views/loginsys/signup.php?error=pwdmissmatch");
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+    header("location: ../views/loginsys/signup.php?error=pwdmissmatch");
+>>>>>>> 9c68076 (Updates in organization)
     exit();
   }
 
   if (uidExists($conn, $username, $email) !== false){
-    header("location: ../Views/loginsys/signup.php?error=uidexists");
+    header("location: ../views/loginsys/signup.php?error=uidexists");
     exit();
   }
 
   if (pwdStrengthChecker($pwd) !== false){
-    header("location: ../Views/loginsys/signup.php?error=pwdstrength");
+    header("location: ../views/loginsys/signup.php?error=pwdstrength");
     exit();
   }
 
@@ -152,6 +168,7 @@ if (isset($_GET["code"])) {
 else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   header("location: ../Views/inscription.php");
 >>>>>>> 28487d0 (update php MVC partiel login system)
 =======
@@ -160,6 +177,9 @@ else {
 =======
   header("location: ../Views/loginsys/signup.php");
 >>>>>>> 99ba0ac (made pwd recovery !)
+=======
+  header("location: ../views/loginsys/signup.php");
+>>>>>>> 9c68076 (Updates in organization)
   exit();
 }
 

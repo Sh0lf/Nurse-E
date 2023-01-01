@@ -43,6 +43,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo '<li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php">Accueil</a></li>';
             } else {
             echo '<li>
@@ -62,12 +63,16 @@
 =======
                 echo '<li><a href="Views/index.php">Accueil</a></li>';
 >>>>>>> 4498229 (small changes on the hrefs)
+=======
+                echo '<li><a href="views/mainmenu.php">Accueil</a></li>';
+>>>>>>> 9c68076 (Updates in organization)
             } else {
             echo '<li>
                     <label for="btn-1" class="show">Accueil +</label>
                     <a href="#home">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -94,6 +99,12 @@
                         <li><a href="//localhost:8888/Views/index.php#updates">Les updates</a></li>
                         <li><a href="//localhost:8888/Views/index.php#questions">Vos questions</a></li>                                
 >>>>>>> ab961c6 (nouveau cgu help)
+=======
+                        <li><a href="//localhost:8888/views/mainmenu.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="//localhost:8888/views/mainmenu.php#produit">Notre produit</a></li>
+                        <li><a href="//localhost:8888/views/mainmenu.php#updates">Les updates</a></li>
+                        <li><a href="//localhost:8888/views/mainmenu.php#questions">Vos questions</a></li>                                
+>>>>>>> 9c68076 (Updates in organization)
                     </ul>
                 </li>';
             }
@@ -122,6 +133,7 @@
 <<<<<<< HEAD
             </ul></li>';
         } else {
+<<<<<<< HEAD
             echo '<li><a href="http://nurse-medicobot.wstr.fr/views/medicalbot/medicobot.php">Médicobot</a></li>';
 =======
             </ul></li>';
@@ -132,6 +144,9 @@
 =======
             echo '<li><a href="//localhost:8888/Views/medicalbot/medicobot.php">Médicobot</a></li>';
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+            echo '<li><a href="//localhost:8888/views/medicalbot/medicobot.php">Médicobot</a></li>';
+>>>>>>> 9c68076 (Updates in organization)
         }
         ?>    
         <?php
@@ -189,6 +204,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
 =======
@@ -200,6 +216,9 @@
 =======
             echo '<li><a href="//localhost:8888/Views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
 >>>>>>> ab961c6 (nouveau cgu help)
+=======
+            echo '<li><a href="//localhost:8888/views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+>>>>>>> 9c68076 (Updates in organization)
         }
         ?>
     </ul>

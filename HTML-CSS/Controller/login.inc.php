@@ -14,6 +14,7 @@ if (isset($_POST["submit"])){
 <<<<<<< HEAD
     if (EmptyInputLogin($username, $pwd) !== false){
         header("location: ../views/loginsys/login.php?error=emptyinput");
+<<<<<<< HEAD
 =======
     if (EmptyInputLogin($username, $pwd) != false){
 <<<<<<< HEAD
@@ -25,6 +26,8 @@ if (isset($_POST["submit"])){
 >>>>>>> 953afe5 (Update: login sys in pdo + stylizing pages)
         header("location: ../Views/loginsys/login.php?error=emptyinput");
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+>>>>>>> 9c68076 (Updates in organization)
         exit();
     }
 
@@ -33,10 +36,14 @@ if (isset($_POST["submit"])){
 
 else {
 <<<<<<< HEAD
+<<<<<<< HEAD
     header("location:../views/loginsys/login.php");
 =======
     header("location:../Views/loginsys/login.php");
 >>>>>>> 9a3888f (organization update, to change stylesheets)
+=======
+    header("location:../views/loginsys/login.php");
+>>>>>>> 9c68076 (Updates in organization)
     exit();
 }
 
