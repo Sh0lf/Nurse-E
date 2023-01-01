@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 session_start();
 if (isset($_SESSION["iduser"])){
@@ -33,4 +34,12 @@ if (isset($_SESSION["iduser"])){
     header("location: /views/mainmenu.php");
     exit();
 }
+=======
+
+session_start();
+if (isset($_SESSION["iduser"])){
+
+}
+
+>>>>>>> dc79c0f (trying to implement index.php)
 ?>
