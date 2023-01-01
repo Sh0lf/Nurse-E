@@ -24,7 +24,7 @@
 
     <div class="container">
         <div class="container_form">
-            <form method="post" action="../../Controller/forgotpwd.inc.php">
+            <form method="post" action="../../controller/forgotpwd.inc.php">
                 <label><u>Votre Email</u></label><br><br>
                 <input type="text" name="email" placeholder="Email..."><br><br>
                 <div class="centerbox">

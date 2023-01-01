@@ -3,5 +3,5 @@
     session_unset();
     session_destroy();
 
-    header("location:../Views/index.php")
+    header("location:../views/mainmenu.php")
 ?>

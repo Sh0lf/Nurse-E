@@ -2,7 +2,7 @@
 
 include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
-include_once '../Model/SQL-loginsystem.php';
+include_once '../model/SQL-loginsystem.php';
 
 if (isset($_POST["submit_pwd"])){
     $newpwd = $_POST["pwd"];
@@ -11,11 +11,11 @@ if (isset($_POST["submit_pwd"])){
     $result = changePwd($conn, $newpwd, $code);
 
     if ($result == true){
-        header("location: ../Views/loginsys/login.php?error=remadepwd");
+        header("location: ../views/loginsys/login.php?error=remadepwd");
         exit();
     }
 } else {
-    header("location: ../Views/loginsys/login.php");
+    header("location: ../views/loginsys/login.php");
     exit();
 }
 ?>

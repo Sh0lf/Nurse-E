@@ -1,16 +1,16 @@
 <?php
 
-include_once '../Controller/functions.inc.php';
-include_once '../Controller/dbh.inc.php';
-include_once '../Controller/sendEmail.php';
-include_once '../Controller/sendEmailRecovery.php';
+include_once '../controller/functions.inc.php';
+include_once '../controller/dbh.inc.php';
+include_once '../controller/sendEmail.php';
+include_once '../controller/sendEmailRecovery.php';
 
 function uidExists($conn, $username, $email)
 {
     $sql = "SELECT * FROM user WHERE username = ? OR email = ?;";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+        header("location: ../views/loginsys/signup.php?error=stmtfailed");
         exit();
     }
 
@@ -32,7 +32,7 @@ function checkAcc_Verified($conn, $username, $email)
     $sql = "SELECT * FROM user WHERE username = ? OR email = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+        header("location: ../views/loginsys/signup.php?error=stmtfailed");
         exit();
     }
 
@@ -59,13 +59,13 @@ function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe,
     $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, code, KitDiagnostiqueidKitDiagnostique) VALUES ('$username', '$nom', '$prenom', '$email', '$phone', '$sexe', '$hashedpwd', '$role', '$code', '$idkit');";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+        header("location: ../views/loginsys/signup.php?error=stmtfailed");
         exit();
     }
 
     $stmt->execute(); 
     $sendMl->send($code, $username, $nom, $prenom, $email);
-    header("location: ../Views/loginsys/signup.php?error=verifyemail");
+    header("location: ../views/loginsys/signup.php?error=verifyemail");
     exit();
 }
 
@@ -73,11 +73,11 @@ function accCompletion($conn, $username, $code){
     $sql = "UPDATE user SET is_verified = 1 WHERE username = '$username' AND code ='$code'";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../Views/loginsys/signup.php?error=stmtfailed");
+        header("location: ../views/loginsys/signup.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(); 
-    header("location: ../Views/loginsys/signup.php?error=none");
+    header("location: ../views/loginsys/signup.php?error=none");
     exit();
 }
 
@@ -85,7 +85,7 @@ function pwdRecovery($conn, $email){
     $sql = "SELECT * FROM user where email= ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
+        header("location: ../views/loginsys/forgotpwd.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($email));
@@ -98,14 +98,14 @@ function pwdRecovery($conn, $email){
             $sql = "UPDATE user SET code = ? where email= ?";
             $stmt = $conn->prepare($sql);
             if (!$stmt) {
-                header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
+                header("location: ../views/loginsys/forgotpwd.php?error=stmtfailed");
                 exit();
             }
             $stmt->execute(array($code, $email));
             $sql = "SELECT * FROM user where email= ?";
             $stmt = $conn->prepare($sql);
             if (!$stmt) {
-                header("location: ../Views/loginsys/forgotpwd.php?error=stmtfailed");
+                header("location: ../views/loginsys/forgotpwd.php?error=stmtfailed");
                 exit();
             }
             $stmt->execute(array($email));
@@ -126,7 +126,7 @@ function changePwd($conn, $pwd, $code){
     $sql = "UPDATE user SET password = ? where code = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header('location: ../Views/index.php');
+        header('location: ../views/mainmenu.php');
         exit();
     }
     $stmt->execute(array($hashedpwd, $code));

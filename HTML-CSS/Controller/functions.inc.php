@@ -1,6 +1,6 @@
 <?php
 
-include_once '../Model/SQL-loginsystem.php';
+include_once '../model/SQL-loginsystem.php';
 include_once 'dbh.inc.php';
 
 function test_input($data) {
@@ -78,10 +78,10 @@ function loginUser($conn, $username, $pwd){
     $checkAcc_Verified = checkAcc_Verified($conn, $username, $username);
 
     if ($checkAcc_Verified == false) {
-        header("location: ../Views/loginsys/login.php?error=accnotverified");
+        header("location: ../views/loginsys/login.php?error=accnotverified");
         exit();
     } else if ($checkAcc_Verified == "notexist"){
-        header("location: ../Views/loginsys/login.php?error=accnotexist");
+        header("location: ../views/loginsys/login.php?error=accnotexist");
         exit();
     }
 
@@ -89,7 +89,7 @@ function loginUser($conn, $username, $pwd){
     $checkpwd = password_verify($pwd, $hashedpwd);
 
     if ($checkpwd == false) {
-        header("location: ../Views/loginsys/login.php?error=wronglogin");
+        header("location: ../views/loginsys/login.php?error=wronglogin");
         exit();
     }
 
@@ -105,7 +105,7 @@ function loginUser($conn, $username, $pwd){
         $_SESSION["role"]=$checkAcc_Verified["role"];
         $_SESSION["idkit"]=$checkAcc_Verified["KitDiagnostiqueidKitDiagnostique"];
 
-        header("location: ../Views/index.php");
+        header("location: ../views/mainmenu.php");
         exit();
     }
 }

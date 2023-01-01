@@ -3,7 +3,7 @@
 
 include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
-include_once '../Model/SQL-loginsystem.php';
+include_once '../model/SQL-loginsystem.php';
 include_once 'sendEmail.php';
 
 if (isset($_POST["submit"])) {
@@ -20,32 +20,32 @@ if (isset($_POST["submit"])) {
   $idkit = test_input($_POST["idkit"]);
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
-    header("location: ../Views/loginsys/signup.php?error=emptyinput");
+    header("location: ../views/loginsys/signup.php?error=emptyinput");
     exit();
   }
 
   if (invalidUid($username) !== false){
-    header("location: ../Views/loginsys/signup.php?error=invaliduid");
+    header("location: ../views/loginsys/signup.php?error=invaliduid");
     exit();
   }
   
   if (invalidEmail($email) !== false){
-    header("location: ../Views/loginsys/signup.php?error=invalidemail");
+    header("location: ../views/loginsys/signup.php?error=invalidemail");
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
-    header("location: ../Views/loginsys/signup.php?error=pwdmissmatch");
+    header("location: ../views/loginsys/signup.php?error=pwdmissmatch");
     exit();
   }
 
   if (uidExists($conn, $username, $email) !== false){
-    header("location: ../Views/loginsys/signup.php?error=uidexists");
+    header("location: ../views/loginsys/signup.php?error=uidexists");
     exit();
   }
 
   if (pwdStrengthChecker($pwd) !== false){
-    header("location: ../Views/loginsys/signup.php?error=pwdstrength");
+    header("location: ../views/loginsys/signup.php?error=pwdstrength");
     exit();
   }
 
@@ -58,7 +58,7 @@ if (isset($_GET["code"])) {
 }
 
 else {
-  header("location: ../Views/loginsys/signup.php");
+  header("location: ../views/loginsys/signup.php");
   exit();
 }
 

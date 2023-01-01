@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 
-
-
 <html>
   <head>
     <meta charset="UTF-8">  
@@ -43,7 +41,7 @@
         </div>
     </div>';
     } else {
-        header("location: ../Views/index.php");
+        header("location: ../views/mainmenu.php");
         exit();
     }
     ?>
