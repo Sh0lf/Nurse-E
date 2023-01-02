@@ -10,6 +10,11 @@ if (isset($_POST["submit_pwd"])){
     $code = $_POST["code"];
     error_log(print_r($code, TRUE));
 
+    if (EmpytInputpwdReset($newpwd, $newpwdrep) !== false){
+        header("location: ../views/loginsys/resetpwd.php?error=emptyinput&code='.$code.'");
+        exit();
+    }
+
     if (pwdMatch($newpwd, $newpwdrep) !== false){
         header("location: ../views/loginsys/resetpwd.php?error=pwdmissmatch&code='.$code.'");
         exit();

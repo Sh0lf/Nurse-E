@@ -110,6 +110,26 @@ function loginUser($conn, $username, $pwd){
     }
 }
 
+function EmpytInputpwdReset($pwd, $pwdrep){
+    $result = "";
+    if (empty($pwd) or empty($pwdrep)) {
+        $result = true;
+    } else {
+        $result = false; 
+    }
+    return $result;
+}
+
+function EmptyInputContact($nom, $email, $sujet, $body){
+    $result = "";
+    if (empty($nom) or empty($email) or empty($sujet) or empty($body)) {
+        $result = true;
+    } else {
+        $result = false; 
+    }
+    return $result;
+}
+
 //In case
 /* 
 // define variables and set to empty values

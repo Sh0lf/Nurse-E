@@ -38,6 +38,8 @@
       if (isset($_GET["error"])) {
         if ($_GET["error"] == "pwdmissmatch") {
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
+        } else if ($_GET["error"] == "emptyinput") {
+          echo "<p> Veuillez remplir chaque compartiment !</p>";
         } else if ($_GET["error"] == "pwdstrength") {
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         }
