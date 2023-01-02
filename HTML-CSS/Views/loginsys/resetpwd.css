@@ -47,7 +47,6 @@
 .container_form form input {
     display: inline-block !important; 
     padding: 5px;
-    margin-bottom: 36px;
 }
 
 .eyes i{
@@ -66,6 +65,13 @@
     color:red;
 }
 
+#note {
+    font-style: italic;
+    font-size: 16px;
+    color: red;
+    margin-bottom: 36px;
+}
+
 .centerbox .confbutton{
     padding: 5px 15px;
     margin-left: 20px;
@@ -79,7 +85,7 @@
 
 @media screen and (max-width: 615px) {
     #note {
-        font-size: 6px ;
+        font-size: 12px ;
     }
 }
 
