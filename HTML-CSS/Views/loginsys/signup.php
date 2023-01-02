@@ -174,10 +174,7 @@
           <label>Femme</label><br>
           <input type="text" name="username" placeholder="Username...">
           <br>
-          <div class="eyes">
-            <input type="password" name="pwd" placeholder="Mot de passe...">
-            <i class="fa-solid fa-eye"></i>
-          </div><br>
+          <input type="password" name="pwd" placeholder="Mot de passe..."><br>
           <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial</p>
           <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
           <br>

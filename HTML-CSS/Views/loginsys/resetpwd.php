@@ -72,12 +72,17 @@
                   <i class="fa-solid fa-eye"></i><br>
                 </div>
                 <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br> et un caractère spécial</p>
+                <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
                 <div class="centerbox">
                     <button type="submit" name="submit_pwd" class="confbutton">Confirmer</button><br>
-                </div>
-            </form>
-        </div>
-    </div>';
+                </div>';
+      if (isset($_GET["error"])) {
+        if ($_GET["error"] == "pwdmissmatch") {
+          echo "<p> Les mots de passes ne sont pas les mêmes </p>";
+        } else if ($_GET["error"] == "pwdstrength") {
+          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
+        }
+      }
     } else {
 <<<<<<< HEAD
         header("location: ../Views/index.php");
