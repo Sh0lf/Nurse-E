@@ -298,7 +298,7 @@ function pwdRecovery($conn, $email){
 
     if ($row > 0) {
         if ($fetchedRow["is_verified"] == 1) {
-            $code=rand();
+            $code = rand();
             $sql = "UPDATE user SET code = ? where email= ?";
             $stmt = $conn->prepare($sql);
             if (!$stmt) {

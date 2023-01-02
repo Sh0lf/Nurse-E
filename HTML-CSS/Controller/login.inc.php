@@ -1,14 +1,16 @@
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
+=======
+include_once 'dbh.inc.php';
+include_once 'functions.inc.php';
+>>>>>>> 27f66f0 (contact us fini, sys email marche bien)
 
 if (isset($_POST["submit"])){
-    $username = htmlspecialchars($_POST["username"]);
-    $pwd = htmlspecialchars($_POST["pwd"]);
-
-    include_once 'dbh.inc.php';
-    include_once 'functions.inc.php';
+    $username = test_input($_POST["username"]);
+    $pwd = test_input($_POST["pwd"]);
 
 <<<<<<< HEAD
 <<<<<<< HEAD

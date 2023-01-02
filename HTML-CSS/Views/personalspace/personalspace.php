@@ -3,10 +3,14 @@
 <?php
 if (!isset($_SESSION['id'])){
 <<<<<<< HEAD
+<<<<<<< HEAD
   header('location: ../mainmenu.php');
 =======
   header('Location: index.php');
 >>>>>>> e028cf2 (added medicobot/question+ reorganizing)
+=======
+  header('location: ../mainmenu.php');
+>>>>>>> 27f66f0 (contact us fini, sys email marche bien)
   exit;
 }
 

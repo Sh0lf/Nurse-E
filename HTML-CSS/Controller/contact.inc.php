@@ -1,8 +1,15 @@
 <?php
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
 include_once './sendEmailContact.php';
+=======
+
+include_once 'dbh.inc.php';
+include_once 'functions.inc.php';
+include_once 'sendEmailContact.php';
+>>>>>>> 27f66f0 (contact us fini, sys email marche bien)
 
 if (isset($_POST["submit_contact"])){
     $nom = test_input($_POST["nom"]);

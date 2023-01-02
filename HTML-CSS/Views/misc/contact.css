@@ -66,6 +66,7 @@
     border:1px solid white;
     background-color: #43B1F8;
     cursor:pointer;
+<<<<<<< HEAD
 }
 
 @media screen and (max-width: 650px) {
@@ -78,4 +79,6 @@
     #note{
         display: none;
     }
+=======
+>>>>>>> 27f66f0 (contact us fini, sys email marche bien)
 }
