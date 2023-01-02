@@ -67,10 +67,7 @@
             <form method="post" action="../../Controller/resetpwd.inc.php">
                 <input type="hidden" name="code" value='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
-                <div class="eyes">
-                  <input type="password" name="pwd" placeholder="Mot de passe...">
-                  <i class="fa-solid fa-eye"></i><br>
-                </div>
+                <input type="password" name="pwd" placeholder="Mot de passe..."><br>
                 <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br> et un caractère spécial</p>
                 <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
                 <div class="centerbox">
@@ -83,6 +80,9 @@
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         }
       }
+      echo '</form>
+            </div>
+            </div>';
     } else {
 <<<<<<< HEAD
         header("location: ../Views/index.php");

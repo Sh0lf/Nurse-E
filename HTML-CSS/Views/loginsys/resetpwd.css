@@ -49,6 +49,7 @@
 <<<<<<< HEAD
     display: inline-block !important; 
     padding: 5px;
+<<<<<<< HEAD
 }
 
 .eyes i{
@@ -79,6 +80,8 @@
     padding: 5px;
 >>>>>>> 99ba0ac (made pwd recovery !)
     margin-bottom: 36px;
+=======
+>>>>>>> eb81d3b (fixed resetpwd sys)
 }
 
 .eyes i{
@@ -95,6 +98,13 @@
 {
     content:'\f070';
     color:red;
+}
+
+#note {
+    font-style: italic;
+    font-size: 16px;
+    color: red;
+    margin-bottom: 36px;
 }
 
 .centerbox .confbutton{
@@ -117,8 +127,12 @@
 =======
 @media screen and (max-width: 615px) {
     #note {
+<<<<<<< HEAD
         font-size: 6px ;
 >>>>>>> 61a14bc (Full loginsys working, bonus: timestamps)
+=======
+        font-size: 12px ;
+>>>>>>> eb81d3b (fixed resetpwd sys)
     }
 }
 
