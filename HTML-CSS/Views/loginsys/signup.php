@@ -215,15 +215,20 @@
         } else if ($_GET["error"] == "pwdstrength") {
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         } else if ($_GET["error"] == "verifyemail") {
-          echo "<p> Inscription passée, veuillez vérifier votre email</p>";
+          echo "<p> Inscription passée, veuillez vérifier votre email sous les 2 prochaines heures !</p>";
         } else if ($_GET["error"] == "stmtfailed") {
 >>>>>>> 50d48fc (Strengthened pwd requirements)
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
+<<<<<<< HEAD
 <<<<<<< HEAD
         } else if ($_GET["error"] === "toolate") {
           echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
         } else if ($_GET["error"] === "none") {
 =======
+=======
+        } else if ($_GET["error"] == "toolate") {
+          echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
+>>>>>>> 3ec4b8c (added time restrictions)
         } else if ($_GET["error"] == "none") {
 >>>>>>> 2b7f0b7 (seems to work, need to check again)
           echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";

@@ -96,21 +96,6 @@
     }
     ?>
 
-    <script>
-      let input = document.querySelector('.eyes input');
-      let showBtn = document.querySelector('.eyes i');
-      showBtn.onclick =function(){
-          if(input.type == "password"){
-            input.type = "text";
-            showBtn.classList.add('active');
-          }else {
-            input.type = "password";
-            showBtn.classList.remove('active');
-          }
-
-      }
-    </script>
-
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php

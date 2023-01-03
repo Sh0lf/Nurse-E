@@ -129,6 +129,7 @@ if (isset($_GET["code"])) {
   $t = time();
   $timestamp = date(("Y-m-d H:i:s"));
   accCompletion($conn, $username, $timestamp, $code);
+<<<<<<< HEAD
 }
 
 else {
@@ -163,6 +164,8 @@ if (isset($_GET["code"])) {
   $code = $_GET["code"];
   $username = $_GET["username"];
   accCompletion($conn, $username, $code);
+=======
+>>>>>>> 3ec4b8c (added time restrictions)
 }
 
 else {

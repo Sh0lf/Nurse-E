@@ -76,6 +76,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         <li><a href="#">Comment ça marche ?</a></li>
                         <li><a href="#">Notre produit</a></li>
                         <li><a href="#">Les updates</a></li>
@@ -105,6 +106,12 @@
                         <li><a href="//localhost:8888/views/mainmenu.php#updates">Les updates</a></li>
                         <li><a href="//localhost:8888/views/mainmenu.php#questions">Vos questions</a></li>                                
 >>>>>>> 9c68076 (Updates in organization)
+=======
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#produit">Notre produit</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#updates">Les updates</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#questions">Vos questions</a></li>                                
+>>>>>>> 3ec4b8c (added time restrictions)
                     </ul>
                 </li>';
             }
@@ -134,6 +141,7 @@
             </ul></li>';
         } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<li><a href="http://nurse-medicobot.wstr.fr/views/medicalbot/medicobot.php">Médicobot</a></li>';
 =======
             </ul></li>';
@@ -147,6 +155,9 @@
 =======
             echo '<li><a href="//localhost:8888/views/medicalbot/medicobot.php">Médicobot</a></li>';
 >>>>>>> 9c68076 (Updates in organization)
+=======
+            echo '<li><a href="http://nurse-medicobot.wstr.fr/views/medicalbot/medicobot.php">Médicobot</a></li>';
+>>>>>>> 3ec4b8c (added time restrictions)
         }
         ?>    
         <?php
@@ -205,6 +216,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<li><button class="bouton" href="../loginsys/login.php">Connexion</button></li>';
 >>>>>>> d9a6817 (made navbar based on if session exists (help me))
 =======
@@ -219,6 +231,9 @@
 =======
             echo '<li><a href="//localhost:8888/views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
 >>>>>>> 9c68076 (Updates in organization)
+=======
+            echo '<li><a href="http://nurse-medicobot.wstr.fr/views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+>>>>>>> 3ec4b8c (added time restrictions)
         }
         ?>
     </ul>

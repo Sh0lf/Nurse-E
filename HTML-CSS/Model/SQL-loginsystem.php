@@ -268,16 +268,39 @@ function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe,
     exit();
 }
 
-function accCompletion($conn, $username, $code){
-    $sql = "UPDATE user SET is_verified = 1 WHERE username = '$username' AND code ='$code'";
+function accCompletion($conn, $username, $timestamp, $code)
+{
+    $sql = "SELECT * FROM user where code= ?";
+    $now_timestamp = strtotime($timestamp);
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/loginsys/signup.php?error=stmtfailed");
+        header("location: ../views/loginsys/forgotpwd.php");
         exit();
     }
-    $stmt->execute(); 
-    header("location: ../views/loginsys/signup.php?error=none");
-    exit();
+    $stmt->execute(array($code));
+    $fetchedRow = $stmt->fetch();
+    $intervale = abs($now_timestamp - (strtotime($fetchedRow["creation_time"])));
+    if ($intervale >= 2 * 60 * 60) {
+        $sql = "UPDATE user SET is_verified = 1 WHERE username = '$username' AND code ='$code'";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            header("location: ../views/loginsys/signup.php?error=stmtfailed");
+            exit();
+        }
+        $stmt->execute();
+        header("location: ../views/loginsys/signup.php?error=none");
+        exit();
+    } else {
+        $sql = "DELETE FROM user WHERE code=?";
+        $stmt = $conn->prepare($sql);
+        if (!$stmt) {
+            header("location: ../views/loginsys/signup.php?error=stmtfailed");
+            exit();
+        }
+        $stmt->execute(array($code));
+        header("location: ../views/loginsys/signup.php?error=toolate");
+        exit();
+    }
 }
 
 <<<<<<< HEAD
@@ -299,13 +322,15 @@ function pwdRecovery($conn, $email){
     if ($row > 0) {
         if ($fetchedRow["is_verified"] == 1) {
             $code = rand();
-            $sql = "UPDATE user SET code = ? where email= ?";
+            $t = time();
+            $timestamp = date(("Y-m-d H:i:s"), $t);
+            $sql = "UPDATE user SET code = ?, code_timestamp = ? WHERE email= ?";
             $stmt = $conn->prepare($sql);
             if (!$stmt) {
                 header("location: ../views/loginsys/forgotpwd.php?error=stmtfailed");
                 exit();
             }
-            $stmt->execute(array($code, $email));
+            $stmt->execute(array($code, $timestamp, $email));
             $sql = "SELECT * FROM user where email= ?";
             $stmt = $conn->prepare($sql);
             if (!$stmt) {
@@ -320,6 +345,24 @@ function pwdRecovery($conn, $email){
         }
     } else {
         return "notexist";
+    }
+}
+
+function checkQueryPwdReset($conn, $timestamp, $code){
+    $sql = "SELECT * FROM user where code= ?";
+    $now_timestamp=strtotime($timestamp);
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/loginsys/forgotpwd.php");
+        exit();
+    }
+    $stmt->execute(array($code));
+    $fetchedRow = $stmt->fetch();
+    $intervale = abs($now_timestamp - (strtotime($fetchedRow["code_timestamp"])));
+    if ($intervale >= 2*60*60){
+        return false;
+    } else {
+        return true;
     }
 }
 
