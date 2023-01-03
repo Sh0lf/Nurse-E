@@ -62,14 +62,19 @@ if (isset($_SESSION["iduser"])){
             break;
     }
     if ($view != "error404"){
-        include DIR ('/views/personalspace/'.$view.'/'.$view.'-personalspace.php');
+        header ("location :views/personalspace/'.$view.'/'.$view.'-personalspace.php");
+        exit();
     } else {
-        include DIR('/views/error404.php');
+        header ("location: views/error404.php");
     }
     
 } else {
-    include DIR ('/views/mainmenu.php');
+    header("location: /views/mainmenu.php");
+    exit();
 }
+<<<<<<< HEAD
 
 >>>>>>> dc79c0f (trying to implement index.php)
+=======
+>>>>>>> 7acb80a (Verifying directories)
 ?>

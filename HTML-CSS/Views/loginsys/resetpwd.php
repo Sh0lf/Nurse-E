@@ -37,6 +37,7 @@
 <<<<<<< HEAD
         <div class="container_form">
             <form method="post" action="../../controller/resetpwd.inc.php">
+<<<<<<< HEAD
                 <input type="hidden" name="code" value='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
                 <input type="password" name="pwd" placeholder="Mot de passe..."><br>
@@ -65,6 +66,8 @@
         <div class="container_form">
 >>>>>>> aafffe2 (need to test deeply)
             <form method="post" action="../../Controller/resetpwd.inc.php">
+=======
+>>>>>>> 7acb80a (Verifying directories)
                 <input type="hidden" name="code" value='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
                 <input type="password" name="pwd" placeholder="Mot de passe..."><br>
