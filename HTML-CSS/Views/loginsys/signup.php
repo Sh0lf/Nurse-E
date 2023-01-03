@@ -46,7 +46,7 @@
         <p><u>Etes-vous un médecin ?</u></p>
       </div>
       <div class="container_form">
-        <form action="../../Controller/signup.inc.php" method="post" id="signup-form">
+        <form action="../../controller/signup.inc.php" method="post" id="signup-form">
           <input type="number" name="idkit" placeholder="id de votre kit">
           <br>
           <input type="text" name="nom" placeholder="Nom...">

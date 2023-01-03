@@ -26,7 +26,7 @@
 
     <div class="container">
         <div class="container_form">
-            <form method="post" action="../../Controller/resetpwd.inc.php">
+            <form method="post" action="../../controller/resetpwd.inc.php">
                 <input type="hidden" name="code" value='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
                 <input type="password" name="pwd" placeholder="Mot de passe..."><br>

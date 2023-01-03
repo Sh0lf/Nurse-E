@@ -15,11 +15,11 @@
     <ul>
         <?php
             if (isset($_SESSION["username"])){
-                echo '<li><a href="views/mainmenu.php">Accueil</a></li>';
+                echo '<li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php">Accueil</a></li>';
             } else {
             echo '<li>
                     <label for="btn-1" class="show">Accueil +</label>
-                    <a href="#home">Accueil <i class="fas fa-caret-down"></i></a>
+                    <a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
                         <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#comment">Comment ça marche ?</a></li>
