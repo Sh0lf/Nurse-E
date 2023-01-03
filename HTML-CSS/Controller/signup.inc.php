@@ -54,7 +54,9 @@ if (isset($_POST["submit"])) {
 if (isset($_GET["code"])) {
   $code = $_GET["code"];
   $username = $_GET["username"];
-  accCompletion($conn, $username, $code);
+  $t = time();
+  $timestamp = date(("Y-m-d H:i:s"));
+  accCompletion($conn, $username, $timestamp, $code);
 }
 
 else {

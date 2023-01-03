@@ -94,9 +94,11 @@
         } else if ($_GET["error"] == "pwdstrength") {
           echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
         } else if ($_GET["error"] == "verifyemail") {
-          echo "<p> Inscription passée, veuillez vérifier votre email</p>";
+          echo "<p> Inscription passée, veuillez vérifier votre email sous les 2 prochaines heures !</p>";
         } else if ($_GET["error"] == "stmtfailed") {
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
+        } else if ($_GET["error"] == "toolate") {
+          echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
         } else if ($_GET["error"] == "none") {
           echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }

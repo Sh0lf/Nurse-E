@@ -4,7 +4,20 @@ include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
 include_once '../model/SQL-loginsystem.php';
 
-if (isset($_POST["submit_pwd"])){
+if (isset($_GET["code"])){
+    $code = $_GET["code"];
+    $t = time();
+    $timestamp = date(("Y-m-d H:i:s"));
+
+    if (checkQueryPwdReset($conn, $timestamp, $code) !== false){
+        header("location: ../views/loginsys/forgotpwd.php?error=outoftime");
+        exit();
+    } else {
+        header("location: ../views/loginsys/resetpwd.php?code='.$code.'");
+        exit();
+    }
+
+} else if (isset($_POST["submit_pwd"])){
     $newpwd = test_input($_POST["pwd"]);
     $newpwdrep = test_input($_POST["pwdrep"]);
     $code = $_POST["code"];

@@ -22,10 +22,10 @@
                     <a href="#home">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
-                        <li><a href="//localhost:8888/views/mainmenu.php#comment">Comment ça marche ?</a></li>
-                        <li><a href="//localhost:8888/views/mainmenu.php#produit">Notre produit</a></li>
-                        <li><a href="//localhost:8888/views/mainmenu.php#updates">Les updates</a></li>
-                        <li><a href="//localhost:8888/views/mainmenu.php#questions">Vos questions</a></li>                                
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#comment">Comment ça marche ?</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#produit">Notre produit</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#updates">Les updates</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/mainmenu.php#questions">Vos questions</a></li>                                
                     </ul>
                 </li>';
             }
@@ -40,7 +40,7 @@
                 <li><a href="#">Votre dossier</a></li>
             </ul></li>';
         } else {
-            echo '<li><a href="//localhost:8888/views/medicalbot/medicobot.php">Médicobot</a></li>';
+            echo '<li><a href="http://nurse-medicobot.wstr.fr/views/medicalbot/medicobot.php">Médicobot</a></li>';
         }
         ?>    
         <?php
@@ -61,7 +61,7 @@
         if(isset($_SESSION["username"])) {
             echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
         } else {
-            echo '<li><a href="//localhost:8888/views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
+            echo '<li><a href="http://nurse-medicobot.wstr.fr/views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
         }
         ?>
     </ul>
