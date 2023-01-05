@@ -5,101 +5,130 @@
 }
 
 
-
-
-/* Définition du corps, des titres et des paragraphes */
-
-body{
-    background-color: white;
+.container {
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 24px;
+    background-color:white;
+    width: 95%;
+    margin: auto;
     font-family: Jua, Century Gothic, sans-serif;
     overflow: auto;
-    }
 
+}
+/*Définition de l'ensemble contenant paragraphe et image*/
+.subcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    margin: 2%;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+/*D&finition des paragraphes*/
+.paragraphe{
+    flex-basis: auto;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-indent: 50px;
+    color: #424949;
+    font-family: "Century Gothic";
+    font-size: 17px;
+    padding: 2%;
+    background-color: #ECECEC;
+}
+/*Définition des images*/
+.image1{
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 75%;
+    padding: 2%;
+}
+
+/*Définition du diagrammme des valeurs de l'entreprise*/
+.cycle{
+    width: 50%;
+    padding: 5%;
+    text-align: center;
+    margin: auto;
+    padding: 2%;
+}
+
+/*Définition des titres*/
 .titre{
     color: #43B1F8;
     font-size: 30px;
     font-family: "Century Gothic", serif;   
-    text-align: center;
     margin-top: 80px;
     margin-bottom: 10px;
-    padding: 10px;
-    }
-
-.sstitre{
-    color: #43B1F8;
-    margin-top: 10%;
-    margin-left: 10%;
-    border: 1px transparent solid ;
-    border-radius: 45%;
-    width: 150px;
-    height: 43px;
-    text-align: center;
-    font-family: "Century Gothic";
-    font-size: 20px;
-    position: relative;
-    background-color: #73b8dd65;
+    padding: 2%    
 }
 
-.para{
-    text-align: center;
-    color: #424949;
-    font-family: "Century Gothic";
-    font-size: 17px;
-    left: 15px;
-    margin-right-left: 20%;
-    shape-margin: 40px;
-    padding: 50px;
-    }
-
-
-
-/* Définition de la position des paragraphes */
-
-.paragraphe{
-    display: inline-block;
-    text-align: center;
-    padding: 10px;
-}
-
-
-/* Définition de la position des composants de la partie "Nos valeurs" */
+/*Définition de l'ensemble contenant toutes les valeurs de l'entreprise explicitées*/
 .row{
     display: flex;
     flex-flow: wrap;
     flex-basis: auto;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 2%;
+    background-color: whitesmoke;
 }
+/*Définition du texte explicitant chaque valeur*/
 .column{
     flex-basis: auto;
-    width: 33.33%;
+    width: 30%;
+    background-color: #ECECEC;
+    padding: 1%;
+}
 
+/*sous-titre*/
+.gras{
+    font-weight: 550;
+    color: #A5A5A5;
 }
 
 
+/*Responsive: Changement du subcontainer en colonne, changement de couleur de fond d'écran et de taille des  éléments.*/
 
-/* Elément de décoration de la page */
-.dot{
-    height: 10px;
-    width: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
+@media screen and (max-width:900px){
+    .subcontainer{
+        flex-direction: column;
+        background-color: white;
+    }
+    .paragraphe{
+        width: 85%;
+        justify-content: center;
+        background-color: whitesmoke;
+    }
+    .image1{
+        width: 90%;
+        justify-content: center;
+    }
+
+    .cycle{
+         width: 60%;
+    }
 }
 
-/* responsive: changement de la taille des paragraphes et titres,
-changement de la partie "Nos valeurs" en une colonne */
-
+/*Responsive: Changement de la diposition de a définition de chaque valeur de l'entreprise en colonne.*/
 @media screen and (max-width:600px) {
   .row{
     flex-direction: column;
   }
   .column {
-    width: 100%;
-  }
-  .paragraphe {
-    width: 100%;
+    width: 97%;
   }
   .dot{
     justify-content: center;
@@ -108,19 +137,10 @@ changement de la partie "Nos valeurs" en une colonne */
     font-size: 25px;
     justify-content: center;
   }
-    .sstitre{
-    font-size: 20px;
-    margin-left: 10%;
-    margin-top: 10%;
   }
     .para{
     font-size: 15px;
 }
-
-}
-
-
-
 
 
 
