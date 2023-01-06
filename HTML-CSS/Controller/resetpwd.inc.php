@@ -1,7 +1,7 @@
 <?php
-
-include_once 'dbh.inc.php';
-include_once 'functions.inc.php';
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
 include_once '../model/SQL-loginsystem.php';
 
 if (isset($_GET["code"])){

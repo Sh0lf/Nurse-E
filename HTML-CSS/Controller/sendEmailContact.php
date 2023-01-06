@@ -1,10 +1,11 @@
 <?php
 
+ini_set('display_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require '../../bin/phpMyAdmin/vendor/autoload.php';
+require '../../vendor/autoload.php';
 
     class sendEmailContact
 

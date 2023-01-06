@@ -64,7 +64,7 @@
           <input type="text" name="username" placeholder="Username...">
           <br>
           <input type="password" name="pwd" placeholder="Mot de passe..."><br>
-          <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial</p>
+          <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial et un chiffre</p>
           <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
           <br>
           <input type="radio" name="role" value="client">
@@ -81,25 +81,25 @@
     <div class="centerbox">
       <?php
       if (isset($_GET["error"])) {
-        if ($_GET["error"] == "emptyinput") {
+        if ($_GET["error"] === "emptyinput") {
           echo "<p> Veuillez remplir chaque compartiments !</p>";
-        } else if ($_GET["error"] == "invaliduid") {
+        } else if ($_GET["error"] === "invaliduid") {
           echo "<p> Veuillez essayer un nouveau username !</p>";
-        } else if ($_GET["error"] == "invalidemail") {
+        } else if ($_GET["error"] === "invalidemail") {
           echo "<p> Veuillez mettre un email valide !</p>";
-        } else if ($_GET["error"] == "pwdmissmatch") {
+        } else if ($_GET["error"] === "pwdmissmatch") {
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
-        } else if ($_GET["error"] == "uidexists") {
+        } else if ($_GET["error"] === "uidexists") {
           echo "<p> Veuillez essayer un nouveau username ou un nouveau email, un compte existe déjà avec vos identifiants</p>";
-        } else if ($_GET["error"] == "pwdstrength") {
-          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
-        } else if ($_GET["error"] == "verifyemail") {
+        } else if ($_GET["error"] === "pwdstrength") {
+          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial et un chiffre </p>";
+        } else if ($_GET["error"] === "verifyemail") {
           echo "<p> Inscription passée, veuillez vérifier votre email sous les 2 prochaines heures !</p>";
-        } else if ($_GET["error"] == "stmtfailed") {
+        } else if ($_GET["error"] === "stmtfailed") {
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
-        } else if ($_GET["error"] == "toolate") {
+        } else if ($_GET["error"] === "toolate") {
           echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
-        } else if ($_GET["error"] == "none") {
+        } else if ($_GET["error"] === "none") {
           echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }
       }

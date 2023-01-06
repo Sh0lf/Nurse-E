@@ -37,14 +37,17 @@
     <div class="centerbox">
         <?php
         if (isset($_GET["error"])){
-          if ($_GET["error"] == "accnotexist") {
+          if ($_GET["error"] === "accnotexist") {
             echo "<p> Ce compte n'existe pas; veuillez en créer un.</p>";
           }
-          else if ($_GET["error"] == "accnotverified") {
+          else if ($_GET["error"] === "accnotverified") {
             echo "<p> Ce compte n'est pas encore vérifié, veuillez le vérifier avec l'email envoyé par nous</p>";
           }
-          else if ($_GET["error"] == "verifyacc") {
+          else if ($_GET["error"] === "verifyacc") {
             echo "<p> Demande enregistré, veuillez vérifier votre boite email</p>";
+          } 
+          else if ($_GET["error"] === "outoftime"){
+            echo "<p> Vous êtes trop en retard pour modifier votre mot de passe, veuillez réessayer mais cette fois ci plus rapidement !</p>";
           }
         } 
         ?>

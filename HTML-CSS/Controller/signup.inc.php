@@ -1,10 +1,10 @@
 <!-- php script for database connection communication -->
 <?php
-
-include_once 'dbh.inc.php';
-include_once 'functions.inc.php';
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
 include_once '../model/SQL-loginsystem.php';
-include_once 'sendEmail.php';
+include_once './sendEmail.php';
 
 if (isset($_POST["submit"])) {
   $code = rand();

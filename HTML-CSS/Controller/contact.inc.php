@@ -1,8 +1,8 @@
 <?php
-
-include_once 'dbh.inc.php';
-include_once 'functions.inc.php';
-include_once 'sendEmailContact.php';
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
+include_once './sendEmailContact.php';
 
 if (isset($_POST["submit_contact"])){
     $nom = test_input($_POST["nom"]);

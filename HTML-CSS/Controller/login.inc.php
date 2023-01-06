@@ -1,6 +1,7 @@
 <?php
-include_once 'dbh.inc.php';
-include_once 'functions.inc.php';
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
 
 if (isset($_POST["submit"])){
     $username = test_input($_POST["username"]);
@@ -18,3 +19,5 @@ else {
     header("location:../views/loginsys/login.php");
     exit();
 }
+
+?>

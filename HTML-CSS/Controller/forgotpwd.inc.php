@@ -1,9 +1,9 @@
 <?php
-
-include_once 'dbh.inc.php';
-include_once 'functions.inc.php';
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
 include_once '../model/SQL-loginsystem.php';
-include_once 'sendEmailRecovery.php';
+include_once './sendEmailRecovery.php';
 
 if(isset($_POST['submit_email']) && $_POST['email']){
     $email = $_POST['email'];

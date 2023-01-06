@@ -1,5 +1,6 @@
 <?php
 
+ini_set('display_errors', 1);
 include_once '../controller/functions.inc.php';
 include_once '../controller/dbh.inc.php';
 include_once '../controller/sendEmail.php';
@@ -75,13 +76,13 @@ function accCompletion($conn, $username, $timestamp, $code)
     $now_timestamp = strtotime($timestamp);
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/loginsys/forgotpwd.php");
+        header("location: ../views/loginsys/signup.php");
         exit();
     }
     $stmt->execute(array($code));
     $fetchedRow = $stmt->fetch();
     $intervale = abs($now_timestamp - (strtotime($fetchedRow["creation_time"])));
-    if ($intervale >= 2 * 60 * 60) {
+    if ($intervale <= 2 * 60 * 60) {
         $sql = "UPDATE user SET is_verified = 1 WHERE username = '$username' AND code ='$code'";
         $stmt = $conn->prepare($sql);
         if (!$stmt) {
@@ -156,9 +157,9 @@ function checkQueryPwdReset($conn, $timestamp, $code){
     $fetchedRow = $stmt->fetch();
     $intervale = abs($now_timestamp - (strtotime($fetchedRow["code_timestamp"])));
     if ($intervale >= 2*60*60){
-        return false;
-    } else {
         return true;
+    } else {
+        return false;
     }
 }
 
