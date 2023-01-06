@@ -4,6 +4,9 @@
     box-sizing:border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f01c05 (updated: same code as the website)
     }
     
     .container {
@@ -47,6 +50,7 @@
     
     .intro{
         text-align: justify;
+<<<<<<< HEAD
     }
 =======
 }
@@ -80,3 +84,6 @@ p {
     padding: 6px;
 }
 >>>>>>> bd7f60d (updates: title)
+=======
+    }
+>>>>>>> 1f01c05 (updated: same code as the website)

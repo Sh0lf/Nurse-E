@@ -1,18 +1,26 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 =======
 >>>>>>> 27f66f0 (contact us fini, sys email marche bien)
+=======
+ini_set('display_errors', 1);
+>>>>>>> 1f01c05 (updated: same code as the website)
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 require '../../vendor/autoload.php';
 =======
 require '../../bin/phpMyAdmin/vendor/autoload.php';
 >>>>>>> 27f66f0 (contact us fini, sys email marche bien)
+=======
+require '../../vendor/autoload.php';
+>>>>>>> 1f01c05 (updated: same code as the website)
 
     class sendEmailContact
 

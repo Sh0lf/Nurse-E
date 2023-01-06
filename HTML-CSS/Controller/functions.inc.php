@@ -1,7 +1,7 @@
 <?php
-
+ini_set('display_errors', 1);
 include_once '../model/SQL-loginsystem.php';
-include_once 'dbh.inc.php';
+include_once './dbh.inc.php';
 
 function test_input($data) {
     $data = trim($data);

@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
@@ -52,6 +53,11 @@ if (isset($_GET["code"])){
 
 include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
+=======
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
+>>>>>>> 1f01c05 (updated: same code as the website)
 include_once '../model/SQL-loginsystem.php';
 
 if (isset($_GET["code"])){

@@ -69,25 +69,25 @@
     <div class="centerbox">
       <?php
         if (isset($_GET["error"])){
-          if ($_GET["error"] == "emptyinput") {
+          if ($_GET["error"] === "emptyinput") {
             echo "<p> Veuillez remplir chaque compartiments !</p>";
           } 
-          else if ($_GET["error"] == "accnotexist") {
+          else if ($_GET["error"] === "accnotexist") {
             echo "<p> Ce compte n'existe pas; veuillez en créer un.</p>";
           }
-          else if ($_GET["error"] == "accnotverified") {
+          else if ($_GET["error"] === "accnotverified") {
             echo "<p> Ce compte n'est pas encore vérifié, veillez le vérifier avec l'email envoyé par nous</p>";
           }
-          else if ($_GET["error"] == "wronglogin") {
+          else if ($_GET["error"] === "wronglogin") {
             echo "<p> Veuillez réessayer, mauvais identifiant et/ou mot de passe</p>";
           }
-          else if ($_GET["error"] == "failedprocess") {
+          else if ($_GET["error"] === "failedprocess") {
             echo "<p> Quelque chose n'a pas marché, veuillez rééssayer ultérieurement</p>";
           }
-          else if ($_GET["error"] == "remadepwd") {
+          else if ($_GET["error"] === "remadepwd") {
             echo "<p> Mot de passe changé ! Essayez de vous identifier avec le nouveau mot de passe !</p>";
           }
-          else if ($_GET["error"] == "none") {
+          else if ($_GET["error"] === "none") {
             echo "<p> Succès !</p>";
 
           } 

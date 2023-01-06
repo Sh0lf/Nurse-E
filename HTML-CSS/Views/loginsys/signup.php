@@ -175,7 +175,7 @@
           <input type="text" name="username" placeholder="Username...">
           <br>
           <input type="password" name="pwd" placeholder="Mot de passe..."><br>
-          <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial</p>
+          <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial et un chiffre</p>
           <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
           <br>
           <input type="radio" name="role" value="client">
@@ -202,6 +202,7 @@
         } else if ($_GET["error"] === "pwdmissmatch") {
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
 <<<<<<< HEAD
+<<<<<<< HEAD
         } else if ($_GET["error"] === "uidexists") {
           echo "<p> Veuillez essayer un nouveau username ou un nouveau email, un compte existe déjà avec vos identifiants</p>";
         } else if ($_GET["error"] === "pwdstrength") {
@@ -211,11 +212,15 @@
         } else if ($_GET["error"] === "stmtfailed") {
 =======
         } else if ($_GET["error"] == "uidexists") {
+=======
+        } else if ($_GET["error"] === "uidexists") {
+>>>>>>> 1f01c05 (updated: same code as the website)
           echo "<p> Veuillez essayer un nouveau username ou un nouveau email, un compte existe déjà avec vos identifiants</p>";
-        } else if ($_GET["error"] == "pwdstrength") {
-          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
-        } else if ($_GET["error"] == "verifyemail") {
+        } else if ($_GET["error"] === "pwdstrength") {
+          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial et un chiffre </p>";
+        } else if ($_GET["error"] === "verifyemail") {
           echo "<p> Inscription passée, veuillez vérifier votre email sous les 2 prochaines heures !</p>";
+<<<<<<< HEAD
         } else if ($_GET["error"] == "stmtfailed") {
 >>>>>>> 50d48fc (Strengthened pwd requirements)
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
@@ -231,6 +236,13 @@
 >>>>>>> 3ec4b8c (added time restrictions)
         } else if ($_GET["error"] == "none") {
 >>>>>>> 2b7f0b7 (seems to work, need to check again)
+=======
+        } else if ($_GET["error"] === "stmtfailed") {
+          echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
+        } else if ($_GET["error"] === "toolate") {
+          echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
+        } else if ($_GET["error"] === "none") {
+>>>>>>> 1f01c05 (updated: same code as the website)
           echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }
       }

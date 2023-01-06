@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
@@ -12,6 +13,13 @@ include_once 'functions.inc.php';
 include_once '../model/SQL-loginsystem.php';
 include_once 'sendEmailRecovery.php';
 >>>>>>> b14763e (made pwd recovery !)
+=======
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
+include_once '../model/SQL-loginsystem.php';
+include_once './sendEmailRecovery.php';
+>>>>>>> 1f01c05 (updated: same code as the website)
 
 if(isset($_POST['submit_email']) && $_POST['email']){
     $email = $_POST['email'];

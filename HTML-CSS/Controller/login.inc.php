@@ -1,5 +1,6 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
@@ -7,6 +8,11 @@ include_once './functions.inc.php';
 include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
 >>>>>>> 27f66f0 (contact us fini, sys email marche bien)
+=======
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
+>>>>>>> 1f01c05 (updated: same code as the website)
 
 if (isset($_POST["submit"])){
     $username = test_input($_POST["username"]);
@@ -49,4 +55,8 @@ else {
     exit();
 }
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 1f01c05 (updated: same code as the website)

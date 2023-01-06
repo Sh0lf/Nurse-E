@@ -1,11 +1,15 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f01c05 (updated: same code as the website)
 ini_set('display_errors', 1);
 $db_name = "rflzfr_nursemed_db";
 $db_user = "rflzfr_nursemed_db";
 $db_pass = "M71b-VLo8Is*%9!d";
 $db_host = "176.31.132.185";
 $conn = new PDO("mysql:host=". $db_host .";dbname=". $db_name ."", $db_user, $db_pass);
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -22,6 +26,8 @@ $conn = new PDO( 'mysql:host=176.31.132.185;dbname=Projet_BDD_APP', $db_username
 =======
 $conn = new PDO( 'mysql:host=176.31.132.185;dbname=rflzfr_nursemed_db', $db_username, $db_password );
 >>>>>>> 13556d4 (Updated for web host)
+=======
+>>>>>>> 1f01c05 (updated: same code as the website)
 if(!$conn){
     die("Fatal Error: Connection Failed!");
 }

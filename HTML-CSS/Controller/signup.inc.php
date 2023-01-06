@@ -1,6 +1,7 @@
 <!-- php script for database connection communication -->
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
@@ -26,8 +27,13 @@ if (isset($_POST["submit"])) {
 
 include_once 'dbh.inc.php';
 include_once 'functions.inc.php';
+=======
+ini_set('display_errors', 1);
+include_once './dbh.inc.php';
+include_once './functions.inc.php';
+>>>>>>> 1f01c05 (updated: same code as the website)
 include_once '../model/SQL-loginsystem.php';
-include_once 'sendEmail.php';
+include_once './sendEmail.php';
 
 if (isset($_POST["submit"])) {
   $code = rand();

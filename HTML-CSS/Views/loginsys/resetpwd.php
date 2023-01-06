@@ -71,18 +71,18 @@
                 <input type="hidden" name="code" value='.$code.'><br>
                 <label><u>Notez un nouveau mot de passe</u></label><br><br>
                 <input type="password" name="pwd" placeholder="Mot de passe..."><br>
-                <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br> et un caractère spécial</p>
+                <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule,<br> un caractère spécial et un chiffre</p>
                 <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
                 <div class="centerbox">
                     <button type="submit" name="submit_pwd" class="confbutton">Confirmer</button><br>
                 </div>';
       if (isset($_GET["error"])) {
-        if ($_GET["error"] == "pwdmissmatch") {
+        if ($_GET["error"] === "pwdmissmatch") {
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
-        } else if ($_GET["error"] == "emptyinput") {
+        } else if ($_GET["error"] === "emptyinput") {
           echo "<p> Veuillez remplir chaque compartiment !</p>";
-        } else if ($_GET["error"] == "pwdstrength") {
-          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial </p>";
+        } else if ($_GET["error"] === "pwdstrength") {
+          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial et un chiffre</p>";
         }
       }
       echo '</form>

@@ -1,6 +1,7 @@
 <?php
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 session_start();
 if (isset($_SESSION["iduser"])){
@@ -39,6 +40,9 @@ if (isset($_SESSION["iduser"])){
 
 =======
 >>>>>>> 34f6f20 (Contact us is done, email system working)
+=======
+ini_set('display_errors', 1);
+>>>>>>> 1f01c05 (updated: same code as the website)
 session_start();
 if (isset($_SESSION["iduser"])){
     $role = $_SESSION["role"];

@@ -1,14 +1,21 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ini_set('display_errors', 1);
 =======
 >>>>>>> b14763e (made pwd recovery !)
+=======
+ini_set('display_errors', 1);
+>>>>>>> 1f01c05 (updated: same code as the website)
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1f01c05 (updated: same code as the website)
 require '../../vendor/autoload.php';
 
     class sendEmailRecovery
