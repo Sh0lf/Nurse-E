@@ -67,3 +67,15 @@
     background-color: #43B1F8;
     cursor:pointer;
 }
+
+@media screen and (max-width: 650px) {
+    .container_form form input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #note{
+        display: none;
+    }
+}

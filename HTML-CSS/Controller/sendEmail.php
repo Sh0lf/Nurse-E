@@ -5,7 +5,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require '../../vendor/autoload.php';
+require '../../bin/phpMyadmin/vendor/autoload.php';
 
     class sendEmail
 
@@ -38,13 +38,15 @@ require '../../vendor/autoload.php';
 
             $mail->Port = 587;   // port for SMTP     
 
-            $mail->isHTML(true); 
+            $mail->isHTML(true);
+
+            $mail->CharSet = 'utf-8';
 
             $mail->setFrom('nurse.medicobot@gmail.com', "Nurse-e"); // sender's email and name
 
             $mail->addAddress($email, $nomEntier);  // receiver's email and name
 
-            $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
+            $headers .= 'Content-type: text/html;' . "\r\n"; 
 
             $mail->Subject = 'Verification du compte';
 

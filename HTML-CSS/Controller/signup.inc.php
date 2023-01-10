@@ -19,7 +19,7 @@ if (isset($_POST["submit"])) {
   $role = test_input($_POST["role"]);
   $idkit = test_input($_POST["idkit"]);
 
-  if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) != false){
+  if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) !== false){
     header("location: ../views/loginsys/signup.php?error=emptyinput");
     exit();
   }

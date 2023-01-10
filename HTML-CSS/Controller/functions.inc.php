@@ -77,10 +77,10 @@ function EmptyInputLogin($username, $pwd){
 function loginUser($conn, $username, $pwd){
     $checkAcc_Verified = checkAcc_Verified($conn, $username, $username);
 
-    if ($checkAcc_Verified == false) {
+    if ($checkAcc_Verified === false) {
         header("location: ../views/loginsys/login.php?error=accnotverified");
         exit();
-    } else if ($checkAcc_Verified == "notexist"){
+    } else if ($checkAcc_Verified === "notexist"){
         header("location: ../views/loginsys/login.php?error=accnotexist");
         exit();
     }
@@ -88,12 +88,12 @@ function loginUser($conn, $username, $pwd){
     $hashedpwd = $checkAcc_Verified["password"];
     $checkpwd = password_verify($pwd, $hashedpwd);
 
-    if ($checkpwd == false) {
+    if ($checkpwd === false) {
         header("location: ../views/loginsys/login.php?error=wronglogin");
         exit();
     }
 
-    else if ($checkpwd == true) {
+    else if ($checkpwd === true) {
         session_start();
         $_SESSION["iduser"]=$checkAcc_Verified["iduser"];
         $_SESSION["username"]=$checkAcc_Verified["username"];
@@ -123,6 +123,16 @@ function EmpytInputpwdReset($pwd, $pwdrep){
 function EmptyInputContact($nom, $email, $sujet, $body){
     $result = "";
     if (empty($nom) or empty($email) or empty($sujet) or empty($body)) {
+        $result = true;
+    } else {
+        $result = false; 
+    }
+    return $result;
+}
+
+function EmptyInputModif($iduser, $username, $familyname, $name, $email, $phone, $sexe, $role, $idkit){
+    $result = "";
+    if (empty($username) or empty($iduser) or empty($familyname) or empty($name) or empty($email) or empty($phone) or empty($sexe) or empty($role) or empty($idkit)) {
         $result = true;
     } else {
         $result = false; 
