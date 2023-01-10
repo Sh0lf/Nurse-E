@@ -21,6 +21,7 @@
 >>>>>>> 8044b22 (updates css styling + pages)
 =======
     box-shadow: 0px 5px 25px #43B1F8;
+    z-index: 20;
  }
  
 >>>>>>> 939be3c (updates changes navbar)
@@ -264,6 +265,13 @@
        margin-bottom:15px;
 >>>>>>> 939be3c (updates changes navbar)
     }
+}
+header{
+    margin-bottom: 80px;
+}
+
+footer {
+    margin-top: 80px;
 }
 
 header{

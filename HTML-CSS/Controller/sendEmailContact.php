@@ -14,6 +14,7 @@ use PHPMailer\PHPMailer\Exception;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 require '../../vendor/autoload.php';
 =======
 require '../../bin/phpMyAdmin/vendor/autoload.php';
@@ -21,6 +22,9 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
 =======
 require '../../vendor/autoload.php';
 >>>>>>> 1f01c05 (updated: same code as the website)
+=======
+require '../../bin/phpMyadmin/vendor/autoload.php';
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
     class sendEmailContact
 
@@ -52,12 +56,18 @@ require '../../vendor/autoload.php';
             $mail->Port = 587;   // port for SMTP     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $mail->isHTML(true);
 
             $mail->CharSet = 'utf-8';
 =======
             $mail->isHTML(true); 
 >>>>>>> 27f66f0 (contact us fini, sys email marche bien)
+=======
+            $mail->isHTML(true);
+
+            $mail->CharSet = 'utf-8';
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
             $mail->setFrom('nurse.medicobot@gmail.com', "Nurse-e"); // sender's email and name
 
@@ -66,10 +76,14 @@ require '../../vendor/autoload.php';
             $mail->AddCC('nurse.medicobot@gmail.com');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $headers .= 'Content-type: text/html;' . "\r\n";
 =======
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 >>>>>>> 27f66f0 (contact us fini, sys email marche bien)
+=======
+            $headers .= 'Content-type: text/html;' . "\r\n";
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
             $mail->Subject = 'Sujet Medicobot: ' . $sujet;
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 ul {
@@ -93,3 +94,33 @@ tr:nth-child(even) {
 body {
     color: #444; 
 }  
+=======
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    padding: 16px;
+    justify-content: space-between;
+    width: fit-content,
+}
+
+.container-box{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 16px;
+}
+
+form input{
+    display: flex;
+    flex-direction: row;
+    padding: 1px
+}
+>>>>>>> 3836c0f (New updates: maps and user modify)

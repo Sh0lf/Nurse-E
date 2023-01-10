@@ -1,6 +1,11 @@
 <?php
 
 ini_set('display_errors', 1);
+<<<<<<< HEAD
+=======
+include_once '../controller/functions.inc.php';
+include_once '../controller/dbh.inc.php';
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
 function fetchAddressAsker($conn, $iduser){
     $sql = "SELECT * from Adresse where user_iduser = ?";
@@ -30,6 +35,7 @@ function fetchAddressesMedecin($conn){
     return $fetchedRow;
 }
 
+<<<<<<< HEAD
 function fetchRowUser($conn, $input){
     $sql = "SELECT * from user where username = ? or iduser = ? or email = ? or familyname = ?";
     $stmt = $conn->prepare($sql);
@@ -38,17 +44,36 @@ function fetchRowUser($conn, $input){
         exit();
     }
     $stmt->execute(array($input, $input, $input, $input));
+=======
+function fetchRowUser($conn, $username){
+    $sql = "SELECT * from user where username = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/admin-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($username));
+>>>>>>> 3836c0f (New updates: maps and user modify)
     $fetchedRow = $stmt->fetch();
     return $fetchedRow;
 }
 
 function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $sexe, $role, $idkit){
+<<<<<<< HEAD
     $sql= "UPDATE user SET username = ?, familyname = ?, 
     name = ?, email = ?, phone = ?, sexe = ?, role = ?, KitDiagnostiqueidKitDiagnostique = ? WHERE iduser = ?";
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
+=======
+    $sql= "UPDATE user SET(username = ?, familyname = ?, 
+    name = ?, email = ?, phone = ?, sexe = ?, role = ?, KitDiagnostiqueidKitDiagnostique = ?) WHERE iduser = ?";
+
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/admin-personalspace.php?error=stmtfailed");
+>>>>>>> 3836c0f (New updates: maps and user modify)
         exit();
     }
     $stmt->execute(array($username, $familyname, $name, $email, $phone, $sexe, $role, $idkit, $iduser));
@@ -56,6 +81,7 @@ function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $p
     return fetchRowUser($conn, $username);
 }   
 
+<<<<<<< HEAD
 function deleteUser($conn, $iduser){
     $sql = "DELETE FROM user WHERE iduser = ?";
     $stmt = $conn->prepare($sql);
@@ -85,6 +111,8 @@ function fetchAllUser($conn){
     return $result;
     
 }
+=======
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
 
 ?>

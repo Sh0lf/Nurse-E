@@ -14,9 +14,13 @@ use PHPMailer\PHPMailer\Exception;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1f01c05 (updated: same code as the website)
 require '../../vendor/autoload.php';
+=======
+require '../../bin/phpMyadmin/vendor/autoload.php';
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
     class sendEmailRecovery
 =======
@@ -58,22 +62,32 @@ require '../../bin/phpMyAdmin/vendor/autoload.php';
             $mail->Port = 587;   // port for SMTP     
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $mail->isHTML(true);
 
             $mail->CharSet = 'utf-8';
 =======
             $mail->isHTML(true); 
 >>>>>>> b14763e (made pwd recovery !)
+=======
+            $mail->isHTML(true);
+
+            $mail->CharSet = 'utf-8';
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
             $mail->setFrom('nurse.medicobot@gmail.com', "Nurse-e"); // sender's email and name
 
             $mail->addAddress($email);  // receiver's email and name
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             $headers .= 'Content-type: text/html;' . "\r\n"; 
 =======
             $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n"; 
 >>>>>>> b14763e (made pwd recovery !)
+=======
+            $headers .= 'Content-type: text/html;' . "\r\n"; 
+>>>>>>> 3836c0f (New updates: maps and user modify)
 
             $mail->Subject = 'Recuperation de votre compte';
 
