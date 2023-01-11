@@ -1,0 +1,67 @@
+
+.corps{
+    background-color: white;
+    font-family: Jua, Century Gothic, sans-serif;
+    overflow: auto;
+}
+
+.titre{
+    color: #43B1F8;
+    font-size: 30px;
+    font-family: "Century Gothic", serif;   
+    margin-left: 5%;
+    }
+
+.rectangle{
+    border: 1px transparent solid ;
+    border-radius: 2% 2%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    background-color: #F5F5F5;
+    padding: 1%;
+}
+
+.list{
+    list-style-type: none;
+    line-height: 350%;
+    position: relative;
+}
+
+/*.couleur{
+    color: #43B1F8;
+    font-weight: bold;
+}*/
+
+.puce{
+    margin: auto;
+   
+}
+
+.btn{
+    margin-right:10%;
+    text-align: right;
+    text-decoration: none;
+}
+
+@media screen and (max-width:600px) {
+
+    .list{
+    line-height: 250%;
+    border-right: 5%;
+    position: relative;
+    }
+
+    .puce{
+    margin-top: 10%;
+    }
+
+    .rectangle{
+    margin-top: 10%;
+    border: 10%;
+    height: 60%;
+    width: 80%;
+    }
+
+}
