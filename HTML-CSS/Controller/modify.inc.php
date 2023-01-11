@@ -20,7 +20,7 @@ if (isset($_POST["submit_seek"]))
     $role=$result["role"];
     $idkit=$result["KitDiagnostiqueidKitDiagnostique"];
 
-    header('location:../views/personalspace/admin/admin-personalspace.php?id='.$idkit.'&username='.$username.'&family='.$familyname.'&name='
+    header('location:../views/personalspace/admin/adminmodif-personalspace.php?id='.$iduser.'&username='.$username.'&family='.$familyname.'&name='
     .$name.'&email='.$email.'&phone='.$phone.'&sexe='.$sexe.'&role='.$role.'&idkit='.$idkit);
     exit();
 }
@@ -37,7 +37,7 @@ if (isset($_POST["submit_modify"])){
     $idkit = test_input($_POST["idkit"]);
 
     if (EmptyInputModif($iduser, $username, $familyname, $name, $email, $phone, $sexe, $role, $idkit) !== false){
-        header("location: ../views/personalspace/admin/admin-personalspace.php?error=emptyinput");
+        header("location: ../views/personalspace/admin/adminmodif-personalspace.php?error=emptyinput");
         exit();
     }
 
@@ -53,17 +53,17 @@ if (isset($_POST["submit_modify"])){
         $role=$result["role"];
         $idkit=$result["KitDiagnostiqueidKitDiagnostique"];
 
-        header('location:../views/personalspace/admin/admin-personalspace.php?id='.$idkit.'&username='.$username.'&family='.$familyname.'&name='
+        header('location:../views/personalspace/admin/adminmodif-personalspace.php?id='.$iduser.'&username='.$username.'&family='.$familyname.'&name='
         .$name.'&email='.$email.'&phone='.$phone.'&sexe='.$sexe.'&role='.$role.'&idkit='.$idkit.'&error=success');
         exit();
     } else {
-        header('location:../views/personalspace/admin/admin-personalspace.php?id='.$idkit.'&username='.$username.'&family='.$familyname.'&name='
+        header('location:../views/personalspace/admin/adminmodif-personalspace.php?id='.$iduser.'&username='.$username.'&family='.$familyname.'&name='
         .$name.'&email='.$email.'&phone='.$phone.'&sexe='.$sexe.'&role='.$role.'&idkit='.$idkit.'&error=issue');
         exit();
     }
     
 } else {
-    header('location:../views/personalspace/admin-personalspace.php');
+    header('location:../views/personalspace/adminmodif-personalspace.php');
     exit();
 }
 

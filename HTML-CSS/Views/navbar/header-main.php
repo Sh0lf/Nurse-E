@@ -47,7 +47,7 @@
         if(isset($_SESSION["username"])) {
             echo '<li>
                     <label for="btn-3" class="show">Ecologie +</label>
-                    <a href="eco">Ecologie <i class="fas fa-caret-down"></i></a>
+                    <a href="#eco">Ecologie <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-3">
                     <ul>
                         <li><a href="#">Votre arbre</a></li>
@@ -59,7 +59,14 @@
         ?>
         <?php
         if(isset($_SESSION["username"])) {
-            echo '<li><button class="bouton" href="#profil">Mon profil</button></li>';
+            echo '<li>
+                    <label for="btn-4" class="show">Mon profil +</label>
+                    <a href="http://nurse-medicobot.wstr.fr">Mon profil <i class="fas fa-caret-down"></i></a>
+                    <input type="checkbox" id="btn-4">
+                    <ul>
+                        <li><a href="#">Options</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/controller/logout.inc.php">Logout</a></li>
+                    </ul></li>';
         } else {
             echo '<li><a href="http://nurse-medicobot.wstr.fr/views/loginsys/login.php"><button class="bouton">Connexion</button></a></li>';
         }

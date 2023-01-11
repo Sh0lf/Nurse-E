@@ -1,8 +1,6 @@
 <?php
 
 ini_set('display_errors', 1);
-include_once '../controller/functions.inc.php';
-include_once '../controller/dbh.inc.php';
 
 function fetchAddressAsker($conn, $iduser){
     $sql = "SELECT * from Adresse where user_iduser = ?";
@@ -32,25 +30,25 @@ function fetchAddressesMedecin($conn){
     return $fetchedRow;
 }
 
-function fetchRowUser($conn, $username){
-    $sql = "SELECT * from user where username = ?";
+function fetchRowUser($conn, $input){
+    $sql = "SELECT * from user where username = ? or iduser = ? or email = ? or familyname = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/admin-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
         exit();
     }
-    $stmt->execute(array($username));
+    $stmt->execute(array($input, $input, $input, $input));
     $fetchedRow = $stmt->fetch();
     return $fetchedRow;
 }
 
 function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $sexe, $role, $idkit){
-    $sql= "UPDATE user SET(username = ?, familyname = ?, 
-    name = ?, email = ?, phone = ?, sexe = ?, role = ?, KitDiagnostiqueidKitDiagnostique = ?) WHERE iduser = ?";
+    $sql= "UPDATE user SET username = ?, familyname = ?, 
+    name = ?, email = ?, phone = ?, sexe = ?, role = ?, KitDiagnostiqueidKitDiagnostique = ? WHERE iduser = ?";
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/admin-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($username, $familyname, $name, $email, $phone, $sexe, $role, $idkit, $iduser));
@@ -58,6 +56,35 @@ function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $p
     return fetchRowUser($conn, $username);
 }   
 
+function deleteUser($conn, $iduser){
+    $sql = "DELETE FROM user WHERE iduser = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/adminsupp-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($iduser));
+    
+    if($stmt){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function fetchAllUser($conn){
+    $sql = "SELECT * FROM user";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/adminsupp-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute();
+    // set the resulting array to associative
+    $result = $stmt->fetchAll();
+    return $result;
+    
+}
 
 
 ?>
