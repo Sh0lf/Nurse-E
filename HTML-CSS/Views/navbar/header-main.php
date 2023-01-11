@@ -168,10 +168,14 @@
             echo '<li>
                     <label for="btn-3" class="show">Ecologie +</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <a href="#eco">Ecologie <i class="fas fa-caret-down"></i></a>
 =======
                     <a href="eco">Ecologie <i class="fas fa-caret-down"></i></a>
 >>>>>>> 31cd901 (changes updated navbar)
+=======
+                    <a href="#eco">Ecologie <i class="fas fa-caret-down"></i></a>
+>>>>>>> 2de61a8 (update: files from website)
                     <input type="checkbox" id="btn-3">
                     <ul>
                         <li><a href="#">Votre arbre</a></li>

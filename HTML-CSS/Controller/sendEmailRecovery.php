@@ -15,12 +15,16 @@ use PHPMailer\PHPMailer\Exception;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 1f01c05 (updated: same code as the website)
 require '../../vendor/autoload.php';
 =======
 require '../../bin/phpMyadmin/vendor/autoload.php';
 >>>>>>> 3836c0f (New updates: maps and user modify)
+=======
+require '../../vendor/autoload.php';
+>>>>>>> 2de61a8 (update: files from website)
 
     class sendEmailRecovery
 =======

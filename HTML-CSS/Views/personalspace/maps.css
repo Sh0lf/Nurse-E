@@ -10,6 +10,7 @@
     justify-self: center;
     justify-content: center;
 <<<<<<< HEAD
+<<<<<<< HEAD
     flex-direction: column;
     padding: 16px;
 =======
@@ -18,6 +19,10 @@
     text-align: center;
     margin: auto; 
 >>>>>>> 98c9008 (New changes: maps and modify)
+=======
+    flex-direction: column;
+    padding: 16px;
+>>>>>>> 2de61a8 (update: files from website)
 }
 
 #map{

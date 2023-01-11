@@ -27,6 +27,7 @@ if (isset($_SESSION["iduser"])){
     }
     if ($view != "error404"){
         header ('location: https://nurse-medicobot.wstr.fr/views/personalspace/'.$view.'/'.$view.'-personalspace.php');
+<<<<<<< HEAD
         exit();
     } else {
         header ("location: views/error404.php");
@@ -67,6 +68,8 @@ if (isset($_SESSION["iduser"])){
     }
     if ($view != "error404"){
         header ("location :views/personalspace/'.$view.'/'.$view.'-personalspace.php");
+=======
+>>>>>>> 2de61a8 (update: files from website)
         exit();
     } else {
         header ("location: views/error404.php");

@@ -27,11 +27,11 @@ if(isset($_POST['submit_email']) && $_POST['email']){
 <<<<<<< HEAD
 <<<<<<< HEAD
     error_log(print_r($pwdRecovery, TRUE));
-    if ($pwdRecovery === false) {
+    if ($pwdRecovery == false) {
         header("location: ../views/loginsys/forgotpwd.php?error=accnotverified");
 <<<<<<< HEAD
         exit();
-    } else if ($pwdRecovery === "notexist"){
+    } else if ($pwdRecovery == "notexist"){
         header("location: ../views/loginsys/forgotpwd.php?error=accnotexist");
 =======
 

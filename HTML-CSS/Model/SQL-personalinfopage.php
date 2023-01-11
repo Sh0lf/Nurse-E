@@ -2,10 +2,13 @@
 
 ini_set('display_errors', 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 include_once '../controller/functions.inc.php';
 include_once '../controller/dbh.inc.php';
 >>>>>>> 3836c0f (New updates: maps and user modify)
+=======
+>>>>>>> 2de61a8 (update: files from website)
 
 function fetchAddressAsker($conn, $iduser){
     $sql = "SELECT * from Adresse where user_iduser = ?";
@@ -36,6 +39,7 @@ function fetchAddressesMedecin($conn){
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 function fetchRowUser($conn, $input){
     $sql = "SELECT * from user where username = ? or iduser = ? or email = ? or familyname = ?";
     $stmt = $conn->prepare($sql);
@@ -47,18 +51,27 @@ function fetchRowUser($conn, $input){
 =======
 function fetchRowUser($conn, $username){
     $sql = "SELECT * from user where username = ?";
+=======
+function fetchRowUser($conn, $input){
+    $sql = "SELECT * from user where username = ? or iduser = ? or email = ? or familyname = ?";
+>>>>>>> 2de61a8 (update: files from website)
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/admin-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
         exit();
     }
+<<<<<<< HEAD
     $stmt->execute(array($username));
 >>>>>>> 3836c0f (New updates: maps and user modify)
+=======
+    $stmt->execute(array($input, $input, $input, $input));
+>>>>>>> 2de61a8 (update: files from website)
     $fetchedRow = $stmt->fetch();
     return $fetchedRow;
 }
 
 function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $sexe, $role, $idkit){
+<<<<<<< HEAD
 <<<<<<< HEAD
     $sql= "UPDATE user SET username = ?, familyname = ?, 
     name = ?, email = ?, phone = ?, sexe = ?, role = ?, KitDiagnostiqueidKitDiagnostique = ? WHERE iduser = ?";
@@ -74,6 +87,14 @@ function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $p
     if (!$stmt) {
         header("location: ../views/personalspace/admin-personalspace.php?error=stmtfailed");
 >>>>>>> 3836c0f (New updates: maps and user modify)
+=======
+    $sql= "UPDATE user SET username = ?, familyname = ?, 
+    name = ?, email = ?, phone = ?, sexe = ?, role = ?, KitDiagnostiqueidKitDiagnostique = ? WHERE iduser = ?";
+
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
+>>>>>>> 2de61a8 (update: files from website)
         exit();
     }
     $stmt->execute(array($username, $familyname, $name, $email, $phone, $sexe, $role, $idkit, $iduser));
@@ -82,6 +103,9 @@ function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $p
 }   
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2de61a8 (update: files from website)
 function deleteUser($conn, $iduser){
     $sql = "DELETE FROM user WHERE iduser = ?";
     $stmt = $conn->prepare($sql);
@@ -111,8 +135,11 @@ function fetchAllUser($conn){
     return $result;
     
 }
+<<<<<<< HEAD
 =======
 >>>>>>> 3836c0f (New updates: maps and user modify)
+=======
+>>>>>>> 2de61a8 (update: files from website)
 
 
 ?>

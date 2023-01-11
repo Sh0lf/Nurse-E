@@ -7,7 +7,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require '../../bin/phpMyadmin/vendor/autoload.php';
+require '../../vendor/autoload.php';
 
     class sendEmail
 

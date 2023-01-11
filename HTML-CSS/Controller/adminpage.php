@@ -24,9 +24,12 @@ if (isset($_POST["submit"]))
     header('location:../views/personalspace/admin/admin-personalspace.php?id='.$iduser.'&username='.$username.'&family='.$familyname.'&name='
     .$name.'&email='.$email.'&phone='.$phone.'&sexe='.$sexe.'&role='.$role.'&idkit='.$idkit);
     exit();
+<<<<<<< HEAD
 } else {
     header('location: ../views/mainmenu.php');
     exit();
+=======
+>>>>>>> 2de61a8 (update: files from website)
 }
 
 ?>

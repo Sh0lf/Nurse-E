@@ -42,7 +42,7 @@ if (isset($_GET["code"])){
     
     $result = changePwd($conn, $newpwd, $code);
 
-    if ($result === true){
+    if ($result == true){
         header("location: ../views/loginsys/login.php?error=remadepwd");
         exit();
     }
