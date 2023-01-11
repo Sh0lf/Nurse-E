@@ -108,6 +108,14 @@ body {
 >>>>>>> 2de61a8 (update: files from website)
 }
 
+.container {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  padding: 16px;
+  width: fit-content;
+}
+
 section {
   text-align: center;
   font-family: sans-serif;
@@ -124,12 +132,14 @@ a {
 h2
 {
     color:#43b1f8;
+    margin:16px ;
 }
 span
 {
     color:green;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 form input{
     display: flex;
@@ -138,6 +148,32 @@ form input{
 }
 >>>>>>> 3836c0f (New updates: maps and user modify)
 =======
+=======
+form input{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  padding: 1px
+}
+
+input[type="text"] {
+  padding: 2px 10px;
+  margin-bottom: 1px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  margin-top: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: #fff;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+>>>>>>> 54a5a92 (small updares on appearance)
 
 table {
   display: flex;

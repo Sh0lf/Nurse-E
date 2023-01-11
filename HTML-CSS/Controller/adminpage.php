@@ -25,11 +25,17 @@ if (isset($_POST["submit"]))
     .$name.'&email='.$email.'&phone='.$phone.'&sexe='.$sexe.'&role='.$role.'&idkit='.$idkit);
     exit();
 <<<<<<< HEAD
+<<<<<<< HEAD
 } else {
     header('location: ../views/mainmenu.php');
     exit();
 =======
 >>>>>>> 2de61a8 (update: files from website)
+=======
+} else {
+    header('location: ../views/mainmenu.php');
+    exit();
+>>>>>>> 54a5a92 (small updares on appearance)
 }
 
 ?>
