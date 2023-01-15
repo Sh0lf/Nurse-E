@@ -18,18 +18,16 @@
       ?>
     </header>
 
-    <div class="centerbox">
-        <h2>Oublié mot de passe ?</h2><br>
-    </div>
-
     <div class="container">
+      <div class="centerbox">
+        <h4>Récupération de votre mot de passe par email</h4>
         <div class="container_form">
             <form method="post" action="../../controller/forgotpwd.inc.php">
-                <label><u>Votre Email</u></label><br><br>
-                <input type="text" name="email" placeholder="Email..."><br><br>
+                <input type="text" name="email" placeholder="Votre Adresse Mail"><br><br>
                 <div class="centerbox">
                     <button type="submit" name="submit_email" class="confbutton">Confirmer</button><br>
                 </div>
+      </div>
             </form>
         </div>
     </div>
