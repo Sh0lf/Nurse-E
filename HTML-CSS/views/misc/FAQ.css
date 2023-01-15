@@ -1,6 +1,11 @@
 .contient-tout {
     width: 100%;
 }
+
+body {
+    background-color: #eef2f7;
+}
+
 .container {
     margin: auto;
     max-width: 900px;
@@ -19,23 +24,30 @@
     margin: auto;
     max-width: 900px;
     min-width: 70px;
-    padding-bottom: 20px;
+    padding-top:20px;
+    border-radius: 5px;
 }
+
 .tableau h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 24px;
+    color:#274359;
 }
+
 .tableau ul {
-    border: black;
-    border-style: solid;
+    background-color: white;
     border-width: 2px;
     padding: 20px;
     margin: 20px;
+    border-radius: 5px;
+    color:#274359;
+    font-weight:bold;
 }
 
 h2 {
     margin: 24px;
+    color:#274359;
 }
 
 form {
