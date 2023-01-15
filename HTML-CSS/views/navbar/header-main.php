@@ -8,7 +8,6 @@
         echo '<img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png">';
     }
     ?>
-    <img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png">
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>

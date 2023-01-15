@@ -38,6 +38,19 @@ if (isset($_POST["submit_ques"])){
     header('location: ../views/personalspace/admin/adminfaq-personalspace.php?id='.$idques.'&ques='.$ques.'&rep='.$rep.'&error=success');
     exit();
     
+} elseif (isset($_GET["idquesrem"])){
+
+    $idques = $_GET["idquesrem"];
+
+    $result = remQuestion($conn, $idques);
+
+    if ($result){
+        header('location: ../views/personalspace/admin/adminfaq-personalspace.php?error=rem');
+        exit();
+    } else {
+        header('location: ../views/personalspace/admin/adminfaq-personalspace.php?error=rem');
+        exit();
+    }
 }
 
 else {

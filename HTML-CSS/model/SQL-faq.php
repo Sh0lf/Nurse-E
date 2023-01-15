@@ -22,7 +22,7 @@ function fetchQuestion($conn, $idques){
     // use exec() because no results are returned
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminfaq-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($idques));
@@ -35,12 +35,28 @@ function modifyRowQuestion($conn, $idques, $ques, $rep){
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminfaq-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($ques, $rep, $idques));
 
     return fetchQuestion($conn, $idques);
 }   
+
+function remQuestion($conn, $idques){
+    $sql = "DELETE FROM user WHERE idFAQ = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($idques));
+    
+    if($stmt){
+        return true;
+    } else {
+        return false;
+    }
+}
 
 ?>

@@ -34,7 +34,7 @@ function fetchRowUser($conn, $input){
     $sql = "SELECT * from user where username = ? or iduser = ? or email = ? or familyname = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminmodif-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($input, $input, $input, $input));
@@ -48,7 +48,7 @@ function modifyRowUser($conn, $iduser, $username, $familyname, $name, $email, $p
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminmodif-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminmodif-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($username, $familyname, $name, $email, $phone, $sexe, $role, $idkit, $iduser));
@@ -60,7 +60,7 @@ function deleteUser($conn, $iduser){
     $sql = "DELETE FROM user WHERE iduser = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminsupp-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminsupp-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($iduser));
@@ -76,7 +76,7 @@ function fetchAllUser($conn){
     $sql = "SELECT * FROM user";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminsupp-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminsupp-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute();
@@ -90,7 +90,7 @@ function fetchAllUserClient($conn){
     $sql = "SELECT * FROM user WHERE role = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/adminsupp-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/admin/adminsupp-personalspace.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array("client"));

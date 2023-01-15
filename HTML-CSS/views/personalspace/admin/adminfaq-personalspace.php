@@ -39,7 +39,7 @@
             foreach($result as $row)
                 {
                 echo "<tr>";
-                echo '<td>' . $row["idFAQ"] . '</td><td>' . $row["question"] . '</td><td>' . $row["reponse"] . '</td><td><a href="../../../controller/faqprocess.php?idques='.$row["idFAQ"].'"><button class="editbutton">Modifier</button></a> <a href="../../../controller/faqprocess.php?idques='.$row["idFAQ"].'"><button class="remove">Supprimer</button></a>';
+                echo '<td>' . $row["idFAQ"] . '</td><td>' . $row["question"] . '</td><td>' . $row["reponse"] . '</td><td><a href="../../../controller/faqprocess.php?idques='.$row["idFAQ"].'"><button class="editbutton">Modifier</button></a> <a href="../../../controller/faqprocess.php?idquesrem='.$row["idFAQ"].'"><button class="remove">Supprimer</button></a>';
                 echo "</tr>";
                 
                 }

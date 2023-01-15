@@ -19,7 +19,7 @@
         <div class="tableau">
             <h1>Les questions les plus posées</h1>
             <il>
-                <ul>Quel est le prix du produit ?</ul>
+                <ul>Quelle est le prix du produit ?</ul>
                 <ul>Pourquoi acheter notre produit ?</ul>
 
             </il>
