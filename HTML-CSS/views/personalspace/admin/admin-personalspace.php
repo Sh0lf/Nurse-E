@@ -30,6 +30,8 @@
             Veuillez cliquer <a href="adminmodif-personalspace.php">ICI</a>
         <h2>SUPPRESSION SUR UN UTILISATEUR </h2>
             Veuillez cliquer <a href="adminsupp-personalspace.php">ICI</a>
+        <h2>MODIFICATION FAQ</h2>
+        Veuillez cliquer <a href="adminfaq-personalspace.php">ICI</a>
         <h2>EFFECTUER UNE RECHERCHE (Ecrivez soit le numero id, le pseudo, le nom de famille ou email)</h2>
         <form action="../../../controller/adminpage.php" method="post">
             <input type="text" name="input">
