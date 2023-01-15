@@ -44,7 +44,7 @@ function modifyRowQuestion($conn, $idques, $ques, $rep){
 }   
 
 function remQuestion($conn, $idques){
-    $sql = "DELETE FROM user WHERE idFAQ = ?";
+    $sql = "DELETE FROM FAQ WHERE idFAQ = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
