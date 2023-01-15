@@ -20,21 +20,21 @@
     <?php
     if (isset($_GET["code"])){
         $code = $_GET["code"];
-        echo '<div class="centerbox">
-        <h2>Changer de mot de passe</h2><br>
-    </div>
+        echo '
 
     <div class="container">
+      <div class="centerbox">
+          <h2>Changement de mot de passe</h2>
         <div class="container_form">
             <form method="post" action="../../controller/resetpwd.inc.php">
                 <input type="hidden" name="code" value='.$code.'><br>
-                <label><u>Notez un nouveau mot de passe</u></label><br><br>
-                <input type="password" name="pwd" placeholder="Mot de passe..."><br>
+                <input type="password" name="pwd" placeholder="Nouveau mot de passe"><br>
                 <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule,<br> un caractère spécial et un chiffre</p>
-                <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
+                <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter mot de passe">
                 <div class="centerbox">
                     <button type="submit" name="submit_pwd" class="confbutton">Confirmer</button><br>
-                </div>';
+                </div>
+      </div>';
       if (isset($_GET["error"])) {
         if ($_GET["error"] === "pwdmissmatch") {
           echo "<p> Les mots de passes ne sont pas les mêmes </p>";
