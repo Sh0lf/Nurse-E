@@ -5,6 +5,10 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    background-color: #eef2f7;
+}
+
 .centerbox {
     display: flex;
     align-items: center;
@@ -22,8 +26,7 @@
     justify-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 24px;
-    border:2px #000000 solid;
+    padding: 20px;
     border-radius:20px;
     background-color:white;
     width: fit-content;
@@ -73,15 +76,23 @@
 }
 
 .centerbox .confbutton{
-    padding: 5px 15px;
+    padding: 10px 55px;
     margin-left: 20px;
     margin-top: 18px;;
     font-size: 17px;
     color: white;
-    border:1px solid white;
+    border: 1px solid #eef2f7;
+    border-radius: 5px;
     background-color: #43B1F8;
     cursor:pointer;
 }
+
+.centerbox .confbutton:hover {
+    background-color: white;
+    color:#43B1F8;
+    border: 1px solid #43B1F8;
+}
+
 
 @media screen and (max-width: 615px) {
     #note {
