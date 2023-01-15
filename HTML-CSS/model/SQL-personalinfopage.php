@@ -86,5 +86,18 @@ function fetchAllUser($conn){
     
 }
 
+function fetchAllUserClient($conn){
+    $sql = "SELECT * FROM user WHERE role = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/adminsupp-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array("client"));
+    // set the resulting array to associative
+    $result = $stmt->fetchAll();
+    return $result;
+    
+}
 
 ?>
