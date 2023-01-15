@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 11, 2023 at 06:03 PM
+-- Generation Time: Jan 15, 2023 at 04:17 PM
 -- Server version: 10.5.18-MariaDB-0+deb11u1
 -- PHP Version: 7.4.32
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `rflzfr_nursemed_db`
 --
+CREATE DATABASE IF NOT EXISTS `dbAPP-G5B` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `dbAPP-G5B`;
 
 -- --------------------------------------------------------
 
@@ -80,8 +82,18 @@ CREATE TABLE `Diagnostique` (
 CREATE TABLE `FAQ` (
   `idFAQ` int(11) NOT NULL,
   `question` varchar(45) NOT NULL,
-  `reponse` varchar(45) NOT NULL
+  `reponse` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `FAQ`
+--
+
+INSERT INTO `FAQ` (`idFAQ`, `question`, `reponse`) VALUES
+(1, 'YESSS LET\'s goooo', 'OUIII'),
+(2, 'SUCCESS MODIF FINALLY ? ', 'PLEASE'),
+(3, 'Je veux le produit', NULL),
+(4, 'Test if it adds question', NULL);
 
 -- --------------------------------------------------------
 
@@ -166,6 +178,43 @@ CREATE TABLE `question_reponse` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `symptoms`
+--
+
+CREATE TABLE `symptoms` (
+  `id` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `s1` text NOT NULL,
+  `s2` text NOT NULL,
+  `s3` text NOT NULL,
+  `s5` text NOT NULL,
+  `name` text NOT NULL,
+  `s4` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `symptoms`
+--
+
+INSERT INTO `symptoms` (`id`, `description`, `s1`, `s2`, `s3`, `s5`, `name`, `s4`) VALUES
+(1, 'Vous êtes en bonne santé', 'non', 'pas de toux', 'non', 'non', 'rien de grave', 'pas de douleur'),
+(2, 'good', 'oui', 'grasse', 'non', 'non', 'rhume', 'pas de douleur'),
+(3, 'good', 'oui', 'seche', 'non', 'non', 'rhume', 'pas de douleur'),
+(4, 'good', 'oui', 'seche', 'oui', 'non', 'angine', 'poumon'),
+(5, 'bad', 'oui', 'grasse', 'oui', 'non', 'angine', 'poumon'),
+(7, 'very bad', 'oui', 'grasse', 'oui', 'oui', 'covid', 'poumon'),
+(8, 'very bad', 'oui', 'seche', 'oui', 'oui', 'covid', 'poumon'),
+(9, 'very bad', 'oui', 'grasse', 'oui', 'oui', 'covid', 'tete'),
+(10, 'very bad', 'oui', 'seche', 'oui', 'oui', 'covid', 'tete'),
+(13, 'very bad', 'oui', 'grasse', 'oui', 'oui', 'covid', 'gorge'),
+(14, 'bad', 'oui', 'grasse', 'oui', 'non', 'angine', 'gorge'),
+(15, 'very bad', 'oui', 'seche', 'oui', 'oui', 'covid', 'gorge'),
+(16, 'bad', 'oui', 'seche', 'oui', 'non', 'angine', 'gorge'),
+(17, 'bad', 'oui', 'seche', 'oui', 'non', 'angine', 'poumon');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -192,7 +241,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`iduser`, `creation_time`, `username`, `familyname`, `name`, `email`, `phone`, `sexe`, `password`, `role`, `code_timestamp`, `code`, `is_verified`, `KitDiagnostiqueidKitDiagnostique`) VALUES
 (1, '2022-12-29 22:20:33', 'Sh0lf', 'Yoplait', 'VinSang', 'test@test.com', 778266459, 'Homme', '$2y$10$y1wI1PX./qxXLBKXgT3oeuYAQDLjYI4KGE8eD8b5ImSIe7kEOWhki', 'client', '2022-12-29 22:19:02', 0, 0, 1),
-(14, '2022-12-29 22:20:33', 'Sh0lfyyyy', 'Yappy', 'VinSang', 'vyvincentyap@gmail.com', 778266459, 'Homme', '$2y$10$BTYWiUjT5lRJIgz7rIvNuey.fMsmSiwc9HyBuaIqK158OwoOcW/gS', 'admin', '2023-01-06 10:55:52', 55792749, 1, 10),
+(14, '2022-12-29 22:20:33', 'Sh0lfyyyy', 'Yappy', 'VinSang', 'vyvincentyap@gmail.com', 778266459, 'Homme', '$2y$10$BTYWiUjT5lRJIgz7rIvNuey.fMsmSiwc9HyBuaIqK158OwoOcW/gS', 'admin', '2023-01-12 23:48:26', 231728195, 1, 10),
 (18, '2023-01-06 13:59:49', 'idirouille', 'Couille', 'Idi', 'idircoutant@gmail.com', 1564851564, 'Femme', '$2y$10$467yLruSKMv.b27NajCgJuWgQJTKeS8Vf1ia0k6cwitGeFA0DyuEe', 'client', '2023-01-06 13:59:49', 651141296, 1, 3),
 (20, '2023-01-10 15:37:17', 'junior123', 'YAMEUNDEU', 'JUNIOR ERIC', 'juniortitcheu@gmail.com', 652051901, 'Homme', '$2y$10$yh3C1vFbLxa8JqmBUCWjIuwiJccMKBaAatG8n9N0kkrM7d.O6cYde', 'admin', '2023-01-11 13:49:42', 1193111792, 1, 15),
 (22, '2023-01-11 10:10:46', 'ClemLaReine', 'DEBEUGNY', 'Clémentine', 'clementine.debeugny@gmail.com', 782785616, 'Femme', '$2y$10$cAf1.s6uiIFZpvXfQF4bo.YHCG1yudOWmUKePr7mv7idqQya5yzTS', 'admin', '2023-01-11 10:10:46', 1031044169, 1, 1),
@@ -264,6 +313,12 @@ ALTER TABLE `question_reponse`
   ADD KEY `fk_question_reponse_Questionnaire1_idx` (`Questionnaire_idQuestionnaire`);
 
 --
+-- Indexes for table `symptoms`
+--
+ALTER TABLE `symptoms`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -296,7 +351,7 @@ ALTER TABLE `Diagnostique`
 -- AUTO_INCREMENT for table `FAQ`
 --
 ALTER TABLE `FAQ`
-  MODIFY `idFAQ` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFAQ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `KitDiagnostique`
@@ -320,7 +375,7 @@ ALTER TABLE `Questionnaire`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `iduser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables

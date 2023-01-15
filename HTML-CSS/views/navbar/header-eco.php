@@ -1,5 +1,5 @@
 <nav>  
-    <img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png">
+    <img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/logo nurse-e 1.png">
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
     </label>

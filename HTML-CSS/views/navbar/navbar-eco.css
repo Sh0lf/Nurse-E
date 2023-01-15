@@ -168,6 +168,14 @@
     }
 }
 
+header{
+    margin-bottom: 80px;
+}
+
+footer {
+    margin-top: 80px;
+}
+
 /* Defining bottom navigation bar */
 .bottombar {
     display: flex;
