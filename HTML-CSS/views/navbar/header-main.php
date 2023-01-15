@@ -1,4 +1,12 @@
 <nav>  
+    <?php
+    $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
+    if ($curPageName === "medicobot.php"){
+        echo '<img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/logo nurse-e 1.png">';
+    } else {
+        echo '<img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png">';
+    }
+    ?>
     <img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png">
     <label for="btn" class="icon">
         <span class="fa fa-bars"></span>
