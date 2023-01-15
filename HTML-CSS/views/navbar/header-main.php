@@ -1,5 +1,6 @@
 <nav>  
     <?php
+    session_start();
     $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
     if ($curPageName === "medicobot.php"){
         echo '<img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/logo nurse-e 1.png">';
