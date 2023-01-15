@@ -16,31 +16,26 @@
         ?>
     </header>
 
-    <div class="centerbox">
-        <h2> Contactez-nous </h2><br>
-    </div>
-
     <div class="container">
+      <div class="centerbox">
+          <h2> Contactez-nous </h2>
         <div class="container_form">
             <form action="../../controller/contact.inc.php" method="post">
-                <label><u>Votre nom :</u></label><br><br>
-                <input type="text" name="nom" placeholder="Nom..."><br><br>
-                <label><u>Votre email :</u></label><br><br>
-                <input type="text" name="email" placeholder="Email..."><br><br>
-                <label><u>Le sujet :</u></label><br><br>
-                <input type="text" name="sujet" placeholder="Sujet..."><br><br>
-                <label><u>Votre reproche / remarque :</u></label><br><br>
-                <textarea id="body" name="body" placeholder="..."></textarea><br><br>
+                <input type="text" name="nom" placeholder="Votre Nom"><br><br>
+                <input type="text" name="email" placeholder="Votre Email"><br><br>
+                <input type="text" name="sujet" placeholder="Le Sujet"><br><br>
+                <textarea id="body" name="body" placeholder="Votre remarque"></textarea><br><br>
                 <div class="centerbox">
                     <button type="submit" name="submit_contact" class="confbutton">Confirmer</button><br>
                 </div>
+          </div>
             </form>
         </div>
         <div class="centerbox">
         <?php
         if (isset($_GET["error"])) {
           if ($_GET["error"] == "emptyinput") {
-            echo "<p> Veuillez remplir chaque compartiments !</p>";
+            echo "<p> Veuillez remplir tous les champs!</p>";
           } else if ($_GET["error"] == "none") {
             echo "<p> Succès ! Nous avons bien reçu votre email. Nous vous avons mis en copie, veuillez vérifier votre boite mail !</p>";
           }
