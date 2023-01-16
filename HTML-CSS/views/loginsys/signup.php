@@ -17,66 +17,44 @@
         include_once '../navbar/header-main.php';
       ?>
     </header>
-
-
-    <div class="centerbox">
-      <h1>INSCRIPTION</h1>
-      <h2>Vous ne pouvez que vous inscrire si vous possédez un kit.</h2>
-    </div>
     <div class="container">
-      <div class="container_form">
-        <p><u>Veuillez noter l'id de votre kit :</u></p>
-        <br>
-        <p><u>Votre nom de famille :</u></p>
-        <br>
-        <p><u>Votre prénom :</u></p>
-        <br>
-        <p><u>Votre email :</u></p>
-        <br>
-        <p><u>Votre numéro de teléphone :</u></p>
-        <br>     
-        <p><u>Votre sexe :</u></p>
-        <br><br>
-        <p><u>Votre pseudo :</u></p>
-        <br>
-        <p><u>Notez votre mot de passe :</u></p>
-        <br>
-        <p><u>Répétez votre mot de passe :</u></p>
-        <br>
-        <p><u>Etes-vous un médecin ?</u></p>
-      </div>
+    <div class="centerbox">
+      <h3>INSCRIPTION</h3>
+      <h4>Vous ne pouvez que vous inscrire si vous possédez un kit.</h4>
       <div class="container_form">
         <form action="../../controller/signup.inc.php" method="post" id="signup-form">
-          <input type="number" name="idkit" placeholder="id de votre kit">
+          <input type="number" name="idkit" placeholder="Veuillez noter l'id de votre kit :">
           <br>
-          <input type="text" name="nom" placeholder="Nom...">
+          <input type="text" name="nom" placeholder="Nom">
           <br>
-          <input type="text" name="prenom" placeholder="Prenom...">
+          <input type="text" name="prenom" placeholder="Prénom">
           <br>
-          <input type="email" name="email" placeholder="Email...">
+          <input type="email" name="email" placeholder="Adresse Mail">
           <br>
-          <input type="tel" name="phone" placeholder="+33 ....." pattern="[0-9]{10}">
+          <input type="tel" name="phone" placeholder="Numéro de téléphone" pattern="[0-9]{10}">
           <br>
           <input type="radio" name="sexe" value="Homme">
           <label>Homme</label><br>
           <input type="radio" name="sexe" id="lastsex" value="Femme">
           <label>Femme</label><br>
-          <input type="text" name="username" placeholder="Username...">
+          <input type="text" name="username" placeholder="Votre pseudo">
           <br>
-          <input type="password" name="pwd" placeholder="Mot de passe..."><br>
+          <input type="password" name="pwd" placeholder="Votre mot de passe"><br>
           <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial et un chiffre</p>
-          <input type="password" name="pwdrep" id="lastpwd" placeholder="Répéter Mot de passe...">
+          <input type="password" name="pwdrep" id="lastpwd" placeholder="Répétez le mot de passe">
           <br>
+          <p style="font-weight:bold;">Etes-vous un médecin ?</p>
           <input type="radio" name="role" value="client">
           <label>Non</label><br>
           <input type="radio" name="role" value="médecin">
           <label>Oui</label>
-          <br><br>
+          <br>
         </form>    
       </div>
       <div class="centerbox"> 
         <button type="submit" form="signup-form" name="submit" class="confbutton">Confirmer</button>
       </div>
+    </div>
     </div>
     <div class="centerbox">
       <?php
@@ -100,7 +78,7 @@
         } else if ($_GET["error"] === "toolate") {
           echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
         } else if ($_GET["error"] === "none") {
-          echo "<p> Succès ! Votre compte est bien enregistré et vérifié ! Surprise: Nous avons aussi enregistré un arbre sous votre nom ! Vous pouvez désormais vous connecter et utiliser toutes les fonctionnalités du site </p>";
+          echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }
       }
       ?>
