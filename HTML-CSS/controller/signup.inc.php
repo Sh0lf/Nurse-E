@@ -5,6 +5,8 @@ include_once './dbh.inc.php';
 include_once './functions.inc.php';
 include_once '../model/SQL-loginsystem.php';
 include_once './sendEmail.php';
+include_once '../model/SQL-personalinfopage.php';
+include_once '../model/SQL-arbre.php';
 
 if (isset($_POST["submit"])) {
   $code = rand();
@@ -57,6 +59,27 @@ if (isset($_GET["code"])) {
   $t = time();
   $timestamp = date(("Y-m-d H:i:s"));
   accCompletion($conn, $username, $timestamp, $code);
+  $result = fetchRowUser($conn, $username);
+  if ($result){
+    $idkit = $result["KitDiagnostiqueidKitDiagnostique"];
+    createTree($conn, $idkit);
+    session_start();
+    $_SESSION["iduser"]=$result["iduser"];
+    $_SESSION["username"]=$result["username"];
+    $_SESSION["familyname"]=$result["familyname"];
+    $_SESSION["name"]=$result["name"];
+    $_SESSION["email"]=$result["email"];
+    $_SESSION["phone"]=$result["phone"];
+    $_SESSION["sexe"]=$result["sexe"];
+    $_SESSION["role"]=$result["role"];
+    $_SESSION["idkit"]=$result["KitDiagnostiqueidKitDiagnostique"];
+  } else {
+    header("location: ../views/loginsys/signup.php?error=stmtfailed");
+    exit();
+  }
+  header("location: ../views/loginsys/signup.php?error=none");
+  exit();
+
 }
 
 else {

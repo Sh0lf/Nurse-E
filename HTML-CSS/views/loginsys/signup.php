@@ -100,7 +100,7 @@
         } else if ($_GET["error"] === "toolate") {
           echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
         } else if ($_GET["error"] === "none") {
-          echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
+          echo "<p> Succès ! Votre compte est bien enregistré et vérifié ! Surprise: Nous avons aussi enregistré un arbre sous votre nom ! Vous pouvez désormais vous connecter et utiliser toutes les fonctionnalités du site </p>";
         }
       }
       ?>

@@ -90,8 +90,6 @@ function accCompletion($conn, $username, $timestamp, $code)
             exit();
         }
         $stmt->execute();
-        header("location: ../views/loginsys/signup.php?error=none");
-        exit();
     } else {
         $sql = "DELETE FROM user WHERE code=?";
         $stmt = $conn->prepare($sql);
