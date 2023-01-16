@@ -2,7 +2,7 @@
     <?php
     session_start();
     $curPageName = substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);  
-    if ($curPageName === "medicobot.php"){
+    if ($curPageName === "ecologie.php" || $curPageName === "ecologie-arbre.php"){
         echo '<img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/logo nurse-e 1.png">';
     } else {
         echo '<img class="logo" src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png">';
@@ -50,7 +50,7 @@
                     <a href="#eco">Ecologie <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-3">
                     <ul>
-                        <li><a href="#">Votre arbre</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/controller/yourtree.php">Votre arbre</a></li>
                     </ul>
                 </li>';
         } else {
