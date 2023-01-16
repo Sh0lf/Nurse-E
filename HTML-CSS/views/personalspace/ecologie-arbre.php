@@ -21,7 +21,7 @@
     </header>
 
     <?php
-    if (!$_SESSION["id"]){
+    if (!$_SESSION["idkit"]){
         header("location: ../mainmenu.php");
         exit();
     } 
