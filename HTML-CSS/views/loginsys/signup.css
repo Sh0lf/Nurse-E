@@ -5,6 +5,10 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+    background-color: #eef2f7;
+}
+
 .centerbox {
     display: flex;
     align-items: center;
@@ -22,8 +26,7 @@
     justify-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 24px;
-    border:2px #000000 solid;
+    padding: 20px;
     border-radius:20px;
     background-color:white;
     width: fit-content;
@@ -40,19 +43,31 @@
 }
 
 .container_form form input[type=text]{
-    margin-bottom:18px;
+    padding: 10px 55px;
+    margin-top: 10px;
+    border : 1.5px #eef2f7 solid;
+    border-radius: 5px;
 }
 
 .container_form form input[type=email]{
-    margin-bottom:18px;
+    padding: 10px 55px;
+    margin-top: 10px;
+    border : 1.5px #eef2f7 solid;
+    border-radius: 5px;
 }
 
 .container_form form input[type=number]{
-    margin-bottom:18px;
+    padding: 10px 55px;
+    margin-top: 10px;
+    border : 1.5px #eef2f7 solid;
+    border-radius: 5px;
 }
 
 .container_form form input[type=tel]{
-    margin-bottom:18px;
+    padding: 10px 55px;
+    margin-top: 10px;
+    border : 1.5px #eef2f7 solid;
+    border-radius: 5px;
 }
 
 #lastsex {
@@ -65,24 +80,34 @@
 
 form input {
     display: inline;
-    float: center;
-    justify-content:left;
+    padding: 10px 55px;
+    margin-top: 10px;
+    border : 1.5px #eef2f7 solid;
+    border-radius: 5px;
 }
+
 .centerbox .confbutton{
-    padding: 5px 15px;
+    padding: 10px 55px;
     margin-left: 20px;
-    margin-top: 18px;
+    margin-top: 18px;;
     font-size: 17px;
     color: white;
-    border:1px solid white;
+    border: 1px solid #eef2f7;
+    border-radius: 5px;
     background-color: #43B1F8;
     cursor:pointer;
+}
+
+.centerbox .confbutton:hover {
+    background-color: white;
+    color:#43B1F8;
+    border: 1px solid #43B1F8;
 }
 
 #note {
     font-style: italic;
     font-size: 8px;
-    color: red;
+    color:#43B1F8;
 }
 
 .eyes i{
