@@ -5,7 +5,7 @@
     <meta charset="UTF-8">    <!-- Implémente tous les symboles* -->
     <title>Arbre</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
-    <link rel="stylesheet" href="maps.css">
+    <link rel="stylesheet" href="ecologie-arbre.css">
     <link rel="stylesheet" href="../navbar/navbar-eco.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -29,7 +29,7 @@
     if (isset($_GET["idkit"])){
         $idkit = $_GET["idkit"];
         $interval = $_GET["time"];
-        $julianDay = $interval / 86400 + 2440587.5;
+        $julianDay = $interval / (86400);
 
         echo '<div class="container">
         <h1>L\'arbre associé à votre kit diagnostique: '.$idkit.'</h1>' ;
