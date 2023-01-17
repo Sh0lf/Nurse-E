@@ -2,7 +2,7 @@
 
 <?php
 if (!isset($_SESSION['iduser'])){
-  header('location: ../mainmenu.php');
+  header('location: ../../mainmenu.php');
   exit;
 }
 
