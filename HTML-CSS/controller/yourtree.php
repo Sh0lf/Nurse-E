@@ -18,7 +18,7 @@ if (isset($_SESSION["idkit"])){
 
     $interval = abs(($curTmstp - $creationtime));
 
-    header('location:../views/personalspace/ecologie-arbre.php?idkit='.$idkit.'&time='.$interval);
+    header('location:../views/personalspace/ecologie-arbre.php?idkit='.$idkit.'&time='.$interval.'&idtree='.$idtree);
     exit();
 } else {
     header("location:../views/mainmenu.php");
