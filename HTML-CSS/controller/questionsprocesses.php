@@ -3,6 +3,8 @@ include_once './dbh.inc.php';
 include_once './functions.inc.php';
 include_once '../model/SQL-questions.php';
 
+session_start();
+
 if (isset($_POST["submit"])) {
   $s1 = $_POST["s1"];
   $s2 = $_POST["s2"];
@@ -10,12 +12,14 @@ if (isset($_POST["submit"])) {
   $s4 = $_POST["s4"];
   $s5 = $_POST["s5"];
 
-  if (EmptyInputQues($s1, $s2, $s3, $s4, $s5) != false){
+  if (EmptyInputQues($s1, $s2, $s3, $s4, $s5) !== false){
     header("location: ../views/personalspace/client/questionnaire.php?error=emptyinput");
     exit();
   }
 
-  quest($conn,$s1, $s2, $s3, $s4, $s5);
+  $fetchedRow = quest($conn,$s1, $s2, $s3, $s4, $s5);
+
+  $sentence = "<br> Maladie: " . $fetchedRow["name"] . " - gravité: " . $fetchedRow["description"] . "<br>";
 
  
 } 

@@ -12,11 +12,11 @@ require '../../vendor/autoload.php';
     {
         function send($code, $email)
         {
-        require 'PHPMailer/src/Exception.php';
+        require '../../vendor/PHPMailer/src/Exception.php';
 
-        require 'PHPMailer/src/PHPMailer.php';
+        require '../../vendor/PHPMailer/src/PHPMailer.php';
 
-        require 'PHPMailer/src/SMTP.php';
+        require '../../vendor/PHPMailer/src/SMTP.php';
 
         // create object of PHPMailer class with boolean parameter which sets/unsets exception.
 
