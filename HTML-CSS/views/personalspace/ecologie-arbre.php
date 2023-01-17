@@ -24,7 +24,7 @@
     if (!$_SESSION["idkit"]){
         header("location: ../mainmenu.php");
         exit();
-    }elseif (isset($_GET["idkit"]) && isset($_GET["idarbre"])){
+    } elseif (isset($_GET["idkit"]) && isset($_GET["idtree"])){
         $idkit = $_GET["idkit"];
         $interval = $_GET["time"];
         $julianDay = $interval / (86400);
@@ -41,7 +41,7 @@
             echo '<img class="tree" src="http://nurse-medicobot.wstr.fr/views/assets/bigtree.gif">';
         } echo '</div>';
 
-    } elseif (isset($_GET["idkit"]) && empty($_GET["idarbre"])) {
+    } elseif (isset($_GET["idkit"]) && empty($_GET["idtree"])) {
       echo '<h1> Pas d\'arbre sous votre kit de diagnostique associée ! Veuillez contacter le support pour vérifier</h1>';
     } elseif (isset($_SESSION["idkit"])) {
       header("location:../../controller/yourtree.php");
