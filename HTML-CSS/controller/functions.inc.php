@@ -140,6 +140,16 @@ function EmptyInputModif($iduser, $username, $familyname, $name, $email, $phone,
     return $result;
 }
 
+function EmptyInputQues($s1, $s2, $s3, $s4, $s5){
+    $result = "";
+    if (empty($s1) or empty($s2) or empty($s3) or empty($s4) or empty($s5)){
+        $result = true;
+    } else {
+        $result = false; 
+    }
+    return $result;
+}
+
 //In case
 /* 
 // define variables and set to empty values
