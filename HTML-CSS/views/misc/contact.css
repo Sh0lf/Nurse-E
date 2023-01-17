@@ -50,6 +50,7 @@ body {
 }
 
 .container_form form input {
+    width: 100%;
     display: inline;
     padding: 10px 55px;
     margin-top: 7px;
@@ -63,11 +64,14 @@ input::placeholder {
 }
 
 .container_form form textarea {
-    width: 100%;
     padding: 12px;
-    height: 200px;
     border : 1.5px #eef2f7 solid;
     border-radius: 5px;
+    resize : both;
+    min-width : 400px;
+    min-height : 200px;
+    max-width : 500px;
+    max-height : 300px;
 }
 
 .centerbox .confbutton{
