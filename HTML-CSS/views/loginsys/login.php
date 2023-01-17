@@ -21,13 +21,13 @@
     <div class="container">
       <div class="centerbox">
         <h4>J'ai déjà un compte MédicoBot</h4>
-      <div class="container_form">
-        <form action="../../controller/login.inc.php" method="post">
-          <input type="text" name="username" placeholder="Adresse email ou pseudo"><br><br>
-          <div class="eyes">
-            <input type="password" name="pwd" placeholder="Mot de passe">
-            <i class="fa-solid fa-eye"></i>
-          </div>
+        <div class="container_form">
+          <form action="../../controller/login.inc.php" method="post">
+            <input type="text" name="username" placeholder="Adresse email ou pseudo"><br><br>
+            <div class="eyes">
+              <input type="password" name="pwd" placeholder="Mot de passe">
+              <i class="fa-solid fa-eye"></i>
+            </div>
           <div class="centerbox">
             <button type="submit" name="submit" class="confbutton">Confirmer</button><br>
           </div>
@@ -41,6 +41,7 @@
           <p><a href="signup.php">S'inscrire</a></p>
       </div>
     </div>
+  </div>
 
     <script>
       let input = document.querySelector('.eyes input');
@@ -59,25 +60,25 @@
       <?php
         if (isset($_GET["error"])){
           if ($_GET["error"] === "emptyinput") {
-            echo "<p> Veuillez remplir chaque compartiments !</p>";
+            echo "<p style='text-align:center;'> Veuillez remplir chaque compartiments !</p>";
           } 
           else if ($_GET["error"] === "accnotexist") {
-            echo "<p> Ce compte n'existe pas; veuillez en créer un.</p>";
+            echo "<p style='text-align:center;'> Ce compte n'existe pas; veuillez en créer un.</p>";
           }
           else if ($_GET["error"] === "accnotverified") {
-            echo "<p> Ce compte n'est pas encore vérifié, veillez le vérifier avec l'email envoyé par nous</p>";
+            echo "<p style='text-align:center;'> Ce compte n'est pas encore vérifié, veuillez le vérifier avec l'email qui vous sera envoyé</p>";
           }
           else if ($_GET["error"] === "wronglogin") {
-            echo "<p> Veuillez réessayer, mauvais identifiant et/ou mot de passe</p>";
+            echo "<p style='text-align:center;'> Veuillez réessayer, mauvais identifiant et/ou mot de passe</p>";
           }
           else if ($_GET["error"] === "failedprocess") {
-            echo "<p> Quelque chose n'a pas marché, veuillez rééssayer ultérieurement</p>";
+            echo "<p style='text-align:center;'> Quelque chose n'a pas marché, veuillez rééssayer ultérieurement</p>";
           }
           else if ($_GET["error"] === "remadepwd") {
-            echo "<p> Mot de passe changé ! Essayez de vous identifier avec le nouveau mot de passe !</p>";
+            echo "<p style='text-align:center;'> Mot de passe changé ! Essayez de vous identifier avec le nouveau mot de passe !</p>";
           }
           else if ($_GET["error"] === "none") {
-            echo "<p> Succès !</p>";
+            echo "<p style='text-align:center;'> Succès !</p>";
 
           } 
         } 
