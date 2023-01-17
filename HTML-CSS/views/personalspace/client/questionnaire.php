@@ -24,8 +24,13 @@
 
     <?php
 
-    
-
+    if(!isset($_SESSION["iduser"])){
+      header("location:../../loginsys/login.php");
+      exit();
+    } elseif (!isset($_GET["idDia"])){
+      header("location:client-personalspace.php");
+      exit();
+    }
     ?>
 
     <div class="debut">
@@ -39,6 +44,7 @@
             <p class="pres">à ce questionnaire :</p>
         </div>
          <form action="../../../controller/questionsprocesses.php" method="post">
+          <input type="hidden" name="idDia" <?php echo 'value="'.$_GET["idDia"].'"'; ?>>
           <div class="all">
           <div class="for">
           <div class="quest">

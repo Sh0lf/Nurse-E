@@ -6,6 +6,7 @@ include_once '../model/SQL-questions.php';
 session_start();
 
 if (isset($_POST["submit"])) {
+  $idDia = $_POST["idDia"];
   $s1 = $_POST["s1"];
   $s2 = $_POST["s2"];
   $s3 = $_POST["s3"];
