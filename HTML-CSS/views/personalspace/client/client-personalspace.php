@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-if (!isset($_SESSION['id'])){
+if (!isset($_SESSION['iduser'])){
   header('location: ../mainmenu.php');
   exit;
 }
@@ -18,16 +18,16 @@ if (!isset($_SESSION['id'])){
   <head>
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Client personal space</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="../navbar/navbar-main.css">
+    <link rel="stylesheet" href="../../navbar/navbar-main.css">
   </head>
 
   <body>
     <header>
       <!-- Defining in header a top navigation bar-->
       <?php
-        include_once '../navbar/header-main.php';
+        include_once '../../navbar/header-main.php';
       ?>
     </header>
 
@@ -53,10 +53,11 @@ if (!isset($_SESSION['id'])){
         ?>
     </table>
 
+
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php
-        include_once '../navbar/footer.php';
+        include_once '../../navbar/footer.php';
       ?>
     </footer>
   </body>  
