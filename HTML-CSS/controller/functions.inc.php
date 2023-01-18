@@ -103,6 +103,7 @@ function loginUser($conn, $username, $pwd){
         $_SESSION["phone"]=$checkAcc_Verified["phone"];
         $_SESSION["sexe"]=$checkAcc_Verified["sexe"];
         $_SESSION["role"]=$checkAcc_Verified["role"];
+        $_SESSION["pfp_path"] = $checkAcc_Verified["pfp_path"];
         $_SESSION["idkit"]=$checkAcc_Verified["KitDiagnostiqueidKitDiagnostique"];
 
         header("location: ../views/mainmenu.php");

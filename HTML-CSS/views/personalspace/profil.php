@@ -5,17 +5,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Profil</title>
+	<link rel="stylesheet" href="../navbar/navbar-eco.css">
 	<link rel="stylesheet" type="text/css" href="profil.css">
 </head>
 
+
+
+<body class="corps">
+	<header>
+        <?php
+            include_once '../navbar/header-main.php';
+        ?>
+    </header>
+
 <?php 
-if (!isset($_SESSION["id"])){
-	header("location: ../views/loginsys/login.php");
+if (empty($_SESSION["iduser"])){
+	header("location: ../loginsys/login.php");
     exit();
 }
 ?>
 
-<body class="corps">
 	<div class='rectangle'>
 	<img <?php echo 'src="'.$_SESSION["pfp_path"].'"'?> alt="Photo de profil">
 	<h1 class="titre"><?php echo $_SESSION["username"] ?></h1>
@@ -23,7 +32,7 @@ if (!isset($_SESSION["id"])){
 		<li class="list">Prénom : <?php echo $_SESSION["name"];?></li>
 		<li class="list">Nom de famille : <?php echo $_SESSION["familyname"];?></li>
 		<li class="list">Couriel : <?php echo $_SESSION["email"];?></li>
-		<li class="list">Numéro de téléphone : <?php $_SESSION["phone"];?></li>
+		<li class="list">Numéro de téléphone : <?php echo $_SESSION["phone"];?></li>
 	</ul>
 	</div>
 	<form action="../../controller/profiledit.php" method="post" id="edit-form">
@@ -36,21 +45,22 @@ if (!isset($_SESSION["id"])){
         echo '
         <div class="container" id="second-form">
             <div class="container-box">
-            <form action="../../../controller/profiledit.php" method="post">
-                <input type="hidden" name="iduser" value="' . $_GET["id"] . '">
-                <p><b>Username</b></p>
-                <input type="text" name="username" value="' . $_GET["username"].'">
-                <p><b>Nom de famille</b></p>
-                <input type="text" name="familyname" value="'.$_GET["familyname"].'">
-                <p><b>Prénom</b></p>
-                <input type="text" name="name" value="'.$_GET["name"].'">
-                <p><b>Email</b></p>
-                <input type="text" name="email" value="'.$_GET["email"].'">
-                <p><b>Numéro de tel</b></p>
-                <input type="text" name="phone" value="'.$_GET["phone"].'">
-                <button type="submit" name="submit_modify" class="submitbutton">Confirmer Modification</button>
+				<form action="../../../controller/profiledit.php" method="post">
+					<input type="hidden" name="iduser" value="' . $_GET["id"] . '">
+					<p><b>Username</b></p>
+					<input type="text" name="username" value="' . $_GET["username"].'">
+					<p><b>Nom de famille</b></p>
+					<input type="text" name="familyname" value="'.$_GET["familyname"].'">
+					<p><b>Prénom</b></p>
+					<input type="text" name="name" value="'.$_GET["name"].'">
+					<p><b>Email</b></p>
+					<input type="text" name="email" value="'.$_GET["email"].'">
+					<p><b>Numéro de tel</b></p>
+					<input type="text" name="phone" value="'.$_GET["phone"].'">
+					<button type="submit" name="submit_modify" class="submitbutton">Confirmer Modification</button>
+				</form>
             </div>
-            </div>
+		</div>
             <div class="container">';
             if (isset($_GET["error"])){
                 if ($_GET["error"] === "success"){
@@ -67,5 +77,11 @@ if (!isset($_SESSION["id"])){
         }
 
 		?>
+		<footer>
+		<!--Defining our bottom navigation bar in footer, for aesthetics purpose-->
+		<?php
+			include_once '../navbar/footer.php';
+		?>
+		</footer>
 </body>
 </html>
