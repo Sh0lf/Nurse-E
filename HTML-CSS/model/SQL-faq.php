@@ -59,4 +59,13 @@ function remQuestion($conn, $idques){
     }
 }
 
+function showAllQuestionsClient($conn)
+{
+    $sql = "SELECT * FROM questions WHERE Reponse != ''  ";
+    $statement = $conn->prepare($sql);
+    $statement->execute();
+    $questions = $statement->fetchAll();
+    return $questions;
+}
+
 ?>

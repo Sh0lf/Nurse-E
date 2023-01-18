@@ -16,29 +16,33 @@
         ?>
     </header>
         <div class="contient-tout">
-        <div class="tableau">
-            <h1>Les questions les plus posées</h1>
-            <il>
-                <ul>Quelle est le prix du produit ?</ul>
-                <ul>Pourquoi acheter notre produit ?</ul>
+        <?php
+        include_once '../../model/SQL-faq.php';
+        include_once '../../controller/dbh.inc.php';
 
-            </il>
-        </div>
-        <div class="container">
-            <h2 class="text-center"> Posez vos questions ! Nous allons faire de notre mieux pour vous répondre le plus vite possible</h2>
-            <!-- question, auto-populate -->
-            <form action="../../controller/faqprocess.php" method="POST">
-                <input type="text" name="question" class="form-control" required>
-                <input type="submit" name="submit_ques" class="btn btn-info" value="Add FAQ" />
-            </form>
+        $questions = showAllQuestionsClient($conn);
+        foreach ($questions as $faq) : ?>
+          <details class="styled">
+              <summary><?php echo $faq['Questions']; ?></summary>
+              <!-- accordion for answer -->
+              <?php echo $faq['Reponse']; ?>
+          </details>
+        <?php endforeach; ?>
+          <div class="container">
+              <h2 class="text-center"> Posez vos questions ! Nous allons faire de notre mieux pour vous répondre le plus vite possible</h2>
+              <!-- question, auto-populate -->
+              <form action="../../controller/faqprocess.php" method="POST">
+                  <input type="text" name="question" class="form-control" required>
+                  <input type="submit" name="submit_ques" class="btn btn-info" value="Add FAQ" />
+              </form>
 
-            <?php
-                if ((isset($_GET["error"]))&& $_GET["error"]=="success"){
-                echo "Demande bien envoyé !";
-                }
-            ?>
-        </div>
-    </div>
+              <?php
+                  if ((isset($_GET["error"]))&& $_GET["error"]=="success"){
+                  echo "Demande bien envoyé !";
+                  }
+              ?>
+          </div>
+      </div>
     <footer>
       <!--Defining our bottom navigation bar in footer, for aesthetics purpose-->
       <?php
