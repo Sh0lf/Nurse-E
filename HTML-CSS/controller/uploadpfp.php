@@ -25,10 +25,15 @@ function uploadpfp($file){
       }
 
       if($file_error === 0){
-        $file_name_new = uniqid('', true) . '.' . $file_ext;
+        $file_name_new = uniqid() . '.' . $file_ext;
         $file_destination = '/uploadspfp/' . $file_name_new;
-        move_uploaded_file($file_tmp, $file_destination);
-        return $file_destination;
+        $result = move_uploaded_file($file_tmp, $file_destination);
+        if ($result == true){
+          return $file_destination;
+        } else {
+          header("location: ../views/loginsys/signup.php?error=uploaderr");
+          exit();
+        }
       }
 }
       

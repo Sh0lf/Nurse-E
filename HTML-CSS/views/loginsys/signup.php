@@ -82,6 +82,8 @@
             echo "<p> Votre fichier de photo de profile est trop lourd, veuillez choisir un auter plus léger</p>";
         } else if ($_GET["error"] === "badformat") {
           echo "<p> Votre fichier de photo de profile n'est pas un format que nous acceptons: seulement .jpg, .jpeg et .png</p>";
+        } else if ($_GET["error"] === "uploaderr") {
+          echo "<p> Il y a eu un problème de publication de votre fichier, veuillez contacter l'admin ou réessayer ultérieurement.</p>";
         } else if ($_GET["error"] === "none") {
           echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }
