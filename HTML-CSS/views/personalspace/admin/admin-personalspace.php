@@ -44,38 +44,37 @@
                 <h1 class="h1">Modification</h1>
                 </div>
                 <div class="utilisateur">
+                    <a href="adminmodif-personalspace.php">
                     <div class=avant>
                         <h2> Modification utilisateur </h2>
-                        <div class="oee">
-                            <button class="btn-34"><span><a href="adminmodif-personalspace.php">Voir plus</a></span></button>  
-                        </div> 
                     </div>
+                    </a>
+                    <a href="adminsupp-personalspace.php">
                     <div class=avant>
                         <h2>Supprimer un utilisateur</h2>
-                        <div class="oee">
-                            <button class="btn-34"><span><a href="adminsupp-personalspace.php">Voir plus</a></span></button>
-                            
-                        </div>
-                    </div> 
-                    <div class=avant>       
-                        <h2>MODIFICATION FAQ</h2>
-                        <div class="oee">
-                            <button class="btn-34"><span><a href="adminfaq-personalspace.php">Voir plus</a></span></button>
-                            
-                        </div>
                     </div>
+                    </a>
+                    <a href="adminfaq-personalspace.php">
+                        <div class=avant>       
+                            <h2>Modification FAQ</h2>
+                        </div>
+                    </a>
                 </div>
     
             </section>
             <section class="recherche">
             <div class="form">
             <div class="center">
-            <h1>Liste UTILISATEURS</h2>
+                <h1>Recherche utilisateur</h1>
             </div>
                 <form action="../../../controller/adminpage.php" method="post">
-                    <input type="text" name="input">
+                    <input type="text" placeholder="Username/id/email" name="input">
                     <input type="submit" name="submit">
                 </form>
+            </div>
+
+            <div class="center">
+                <h1>Liste des utilisateurs:</h1>
             </div>
             <div class="table">'; 
                     if (isset($_GET["id"])){
