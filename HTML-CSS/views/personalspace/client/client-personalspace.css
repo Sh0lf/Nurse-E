@@ -11,3 +11,20 @@
     justify-content: center;
     padding: 16px;
 }
+
+.bigbutton {
+    padding: 20px 55px;
+    margin: 20px auto;
+    font-size: 17px;
+    color: white;
+    border: 1px solid #eef2f7;
+    border-radius: 30px;
+    background-color: #43B1F8;
+    cursor:pointer;
+}
+
+.bigbutton:hover {
+    background-color: white;
+    color:#43B1F8;
+    border: 1px solid #43B1F8;
+}
