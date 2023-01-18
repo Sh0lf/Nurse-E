@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Profil</title>
-	<link rel="stylesheet" href="../navbar/navbar-eco.css">
+	<link rel="stylesheet" href="../navbar/navbar-main.css">
 	<link rel="stylesheet" type="text/css" href="profil.css">
 </head>
 
