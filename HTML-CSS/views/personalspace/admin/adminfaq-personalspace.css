@@ -1,0 +1,241 @@
+html{
+    overflow-x: hidden;
+    background-color: #fafafa;
+  
+  }
+  .admin{
+    z-index: 300;
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .liste {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: #4743439a .2rem solid;
+    width: 60rem;  
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .liste div{
+    width: 20rem;  
+    border: #43b1f8 .2rem solid;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    height: 6rem;
+    margin: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  h1{
+    color: #43b1f8;
+    text-align: center;
+    padding:2%;
+    width: 50vw;
+    font-size: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .liste p
+  {
+      text-align:center;
+      justify-content: center;
+      color: #4b4b4b;
+      padding:2%;
+  }
+  .utili{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: fit-content;
+    background-color: #ecececfb;
+    border: #dfdede solid 2px;
+    padding:2%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    width: 90vw;
+  
+  
+  }
+  .utilisateur {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:2%;
+  
+  }
+  .utilisateur .avant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:2%;
+    width:25rem ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 25px;
+    background-color: #43b1f8;
+    justify-content: space-around;
+  }
+  .utilisateur div h2{
+    color: rgb(255, 255, 255);
+    
+  }
+  .container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    padding: 16px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-box div{
+    display: flex;
+    margin: 3vh;
+    flex-direction: column;
+      align-items: center;
+  
+  }
+  
+  
+  
+  a {
+    text-decoration: none;
+    color: #b10e1e;
+  }
+  
+  h2
+  {
+      color:#43b1f8;
+  }
+  span
+  {
+      color:green;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+  }
+  .container-box{
+    display: flex;
+  }
+  td a button, .container-box button{ 
+    border: 1px solid #000000;
+    border-radius: 5px;
+     color: #000000;
+     background-color: #fff;
+     padding: 2%;
+     margin-top: 1%;
+     width: fit-content;
+     height: auto;
+     margin-bottom: 1%;
+  
+  }
+  td a:hover button,.container-box button:hover{ 
+  
+     background-color: #f0f0f0;
+  
+     padding: 3%;
+  
+  }
+  form{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  
+  }
+  .recherche{
+    border-top: #4743439a .2rem solid;
+    width: 90vw;
+    padding: 2%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  form input{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    margin:2vh
+  }
+  
+  input[type="text"] {
+    padding: 2px 10px;
+    width: 25rem;
+    height: 2rem;
+    margin-bottom: 1px;
+    border-radius: 5px;
+     border: 1px solid #43b1f8;
+  
+  }
+  
+  input[type="submit"] {
+    margin-top: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: #fff;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  table {
+  
+   margin-top: 3vh;
+   width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x:auto;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    position: relative;
+    justify-content: center; 
+     border: 1px solid #43b1f8; 
+      margin-left: auto;
+    margin-right: auto;
+  }
+  .tr{
+    background-color: #43b1f8;
+    color: #fff;
+  
+  }
+  
+  td, th {
+  
+    text-align: center;
+    padding: 8px;
+  }
+  
+  
+  tr:hover {background-color: #43b1f8;}
+  body {
+      color: #444; 
+  }

@@ -1,0 +1,22 @@
+<div class="cub">
+            <div class="A"></div>
+            <div class="B"></div>
+            <div class="C"></div>
+            <div class="D"></div>
+            <div class="E"></div>
+            <div class="F"></div>
+            <div class="G"></div>
+            <div class="H"></div>
+            <div class="I"></div>
+            <div class="J"></div>
+            <div class="K"></div>
+            <div class="L"></div>
+            <div class="M"></div>
+            <div class="N"></div>
+            <div class="O"></div>
+            <div class="P"></div>
+            <div class="Q"></div>
+            <div class="R"></div>
+            <div class="S"></div>
+            <div class="T"></div>
+        </div>  

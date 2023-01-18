@@ -2,8 +2,9 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8"> 
-        <link rel="stylesheet"  href="admin-personalspace.css" >
+        <link rel="stylesheet" href="admin-personalspace.css" >
         <link rel="stylesheet" href="../../navbar/navbar-main.css">
+        <link rel="stylesheet" href="../../assets/template.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin panel</title>
     </head>
@@ -15,7 +16,7 @@
         </header>
         <?php
         if ($_SESSION["role"]==="admin"){ 
-            include_once '../../template/templatev.php';
+            include_once '../../assets/templatev.php';
             echo '
             <div class="center">
             <h1 class="h1">BIENVENUE, VOICI LES OPERATIONS POSSIBLES A EFFECTUER ICI:</h1>
@@ -41,22 +42,26 @@
             </div>
             <section class="utili">
                 <div class="center">
-                <h1 class="h1">Modification</h1>
+                    <h1 class="h1">Modification</h1>
                 </div>
-                <div class="utilisateur">
-                    <a href="adminmodif-personalspace.php">
-                    <div class=avant>
-                        <h2> Modification utilisateur </h2>
-                    </div>
-                    </a>
-                    <a href="adminsupp-personalspace.php">
-                    <div class=avant>
-                        <h2>Supprimer un utilisateur</h2>
-                    </div>
-                    </a>
-                    <a href="adminfaq-personalspace.php">
+                    <div class="utilisateur">
+                        <div class=avant>
+                            <h2> Modification utilisateur </h2>
+                            <div class="oee">
+                                <button class="btn-34"><span><a href="adminmodif-personalspace.php">Voir plus</a></span></button>  
+                            </div> 
+                        </div>
+                        <div class=avant>
+                            <h2>Supprimer un utilisateur</h2>
+                            <div class="oee">
+                                <button class="btn-34"><span><a href="adminsupp-personalspace.php">Voir plus</a></span></button>
+                            </div>
+                        </div> 
                         <div class=avant>       
                             <h2>Modification FAQ</h2>
+                            <div class="oee">
+                                <button class="btn-34"><span><a href="adminfaq-personalspace.php">Voir plus</a></span></button>  
+                            </div>
                         </div>
                     </a>
                 </div>

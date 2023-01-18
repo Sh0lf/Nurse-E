@@ -49,16 +49,18 @@
 
         if (isset($_GET["id"])){
             echo '
-        <div class="container" id="second-form">
-            <div class="container-box">
-                <p><b>Question</b></p>
-                <p><b>Réponse</b></p>
-            </div>
+            <div class="container" id="second-form">
             <div class="container-box">
             <form action="../../../controller/faqprocess.php" method="post">
                 <input type="hidden" name="idques" value="' . $_GET["id"] . '">
-                <input type="text" name="question" value="' . $_GET["ques"].'">
+                <div>              
+                <p><b>Question</b></p>
+                <input type="text" name="question" value="' . $_GET["ques"].'">  
+                </div>
+                <div>                 
+                <p><b>Réponse</b></p>
                 <input type="text" name="reponse" value="'.$_GET["rep"].'">
+                </div>
                 <button type="submit" name="submit_edit">Confirmer Modification</button>
             </form>
             </div>
