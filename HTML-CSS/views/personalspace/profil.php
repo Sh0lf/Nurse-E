@@ -36,23 +36,20 @@ if (!isset($_SESSION["id"])){
         echo '
         <div class="container" id="second-form">
             <div class="container-box">
-                <p><b>Username</b></p>
-                <p><b>Nom de famille</b></p>
-                <p><b>Prénom</b></p>
-                <p><b>Email</b></p>
-                <p><b>Numéro de tel</b></p>
-            </div>
-            <div class="container-box">
             <form action="../../../controller/profiledit.php" method="post">
                 <input type="hidden" name="iduser" value="' . $_GET["id"] . '">
+                <p><b>Username</b></p>
                 <input type="text" name="username" value="' . $_GET["username"].'">
+                <p><b>Nom de famille</b></p>
                 <input type="text" name="familyname" value="'.$_GET["familyname"].'">
+                <p><b>Prénom</b></p>
                 <input type="text" name="name" value="'.$_GET["name"].'">
+                <p><b>Email</b></p>
                 <input type="text" name="email" value="'.$_GET["email"].'">
+                <p><b>Numéro de tel</b></p>
                 <input type="text" name="phone" value="'.$_GET["phone"].'">
-                <button type="submit" name="submit_modify">Confirmer Modification</button>
-            </form>
-			</div>
+                <button type="submit" name="submit_modify" class="submitbutton">Confirmer Modification</button>
+            </div>
             </div>
             <div class="container">';
             if (isset($_GET["error"])){
