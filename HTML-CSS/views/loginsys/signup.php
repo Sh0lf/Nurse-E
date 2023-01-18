@@ -47,8 +47,8 @@
           <input type="radio" name="role" value="client">
           <label>Non</label><br>
           <input type="radio" name="role" value="médecin">
-          <label>Oui</label><br>
-          <label>Ajouter un photo de profile :</label>
+          <label>Oui</label><br><br>
+          <label style="font-weight:bold;">Ajoutez une photo de profil :</label>
           <input type="file" id="pfp" name="pfp" accept="image/*">
         </form>    
       </div>
