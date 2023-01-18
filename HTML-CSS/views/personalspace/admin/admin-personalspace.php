@@ -12,14 +12,18 @@
         <header>
         <?php
             include_once '../../navbar/header-main.php';
+            include_once '../../assets/templateb.php';
         ?>
         </header>
         <?php
-        include_once '../../assets/templatev.php';
+        
+        
         if ($_SESSION["role"]==="admin"){ 
             echo '
             <div class="center">
-            <h1 class="h1">Bienvenue, '.$_SESSION["name"].'. Les opérations que vous pouvez effectuer sont :</h1>
+            <h1 class="h1">Bienvenue, '.$_SESSION["name"].'. Les opérations que vous pouvez effectuer sont :</h1>';
+            include_once '../../assets/templatev.php';
+            echo '
             </div>
                 <div class="admin">
             <div class="liste">
@@ -36,7 +40,7 @@
                     </br> 
                 </div>
                 <div>          
-                    <p>Acceder aux multiples informations de nos utilisateurs</p>
+                    <p>Accéder aux multiples informations de nos utilisateurs</p>
                     </br>
                 </div>
             </div>
