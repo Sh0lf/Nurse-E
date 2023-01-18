@@ -14,66 +14,110 @@
         ?>
         </header>
         <?php
-        if ($_SESSION["role"]==="admin"){ echo '
-        <h1>BIENVENUE ADMIN LES OPERATIONS POSSIBLES A EFFECTUER ICI :</h1>
-        <ul>
-            <li>acceder au multiple informations de nos utilisateurs</li>
-            </br>
-            <li>modifier les information dun utilisateur (tout en suivant les instructions indiquer par compartiments) </li> 
-            </br>
-            <li>supprimer un utilisateur (tout en suivant les instructions indiquer par compartiments)</li>
-            </br>
-            <li>rechercher un utilisateur grace a des informations spécifiques</li> 
-        </ul>
-        <section>
-        <h2> MODIFICATION SUR UN UTILISATEUR </h2>
-            Veuillez cliquer <a href="adminmodif-personalspace.php">ICI</a>
-        <h2>SUPPRESSION SUR UN UTILISATEUR </h2>
-            Veuillez cliquer <a href="adminsupp-personalspace.php">ICI</a>
-        <h2>MODIFICATION FAQ</h2>
-        Veuillez cliquer <a href="adminfaq-personalspace.php">ICI</a>
-        <h2>EFFECTUER UNE RECHERCHE (Ecrivez soit le numero id, le pseudo, le nom de famille ou email)</h2>
-        <form action="../../../controller/adminpage.php" method="post">
-            <input type="text" name="input">
-            <input type="submit" name="submit">
-        </form>';
-        
-            if (isset($_GET["id"])){
-                echo '<table>
-                <tr><th>iduser</th><th>Pseudo</th><th>Nom</th><th>Nom de famille</th><th>Email</th><th>Phone</th><th>Sexe</th><th>Role</th><th>idkit</th></tr>
-                <tr><td>'.$_GET["id"].'</td><td>'.$_GET["username"].'</td><td>'.$_GET["name"].'</td><td>'.$_GET["family"].'</td><td>'.$_GET["email"].'</td><td>'.$_GET["phone"].'</td><td>'.$_GET["sexe"].'
-                </td><td>'.$_GET["role"].'</td><td>'.$_GET["idkit"].'</td></tr></table>';
-            }
-     
+        if ($_SESSION["role"]==="admin"){ 
+            include_once '../../template/templatev.php';
             echo '
-            <h2>LISTE DES UTILISATEURS AVEC LES INFORMATIONS COMPLEMENTAIRES A LEUR PROFIL </h2>
+            <div class="center">
+            <h1 class="h1">BIENVENUE, VOICI LES OPERATIONS POSSIBLES A EFFECTUER ICI:</h1>
+            </div>
+                <div class="admin">
+            <div class="liste">
+                <div>
+                    <p>Modifier les information d\'un utilisateur </p> 
+                    </br>
+                </div>
+                <div>
+                    <p>Supprimer un utilisateur </p>
+                    </br>
+                </div>
+                <div>  
+                    <p>Rechercher un utilisateur </p>  
+                    </br> 
+                </div>
+                <div>          
+                    <p>Acceder au multiple informations de nos utilisateurs</p>
+                    </br>
+                </div>
+            </div>
+            <section class="utili">
+                <div class="center">
+                <h1 class="h1">Modification</h1>
+                </div>
+                <div class="utilisateur">
+                    <div class=avant>
+                        <h2> Modification utilisateur </h2>
+                        <div class="oee">
+                            <button class="btn-34"><span><a href="adminmodif-personalspace.php">Voir plus</a></span></button>  
+                        </div> 
+                    </div>
+                    <div class=avant>
+                        <h2>Supprimer un utilisateur</h2>
+                        <div class="oee">
+                            <button class="btn-34"><span><a href="adminsupp-personalspace.php">Voir plus</a></span></button>
+                            
+                        </div>
+                    </div> 
+                    <div class=avant>       
+                        <h2>MODIFICATION FAQ</h2>
+                        <div class="oee">
+                            <button class="btn-34"><span><a href="adminfaq-personalspace.php">Voir plus</a></span></button>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+            <section class="recherche">
+            <div class="form">
+            <div class="center">
+            <h1>Liste UTILISATEURS</h2>
+            </div>
+                <form action="../../../controller/adminpage.php" method="post">
+                    <input type="text" name="input">
+                    <input type="submit" name="submit">
+                </form>
+            </div>
+            <div class="table">'; 
+                    if (isset($_GET["id"])){
+                        echo '<table>
+                        <tr class="tr"><th>iduser</th><th>Pseudo</th><th>Nom</th><th>Nom de famille</th><th>Email</th><th>Phone</th><th>Sexe</th><th>Role</th><th>idkit</th></tr>
+                        <tr><td>'.$_GET["id"].'</td><td>'.$_GET["username"].'</td><td>'.$_GET["name"].'</td><td>'.$_GET["family"].'</td><td>'.$_GET["email"].'</td><td>'.$_GET["phone"].'</td><td>'.$_GET["sexe"].'
+                        </td><td>'.$_GET["role"].'</td><td>'.$_GET["idkit"].'</td></tr></table>';
+                    }
             
-            <table>
-            <tr>
-            <th>iduser</th>
-            <th>Pseudo</th>
-            <th>Nom</th>
-            <th>Nom de famille</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Sexe</th>
-            <th>Role</th>
-            <th>idkit</th>
-            </tr>';
-            
-            include_once '../../../model/SQL-personalinfopage.php';
-            include_once '../../../controller/dbh.inc.php';
-
-            $result = fetchAllUser($conn);
-            
-            foreach($result as $row)
-                {
-                    echo "<tr>";
-                    echo '<td>'. $row["iduser"].'</td><td>' . $row["username"]. '</td><td>' . $row["familyname"]. '</td><td>' . $row["name"]. '</td><td>' . $row["email"]. '</td><td>' . $row["phone"]. '</td><td>' . $row["sexe"]. '</td><td>' . $row["role"]. '</td><td>' . $row["KitDiagnostiqueidKitDiagnostique"].'</td>';
-                    echo "</tr>";
-                }
-                
-            echo "</table>";
+                    echo '
+                    
+                    
+                    <table>
+                    <tr class="tr">
+                    <th>iduser</th>
+                    <th>Pseudo</th>
+                    <th>Nom</th>
+                    <th>Nom de famille</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Sexe</th>
+                    <th>Role</th>
+                    <th>idkit</th>
+                    </tr>';
+                    
+                    include_once '../../../model/SQL-personalinfopage.php';
+                    include_once '../../../controller/dbh.inc.php';
+    
+                    $result = fetchAllUser($conn);
+                    
+                    foreach($result as $row)
+                        {
+                            echo "<tr>";
+                            echo '<td>'. $row["iduser"].'</td><td>' . $row["username"]. '</td><td>' . $row["familyname"]. '</td><td>' . $row["name"]. '</td><td>' . $row["email"]. '</td><td>' . $row["phone"]. '</td><td>' . $row["sexe"]. '</td><td>' . $row["role"]. '</td><td>' . $row["KitDiagnostiqueidKitDiagnostique"].'</td>';
+                            echo "</tr>";
+                        }
+                        
+                    echo "</table>            
+                    </div>
+            </section>
+        </div>";        
+    
         } else {
             header('location:../../mainmenu.php');
             exit();
