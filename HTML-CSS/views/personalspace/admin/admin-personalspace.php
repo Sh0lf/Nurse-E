@@ -19,12 +19,12 @@
             include_once '../../assets/templatev.php';
             echo '
             <div class="center">
-            <h1 class="h1">BIENVENUE, VOICI LES OPERATIONS POSSIBLES A EFFECTUER ICI:</h1>
+            <h1 class="h1">Bienvenue, '.$_SESSION["name"].'. Les opérations que vous pouvez effectuer sont :</h1>
             </div>
                 <div class="admin">
             <div class="liste">
                 <div>
-                    <p>Modifier les information d\'un utilisateur </p> 
+                    <p>Modifier les informations d\'un utilisateur </p> 
                     </br>
                 </div>
                 <div>
@@ -36,7 +36,7 @@
                     </br> 
                 </div>
                 <div>          
-                    <p>Acceder au multiple informations de nos utilisateurs</p>
+                    <p>Acceder aux multiples informations de nos utilisateurs</p>
                     </br>
                 </div>
             </div>
