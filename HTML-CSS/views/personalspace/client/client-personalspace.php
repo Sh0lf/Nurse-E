@@ -25,9 +25,9 @@
 
     <h1>Bonjour, <?php echo $_SESSION["name"]?></h1>
 
-    <button class="bigbutton" href="../../../controller/creatediagnostique.php"> Faire un diagnostique</button>
+    <a href="../../../controller/creatediagnostique.php"><button class="bigbutton"> Faire un diagnostique</button></a>
     <button class="bigbutton">Accéder à l'historique</button>
-    <button class="bigbutton" href="../profil.php"> Options</button>
+    <a href="../profil.php"><button class="bigbutton"> Options</button></a>
 
     <footer>
       <!-- Defining in footer a small navigation bar-->

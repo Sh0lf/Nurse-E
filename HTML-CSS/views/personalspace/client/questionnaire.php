@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="questionnaire.css">
     <link rel="stylesheet" href="../../assets/template.css">
-    <link rel ="stylesheet" href="../../navbar/header-main.css">
+    <link rel ="stylesheet" href="../../navbar/navbar-main.css">
 
     <body>
     <header>
