@@ -7,6 +7,7 @@ include_once '../model/SQL-loginsystem.php';
 include_once './sendEmail.php';
 include_once '../model/SQL-personalinfopage.php';
 include_once '../model/SQL-arbre.php';
+include_once './uploadpfp.php';
 
 if (isset($_POST["submit"])) {
   $code = rand();
@@ -52,38 +53,11 @@ if (isset($_POST["submit"])) {
   }
   $file_destination = '/uploadspfp/defaultpfp.jpg';
 
-  if(isset($_FILES['pfp'])){
-      $file = $_FILES['pfp'];
-
-      // File Properties
-      $file_name = $file['name'];
-      $file_tmp = $file['tmp_name'];
-      $file_error = $file['error'];
-
-      // File Extension
-      $file_ext = explode('.', $file_name);
-      $file_ext = strtolower(end($file_ext));
-
-      // Allowed file types
-      $allowed = array("jpg", "jpeg", "png");
-
-      // File size validation
-      if($file['size'] > 2097152) {
-        header("location: ../views/loginsys/signup.php?error=toobig");
-        exit();
-      }
-      // File type validation
-      if(!in_array($file_ext, $allowed)){
-        header("location: ../views/loginsys/signup.php?error=badformat");
-        exit();
-      }
-
-      if($file_error === 0){
-              $file_name_new = uniqid('', true) . '.' . $file_ext;
-              $file_destination = '/uploadspfp/' . $file_name_new;
-              move_uploaded_file($file_tmp, $file_destination);
-      }
+  if (isset($_FILES['pfp'])) {
+    $file = $_FILES['pfp'];
+    $file_destination = uploadpfp($file);
   }
+
   createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $file_destination, $sendMl);
 }
 if (isset($_GET["code"])) {
