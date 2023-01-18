@@ -24,7 +24,7 @@
     if (!$_SESSION["idkit"]){
         header("location: ../mainmenu.php");
         exit();
-    }elseif (isset($_GET["idkit"]) && isset($_GET["idtree"])){
+    } elseif (isset($_GET["idkit"]) && isset($_GET["idtree"])){
         $idkit = $_GET["idkit"];
         $interval = $_GET["time"];
         $julianDay = $interval / (86400);

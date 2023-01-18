@@ -51,12 +51,17 @@ if (isset($_POST["submit"])) {
     header("location: ../views/loginsys/signup.php?error=pwdstrength");
     exit();
   }
-  
+
   $file_destination = '/uploadspfp/defaultpfp.jpg';
 
   if (isset($_FILES['pfp'])) {
     $file = $_FILES['pfp'];
     $file_destination = uploadpfp($file);
+  }
+
+  if ($file_destination == false){
+    header("location: ../views/loginsys/signup.php?error=uploaderr");
+    exit();
   }
 
   createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $file_destination, $sendMl);

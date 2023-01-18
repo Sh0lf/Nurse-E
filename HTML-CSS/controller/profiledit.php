@@ -26,18 +26,24 @@ if (isset($_POST["submit"])){
     $email = test_input($_POST["email"]);
     $phone = test_input($_POST["phone"]);
 
+    if (isset($_FILES['pfp'])) {
+        $file = $_FILES['pfp'];
+        $file_destination = uploadpfp($file);
+    }
+
     if (EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone) !== false){
         header("location: ../views/personalspace/profil.php?error=emptyinput");
         exit();
     }
 
-    $result = profileEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone);
+    $result = profileEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination);
 
     $username = $result["username"];
     $familyname = $result["familyname"];
     $name = $result["name"];
     $email = $result["email"];
     $phone = $result["phone"];
+    $file_path = $result["pfp_path"];
 
     session_start();
     $_SESSION["username"]=$username;
@@ -45,6 +51,7 @@ if (isset($_POST["submit"])){
     $_SESSION["name"]=$name;
     $_SESSION["email"]=$email;
     $_SESSION["phone"]=$phone;
+    $_SESSION["pfp_path"] = $file_path;
 
 
     header('location: ../views/personalspace/profil.php?error=success');

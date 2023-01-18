@@ -26,7 +26,7 @@ if (empty($_SESSION["iduser"])){
 ?>
 
 	<div class='rectangle'>
-	<img <?php echo 'src="'.$_SESSION["pfp_path"].'"'?> alt="Photo de profil">
+	<img <?php echo 'src="'.$_SESSION["pfp_path"].'"'?> alt="Photo de profil" onclick="">
 	<h1 class="titre"><?php echo $_SESSION["username"] ?></h1>
 	<ul class="puce">
 		<li class="list">Prénom : <?php echo $_SESSION["name"];?></li>
@@ -45,7 +45,7 @@ if (empty($_SESSION["iduser"])){
         echo '
         <div class="container" id="second-form">
             <div class="container-box">
-				<form action="../../../controller/profiledit.php" method="post">
+				<form action="../../../controller/profiledit.php" method="post" enctype="multipart/form-data">
 					<input type="hidden" name="iduser" value="' . $_GET["id"] . '">
 					<p><b>Username</b></p>
 					<input type="text" name="username" value="' . $_GET["username"].'">
@@ -57,6 +57,8 @@ if (empty($_SESSION["iduser"])){
 					<input type="text" name="email" value="'.$_GET["email"].'">
 					<p><b>Numéro de tel</b></p>
 					<input type="text" name="phone" value="'.$_GET["phone"].'">
+					<label style="font-weight:bold;">Changer votre photo de profil :</label>
+					<input type="file" id="pfp" name="pfp" accept="image/*">
 					<button type="submit" name="submit_modify" class="submitbutton">Confirmer Modification</button>
 				</form>
             </div>

@@ -36,8 +36,7 @@ function uploadpfp($file){
         if ($result == true){
           return $file_final_destination;
         } else {
-          header("location: ../views/loginsys/signup.php?error=uploaderr");
-          exit();
+          return false;
         }
       }
 }
