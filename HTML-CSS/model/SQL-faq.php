@@ -61,7 +61,7 @@ function remQuestion($conn, $idques){
 
 function showAllQuestionsClient($conn)
 {
-    $sql = "SELECT * FROM questions WHERE Reponse != ''  ";
+    $sql = "SELECT * FROM FAQ WHERE reponse != ''  ";
     $statement = $conn->prepare($sql);
     $statement->execute();
     $questions = $statement->fetchAll();

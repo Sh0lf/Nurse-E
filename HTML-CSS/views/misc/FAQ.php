@@ -23,9 +23,9 @@
         $questions = showAllQuestionsClient($conn);
         foreach ($questions as $faq) : ?>
           <details class="styled">
-              <summary><?php echo $faq['Questions']; ?></summary>
+              <summary><?php echo $faq['question']; ?></summary>
               <!-- accordion for answer -->
-              <?php echo $faq['Reponse']; ?>
+              <?php echo $faq['reponse']; ?>
           </details>
         <?php endforeach; ?>
           <div class="container">
