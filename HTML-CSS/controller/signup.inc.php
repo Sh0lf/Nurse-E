@@ -50,8 +50,41 @@ if (isset($_POST["submit"])) {
     header("location: ../views/loginsys/signup.php?error=pwdstrength");
     exit();
   }
+  $file_destination = '/uploadspfp/defaultpfp.jpg';
 
-  createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $sendMl);
+  if(isset($_FILES['pfp'])){
+      $file = $_FILES['pfp'];
+
+      // File Properties
+      $file_name = $file['name'];
+      $file_tmp = $file['tmp_name'];
+      $file_error = $file['error'];
+
+      // File Extension
+      $file_ext = explode('.', $file_name);
+      $file_ext = strtolower(end($file_ext));
+
+      // Allowed file types
+      $allowed = array("jpg", "jpeg", "png");
+
+      // File size validation
+      if($file['size'] > 2097152) {
+        header("location: ../views/loginsys/signup.php?error=toobig");
+        exit();
+      }
+      // File type validation
+      if(!in_array($file_ext, $allowed)){
+        header("location: ../views/loginsys/signup.php?error=badformat");
+        exit();
+      }
+
+      if($file_error === 0){
+              $file_name_new = uniqid('', true) . '.' . $file_ext;
+              $file_destination = '/uploadspfp/' . $file_name_new;
+              move_uploaded_file($file_tmp, $file_destination);
+      }
+  }
+  createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $file_destination, $sendMl);
 }
 if (isset($_GET["code"])) {
   $code = $_GET["code"];
@@ -73,6 +106,7 @@ if (isset($_GET["code"])) {
     $_SESSION["sexe"]=$result["sexe"];
     $_SESSION["role"]=$result["role"];
     $_SESSION["idkit"]=$result["KitDiagnostiqueidKitDiagnostique"];
+    $_SESSION["pfp_path"] = $result["pfp_path"];
   } else {
     header("location: ../views/loginsys/signup.php?error=stmtfailed");
     exit();

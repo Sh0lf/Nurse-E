@@ -100,4 +100,18 @@ function fetchAllUserClient($conn){
     
 }
 
+function profileEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone){
+    $sql= "UPDATE user SET username = ?, familyname = ?, 
+    name = ?, email = ?, phone = ? WHERE iduser = ?";
+
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/profil.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($username, $familyname, $name, $email, $phone, $iduser));
+
+    return fetchRowUser($conn, $username);
+}   
+
 ?>

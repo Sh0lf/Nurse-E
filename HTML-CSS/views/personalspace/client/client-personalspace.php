@@ -27,7 +27,7 @@
 
     <button class="bigbutton" href="../../../controller/creatediagnostique.php"> Faire un diagnostique</button>
     <button class="bigbutton">Accéder à l'historique</button>
-    <button class="bigbutton"> Options</button>
+    <button class="bigbutton" href="profil.php"> Options</button>
 
     <footer>
       <!-- Defining in footer a small navigation bar-->

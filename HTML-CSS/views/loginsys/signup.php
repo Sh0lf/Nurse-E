@@ -22,7 +22,7 @@
       <h3>INSCRIPTION</h3>
       <h4>Vous ne pouvez que vous inscrire si vous possédez un kit.</h4>
       <div class="container_form">
-        <form action="../../controller/signup.inc.php" method="post" id="signup-form">
+        <form action="../../controller/signup.inc.php" method="post" id="signup-form" enctype="multipart/form-data">
           <input type="number" name="idkit" placeholder="Veuillez noter l'id de votre kit :">
           <br>
           <input type="text" name="nom" placeholder="Nom">
@@ -47,8 +47,9 @@
           <input type="radio" name="role" value="client">
           <label>Non</label><br>
           <input type="radio" name="role" value="médecin">
-          <label>Oui</label>
-          <br>
+          <label>Oui</label><br>
+          <label>Ajouter un photo de profile :</label>
+          <input type="file" id="pfp" name="pfp" accept="image/*">
         </form>    
       </div>
       <div class="centerbox"> 
@@ -77,6 +78,10 @@
           echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
         } else if ($_GET["error"] === "toolate") {
           echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
+        } else if ($_GET["error"] === "toobig") {
+            echo "<p> Votre fichier de photo de profile est trop lourd, veuillez choisir un auter plus léger</p>";
+        } else if ($_GET["error"] === "badformat") {
+          echo "<p> Votre fichier de photo de profile n'est pas un format que nous acceptons: seulement .jpg, .jpeg et .png</p>";
         } else if ($_GET["error"] === "none") {
           echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
         }

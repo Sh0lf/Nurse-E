@@ -150,6 +150,16 @@ function EmptyInputQues($s1, $s2, $s3, $s4, $s5){
     return $result;
 }
 
+function EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone){
+    $result = "";
+    if (empty($username) or empty($iduser) or empty($familyname) or empty($name) or empty($email) or empty($phone)) {
+        $result = true;
+    } else {
+        $result = false; 
+    }
+    return $result;
+}
+
 //In case
 /* 
 // define variables and set to empty values
