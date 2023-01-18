@@ -22,6 +22,7 @@ if (isset($_POST["submit"])) {
 
   $sentence = "<br> Maladie: " . $fetchedRow["name"] . " - gravité: " . $fetchedRow["description"] . "<br>";
 
+  echo $sentence;
  
 } 
 else {
