@@ -51,6 +51,7 @@ if (isset($_POST["submit"])) {
     header("location: ../views/loginsys/signup.php?error=pwdstrength");
     exit();
   }
+  
   $file_destination = '/uploadspfp/defaultpfp.jpg';
 
   if (isset($_FILES['pfp'])) {

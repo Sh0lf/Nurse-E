@@ -11,7 +11,7 @@ function uploadpfp($file){
       $file_ext = strtolower(end($file_ext));
 
       // Allowed file types
-      $allowed = array("jpg", "jpeg", "png");
+      $allowed = array("jpg", "jpeg", "png", "webp");
 
       // File size validation
       if($file['size'] > 2097152) {
@@ -24,12 +24,17 @@ function uploadpfp($file){
         exit();
       }
 
-      if($file_error === 0){
-        $file_name_new = uniqid() . '.' . $file_ext;
-        $file_destination = '/uploadspfp/' . $file_name_new;
+      if($file_error == 0){
+        $file_name_new = uniqid('',true) . '.' . $file_ext;
+        $file_destination = $_SERVER['DOCUMENT_ROOT'].'/uploadspfp/' . $file_name_new;
+
         $result = move_uploaded_file($file_tmp, $file_destination);
+
+        $file_final_destination = explode('/', $file_destination);
+        $file_final_destination = "/uploadspfp/".strtolower(end($file_final_destination));
+
         if ($result == true){
-          return $file_destination;
+          return $file_final_destination;
         } else {
           header("location: ../views/loginsys/signup.php?error=uploaderr");
           exit();
