@@ -15,8 +15,8 @@
         ?>
         </header>
         <?php
+        include_once '../../assets/templatev.php';
         if ($_SESSION["role"]==="admin"){ 
-            include_once '../../assets/templatev.php';
             echo '
             <div class="center">
             <h1 class="h1">Bienvenue, '.$_SESSION["name"].'. Les opérations que vous pouvez effectuer sont :</h1>
@@ -77,10 +77,6 @@
                     <input type="submit" name="submit">
                 </form>
             </div>
-
-            <div class="center">
-                <h1>Liste des utilisateurs:</h1>
-            </div>
             <div class="table">'; 
                     if (isset($_GET["id"])){
                         echo '<table>
@@ -88,8 +84,9 @@
                         <tr><td>'.$_GET["id"].'</td><td>'.$_GET["username"].'</td><td>'.$_GET["name"].'</td><td>'.$_GET["family"].'</td><td>'.$_GET["email"].'</td><td>'.$_GET["phone"].'</td><td>'.$_GET["sexe"].'
                         </td><td>'.$_GET["role"].'</td><td>'.$_GET["idkit"].'</td></tr></table>';
                     }
-            
-                    echo '
+                    echo '<div class="center">
+                        <h1>Liste des utilisateurs:</h1>
+                    </div>
                     
                     
                     <table>
