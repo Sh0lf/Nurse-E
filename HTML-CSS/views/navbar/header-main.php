@@ -64,7 +64,7 @@
                     <a href="http://nurse-medicobot.wstr.fr">Mon profil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-4">
                     <ul>
-                        <li><a href="#">Options</a></li>
+                        <li><a href="http://nurse-medicobot.wstr.fr/views/personalspace/profil.php">Options</a></li>
                         <li><a href="http://nurse-medicobot.wstr.fr/controller/logout.inc.php">Logout</a></li>
                     </ul></li>';
         } else {

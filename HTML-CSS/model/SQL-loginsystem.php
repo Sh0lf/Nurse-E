@@ -53,11 +53,11 @@ function checkAcc_Verified($conn, $username, $email)
     }
 }
 
-function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $sendMl)
+function createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $file_destination, $sendMl)
 {
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     
-    $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, code, KitDiagnostiqueidKitDiagnostique) VALUES ('$username', '$nom', '$prenom', '$email', '$phone', '$sexe', '$hashedpwd', '$role', '$code', '$idkit');";
+    $sql = "INSERT INTO user(username, familyname, name, email, phone, sexe, password, role, code, pfp_path, KitDiagnostiqueidKitDiagnostique) VALUES ('$username', '$nom', '$prenom', '$email', '$phone', '$sexe', '$hashedpwd', '$role', '$code', '$file_destination','$idkit');";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../views/loginsys/signup.php?error=stmtfailed");
