@@ -1,122 +1,568 @@
-*{
+ 
+ 
+body {
     margin: 0;
     padding:0;
     box-sizing:border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #eef2f7;
+    overflow-x: hidden; 
 }
-
-/* élément CSS de la page */
-.contact {
-    width:fit-content;
-    height:600px;
-    padding:10px;
-    margin-top: 50px;
-    margin-right: 20px;
-    border: 2px solid #424949;
-    text-align:center;
-    line-height: 2em;
-    float:right;
+ 
+/* va nous permettre de placer les éléments à l'intérieur de l'image de garde */
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
 }
-
-div.contact_bis {
-    display:none;
-    width:300px;
-    height:600px;
-    padding:10px;
-    margin-top: 50px;
-    margin-right: 50px;
-    border: 2px solid #424949;
-    text-align:center;
-    line-height: 2em;
-    float:right;
-}
-
-h1 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+ 
+.title-over {
+    position: absolute;
+    font-size: 75px;
+    top: 100px;
+    left: 50px;
+    margin: auto;
+    text-transform: uppercase;
     font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
 }
-
-.p1 {
+ 
+.text-over {
+    position: absolute;
     text-align: justify;
-    color: #424949;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 30px;
-    margin-left: 100px;
+    top: 200px;
+    left: 50px;
     margin-right: 500px;
-    font-size:x-large;
-    line-height:2em;
-    letter-spacing: 3px;
+}
+.btn-33,
+.btn-33 *,
+.btn-33 :after,
+.btn-33 :before,
+.btn-33:after,
+.btn-33:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-33 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#43B1F8, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  top: 340px; 
+  left: 50px;
+}
+.btn-33:disabled {
+  cursor: default;
+}
+.btn-33:-moz-focusring {
+  outline: auto;
+}
+.btn-33 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-33 [hidden] {
+  display: none;
+}
+.btn-33 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: absolute;
+  margin-top: 10px;
+}
+.btn-33:hover {
+  transform: scale(1.1);
+}
+.btn-33 span {
+  font-weight: 900;
+  mix-blend-mode:screen;
+}
+.btn-33:before {
+  aspect-ratio: 1;
+  background: #43B1F8;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s;
+  width: 0;
+}
+.btn-33:hover:before {
+  width: 100%;
 }
 
-.p2 {
-    text-align: justify;
-    color: #424949;
-    font-family: Arial, Helvetica, sans-serif;
-    width : 75%;
-    margin-top: 30px;
-    margin-left: 100px;
-    margin-right: 100px;
-    font-size:x-large;
-    line-height:2em;
-    letter-spacing: 3px;
+.btn-35,
+.btn-35 *,
+.btn-35 :after,
+.btn-35 :before,
+.btn-35:after,
+.btn-35:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-35 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#43B1F8, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  top: 340px; 
+  left: 600px;
+}
+.btn-35:disabled {
+  cursor: default;
+}
+.btn-35:-moz-focusring {
+  outline: auto;
+}
+.btn-35 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-35 [hidden] {
+  display: none;
+}
+.btn-35 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: absolute;
+  margin-top: 10px;
+}
+.btn-35:hover {
+  transform: scale(1.1);
+}
+.btn-35 span {
+  font-weight: 900;
+  mix-blend-mode:screen;
+}
+.btn-35:before {
+  aspect-ratio: 1;
+  background: #43B1F8;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s;
+  width: 0;
+}
+.btn-35:hover:before {
+  width: 100%;
 }
 
-h2 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color: #43B1F8;
-    font-size: xx-large;
-    margin-left: 100px;
-    margin-top: 100px;
+.btn-36,
+.btn-36 *,
+.btn-36 :after,
+.btn-36 :before,
+.btn-36:after,
+.btn-36:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-36 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#43B1F8, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  top: 375px; 
+  right: 210px;
+}
+.btn-36:disabled {
+  cursor: default;
+}
+.btn-36:-moz-focusring {
+  outline: auto;
+}
+.btn-36 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-36 [hidden] {
+  display: none;
+}
+.btn-36 {
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: absolute;
+  margin-top: 10px;
+}
+.btn-36:hover {
+  transform: scale(1.1);
+}
+.btn-36 span {
+  font-weight: 900;
+  mix-blend-mode:screen;
+}
+.btn-36:before {
+  aspect-ratio: 1;
+  background: #43B1F8;
+  border-radius: 50%;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s;
+  width: 0;
+}
+.btn-36:hover:before {
+  width: 100%;
 }
 
-div.produit {
-    width:400px;
-    height:400px;
+.titre {
+    text-align: center;
+}
+ 
+.produitvC {
+    border-radius:10px;
+    width:350px;
     padding:20px;
-    margin-top: 25px;
+    margin-top: 35px;
     margin-left: auto;
     margin-right:auto;
-    border: 2px solid #43B1F8;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: white;
+    text-align: center;
+    transition: all 0.5s ease;
+    transform:scale(1);
 }
-
-.container {
+ 
+.produitvC:hover {
+    transform:scale(1.075);
+ 
+}
+ 
+.buttons {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+}
+.fill:hover,
+.fill:focus {
+   box-shadow: inset 0 0 0 2em var(--hover);
+ }
+
+.fill {
+  --color: #43B1F8;
+  --hover: #43B1F8;
 }
 
-.styled {
-    margin-top: 30px;
-    border: 2px solid #8fafc1;
-    line-height: 2.5;
-    color: #fff;
-    padding: 0 100px;
-    font-size: 2rem;
-    text-align: center;
-    background-color:#43B1F8;
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
 }
 
-.styled:hover {
-    color: #424949;
-    background-color: #8fafc1;
-    border: 2px solid #424949;
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
 }
 
-@media screen and (max-width:968px) {
-   div.contact {
-      display:none;
-   }
+.qui {
+    display: flex;
+    justify-content: center;
+}
 
-   div.contact_bis {
-      display:block;
-      float:none;
-      width:75%;
-      margin: 50px auto;
-   }
-   .p1 {
-      letter-spacing:normal;
-      margin: 30px;
-   }
+.white {
+  z-index: -1;
+  background-color: white;
+}
+ 
+.container3 {
+  position: relative;
+  width: 1160px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  margin: auto;
+}
+ 
+.container3 .box {
+  position: relative;
+  width: 275px;
+  height: 275px;
+  background: #000;
+  transition: 0.5s;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  margin-right: 15px;
+  margin-top: 45px;
+}
+ 
+.container3:hover .box {
+  transform: rotateY(25deg);
+}
+ 
+.container3 .box:hover ~ .box {
+  transform: rotateY(-25deg);
+}
+ 
+.container3 .box:hover {
+  transform: rotateY(0deg) scale(1.25);
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+ 
+.container3 .box .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+ 
+.container3 .box .imgBx:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,#43B1F8,#000);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  mix-blend-mode: multiply;
+}
+ 
+.container3 .box:hover .imgBx:before {
+  opacity: 1;
+}
+ 
+.container3 .box .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+ 
+.container3 .box .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  padding: 20px;
+  align-items: flex-end;
+  box-sizing: border-box;
+}
+ 
+.container3 .box .content h2 {
+  color: #fff;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-size: 20px;
+  transform: translateY(200px);
+  transition-delay: 0.3s;
+}
+ 
+.container3 .box:hover .content h2 {
+  transform: translateY(0px);
+}
+ 
+.container3 .box .content p {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 14px;
+  transform: translateY(200px);
+  transition-delay: 0.4s;
+}
+ 
+.container3 .box:hover .content p {
+  transform: translateY(0px);
+}
+
+.new-title-over {
+  position: absolute;
+  font-size: 50px;
+  top: 250px;
+  right: 50px;
+  margin: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+}
+
+@media screen and (max-width:1100px) {
+  .title-over {
+    top: 10px;
+  }
+
+  .text-over {
+    top: 100px;
+    left: 50px;
+    margin-right: 400px;
+}
+
+.btn-33 {
+  font-size: 75%;
+  padding: 0.4rem 2.6rem;
+  top: 270px; 
+  left: 50px;
+}
+
+.btn-35 {
+  font-size: 75%;
+  padding: 0.4rem 2.6rem;
+  top: 270px; 
+  left: 340px;
+}
+
+.new-title-over {
+  top: 180px;
+  right: 10px;
+}
+
+.btn-36 {
+  top: 300px; 
+  right: 160px;
+}
+
+.container3 {
+  width: 1100px;
+}
+}
+
+@media screen and (max-width:910px) {
+  .title-over {
+    font-size:50px;
+  }
+
+  .text-over {
+    top: 60px;
+    left: 50px;
+    margin-right: 300px;
+}
+
+.new-title-over {
+  top: 80px;
+  right: 30px;
+  font-size: 30px;
+}
+
+.btn-36 {
+  top: 150px; 
+  right: 110px;
+  font-size: 50%;
+}
+
+.container3 {
+  width: 910px;
+}
+
+}
+
+  @media screen and (max-width:720px) {
+
+    .title-over {
+      font-size:30px;
+    }
+
+    .text-over {
+      top: 40px;
+      left: 50px;
+      margin-right: 20px;
+      font-size: 14px;
+  }
+
+  .btn-33 {
+    font-size: 50%;
+    padding: 0.1rem 2.3rem;
+    top: 175px; 
+    left: 50px;
+  }
+  
+  .btn-35 {
+    font-size: 50%;
+    padding: 0.1rem 2.3rem;
+    top: 175px; 
+    left: 340px;
+  }
+
+  .new-title-over {
+    top: 80px;
+    right: 30px;
+    font-size: 20px;
+  }
+  
+  .btn-36 {
+    top: 120px; 
+    right: 60px;
+    font-size: 50%;
+  }
+  }
+
+  @media screen and (max-width:900px) {
+    .container3 {
+      width: 720px;
+    }
+  }
+
+
+@media screen and (max-width:650px) {
+  .container3 {
+    width: 500px;
+  }
 }
