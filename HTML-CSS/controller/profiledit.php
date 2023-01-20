@@ -17,7 +17,7 @@ if (isset($_POST["submit"])){
     $phone = $result["phone"];
 
 
-    header('location: ../views/personalspace/profil.php?username='.$username.'&familyname='.$familyname.'&name='.$name.'&email='.$email.'&phone='.$phone);
+    header('location: ../views/personalspace/profil.php?iduser='.$iduser.'&username='.$username.'&familyname='.$familyname.'&name='.$name.'&email='.$email.'&phone='.$phone);
     exit();
 } elseif (isset($_POST["submit_modify"])){
     $iduser = test_input($_POST["iduser"]);
@@ -27,16 +27,21 @@ if (isset($_POST["submit"])){
     $email = test_input($_POST["email"]);
     $phone = test_input($_POST["phone"]);
 
-    if (EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone) !== false){
+    if (EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone) != false){
         header("location: ../views/personalspace/profil.php?error=emptyinput");
         exit();
     }
     
-    $file_destination = "/uploadspfp/defaultpfp.jpg";
 
     if (isset($_FILES['pfp'])) {
         $file = $_FILES['pfp'];
         $file_destination = uploadpfp($file);
+    } else {
+        $result = fetchRowUser($conn, $iduser);
+        $pfp_path = $result["pfp_path"];
+        if (empty($pfp_path)){
+            $file_destination = "/uploadspfp/defaultpfp.jpg";
+        }
     }
 
     if ($file_destination == false){
@@ -50,11 +55,10 @@ if (isset($_POST["submit"])){
         exit();
     }
 
-    
-
     $result = profilEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination);
-
+    
     session_start();
+    
     $_SESSION["iduser"]=$result["iduser"];
     $_SESSION["username"]=$result["username"];
     $_SESSION["familyname"]=$result["familyname"];

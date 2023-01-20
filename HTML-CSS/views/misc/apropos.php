@@ -7,6 +7,7 @@
         <title>Notre histoire</title>
         <link rel="stylesheet" href ="../navbar/navbar-main.css">
         <link rel="stylesheet" href ="apropos.css">
+        <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
 
     </head>
 

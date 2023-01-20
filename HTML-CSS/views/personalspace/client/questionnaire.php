@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="questionnaire.css">
     <link rel="stylesheet" href="../../assets/template.css">
     <link rel ="stylesheet" href="../../navbar/navbar-main.css">
+    <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
 
     <body>
     <header>

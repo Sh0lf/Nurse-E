@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../navbar/navbar-main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="adminmodif-personalspace.css">
+    <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
   </head>
 
   <body>

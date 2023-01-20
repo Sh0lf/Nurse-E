@@ -7,6 +7,7 @@
 	<title>Profil</title>
 	<link rel="stylesheet" href="../navbar/navbar-main.css">
 	<link rel="stylesheet" type="text/css" href="profil.css">
+	<link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
 </head>
 
 
@@ -46,7 +47,7 @@ if (empty($_SESSION["iduser"])){
         <div class="container" id="second-form">
             <div class="container-box">
 				<form action="../../../controller/profiledit.php" method="post" enctype="multipart/form-data">
-					<input type="hidden" name="iduser" value="' . $_GET["id"] . '">
+					<input type="hidden" name="iduser" value="' . $_GET["iduser"] . '">
 					<p><b>Username</b></p>
 					<input type="text" name="username" value="' . $_GET["username"].'">
 					<p><b>Nom de famille</b></p>

@@ -32,15 +32,14 @@ p{
     margin-bottom: 7px;
 }
 
-.container-form form input[type=text]{
+form input[type=text]{
     display:block;
     padding: 5px 10px;
     margin-top: 7px;
     border : 1.5px #eef2f7 solid;
     border-radius: 5px;
 }
-
-.container-form form input[type=file]{
+form input[type=file]{
     display:block;
     padding: 5px 10px;
     margin-top: 7px;

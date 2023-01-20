@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="cgu.css">
     <link rel="stylesheet" href="../navbar/navbar-main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
   </head>
   <body>
     <header>

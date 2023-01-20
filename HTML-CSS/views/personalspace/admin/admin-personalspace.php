@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="../../navbar/navbar-main.css">
         <link rel="stylesheet" href="../../assets/template.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
         <title>Admin panel</title>
     </head>
     <body>

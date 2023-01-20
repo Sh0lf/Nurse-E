@@ -4,6 +4,7 @@
         <meta charset="utf-8"> 
         <link rel="stylesheet"  href="medecin-personalspace.css" >
         <link rel="stylesheet" href="../../navbar/navbar-main.css">
+        <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Admin panel</title>
     </head>
