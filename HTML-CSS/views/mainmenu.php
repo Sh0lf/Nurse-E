@@ -27,7 +27,7 @@
     </header>
 
     <div class="container">
-            <img src="testaccueil.png" style="width:100%;">
+            <img src="http://nurse-medicobot.wstr.fr/views/assets/testaccueil.png" style="width:100%;">
             <h1 class="title-over">MédicoBot</h1>
             <p class="text-over">A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés. 
             Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient. De ce fait, nous avons 
@@ -41,7 +41,7 @@
         <div class="produitvC">
             <h2 style="margin-left:-125px;color:#274359;">Notre capteur</h2>
             <p style="margin-left:-245px; color:#274359;">$199.95</p>
-            <img src="capteur.jpg" style="width:300px;">
+            <img src="http://nurse-medicobot.wstr.fr/views/assets/capteur.jpg" style="width:300px;">
         </div>
         <div class="buttons">
             <button style="text-transform: uppercase;
@@ -75,7 +75,7 @@
           <div class="medi">
               <div class="bl" style="box-shadow: 0px 5px 25px #43B1F8;">
                 <div class="medico">
-                    <img src="logo.png" alt="medicobot">
+                    <img src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png" alt="medicobot">
                 </div>
                 <div class="hh">
                   <div class="pro">
@@ -95,7 +95,7 @@
               </div>
             <div class="ve" style="background-color: #3A9D23; box-shadow: 0px 5px 25px #3A9D23;">
               <div class="ecolo" >
-                  <img src="nurse.png" alt="nurseE">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/logo nurse-e 1.png" alt="nurseE">
               </div> 
               <div class="hh">
                       <div class="produit" style="margin-left: -35vw;">
@@ -145,7 +145,7 @@
           <div class="container3">
               <div class="box">
                 <div class="imgBx">
-                  <img src="Vincent.jpg">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Vincent.jpg">
                 </div>
                 <div class="content">
                   <div>
@@ -157,7 +157,7 @@
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="Junior.jpg">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Junior.jpg">
                 </div>
                 <div class="content">
                   <div>
@@ -169,7 +169,7 @@
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="Clem.jpg">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Clem.jpg">
                 </div>
                 <div class="content">
                   <div>
@@ -181,7 +181,7 @@
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="Leo.jpg">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Leo.jpg">
                 </div>
                 <div class="content">
                   <div>
@@ -193,7 +193,7 @@
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="Marie-Eve.jpg">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Marie-Eve.jpg">
                 </div>
                 <div class="content">
                   <div>
@@ -205,7 +205,7 @@
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="Aelig.jpg">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Aelig.jpg">
                 </div>
                 <div class="content">
                   <div>
@@ -220,7 +220,7 @@
         <br>
         </div>
         <div class="container">
-          <img src="image1.png" style="width:100%;">
+          <img src="http://nurse-medicobot.wstr.fr/views/assets/image1.png" style="width:100%;">
           <h1 class="new-title-over">Rejoignez-nous<br>
             maintenant !</h1>
             <button class="btn-36"><span>Inscription</span></button>
