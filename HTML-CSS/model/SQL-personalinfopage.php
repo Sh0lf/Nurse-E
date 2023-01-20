@@ -100,7 +100,7 @@ function fetchAllUserClient($conn){
     
 }
 
-function profileEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination){
+function profilEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination){
     $sql= "UPDATE user SET username = ?, familyname = ?, 
     name = ?, email = ?, phone = ?, pfp_path = ? WHERE iduser = ?";
 

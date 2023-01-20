@@ -3,6 +3,7 @@ ini_set('display_errors', 1);
 include_once './dbh.inc.php';
 include_once './functions.inc.php';
 include_once '../model/SQL-personalinfopage.php';
+include_once './uploadpfp.php';
 
 if (isset($_POST["submit"])){
     $iduser = $_POST["iduser"];
@@ -26,6 +27,8 @@ if (isset($_POST["submit"])){
     $email = test_input($_POST["email"]);
     $phone = test_input($_POST["phone"]);
 
+    $file_destination = "/uploadspfp/defaultpfp.jpg";
+
     if (isset($_FILES['pfp'])) {
         $file = $_FILES['pfp'];
         $file_destination = uploadpfp($file);
@@ -36,7 +39,7 @@ if (isset($_POST["submit"])){
         exit();
     }
 
-    $result = profileEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination);
+    $result = profilEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination);
 
     $username = $result["username"];
     $familyname = $result["familyname"];
