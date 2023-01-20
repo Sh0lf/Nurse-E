@@ -1,12 +1,11 @@
 .medeco{
     text-align: center;
     width: 100%;
-    height: 90vw;
-    margin-bottom: 450px;
+    height: fit-content;
 }
 .medi{
     width: 100%;
-    height: 130vw;
+    height: fit-content;
 }
 
 .medico{
@@ -388,6 +387,7 @@
   font-size: 100%;
   font-weight: 900;
   line-height: 1.5;
+  z-index: 1000;
   margin: 0;
   -webkit-mask-image: -webkit-radial-gradient(#9FE855, #fff);
   padding: 0;
@@ -467,6 +467,7 @@
   text-transform: uppercase;
   text-align: center;
   margin-left:35px;
+  z-index: 1000;
 }
 .btn-38:disabled {
   cursor: default;
@@ -537,10 +538,6 @@
   }
   .btn-38 {
     padding: 0.3rem 2rem;
-  }
-
-  .medeco{
-    margin-bottom: 200px;
   }
 
 }
