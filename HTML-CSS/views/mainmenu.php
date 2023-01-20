@@ -26,8 +26,7 @@
       ?>
     </header>
 
-    <div class="container">
-            <img src="http://nurse-medicobot.wstr.fr/views/assets/testaccueil.png" style="width:100%;">
+    <div class="container" id="first-part">
             <h1 class="title-over">MédicoBot</h1>
             <p class="text-over">A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés. 
             Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient. De ce fait, nous avons 
@@ -36,7 +35,7 @@
             comme vous ne l’avez jamais vu.</p>
             <button class="btn-33"><span>Notre produit</span></button>
             <button class="btn-35"><span>A propos</span></button>
-        </div>
+    </div>
         <h1 class="titre" style="color:#274359;">Notre produit</h1>
         <div class="produitvC">
             <h2 style="margin-left:-125px;color:#274359;">Notre capteur</h2>
