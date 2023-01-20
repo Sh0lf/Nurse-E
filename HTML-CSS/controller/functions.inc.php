@@ -153,7 +153,7 @@ function EmptyInputQues($s1, $s2, $s3, $s4, $s5){
 
 function EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone){
     $result = "";
-    if (empty($username) or empty($iduser) or empty($familyname) or empty($name) or empty($email) or empty($phone)) {
+    if (empty($iduser) or empty($username) or empty($familyname) or empty($name) or empty($email) or empty($phone)) {
         $result = true;
     } else {
         $result = false; 
