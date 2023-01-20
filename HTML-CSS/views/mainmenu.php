@@ -27,14 +27,15 @@
     </header>
 
     <div class="container" id="first-part">
-            <h1 class="title-over">MédicoBot</h1>
-            <p class="text-over">A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés. 
-            Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient. De ce fait, nous avons 
-            décidé de créer un produit afin de remédier à ça. Ce produit est MédicoBot, c’est le premier produit 
-            créé par notre entreprise Nurse-E. MedicoBot s’apprête à révolutionner le domaine du monde médical 
-            comme vous ne l’avez jamais vu.</p>
-            <button class="btn-33"><span>Notre produit</span></button>
-            <button class="btn-35"><span>A propos</span></button>
+              <h1 class="title-over">MédicoBot</h1>
+              <p class="text-over">A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés. 
+              Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient. De ce fait, nous avons 
+              décidé de créer un produit afin de remédier à ça. Ce produit est MédicoBot, c’est le premier produit 
+              créé par notre entreprise Nurse-E. MedicoBot s’apprête à révolutionner le domaine du monde médical 
+              comme vous ne l’avez jamais vu.</p>
+              <button class="btn-33"><span>Notre produit</span></button>
+              <button class="btn-33"><span>A propos</span></button>
+            </div>
     </div>
         <h1 class="titre" style="color:#274359;">Notre produit</h1>
         <div class="produitvC">
@@ -92,9 +93,9 @@
                   </div>
                 </div>
               </div>
-            <div class="ve" style="background-color: #3A9D23; box-shadow: 0px 5px 25px #3A9D23;">
+            <div class="ve" style="background: rgba(58, 152, 35, .5); box-shadow: 0px 5px 25px #9bc585;">
               <div class="ecolo" >
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/logo nurse-e 1.png" alt="nurseE">
+                  <img src="http://nurse-medicobot.wstr.fr/views/assets/arbre.png" alt="arbre">
               </div> 
               <div class="hh">
                       <div class="produit" style="margin-left: -35vw;">
@@ -134,9 +135,6 @@
               <div class="S"></div>
               <div class="T"></div>
           </div>
-      <br>
-      <br>
-      <br>
         <div class="white">
           <div class="qui">
               <h1 style="color:#274359;">Qui sommes-nous ?</h1>
@@ -215,14 +213,11 @@
                 </div>
               </div>
           </div>
-        <br>
-        <br>
         </div>
-        <div class="container">
-          <img src="http://nurse-medicobot.wstr.fr/views/assets/image1.png" style="width:100%;">
+        <div class="container" id="last-part">
           <h1 class="new-title-over">Rejoignez-nous<br>
             maintenant !</h1>
-            <button class="btn-36"><span>Inscription</span></button>
+            <button class="btn-35"><span>Inscription</span></button>
         </div>
     
     <footer>
