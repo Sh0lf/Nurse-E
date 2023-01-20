@@ -27,6 +27,11 @@ if (isset($_POST["submit"])){
     $email = test_input($_POST["email"]);
     $phone = test_input($_POST["phone"]);
 
+    if (EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone) !== false){
+        header("location: ../views/personalspace/profil.php?error=emptyinput");
+        exit();
+    }
+    
     $file_destination = "/uploadspfp/defaultpfp.jpg";
 
     if (isset($_FILES['pfp'])) {
@@ -34,27 +39,32 @@ if (isset($_POST["submit"])){
         $file_destination = uploadpfp($file);
     }
 
-    if (EmptyInputEdit($iduser, $username, $familyname, $name, $email, $phone) !== false){
-        header("location: ../views/personalspace/profil.php?error=emptyinput");
+    if ($file_destination == false){
+        header("location: ../views/personalspace/profil.php?error=uploadpfp");
+        exit();
+    } elseif ($file_destination == "badformat"){
+        header("location: ../views/personalspace/profil.php?error=badformat");
+        exit();
+    } elseif ($file_destination == "toobig"){
+        header("location: ../views/personalspace/profil.php?error=toobig");
         exit();
     }
 
+    
+
     $result = profilEditRowUser($conn, $iduser, $username, $familyname, $name, $email, $phone, $file_destination);
 
-    $username = $result["username"];
-    $familyname = $result["familyname"];
-    $name = $result["name"];
-    $email = $result["email"];
-    $phone = $result["phone"];
-    $file_path = $result["pfp_path"];
-
     session_start();
-    $_SESSION["username"]=$username;
-    $_SESSION["familyname"]=$familyname;
-    $_SESSION["name"]=$name;
-    $_SESSION["email"]=$email;
-    $_SESSION["phone"]=$phone;
-    $_SESSION["pfp_path"] = $file_path;
+    $_SESSION["iduser"]=$result["iduser"];
+    $_SESSION["username"]=$result["username"];
+    $_SESSION["familyname"]=$result["familyname"];
+    $_SESSION["name"]=$result["name"];
+    $_SESSION["email"]=$result["email"];
+    $_SESSION["phone"]=$result["phone"];
+    $_SESSION["sexe"]=$result["sexe"];
+    $_SESSION["role"]=$result["role"];
+    $_SESSION["idkit"]=$result["KitDiagnostiqueidKitDiagnostique"];
+    $_SESSION["pfp_path"] = $result["pfp_path"];
 
 
     header('location: ../views/personalspace/profil.php?error=success');

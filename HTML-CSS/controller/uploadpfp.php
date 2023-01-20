@@ -15,13 +15,11 @@ function uploadpfp($file){
 
       // File size validation
       if($file['size'] > 2097152) {
-        header("location: ../views/loginsys/signup.php?error=toobig");
-        exit();
+        return "toobig";
       }
       // File type validation
       if(!in_array($file_ext, $allowed)){
-        header("location: ../views/loginsys/signup.php?error=badformat");
-        exit();
+        return "badformat";
       }
 
       if($file_error == 0){

@@ -62,6 +62,12 @@ if (isset($_POST["submit"])) {
   if ($file_destination == false){
     header("location: ../views/loginsys/signup.php?error=uploaderr");
     exit();
+  } elseif ($file_destination == "badformat") {
+    header("location: ../views/loginsys/signup.php?error=badformat");
+    exit();
+  } elseif ($file_destination == "toobig") {
+    header("location: ../views/loginsys/signup.php?error=toobig");
+    exit();
   }
 
   createUser_temp($conn, $username, $nom, $prenom, $email, $phone, $sexe, $pwd, $role, $code, $idkit, $file_destination, $sendMl);
