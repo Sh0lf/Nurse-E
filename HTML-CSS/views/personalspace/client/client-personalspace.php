@@ -24,11 +24,11 @@
       exit;
     }?>
 
-    <h1>Bonjour, <?php echo $_SESSION["name"]?></h1>
+    <h1 style="margin:auto">Bonjour, <?php echo $_SESSION["name"]?></h1>
 
-    <a href="../../../controller/creatediagnostique.php"><button class="bigbutton"> Faire un diagnostique</button></a>
+    <a href="../../../controller/creatediagnostique.php" style="margin: 20px auto;"><button class="bigbutton"> Faire un diagnostique</button></a>
     <button class="bigbutton">Accéder à l'historique</button>
-    <a href="../profil.php"><button class="bigbutton"> Options</button></a>
+    <a href="../profil.php" style="margin: 20px auto;"><button class="bigbutton"> Options</button></a>
 
     <footer>
       <!-- Defining in footer a small navigation bar-->
