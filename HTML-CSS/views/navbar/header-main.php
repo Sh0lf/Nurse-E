@@ -54,7 +54,7 @@
                     </ul>
                 </li>';
         } else {
-            echo '<li><a href="#ecologie">Ecologie</a></li>';
+            echo '<li><a href="http://nurse-medicobot.wstr.fr/views/misc/ecologie.php">Ecologie</a></li>';
         }
         ?>
         <?php
