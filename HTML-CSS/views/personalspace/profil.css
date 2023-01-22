@@ -111,6 +111,12 @@ form input[type=file]{
     border: 1px solid #43B1F8;
 }
 
+@media (max-width: 968px) {
+    ul.puce {
+        display: block;
+    }
+}
+
 @media screen and (max-width:600px) {
 
     .list{
