@@ -1,7 +1,8 @@
+
 nav {
   border-bottom: 3px solid white;
 }
- 
+
 body {
   margin: 0;
   padding:0;
@@ -387,6 +388,7 @@ letter-spacing: 0.1em;
 text-align: right;
 }
 
+
 @media screen and (max-width:1070px) {
   #first-part{
     width: 100%;
@@ -465,4 +467,3 @@ text-align: right;
   }
 
 }
-

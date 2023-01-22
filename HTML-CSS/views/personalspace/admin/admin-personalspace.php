@@ -54,19 +54,19 @@
                         <div class=avant>
                             <h2> Modification utilisateur </h2>
                             <div class="oee">
-                                <button class="btn-34"><span><a href="adminmodif-personalspace.php">Voir plus</a></span></button>  
+                                <a href="adminmodif-personalspace.php"><button class="btn-34"><span>Voir plus</span></button></a>
                             </div> 
                         </div>
                         <div class=avant>
                             <h2>Supprimer un utilisateur</h2>
                             <div class="oee">
-                                <button class="btn-34"><span><a href="adminsupp-personalspace.php">Voir plus</a></span></button>
+                                <a href="adminsupp-personalspace.php"><button class="btn-34"><span>Voir plus</span></button></a>
                             </div>
                         </div> 
                         <div class=avant>       
                             <h2>Modification FAQ</h2>
                             <div class="oee">
-                                <button class="btn-34"><span><a href="adminfaq-personalspace.php">Voir plus</a></span></button>  
+                                <a href="adminfaq-personalspace.php"><button class="btn-34"><span>Voir plus</span></button></a> 
                             </div>
                         </div>
                     </a>

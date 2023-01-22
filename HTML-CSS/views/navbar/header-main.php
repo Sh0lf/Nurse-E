@@ -27,10 +27,8 @@
                     <a href="/views/mainmenu.php">Accueil <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-1">
                     <ul>
-                        <li><a href="/views/mainmenu.php#comment">Comment ça marche ?</a></li>
                         <li><a href="/views/mainmenu.php#produit">Notre produit</a></li>
-                        <li><a href="/views/mainmenu.php#updates">Les updates</a></li>
-                        <li><a href="/views/mainmenu.php#questions">Vos questions</a></li>                                
+                        <li><a href="/views/mainmenu.php#face">L\'équipe</a></li>                           
                     </ul>
                 </li>';
             }
@@ -38,11 +36,11 @@
         <?php
         if(isset($_SESSION["username"])) {
             echo '<li><label for="btn-2" class="show">MédicoBot +</label>
-            <a href="#produits">MédicoBot <i class="fas fa-caret-down"></i></a>
+            <a href="/views/medicalbot/medicobot.php">MédicoBot <i class="fas fa-caret-down"></i></a>
             <input type="checkbox" id="btn-2">
             <ul>
-                <li><a href="#">Vos analyses</a></li>
-                <li><a href="#">Votre dossier</a></li>
+                <li><a href="/views/error404.php">Vos analyses</a></li>
+                <li><a href="/views/error404.php">Votre dossier</a></li>
             </ul></li>';
         } else {
             echo '<li><a href="/views/medicalbot/medicobot.php">Médicobot</a></li>';
@@ -52,7 +50,7 @@
         if(isset($_SESSION["username"])) {
             echo '<li>
                     <label for="btn-3" class="show">Ecologie +</label>
-                    <a href="#eco">Ecologie <i class="fas fa-caret-down"></i></a>
+                    <a href="/views/misc/ecologie.php">Ecologie <i class="fas fa-caret-down"></i></a>
                     <input type="checkbox" id="btn-3">
                     <ul>
                         <li><a href="/controller/yourtree.php">Votre arbre</a></li>

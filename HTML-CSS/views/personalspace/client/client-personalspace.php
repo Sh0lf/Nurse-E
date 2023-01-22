@@ -33,6 +33,7 @@
     <a href="../../../controller/creatediagnostique.php" style="margin: 20px auto;"><button class="bigbutton"> Faire un diagnostique</button></a>
     <button class="bigbutton">Accéder à l'historique</button>
     <a href="../profil.php" style="margin: 20px auto;"><button class="bigbutton"> Options</button></a>
+    </div>
 
     <footer>
       <!-- Defining in footer a small navigation bar-->

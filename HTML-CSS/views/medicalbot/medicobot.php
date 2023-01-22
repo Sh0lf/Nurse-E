@@ -34,22 +34,21 @@
 		<div class="produit">
 			<h1>Analyse</h1>
 			<h3>Comment cela marche ?</h3>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem</p>		
+			<p>Pour commencer une analyse, il faut tout d'abord lancer une diagnostique. Dès que vous avez lancer une diagnostique, effectuez avec notre boitier les mesures grâce à nos capteurs</p>		
 
 		</div>
 	</div>
 	<div class="produit1">
 		<div class="ana">
 			<div class="oe">
-				<a href="page_annexe\analyse.html" class="bouton2">Commencer une analyse</a>
+				<a href="page_annexe\analyse.html" class="bouton2">Lancer une diagnostique</a>
 			</div>
 		</div>
-		<div>
+	</div>
 			<div class="produit">
 				<h1>Questionnaire</h1>
 				<h3>Fonctionnement</h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem</p>		
-
+				<p>Nous offrons en plus du diagnostique un questionnaire en association aux mesures obtenus par le kit. C'est une démarche obligatoire lors du processus d'une diagnostique afin de vous proposer un pronostique précis.</p>		
 			</div>
 		</div>
 		
@@ -57,7 +56,7 @@
 	<div class="produit1">
 		<div class="ana">
 			<div class="oe">
-				<a href="page_annexe\questionnaire.html" class="bouton2">commencer le questionnaire</a>
+				<a href="../personalspace/client/questionnaire.php" class="bouton2">Commencer le questionnaire</a>
 			</div>
 		</div>	
 	</div>

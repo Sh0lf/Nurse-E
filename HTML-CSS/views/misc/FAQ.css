@@ -9,10 +9,10 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: white;
-    margin: 40px auto;
+    margin: auto;
     padding: 24px;
     border-radius: 10%;
-    z-index: 10;
+    z-index: 5;
 }
 .container {
     margin: auto;

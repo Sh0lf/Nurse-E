@@ -1,5 +1,6 @@
   .bleu
   {
+    margin-top: 26px;
     text-align: center;
     color: #43b1f8;
     font-size: 50px;
@@ -9,6 +10,7 @@
   }
   .bleu1
   {
+    margin-top: 16px;
     color: #43b1f8;
 
   }
@@ -22,7 +24,7 @@
     position: relative;
   }
   .info p{
-    text-align: center;
+    text-align: start;
   }
 
   h3{
@@ -249,16 +251,25 @@
   }
 }
 
+.pro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin:50px;
+    flex-direction:column;
+}
 
 
 .produit {
+  display:flex;
   font-family: 'Courier New', Courier, monospace;
-  margin: 50px; 
+  margin: auto; 
   border-top: solid 4px #43b1f8;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
+  width: 75%;
  
 }
 .produit1 {

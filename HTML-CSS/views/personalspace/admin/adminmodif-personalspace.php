@@ -48,7 +48,11 @@
                 <input type="text" name="email" value="'.$_GET["email"].'">
                 <input type="text" name="phone" value="'.$_GET["phone"].'">
                 <input type="text" name="sexe" value="'.$_GET["sexe"].'">
-                <input type="text" name="role" value="'.$_GET["role"].'">
+                <select name="role" value="'.$_GET["role"].'">
+                    <option value="admin">admin</option>
+                    <option value="client">client</option>
+                    <option value="medecin">medecin</option>
+                </select>
                 <input type="number" name="idkit" value="'.$_GET["idkit"].'"><br>
                 <button type="submit" name="submit_modify">Confirmer Modification</button>
             </form>
@@ -74,11 +78,6 @@
     }   
     ?>
 
-    <footer>
-        <?php
-            include_once '../../navbar/footer.php';
-        ?>
-    </footer>
   </body>
     
 

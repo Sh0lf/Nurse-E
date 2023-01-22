@@ -23,7 +23,7 @@
     </header>
     <?php
     if (!$_SESSION["idkit"]){
-        header("location: ../mainmenu.php");
+        header("location: ../loginsys/login.php");
         exit();
     } elseif (isset($_GET["idkit"]) && isset($_GET["idtree"])){
         $idkit = $_GET["idkit"];
@@ -35,11 +35,11 @@
         echo '<h2>'.$julianDay.' Jours !</h2>';
 
         if ($interval<=60*86400) {
-            echo '<img class="tree" src="http://nurse-medicobot.wstr.fr/views/assets/smalltree.gif" >';
+            echo '<img class="tree" src="/views/assets/smalltree.gif" >';
         } elseif ((60*86400 <= $interval) && ($interval <= 90*86400)) {
-            echo '<img class="tree" src="http://nurse-medicobot.wstr.fr/views/assets/mediumtree.gif" >';
+            echo '<img class="tree" src="/views/assets/mediumtree.gif" >';
         } elseif (90*86400<=$interval) {
-            echo '<img class="tree" src="http://nurse-medicobot.wstr.fr/views/assets/bigtree.gif">';
+            echo '<img class="tree" src="/views/assets/bigtree.gif">';
         } echo '</div>';
 
     } elseif (isset($_GET["idkit"]) && empty($_GET["idtree"])) {

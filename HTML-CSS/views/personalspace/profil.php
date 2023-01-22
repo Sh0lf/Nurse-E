@@ -28,8 +28,10 @@ if (empty($_SESSION["iduser"])){
 ?>
 
 	<div class='rectangle'>
-	<img <?php echo 'src="'.$_SESSION["pfp_path"].'"'?> alt="Photo de profil" onclick="">
-	<h1 class="titre"><?php echo $_SESSION["username"] ?></h1>
+	<div class='first-part'>
+	    <img class='pfp' <?php echo 'src="'.$_SESSION["pfp_path"].'"'?> alt="Photo de profil" onclick="">
+	    <h1 class="titre"><?php echo $_SESSION["username"] ?></h1>
+	</div>
 	<ul class="puce">
 		<li class="list">Prénom : <?php echo $_SESSION["name"];?></li>
 		<li class="list">Nom de famille : <?php echo $_SESSION["familyname"];?></li>

@@ -5,12 +5,13 @@
     box-sizing:border-box;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
 #first-part{
+    display: flex;
     background-image: url("../assets/empreinte.jpg");
     background-size: cover;
     min-height: 600px;
     height:fit-content;
+    margin:auto;
     }
 
 .text-over {
@@ -20,9 +21,11 @@
     text-align: justify;
     padding-top:150px;
     padding-bottom:30px;
-    padding-left: 600px;
+    padding-right: 150px;
+    padding-left: 50%;
     line-height: 30px;
 }
+
 
 @media screen and (max-width:1050px) {
     .text-over {

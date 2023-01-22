@@ -15,9 +15,10 @@
     <header>
         <?php
             include_once '../navbar/header-main.php';
-            include_once '../assets/templateb.php';
         ?>
     </header>
+    
+        <?php include_once '../assets/templateb.php'; ?>
         <div class="contient-tout">
             <h1 style="text-align: center; margin-bottom:26px">FAQ</h1>
         <?php

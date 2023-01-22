@@ -31,21 +31,22 @@
               décidé de créer un produit afin de remédier à ça. Ce produit est MédicoBot, c’est le premier produit 
               créé par notre entreprise Nurse-E. MedicoBot s’apprête à révolutionner le domaine du monde médical 
               comme vous ne l’avez jamais vu.</p>
-              <button class="btn-33"><span>Notre produit</span></button>
-              <button class="btn-33"><span>A propos</span></button>
+              <a href="#produit"><button class="btn-33"><span>Notre produit</span></button></a>
+              <a href="/views/misc/apropos.php"><button class="btn-33"><span>A propos</span></button></a>
             </div>
     </div>
-        <h1 class="titre" style="color:#274359;">Notre produit</h1>
+        <h1 class="titre" style="color:#274359;" id="produit">Notre produit</h1>
         <div class="produitvC">
             <h2 style="margin-left:-125px;color:#274359;">Notre capteur</h2>
             <p style="margin-left:-245px; color:#274359;">$199.95</p>
-            <img src="http://nurse-medicobot.wstr.fr/views/assets/capteur.jpg" style="width:300px;">
+            <img src="/views/assets/capteur.jpg" style="width:300px;">
         </div>
         <div class="buttons">
+            <a href="/views/medicalbot/medicobot.php">
             <button style="text-transform: uppercase;
             font-weight: bold;
             font-family: sans-serif;
-            letter-spacing: 0.1em;" class="fill">Comment ça marche ?</button>
+            letter-spacing: 0.1em;" class="fill">Comment ça marche ?</button></a>
         </div>
         <div class="medeco">
           <div class="cube">
@@ -73,7 +74,7 @@
           <div class="medi">
               <div class="bl" style="box-shadow: 0px 5px 25px #43B1F8;">
                 <div class="medico">
-                    <img src="http://nurse-medicobot.wstr.fr/views/assets/Logo-medicobot.png" alt="medicobot">
+                    <img src="/views/assets/Logo-medicobot.png" alt="medicobot">
                 </div>
                 <div class="hh">
                   <div class="pro">
@@ -81,31 +82,31 @@
                           <h1 style="text-transform: uppercase;
                           font-weight: bold;
                           font-family: sans-serif;
-                          letter-spacing: 0.1em;">Medicobot</h1>
-                          <h3 style="text-decoration: none;">Votre medecin generaliste de poche</h3>
-                          <p class="p1">Chez Medicobot nous vous offrons un medecin generaliste directement dans votre maison.
-                          Chez Medicobot nous vous offrons un medecin generaliste directement dans votre maison.</p>        
+                          letter-spacing: 0.1em;">Notre produit: Medicobot</h1>
+                          <h3 style="text-decoration: none;">Votre médecin généraliste de poche</h3>
+                          <p class="p1">Chez Médicobot nous vous offrons un médecin généraliste directement dans votre maison.</p>    
                           <p class="p1">Acceder a vos analyse :</p>
-                          <button class="btn-38"><span><a href="page_annexe\analyse.html" style="text-decoration: none; color:white;">Commencer une analyse</a></span></button>
+                          <a href="/views/personalspace/client/questionnaire.php" style="text-decoration: none; color:white;"><button class="btn-38"><span>Commencer une analyse</span></button></a>
                       </div>
                   </div>
                 </div>
               </div>
             <div class="ve" style="background: rgba(58, 152, 35, .5); box-shadow: 0px 5px 25px #9bc585;">
               <div class="ecolo" >
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/arbre.png" alt="arbre">
+                  <img src="/views/assets/arbre.png" alt="arbre">
               </div> 
               <div class="hh">
                       <div class="produit" style="margin-left: -35vw;">
                               <h1 style="text-transform: uppercase;
                               font-weight: bold;
                               font-family: sans-serif;
-                              letter-spacing: 0.1em;">Nurse E</h1>
-                              <h3 style="text-decoration: none;">votre medecin generaliste de poche</h3>
-                              <p class="p1">Chez Medicobot nous vous offrons un medecin generaliste directement dans votre maison.
-                              Chez Medicobot nous vous offrons un medecin  generaliste directement dans votre maison.</p>
-                              <p class="p1">Acceder a vos analyse :</p>
-                              <button class="btn-34"><span><a href="page_annexe\analyse.html" style="text-decoration: none; color:white;">Commencer une analyse</a></span></button>
+                              letter-spacing: 0.1em;">L'entreprise: Nurse E</h1>
+                              <h3 style="text-decoration: none;">La startup révolutionnaire</h3>
+                              <p class="p1">Avec l'informatique, aujourd'hui un domaine extrémement convoité, il est aussi malheureusement polluant. C'est pourquoi nous cherchons des initiative
+                              pour réduire notre impact sur l'environnement en s'engageant sur des initiatives écologique comme planter des arbres ! </p>
+                              </p>
+                              <p class="p1">Voir votre arbre en direct:</p>
+                              <a href="./personalspace/ecologie-arbre.php" style="text-decoration: none; color:white;"><button class="btn-34"><span>Votre arbre</span></button></a>
                       </div>          
               </div> 
             </div>
@@ -135,77 +136,77 @@
           </div>
         <div class="white">
           <div class="qui">
-              <h1 style="color:#274359;">Qui sommes-nous ?</h1>
+              <h1 style="color:#274359;" id="face">Qui sommes-nous ?</h1>
           </div>
           <div class="container3">
               <div class="box">
                 <div class="imgBx">
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Vincent.jpg">
+                  <img src="/views/assets/Vincent.jpg">
                 </div>
                 <div class="content">
                   <div>
                     <h2>Vincent YAP</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+                    <p>Le bon back-end développeur de l'équipe de choque, a enchainé beaucoup trop de nuits blanches
                     </p>
                   </div>
                 </div>
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Junior.jpg">
+                  <img src="/views/assets/Junior.jpg">
                 </div>
                 <div class="content">
                   <div>
                     <h2>Junior YAMEUNDJEU TITCHEU</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+                    <p>Le stressé de la vie, et qui veut que des croissants
                     </p>
                   </div>
                 </div>
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Clem.jpg">
+                  <img src="/views/assets/Clem.jpg">
                 </div>
                 <div class="content">
                   <div>
                     <h2>Clementine DEBEUGNY</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+                    <p>La dev front-end, a bien enchainée des nuits blanches pour ce site de qualité
                     </p>
                   </div>
                 </div>
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Leo.jpg">
+                  <img src="/views/assets/Leo.jpg">
                 </div>
                 <div class="content">
                   <div>
                     <h2>Léo ZERBIB</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+                    <p>L'ambivalent de l'équipe, front-end et back-end hehe
                     </p>
                   </div>
                 </div>
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Marie-Eve.jpg">
+                  <img src="/views/assets/Marie-Eve.jpg">
                 </div>
                 <div class="content">
                   <div>
                     <h2>Marie-Evangéline DE LA BROISE</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+                    <p>La réveuse de notre équipe (on ne t'en veux pas, mais où sont nos croissants)
                     </p>
                   </div>
                 </div>
               </div>
               <div class="box">
                 <div class="imgBx">
-                  <img src="http://nurse-medicobot.wstr.fr/views/assets/Aelig.jpg">
+                  <img src="/views/assets/Aelig.jpg">
                 </div>
                 <div class="content">
                   <div>
                     <h2>Aëlig VILLIETTE</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi accusamus molestias quidem iusto.
+                    <p>Arrive en retard alors qu'il habite juste à coté
                     </p>
                   </div>
                 </div>
@@ -215,7 +216,7 @@
         <div class="container" id="last-part">
           <h1 class="new-title-over">Rejoignez-nous<br>
             maintenant !</h1>
-            <button class="btn-35"><span>Inscription</span></button>
+            <a href="./loginsys/signup.php"><button class="btn-35"><span>Inscription</span></button></a>
         </div>
     
     <footer>

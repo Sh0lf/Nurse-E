@@ -5,13 +5,16 @@
 }
 
 .titre{
+    display: flex;
     color: #43B1F8;
     font-size: 30px;
     font-family: "Century Gothic", serif;   
     margin-left: 5%;
+    flex-direction: column;
     }
 
 .rectangle{
+    display: flex;
     border: 1px transparent solid ;
     border-radius: 2% 2%;
     margin-left: 10%;
@@ -20,6 +23,19 @@
     margin-right: 10%;
     background-color: white;
     padding: 1%;
+    justify-content: start;
+}
+.first-part{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 26px;
+}
+
+.pfp {
+    width: 200px;
+    height: 200px;
 }
 
 .list{
