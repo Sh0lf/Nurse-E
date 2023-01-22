@@ -101,7 +101,7 @@
    font-weight:bold;
  }
  
- nav .show,input,.icon {
+ .show,input,.icon {
     display:none;
  }
  
