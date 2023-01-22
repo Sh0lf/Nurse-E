@@ -17,15 +17,13 @@
     <link rel="stylesheet" href="medeco.css">
     <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
   </head>
-
-  <body>
-    <header>
+  <header>
       <!-- Defining in header a top navigation bar-->
       <?php
         include_once 'navbar/header-main.php';
       ?>
-    </header>
-
+  </header>
+  <body>
     <div class="container" id="first-part">
               <h1 class="title-over">MédicoBot</h1>
               <p class="text-over">A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés. 

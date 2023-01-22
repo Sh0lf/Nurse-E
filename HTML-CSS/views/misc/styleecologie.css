@@ -7,7 +7,7 @@
 }
 
 #first-part{
-    background-image: url("./assets/empreinte.jpg");
+    background-image: url("../assets/empreinte.jpg");
     background-size: cover;
     min-height: 600px;
     height:fit-content;

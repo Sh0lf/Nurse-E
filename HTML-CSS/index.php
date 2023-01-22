@@ -23,10 +23,10 @@ if (isset($_SESSION["iduser"])){
             break;
     }
     if ($view != "error404"){
-        header ('location: https://nurse-medicobot.wstr.fr/views/personalspace/'.$view.'/'.$view.'-personalspace.php');
+        header ('location: /views/personalspace/'.$view.'/'.$view.'-personalspace.php');
         exit();
     } else {
-        header ("location: views/error404.php");
+        header ("location: /views/error404.php");
     }
     
 } else {

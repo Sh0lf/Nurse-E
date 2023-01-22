@@ -4,6 +4,7 @@
         <meta charset="utf-8"/>
         <meta http-equiv="refresh" content="30">
         <meta content="width=device-width, initial-scale=1.0">
+        <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
         <title>Notre histoire</title>
         <link rel="stylesheet" href ="../navbar/navbar-main.css">
         <link rel="stylesheet" href ="apropos.css">

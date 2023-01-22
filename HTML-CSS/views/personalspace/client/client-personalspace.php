@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../navbar/navbar-main.css">
     <link rel="stylesheet" href="client-personalspace.css">
     <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
+    <link rel="stylesheet" href="../../assets/template.css">
   </head>
 
   <body>
@@ -17,6 +18,7 @@
       <!-- Defining in header a top navigation bar-->
       <?php
         include_once '../../navbar/header-main.php';
+        include_once '../../assets/templateb.php';
       ?>
     </header>
     <?php
@@ -25,7 +27,8 @@
       exit;
     }?>
 
-    <h1 style="margin:auto">Bonjour, <?php echo $_SESSION["name"]?></h1>
+    <div class=container>
+    <h1>Bonjour, <?php echo $_SESSION["name"]?></h1>
 
     <a href="../../../controller/creatediagnostique.php" style="margin: 20px auto;"><button class="bigbutton"> Faire un diagnostique</button></a>
     <button class="bigbutton">Accéder à l'historique</button>

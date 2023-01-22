@@ -4,6 +4,9 @@
     color: #43b1f8;
     font-size: 50px;
   }
+  body{
+    overflow-x: hidden;
+  }
   .bleu1
   {
     color: #43b1f8;
@@ -81,7 +84,7 @@
     .oe .pres{
       display: none;
     }
-    .bouton{
+    .bouton2{
       display: block;
       background-color: #ffffff;
       border-radius: 20px;
@@ -134,7 +137,7 @@
     color: #43b1f8;
     margin: auto;
   }
-  .bouton{
+  .bouton2{
     display: block;
     background-color: #ffffff;
     border-radius: 20px;
@@ -156,12 +159,12 @@
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
   } 
-  .oe .bouton{
+  .oe .bouton2{
     margin: auto;
     margin-top: 20%;
   }
   
-  .bouton:hover {
+  .bouton2:hover {
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
   }
@@ -249,16 +252,19 @@
 
 
 .produit {
-  text-align: left;
   font-family: 'Courier New', Courier, monospace;
   margin: 50px; 
   border-top: solid 4px #43b1f8;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
  
 }
 .produit1 {
   text-align: left;
   font-family: 'Courier New', Courier, monospace;
-  margin: 50px; 
+  margin-bottom: 7rem; 
 
  
 }
@@ -267,6 +273,9 @@
   text-align: center;
   color: #43b1f8;
   font-size: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 
 }
 .produit h3{
@@ -274,13 +283,18 @@
   font-size: 30px;
   color: #43b1f8;
   text-align: left;
-  text-decoration: underline;
+  text-decoration: underline;  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 .produit p{
   margin: 25px;
   flex-wrap: wrap;
   font-size: 20px;
   text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 
 }
 

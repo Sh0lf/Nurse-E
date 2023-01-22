@@ -14,10 +14,4 @@
             <div class="l"></div>
             <div class="m"></div>
             <div class="n"></div>
-            <div class="o"></div>
-            <div class="p"></div>
-            <div class="q"></div>
-            <div class="r"></div>
-            <div class="s"></div>
-            <div class="t"></div>
         </div>

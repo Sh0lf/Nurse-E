@@ -360,7 +360,7 @@
 .hh{
         display: flex;
         flex-direction: row;
-        margin-bottom: auto;
+        align-items:center;
         width: 30%;
 
 }
@@ -541,4 +541,3 @@
   }
 
 }
-

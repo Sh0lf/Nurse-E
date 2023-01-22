@@ -7,8 +7,9 @@
     <title>MédicoBot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../navbar/navbar-main.css">
-    <link rel="stylesheet" href="medicobot.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
+    <link rel="stylesheet" href="medicobot.css">
   </head>
 
   <body>
@@ -33,32 +34,22 @@
 		<div class="produit">
 			<h1>Analyse</h1>
 			<h3>Comment cela marche ?</h3>
-			<p>kkkkkkkkkkkkkkkkkkk kkkkkkkk kkkkkkk kkkkkkkkkk kkkkkkkk kkkkkkkkk k</p>
-			<p>hhhhhhhhhhhhhhhhhh hhhhhhhhh hhhhh hhhhhh  hhhhhhhh h hhhhhh h</p>
-			<p>jjjjjjjjjj jjjjjjjjjj jjjjjjjjjjjjj jjjjjjjjjjjjjjjjj jjjjjjjjjj j  jjjjjjjjjjj j</p>
-			<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
-			<p>hhhhhhhhhhhhhhhhhh hhhhhhhhh hhhhh hhhhhh  hhhhhhhh h hhhhhh h</p>
-			<p>jjjjjjjjjj jjjjjjjjjj jjjjjjjjjjjjj jjjjjjjjjjjjjjjjj jjjjjjjjjj j  jjjjjjjjjjj j</p>
-			<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem</p>		
+
 		</div>
 	</div>
 	<div class="produit1">
 		<div class="ana">
 			<div class="oe">
-				<a href="page_annexe\analyse.html" class="bouton">Commencer une analyse</a>
+				<a href="page_annexe\analyse.html" class="bouton2">Commencer une analyse</a>
 			</div>
 		</div>
 		<div>
 			<div class="produit">
 				<h1>Questionnaire</h1>
 				<h3>Fonctionnement</h3>
-				<p>kkkkkkkkkkkkkkkkkkk kkkkkkkk kkkkkkk kkkkkkkkkk kkkkkkkk kkkkkkkkk k</p>
-				<p>hhhhhhhhhhhhhhhhhh hhhhhhhhh hhhhh hhhhhh  hhhhhhhh h hhhhhh h</p>
-				<p>jjjjjjjjjj jjjjjjjjjj jjjjjjjjjjjjj jjjjjjjjjjjjjjjjj jjjjjjjjjj j  jjjjjjjjjjj j</p>
-				<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
-				<p>hhhhhhhhhhhhhhhhhh hhhhhhhhh hhhhh hhhhhh  hhhhhhhh h hhhhhh h</p>
-				<p>jjjjjjjjjj jjjjjjjjjj jjjjjjjjjjjjj jjjjjjjjjjjjjjjjj jjjjjjjjjj j  jjjjjjjjjjj j</p>
-				<p>bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem</p>		
+
 			</div>
 		</div>
 		
@@ -66,11 +57,41 @@
 	<div class="produit1">
 		<div class="ana">
 			<div class="oe">
-				<a href="page_annexe\questionnaire.html" class="bouton">commencer le questionnaire</a>
+				<a href="page_annexe\questionnaire.html" class="bouton2">commencer le questionnaire</a>
 			</div>
 		</div>	
 	</div>
-
+   <canvas id="myChart" width="60" height="10"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet'],
+        datasets: [{
+            label: "nombres d'analyses effectuer selon le mois",
+            data: [45, 25, 45, 70, 45, 80, 75],
+            backgroundColor: [
+                'rgba(67, 177, 248, 1)'
+            ],
+            borderColor: [
+                'rgba(238, 0, 0, 1)'
+            ],
+            borderWidth: 5
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+    
 	<footer>
       <!--Defining our bottom navigation bar in footer, for aesthetics purpose-->
       <?php

@@ -50,7 +50,7 @@ require '../../vendor/autoload.php';
 
             $mail->Subject = 'Verification du compte';
 
-            $mail->Body = '<h1>Veuillez cliquer sur le button pour valider votre compte:</h1>'
+            $mail->Body = '<h1>Veuillez cliquer sur le bouton pour valider votre compte:</h1>'
                 . "<br>"
                 . '<ul><a href="http://nurse-medicobot.wstr.fr/controller/signup.inc.php?code=' . $code . '&username=' . $username . '">'
                 . '<button style="padding: 5px 15px; margin-left: 20px; margin-top: 18px; font-size: 17px; color: white; border:1px solid white; background-color: #43B1F8;cursor:pointer;">'

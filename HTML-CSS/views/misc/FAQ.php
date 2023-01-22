@@ -7,16 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
     <link rel="stylesheet" href="FAQ.css">
     <link rel="stylesheet" href="../navbar/navbar-main.css">
-    <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
+    <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png">
+    <link rel="stylesheet" href="../assets/template.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <header>
         <?php
             include_once '../navbar/header-main.php';
+            include_once '../assets/templateb.php';
         ?>
     </header>
         <div class="contient-tout">
+            <h1 style="text-align: center; margin-bottom:26px">FAQ</h1>
         <?php
         include_once '../../model/SQL-faq.php';
         include_once '../../controller/dbh.inc.php';

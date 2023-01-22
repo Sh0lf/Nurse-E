@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
     <link rel="stylesheet" href="ecologie-arbre.css">
     <link rel="stylesheet" href="../navbar/navbar-eco.css">
-    <link rel="shortcut icon" href="/views/assets/logo nurse-e 1.png" />
+    <link rel="stylesheet" href="../assets/template.css">
+    <link rel="shortcut icon" href="/views/assets/logo nurse-e 1.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
@@ -20,7 +21,6 @@
             include_once '../navbar/header-main.php';
         ?>
     </header>
-
     <?php
     if (!$_SESSION["idkit"]){
         header("location: ../mainmenu.php");
@@ -55,6 +55,7 @@
     <footer>
       <!--Defining our bottom navigation bar in footer, for aesthetics purpose-->
       <?php
+        include_once '../assets/templatev.php';
         include_once '../navbar/footer.php';
       ?>
     </footer>

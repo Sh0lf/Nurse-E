@@ -7,23 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> <!-- Permet de prendre des images du site sans avoir à les télécharger -->
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="../navbar/navbar-main.css">
+    <link rel="stylesheet" href="../assets/template.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
   </head>
   <body>
     <header>
         <?php
-            include_once '../navbar/header-main.php';
+          include_once '../navbar/header-main.php';
         ?>
     </header>
+    
+    <?php
+        include_once '../assets/templateb.php';
+        ?>
 
-    <div class="container">
+    <div class="container" >
       <div class="centerbox">
           <h2> Contactez-nous </h2>
         <div class="container_form">
             <form action="../../controller/contact.inc.php" method="post">
                 <input type="text" name="nom" placeholder="Votre Nom"><br><br>
-                <input type="text" name="email" placeholder="Votre Email"><br><br>
+                <input type="email" name="email" placeholder="Votre Email"><br><br>
                 <input type="text" name="sujet" placeholder="Le Sujet"><br><br>
                 <textarea id="body" name="body" placeholder="Votre remarque"></textarea><br><br>
                 <div class="centerbox">
@@ -32,7 +37,8 @@
           </div>
             </form>
         </div>
-        <div class="centerbox">
+    </div>
+    <div class="centerbox">
         <?php
         if (isset($_GET["error"])) {
           if ($_GET["error"] == "emptyinput") {
@@ -43,7 +49,6 @@
         }
         ?>
         </div>
-    </div>
 
     <footer>
       <!--Defining our bottom navigation bar in footer, for aesthetics purpose-->
