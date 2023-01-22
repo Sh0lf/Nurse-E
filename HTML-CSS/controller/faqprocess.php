@@ -5,7 +5,7 @@ include_once './functions.inc.php';
 include_once '../model/SQL-faq.php';
 
 if (isset($_POST["submit_ques"])){
-    $ques = $_POST['question'];
+    $ques = test_input($_POST['question']);
 
     addQuestion($conn, $ques);
     header("location: ../views/misc/FAQ.php?error=success");
@@ -25,9 +25,9 @@ if (isset($_POST["submit_ques"])){
     
 } elseif (isset($_POST["submit_edit"])){
     
-    $idques = $_POST["idques"];
-    $ques = $_POST["question"];
-    $rep = $_POST["reponse"];
+    $idques = test_input($_POST["idques"]);
+    $ques = test_input($_POST["question"]);
+    $rep = test_input($_POST["reponse"]);
     
     $result = modifyRowQuestion($conn, $idques, $ques, $rep);
     
