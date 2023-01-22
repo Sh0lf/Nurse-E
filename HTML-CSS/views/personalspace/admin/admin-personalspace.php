@@ -54,22 +54,27 @@
                         <div class=avant>
                             <h2> Modification utilisateur </h2>
                             <div class="oee">
-                                <a href="adminmodif-personalspace.php"><button class="btn-34"><span>Voir plus</span></button></a>
+                                <a href="adminmodif-personalspace.php"><button class="btn-34"><span class="span">Voir plus</span></button></a>
                             </div> 
                         </div>
                         <div class=avant>
                             <h2>Supprimer un utilisateur</h2>
                             <div class="oee">
-                                <a href="adminsupp-personalspace.php"><button class="btn-34"><span>Voir plus</span></button></a>
+                                <a href="adminsupp-personalspace.php"><button class="btn-34"><span class="span">Voir plus</span></button></a>
                             </div>
                         </div> 
                         <div class=avant>       
                             <h2>Modification FAQ</h2>
                             <div class="oee">
-                                <a href="adminfaq-personalspace.php"><button class="btn-34"><span>Voir plus</span></button></a> 
+                                <a href="adminfaq-personalspace.php"><button class="btn-34"><span class="span">Voir plus</span></button></a> 
                             </div>
                         </div>
-                    </a>
+                        <div class=avant>       
+                            <h2>Page des tickets</h2>
+                            <div class="oee">
+                                <a href="adminticket-personalspace.php"><button class="btn-34"><span class="span">Voir plus</span></button></a> 
+                            </div>
+                        </div>
                 </div>
     
             </section>

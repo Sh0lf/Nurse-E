@@ -26,9 +26,9 @@ function createDiag($conn, $iduser){
     return $fetchedRow;
 }
 
-function quest($conn ,$s1, $s2, $s3, $s4, $s5)
+function quest($conn, $s1, $s2, $s3, $s4, $s5)
 {
-    $sql = "SELECT * FROM symptoms where (s1,s2,s3,s4,s5)=(?,?,?,?,?);";
+    $sql = "SELECT * FROM symptoms where (s1,s2,s3,s4,s5) = (?,?,?,?,?);";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../views/personalspace/client/questionnaire.php?error=stmtfailed");

@@ -208,3 +208,7 @@ body {
     background-color: #8FAFC1;
     color: white;
 }
+
+.bottombar .end{
+    justify-content:flex-end;
+}

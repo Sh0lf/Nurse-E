@@ -22,12 +22,7 @@
 
     <div class="info">
 		<h2 class="bleu">Notre produit</h2>
-		<p>A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés.</p>
-		<p>Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient.</p>
-		<p>De ce fait, nous avons décidé de créer un produit afin de remédier à ça.</p>
-		<p>Ce produit est MédicoBot, c’est le premier produit créé par notre entreprise Nurse-E.</p>
-		<p ><ins class="bleu1">MedicoBot</ins> s’apprête à révolutionner le domaine du monde médical </p>
-		<p> vous ne l’avez jamais vu.</p>		
+		<p>A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés.Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient.De ce fait, nous avons décidé de créer un produit afin de remédier à ça. Ce produit est MédicoBot, c’est le premier produit créé par notre entreprise Nurse-E.<ins class="bleu1">MedicoBot</ins> s’apprête à révolutionner le domaine du monde médical vous ne l’avez jamais vu.</p>		
 	</div>
 		
 	<div class="pro">

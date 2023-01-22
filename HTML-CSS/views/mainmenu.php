@@ -100,7 +100,7 @@
                               <h1 style="text-transform: uppercase;
                               font-weight: bold;
                               font-family: sans-serif;
-                              letter-spacing: 0.1em;">L'entreprise: Nurse E</h1>
+                              letter-spacing: 0.1em;">L'entreprise: Nurse-E</h1>
                               <h3 style="text-decoration: none;">La startup révolutionnaire</h3>
                               <p class="p1">Avec l'informatique, aujourd'hui un domaine extrémement convoité, il est aussi malheureusement polluant. C'est pourquoi nous cherchons des initiative
                               pour réduire notre impact sur l'environnement en s'engageant sur des initiatives écologique comme planter des arbres ! </p>

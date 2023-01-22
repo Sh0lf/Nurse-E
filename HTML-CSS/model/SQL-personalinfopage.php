@@ -114,4 +114,71 @@ function profilEditRowUser($conn, $iduser, $username, $familyname, $name, $email
     return fetchRowUser($conn, $username);
 }   
 
+function addQuestionTicket($conn, $ques, $iduser){
+    $sql = "INSERT INTO Ticket(question, iduser) VALUES (?, ?)";
+    // use exec() because no results are returned
+    $stmt = $conn->prepare($sql);
+    $stmt->execute(array($ques, $iduser));
+}
+
+function fetchAllQuestionsTicket($conn){
+    $sql = "SELECT * FROM Ticket";
+    // use exec() because no results are returned
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
+    return $result;
+}
+
+function fetchQuestionTicket($conn, $idques){
+    $sql = "SELECT * FROM Ticket WHERE idTicket = ?";
+    // use exec() because no results are returned
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($idques));
+    $fetchedRow = $stmt->fetch();
+    return $fetchedRow;
+}
+
+function modifyRowQuestionTicket($conn, $idques, $ques, $rep){
+    $sql= "UPDATE Ticket SET question = ?, reponse = ? WHERE idTicket = ?";
+
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($ques, $rep, $idques));
+
+    return fetchQuestionTicket($conn, $idques);
+}   
+
+function remQuestionTicket($conn, $idques){
+    $sql = "DELETE FROM Ticket WHERE idTicket = ?";
+    $stmt = $conn->prepare($sql);
+    if (!$stmt) {
+        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
+        exit();
+    }
+    $stmt->execute(array($idques));
+    
+    if($stmt){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function showAllTicketClient($conn, $iduser)
+{
+    $sql = "SELECT * FROM Ticket WHERE iduser = ?  ";
+    $statement = $conn->prepare($sql);
+    $statement->execute(array($iduser));
+    $questions = $statement->fetchAll();
+    return $questions;
+}
+
 ?>

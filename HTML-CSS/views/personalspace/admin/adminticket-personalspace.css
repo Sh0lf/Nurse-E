@@ -54,6 +54,8 @@ html{
   .container-box{
     display: flex;
   }
+  
+  
   td a button, .container-box button{ 
     border: 1px solid #000000;
     border-radius: 5px;

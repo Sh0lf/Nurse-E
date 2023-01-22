@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8"> 
-        <link rel="stylesheet"  href="adminfaq-personalspace.css" >
+        <link rel="stylesheet"  href="adminticket-personalspace.css" >
         <link rel="stylesheet" href="../../navbar/navbar-main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
@@ -22,25 +22,26 @@
             exit();
         } else {
            echo '
-            <h2>LISTE DES QUESTIONS/RÉPONSES ET DES QUESTIONS</h2>
+            <h2>LISTE DES TICKETS</h2>
             
             <table>
             <tr>
-            <th>idFAQ</th>
+            <th>idTicket</th>
             <th>Question</th>
             <th>Réponse</th>
+            <th>idUser</th>
             <th></th>
             </tr>';
             
-            include_once '../../../model/SQL-faq.php';
+            include_once '../../../model/SQL-personalinfopage.php';
             include_once '../../../controller/dbh.inc.php';
 
-            $result = fetchAllQuestions($conn);
+            $result = fetchAllQuestionsTicket($conn);
             
             foreach($result as $row)
                 {
                 echo "<tr>";
-                echo '<td>' . $row["idFAQ"] . '</td><td>' . $row["question"] . '</td><td>' . $row["reponse"] . '</td><td><a href="../../../controller/faqprocess.php?idques='.$row["idFAQ"].'"><button class="editbutton">Modifier</button></a> <a href="../../../controller/faqprocess.php?idquesrem='.$row["idFAQ"].'"><button class="remove">Supprimer</button></a>';
+                echo '<td>' . $row["idTicket"] . '</td><td>' . $row["question"] . '</td><td>' . $row["reponse"] . '</td><td>' . $row["iduser"] . '</td><td><a href="../../../controller/ticketprocess.php?idques='.$row["idTicket"].'"><button class="editbutton">Modifier</button></a> <a href="../../../controller/ticketprocess.php?idquesrem='.$row["idTicket"].'"><button class="remove">Supprimer</button></a>';
                 echo "</tr>";
                 
                 }
@@ -52,7 +53,7 @@
             echo '
             <div class="container" id="second-form">
             <div class="container-box">
-            <form action="../../../controller/faqprocess.php" method="post">
+            <form action="../../../controller/ticketprocess.php" method="post">
                 <input type="hidden" name="idques" value="' . $_GET["id"] . '">
                 <div>              
                 <p><b>Question</b></p>
