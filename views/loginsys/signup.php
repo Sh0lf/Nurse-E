@@ -21,7 +21,40 @@
     <div class="container">
     <div class="centerbox">
       <h3>INSCRIPTION</h3>
-      <h4>Vous ne pouvez que vous inscrire si vous possédez un kit.</h4>
+      <div class="centerbox">
+      <?php
+      echo '<h4>Vous ne pouvez que vous inscrire si vous possédez un kit.</h4>';
+      if (isset($_GET["error"])) {
+        if ($_GET["error"] === "emptyinput") {
+          echo "<p> Veuillez remplir chaque compartiments !</p>";
+        } else if ($_GET["error"] === "invaliduid") {
+          echo "<p> Veuillez essayer un nouveau username !</p>";
+        } else if ($_GET["error"] === "invalidemail") {
+          echo "<p> Veuillez mettre un email valide !</p>";
+        } else if ($_GET["error"] === "pwdmissmatch") {
+          echo "<p> Les mots de passes ne sont pas les mêmes </p>";
+        } else if ($_GET["error"] === "uidexists") {
+          echo "<p> Veuillez essayer un nouveau username ou un nouveau email, un compte existe déjà avec vos identifiants</p>";
+        } else if ($_GET["error"] === "pwdstrength") {
+          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial et un chiffre </p>";
+        } else if ($_GET["error"] === "verifyemail") {
+          echo "<p> Inscription passée, veuillez vérifier votre email sous les 2 prochaines heures !</p>";
+        } else if ($_GET["error"] === "stmtfailed") {
+          echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
+        } else if ($_GET["error"] === "toolate") {
+          echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
+        } else if ($_GET["error"] === "toobig") {
+            echo "<p> Votre fichier de photo de profile est trop lourd, veuillez choisir un auter plus léger</p>";
+        } else if ($_GET["error"] === "badformat") {
+          echo "<p> Votre fichier de photo de profile n'est pas un format que nous acceptons: seulement .jpg, .jpeg et .png</p>";
+        } else if ($_GET["error"] === "uploaderr") {
+          echo "<p> Il y a eu un problème de publication de votre fichier, veuillez contacter l'admin ou réessayer ultérieurement.</p>";
+        } else if ($_GET["error"] === "none") {
+          echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
+        }
+      }
+      ?>
+      </div>  
       <div class="container_form">
         <form action="../../controller/signup.inc.php" method="post" id="signup-form" enctype="multipart/form-data">
           <input type="number" name="idkit" placeholder="Veuillez noter l'id de votre kit :">
@@ -58,39 +91,7 @@
       </div>
     </div>
     </div>
-    <div class="centerbox">
-      <?php
-      if (isset($_GET["error"])) {
-        if ($_GET["error"] === "emptyinput") {
-          echo "<p> Veuillez remplir chaque compartiments !</p>";
-        } else if ($_GET["error"] === "invaliduid") {
-          echo "<p> Veuillez essayer un nouveau username !</p>";
-        } else if ($_GET["error"] === "invalidemail") {
-          echo "<p> Veuillez mettre un email valide !</p>";
-        } else if ($_GET["error"] === "pwdmissmatch") {
-          echo "<p> Les mots de passes ne sont pas les mêmes </p>";
-        } else if ($_GET["error"] === "uidexists") {
-          echo "<p> Veuillez essayer un nouveau username ou un nouveau email, un compte existe déjà avec vos identifiants</p>";
-        } else if ($_GET["error"] === "pwdstrength") {
-          echo "<p> Votre mot de passe ne remplit pas les conditions nécessaires. Je vous rappelle qu'il faut:<br> Au moins 8 caractères, 1 lettre majuscule et minuscule ainsi qu'un caractère spécial et un chiffre </p>";
-        } else if ($_GET["error"] === "verifyemail") {
-          echo "<p> Inscription passée, veuillez vérifier votre email sous les 2 prochaines heures !</p>";
-        } else if ($_GET["error"] === "stmtfailed") {
-          echo "<p> Quelque chose n'a pas marché, veuillez essayer encore</p>";
-        } else if ($_GET["error"] === "toolate") {
-          echo "<p> Vous avez passé trop de temps à valider le compte, veuillez recommencer entièrement</p>";
-        } else if ($_GET["error"] === "toobig") {
-            echo "<p> Votre fichier de photo de profile est trop lourd, veuillez choisir un auter plus léger</p>";
-        } else if ($_GET["error"] === "badformat") {
-          echo "<p> Votre fichier de photo de profile n'est pas un format que nous acceptons: seulement .jpg, .jpeg et .png</p>";
-        } else if ($_GET["error"] === "uploaderr") {
-          echo "<p> Il y a eu un problème de publication de votre fichier, veuillez contacter l'admin ou réessayer ultérieurement.</p>";
-        } else if ($_GET["error"] === "none") {
-          echo "<p> Succès ! Votre compte est bien enregistré et vérifié !</p>";
-        }
-      }
-      ?>
-    </div>  
+    
     <footer>
       <!-- Defining in footer a small navigation bar-->
       <?php
