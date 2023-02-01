@@ -30,7 +30,6 @@
 			<h1>Analyse</h1>
 			<h3>Comment cela marche ?</h3>
 			<p>Pour commencer une analyse, il faut tout d'abord lancer une diagnostique. Dès que vous avez lancer une diagnostique, effectuez avec notre boitier les mesures grâce à nos capteurs</p>		
-
 		</div>
 	</div>
 	<div class="produit1">
@@ -40,14 +39,13 @@
 			</div>
 		</div>
 	</div>
-			<div class="produit">
-				<h1>Questionnaire</h1>
-				<h3>Fonctionnement</h3>
-				<p>Nous offrons en plus du diagnostique un questionnaire en association aux mesures obtenus par le kit. C'est une démarche obligatoire lors du processus d'une diagnostique afin de vous proposer un pronostique précis.</p>		
-			</div>
-		</div>
-		
-	</div>
+  <div class="pro">
+    <div class="produit">
+      <h1>Questionnaire</h1>
+      <h3>Fonctionnement</h3>
+      <p>Nous offrons en plus du diagnostique un questionnaire en association aux mesures obtenus par le kit. C'est une démarche obligatoire lors du processus d'une diagnostique afin de vous proposer un pronostique précis.</p>		
+    </div>
+	</div>	
 	<div class="produit1">
 		<div class="ana">
 			<div class="oe">
