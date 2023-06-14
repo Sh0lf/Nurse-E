@@ -1,5 +1,5 @@
 # Nurse-E
-Testing commit 1ere annee cycle ingenieur ISEP 2022-2023: Projet APP
+1ere annee cycle ingenieur ISEP 2022-2023: Projet APP
 
 
 Ceci est le repository privé du projet d'APP-G5B de 2022-2023 constitué de:
