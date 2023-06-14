@@ -5,7 +5,7 @@ body {
 
 .contient-tout {
     display: flex;
-    width: fit-content;
+    width: 60%;
     flex-direction: column;
     justify-content: center;
     background-color: white;
@@ -91,7 +91,7 @@ input[type="submit"] {
     padding: 20px;
     border-radius:20px;
     background-color: #eef2f7;
-    width: 100%;
+    width:100%;
     margin: 20px auto;
 }
 

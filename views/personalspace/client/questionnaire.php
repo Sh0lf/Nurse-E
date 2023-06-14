@@ -7,12 +7,14 @@
     <title>Questionnaire</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Sono:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="questionnaire.css">
     <link rel="stylesheet" href="../../assets/template.css">
     <link rel ="stylesheet" href="../../navbar/navbar-main.css">
+    <link rel="stylesheet" href="../../assets/template.css">
     <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
 
     <body>

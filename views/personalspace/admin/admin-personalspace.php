@@ -31,22 +31,21 @@
             <div class="liste">
                 <div>
                     <p>Modifier les informations d\'un utilisateur </p> 
-                    </br>
                 </div>
                 <div>
                     <p>Supprimer un utilisateur </p>
-                    </br>
                 </div>
                 <div>  
                     <p>Rechercher un utilisateur </p>  
-                    </br> 
                 </div>
                 <div>          
                     <p>Accéder aux multiples informations de nos utilisateurs</p>
-                    </br>
+                </div>
+                <div>          
+                    <p>Accéder à tous les tickets</p>
                 </div>
             </div>
-            <section class="utili">
+            <div class="utili">
                 <div class="center">
                     <h1 class="h1">Modification</h1>
                 </div>
@@ -77,7 +76,7 @@
                         </div>
                 </div>
     
-            </section>
+            </div>
             <section class="recherche">
             <div class="form">
             <div class="center">

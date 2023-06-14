@@ -31,7 +31,7 @@
         $julianDay = $interval / (86400);
 
         echo '<div class="container">
-        <h1>L\'arbre associé à votre kit diagnostique: '.$idkit.'</h1>' ;
+        <h1>L\'arbre associé à votre kit diagnostic: '.$idkit.'</h1>' ;
         echo '<h2>'.$julianDay.' Jours !</h2>';
 
         if ($interval<=60*86400) {
@@ -43,7 +43,7 @@
         } echo '</div>';
 
     } elseif (isset($_GET["idkit"]) && empty($_GET["idtree"])) {
-      echo '<h1> Pas d\'arbre sous votre kit de diagnostique associée ! Veuillez contacter le support pour vérifier</h1>';
+      echo '<h1> Pas d\'arbre sous votre kit de diagnostic associée ! Veuillez contacter le support pour vérifier</h1>';
     } elseif (isset($_SESSION["idkit"])) {
       header("location:../../controller/yourtree.php");
       exit();

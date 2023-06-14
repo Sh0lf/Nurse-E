@@ -125,6 +125,7 @@ html{
     justify-content: center; 
     border: 1px solid #43b1f8; 
     margin: auto;
+    width: 75vw;
   }
   .tr{
     background-color: #43b1f8;

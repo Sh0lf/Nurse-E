@@ -15,6 +15,7 @@
 
   }
 
+
   .info {
     width: 70%;
     background-color: rgb(255, 255, 255);
@@ -63,7 +64,21 @@
     outline-offset: 10%;
 
   }
-
+  
+.slide2 {
+    max-width: 50%;
+    min-width: 50%;
+    background-image: url(../assets/questionnaire.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  .slide1 {
+    max-width: 50%;
+    min-width: 50%;
+    background-image: url(../assets/diagnostic.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 
   .ana:hover {
     transition-timing-function: ease;
@@ -74,8 +89,6 @@
       transition-timing-function: ease;
       background-color: #43b1f8;
       transition: 2s;
-
-    
   }
   @media screen and (max-width: 600px) {
     ul{

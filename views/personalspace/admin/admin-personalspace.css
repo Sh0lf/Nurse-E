@@ -32,7 +32,7 @@ html{
 
 }
 .liste div{
-  width: 20rem;  
+  width: 15rem;  
   border: #43b1f8 .2rem solid;
   border-radius: 15px;
   background-color: #fff;
@@ -84,6 +84,7 @@ h1{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
   padding:2%;
 
 }
@@ -92,7 +93,7 @@ h1{
   flex-direction: column;
   align-items: center;
   padding:2%;
-  width:25rem ;
+  width: 25rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
@@ -219,6 +220,7 @@ table {
    border: 1px solid #43b1f8; 
     margin-left: auto;
   margin-right: auto;
+  width: 75vw;
 }
 .tr{
   background-color: #43b1f8;

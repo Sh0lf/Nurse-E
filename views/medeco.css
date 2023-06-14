@@ -320,7 +320,6 @@
       .produit h3{
         margin: 15px ;
         font-size: 2.6vw;
-        font-family: var(--txt-st);
         color: #ffffff;
         text-align: left;
         text-decoration: underline;

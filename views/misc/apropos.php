@@ -30,13 +30,16 @@
             capable de prescrire des médicaments en cas de faible danger, et , en cas de nécéssité, de contacter un médecin. Médicobot, 
             intermédiaire efficace et sécurisé entre les patients et les médecins, est donc un outil nécéssaire à un diagnostique  adapté et fiable.</p>
             </div>
+            <div class="image1">
+                <img class="image1" src="/views/assets/Beautravail.jpg" alt="travail groupe" width="80%">
+            </div>
         </div>
 
 
         <h1 class="titre">Notre histoire</h1>
         <div class="subcontainer">
             <div class="image1">
-                <img class="image1" src="http://nurse-medicobot.wstr.fr/views/assets/travail_groupe.png" alt="travail groupe" width="80%">
+                <img class="image1" src="/views/assets/travail_groupe.png" alt="travail groupe" width="80%">
             </div>
             <div class="paragraphe">
                 <p>

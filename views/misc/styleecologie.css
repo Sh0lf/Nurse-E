@@ -1,0 +1,69 @@
+/* Afin de mettre tous les éléments à 0 avec une police pour toute la page */
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#first-part{
+    display: flex;
+    background-image: url("../assets/empreinte.jpg");
+    background-size: cover;
+    min-height: 600px;
+    height:fit-content;
+    margin:auto;
+    }
+
+.text-over {
+    font-size: 25px;
+    margin: auto 50px;
+    width:90%;
+    text-align: justify;
+    padding-top:150px;
+    padding-bottom:30px;
+    padding-right: 150px;
+    padding-left: 50%;
+    line-height: 30px;
+}
+
+
+@media screen and (max-width:1050px) {
+    .text-over {
+        padding-top:50px;
+    }
+}
+
+@media screen and (max-width:980px) {
+    .text-over {
+        padding-left: 450px;
+    }
+
+    #first-part{
+        width: 100%;
+        min-height: 220px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .text-over {
+        line-height: 25px;
+        padding-left: 300px;
+    }
+
+    #first-part{
+        width: 100%;
+        min-height: 100px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .text-over {
+        line-height: 20px;
+        padding-left: 200px;
+        font-size: 20px;
+    }
+    #first-part{
+        width: 100%;
+        min-height: 50px;
+    }
+}

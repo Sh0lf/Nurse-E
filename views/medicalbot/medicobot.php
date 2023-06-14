@@ -22,32 +22,38 @@
 
     <div class="info">
 		<h2 class="bleu">Notre produit</h2>
-		<p>A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés.Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient.De ce fait, nous avons décidé de créer un produit afin de remédier à ça. Ce produit est MédicoBot, c’est le premier produit créé par notre entreprise Nurse-E.<ins class="bleu1">MedicoBot</ins> s’apprête à révolutionner le domaine du monde médical vous ne l’avez jamais vu.</p>		
+		<p>A cause de la crise du covid, les médecins ainsi que les hôpitaux furent débordés. Depuis cette crise, les rendez-vous inutiles chez les médecins se multiplient. De ce fait, nous avons décidé de créer un produit afin de remédier à ça. Ce produit est MédicoBot, c’est le premier produit créé par notre entreprise Nurse-E. <ins class="bleu1">MedicoBot</ins> s’apprête à révolutionner le domaine du monde médical vous ne l’avez jamais vu.</p>		
 	</div>
 		
 	<div class="pro">
 		<div class="produit">
 			<h1>Analyse</h1>
 			<h3>Comment cela marche ?</h3>
-			<p>Pour commencer une analyse, il faut tout d'abord lancer une diagnostique. Dès que vous avez lancer une diagnostique, effectuez avec notre boitier les mesures grâce à nos capteurs</p>		
+			<p>Pour commencer une analyse, il faut tout d'abord lancer un diagnostic. Dès que vous avez lancé un diagnostic, vous allez pouvoir effectuer grâce aux capteurs. </p>		
+
 		</div>
 	</div>
 	<div class="produit1">
 		<div class="ana">
+		    <div class="slide1">
+		    </div>
 			<div class="oe">
-				<a href="page_annexe\analyse.html" class="bouton2">Lancer une diagnostique</a>
+				<a href="../../controller/creatediagnostique.php" class="bouton2">Lancer une diagnostique</a>
 			</div>
 		</div>
 	</div>
-  <div class="pro">
-    <div class="produit">
-      <h1>Questionnaire</h1>
-      <h3>Fonctionnement</h3>
-      <p>Nous offrons en plus du diagnostique un questionnaire en association aux mesures obtenus par le kit. C'est une démarche obligatoire lors du processus d'une diagnostique afin de vous proposer un pronostique précis.</p>		
-    </div>
-	</div>	
+			<div class="produit">
+				<h1>Questionnaire</h1>
+				<h3>Fonctionnement</h3>
+				<p>Nous offrons en plus du diagnostic un questionnaire en association aux mesures obtenues par le kit. C'est une démarche obligatoire lors du processus d'un diagnostic afin de vous proposer un pronostic précis.</p>		
+			</div>
+		</div>
+		
+	</div>
 	<div class="produit1">
 		<div class="ana">
+		    <div class="slide2">
+		    </div>
 			<div class="oe">
 				<a href="../personalspace/client/questionnaire.php" class="bouton2">Commencer le questionnaire</a>
 			</div>

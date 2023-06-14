@@ -85,7 +85,7 @@
                           letter-spacing: 0.1em;">Notre produit: Medicobot</h1>
                           <h3 style="text-decoration: none;">Votre médecin généraliste de poche</h3>
                           <p class="p1">Chez Médicobot nous vous offrons un médecin généraliste directement dans votre maison.</p>    
-                          <p class="p1">Acceder a vos analyse :</p>
+                          <p class="p1">Accéder à vos analyses :</p>
                           <a href="/views/personalspace/client/questionnaire.php" style="text-decoration: none; color:white;"><button class="btn-38"><span>Commencer une analyse</span></button></a>
                       </div>
                   </div>
@@ -102,8 +102,8 @@
                               font-family: sans-serif;
                               letter-spacing: 0.1em;">L'entreprise: Nurse-E</h1>
                               <h3 style="text-decoration: none;">La startup révolutionnaire</h3>
-                              <p class="p1">Avec l'informatique, aujourd'hui un domaine extrémement convoité, il est aussi malheureusement polluant. C'est pourquoi nous cherchons des initiative
-                              pour réduire notre impact sur l'environnement en s'engageant sur des initiatives écologique comme planter des arbres ! </p>
+                              <p class="p1">Avec l'informatique, aujourd'hui un domaine extrémement convoité, il est aussi malheureusement polluant. C'est pourquoi nous cherchons des initiatives
+                              pour réduire notre impact sur l'environnement !</p>
                               </p>
                               <p class="p1">Voir votre arbre en direct:</p>
                               <a href="./personalspace/ecologie-arbre.php" style="text-decoration: none; color:white;"><button class="btn-34"><span>Votre arbre</span></button></a>
