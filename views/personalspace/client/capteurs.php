@@ -21,48 +21,48 @@
       ?>
     </header>
     <div class="container">
-        <div class="subcontainer" style="background-color:#FFD1DC">
-            <h1>Capteur cardiaque</h1>
-        <div class="image">
-            <img src="image4.jpg" alt="Image 4">
-        </div>
-        <div class="bouton">
-            <button class="bouton">Accédez à vos résultats</button>
-        </div>
-        </div>
+    <div class="subcontainer">
+      <h1>Capteur cardiaque</h1>
+      <div class="image">
+        <img src="image4.jpg" alt="Image 4">
+      </div>
+      <div class="bouton">
+        <button class="bouton">Accédez à vos résultats</button>
+      </div>
+    </div>
     
+    <div class="subcontainer">
+      <h1>Capteur sonore</h1>
+      <div class="image">
+        <img src="image4.jpg" alt="Image 4">
+      </div>
+      <div class="bouton">
+        <button class="bouton">Accédez à vos résultats</button>
+      </div>
+    </div> 
     
-        <div class="subcontainer" style="background-color: #D1FFD1;">
-            <h1>Capteur sonore</h1>
-        <div class="image">
-            <img src="image4.jpg" alt="Image 4">
-        </div>
-        <div class="bouton">
-            <button class="bouton">Accédez à vos résultats</button>
-        </div>
-        </div> 
-    
-        <div class="subcontainer" style="background-color: #D1D1FF;">
-            <h1>Capteur d'humidité et de température</h1>
-        <div class="image">
-            <img src="image4.jpg" alt="Image 4">
-        </div>
-        <div class="bouton">
-            <button class="bouton">Accédez à vos résultats</button>
-        </div>
-        </div> 
-    
+    <div class="subcontainer">
+      <h1>Capteur d'humidité et de température</h1>
+      <div class="image">
+        <img src="image4.jpg" alt="Image 4">
+      </div>
+      <div class="bouton">
+        <button class="bouton">Accédez à vos résultats</button>
+      </div>
+    </div> 
 
-        <div class="subcontainer" style="background-color: #FFD1D1;">
-            <h1>Capteur de CO2</h1>
-        <div class="image">
-            <img src="image4.jpg" alt="Image 4">
-        </div>
-        <div class="bouton">
-            <button class="bouton">Accédez à vos résultats</button>
-        </div>
-        </div> 
-    </div>    
+    <div class="subcontainer">
+      <h1>Capteur de CO2</h1>
+      <div class="image">
+        <img src="image4.jpg" alt="Image 4">
+      </div>
+      <div class="bouton">
+        <button class="bouton">Accédez à vos résultats</button>
+      </div>
+    </div> 
+  </div>
+
+    
  </body>
 
  <footer>
