@@ -6,7 +6,7 @@
     <title>Capteurs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="../../navbar/navbar-main.css">
-    <link rel="stylesheet" href="capteur.css">
+    <link rel="stylesheet" href="capteurs.css">
     <link rel="shortcut icon" href="/views/assets/Logo-medicobot.png" />
     <link rel="stylesheet" href="../../assets/template.css">
 </head>
