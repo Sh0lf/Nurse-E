@@ -17,34 +17,27 @@
       <!-- Defining in header a top navigation bar-->
       <?php
         include_once '../../navbar/header-main.php';
-        include_once '../../assets/templateb.php';
       ?>
     </header>
     <div class="container">
     <div class="subcontainer">
-      <h1>Capteur cardiaque</h1>
+      <h1>Capteur sonore</h1>
       <div class="image">
-        <img src="image4.jpg" alt="Image 4">
+       <a href="/views/assets/Icon-son.png">
+        <img src="Icon-son.png" alt="Son">
+       </a>
       </div>
       <div class="bouton">
         <button class="bouton">Accédez à vos résultats</button>
       </div>
     </div>
-    
+     
     <div class="subcontainer">
-      <h1>Capteur sonore</h1>
+      <h1>Capteur d'humidité</h1>
       <div class="image">
-        <img src="image4.jpg" alt="Image 4">
-      </div>
-      <div class="bouton">
-        <button class="bouton">Accédez à vos résultats</button>
-      </div>
-    </div> 
-    
-    <div class="subcontainer">
-      <h1>Capteur d'humidité et de température</h1>
-      <div class="image">
-        <img src="image4.jpg" alt="Image 4">
+       <a href="/views/assets/Icon-humidite.png">
+        <img src="Icon-humidite.png" alt="Humidité">
+       </a>
       </div>
       <div class="bouton">
         <button class="bouton">Accédez à vos résultats</button>
@@ -52,9 +45,11 @@
     </div> 
 
     <div class="subcontainer">
-      <h1>Capteur de CO2</h1>
+      <h1>Capteur de température</h1>
       <div class="image">
-        <img src="image4.jpg" alt="Image 4">
+       <a href="/views/assets/Icon-temperature.png">
+        <img src="Icon-temperature.png" alt="Température">
+       </a>
       </div>
       <div class="bouton">
         <button class="bouton">Accédez à vos résultats</button>
