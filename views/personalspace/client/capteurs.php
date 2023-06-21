@@ -13,13 +13,27 @@
 
 
 <body>
-    <header>
+<header>
       <!-- Defining in header a top navigation bar-->
       <?php
         include_once '../../navbar/header-main.php';
-        include_once '../../controller/fetchTomcat.php';
+        include_once '../../assets/templateb.php';
       ?>
     </header>
+    <?php
+    if (!isset($_SESSION['iduser'])){
+      header('location: ../../loginsys/login.php');
+      exit;
+    } elseif (isset($_SESSION['iduser'])){
+      header('location: ../../controller/fetchTomcatToData.php');
+    } elseif(isset($_SESSION['iduser']) && isset($_GET['capt1']) && isset($_GET['capt2']) && isset($_GET['capt3'])){
+      $Capt1 = $_GET['capt1'] / 10;
+      $Capt2 = $_GET['capt2'] / 10;
+      $Capt3 = $_GET['capt3'] / 10;
+    }
+    
+    
+    ?>
     <div class="container">
     <div class="subcontainer">
       <h1>Capteur sonore</h1>
@@ -28,9 +42,12 @@
         <img src="Icon-son.png" alt="Son">
        </a>
       </div>
-      <div><?php echo $Capteur1?></div>
+      <div>
+        <?php echo "Il fait ". $Capt3 . "dB"?>
+        <button class="bouton_req" href="../../../controller/sendingRequest.php?arg=dB">Demander dB</button>
+      </div>
       <div class="bouton">
-        <button class="bouton">Accédez à vos résultats</button>
+        <button>Accédez à vos résultats</button>
       </div>
     </div>
      
@@ -41,8 +58,12 @@
         <img src="Icon-humidite.png" alt="Humidité">
        </a>
       </div>
+      <div>
+        <?php echo "Il fait ". $Capt2 . "% d'humidité"?>
+        <button class="bouton_req" href="../../../controller/sendingRequest.php?arg=hum">Demander %</button>
+      </div>
       <div class="bouton">
-        <button class="bouton">Accédez à vos résultats</button>
+        <button>Accédez à vos résultats</button>
       </div>
     </div> 
 
@@ -53,13 +74,15 @@
         <img src="Icon-temperature.png" alt="Température">
        </a>
       </div>
+      <div>
+        <?php echo "Il fait ". $Capt1 . "°C"?>
+        <button class="bouton_req" href="../../../controller/sendingRequest.php?arg=temp">Demander °C</button>
+      </div>
       <div class="bouton">
-        <button class="bouton">Accédez à vos résultats</button>
+        <button>Accédez à vos résultats</button>
       </div>
     </div> 
   </div>
-
-    
  </body>
 
  <footer>

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
 <?php
 include_once 'dbh.inc.php';
-
 include_once '../model/SQL-capteur.php';
-
-
 
 // 1. Récupérer les données brutes
 $ch = curl_init();
@@ -16,7 +12,6 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $data = curl_exec($ch);
 curl_close($ch);
 
-
 //echo "Raw Data:<br />";
 //echo "$data";
 
@@ -25,6 +20,7 @@ $data_tab = str_split($data, 33);
 //echo "<br /><br />Tabular Data:<br />";
 for ($i = count($data_tab) - 4; $i < count($data_tab) - 1; $i++) {
     changeFormat($conn, $data_tab[$i]);
+}
 echo "Raw Data:<br />";
 echo "$data";
 
@@ -36,6 +32,12 @@ for ($i = count($data_tab) - 4; $i < count($data_tab) - 1; $i++) {
 
 }
 
+$Capt1 = fetchValeur($conn, 3);
+$Capt2 = fetchValeur($conn, 4);
+$Capt3 = fetchValeur($conn, 10);
+
+header('location: ../views/personalspace/client/capteurs.php?capt1='.$Capt1.'&capt2='.$Capt2.'&capt3='.$Capt3);
+exit();
 
 // 3. Décoder 1 trame
 function changeFormat($conn, $dataRow)
@@ -50,9 +52,4 @@ function changeFormat($conn, $dataRow)
         ", date: $day/$month/$year, $hour:$min:$sec <br>";
     addVal($conn, hexdec($c), hexdec($v));
 }
-$Capteur1=fetchValeur($conn, 10);
-$Capteur2=fetchValeur($conn, 4);
-$Capteur3=fetchValeur($conn, 3);
-
 ?>
-

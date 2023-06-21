@@ -1,7 +1,7 @@
 <?php
 include_once '../controller/dbh.inc.php';
 
-function addVal($conn, $typcapteur, $valeur)
+function addVal($conn, $typecapteur, $valeur)
 {
     $sql = "INSERT INTO Valeur SET Valeur = ?, idCapteur = ?";
 
@@ -10,12 +10,12 @@ function addVal($conn, $typcapteur, $valeur)
         header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
         exit();
     }
-    $stmt->execute(array($valeur, $typcapteur));
+    $stmt->execute(array($valeur, $typecapteur));
 }
 
 function fetchValeur($conn, $idcapt)
 {
-    $sql = "SELECT Valeur FROM Valeur WHERE idcapteur = ? ORDER BY idvaleur DESC LIMIT 3";
+    $sql = "SELECT Valeur FROM Valeur WHERE idCapteur = ? ORDER BY idvaleur DESC LIMIT 3";
     
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
@@ -24,6 +24,6 @@ function fetchValeur($conn, $idcapt)
     }
     $stmt->execute(array($idcapt));
     $fetchedRow = $stmt->fetch();
-    return $fetchedRow['Valeur'];
+    return $fetchedRow;
 }
 ?>
