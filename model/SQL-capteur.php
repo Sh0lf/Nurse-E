@@ -3,11 +3,11 @@ include_once '../controller/dbh.inc.php';
 
 function addVal($conn, $typecapteur, $valeur)
 {
-    $sql = "INSERT INTO Valeur SET Valeur = ?, idCapteur = ?";
+    $sql = "INSERT INTO Valeur(Valeur, idCapteur) VALUES (?, ?);";
 
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/client/capteurs.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($valeur, $typecapteur));
@@ -15,11 +15,11 @@ function addVal($conn, $typecapteur, $valeur)
 
 function fetchValeur($conn, $idcapt)
 {
-    $sql = "SELECT Valeur FROM Valeur WHERE idCapteur = ? ORDER BY idvaleur DESC LIMIT 3";
+    $sql = "SELECT Valeur FROM Valeur WHERE idCapteur = ? ORDER BY idValeur DESC LIMIT 3";
     
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
-        header("location: ../views/personalspace/admin/adminfaq-personalspace.php?error=stmtfailed");
+        header("location: ../views/personalspace/client/capteurs.php?error=stmtfailed");
         exit();
     }
     $stmt->execute(array($idcapt));

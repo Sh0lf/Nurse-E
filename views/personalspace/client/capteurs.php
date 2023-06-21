@@ -24,8 +24,8 @@
     if (!isset($_SESSION['iduser'])){
       header('location: ../../loginsys/login.php');
       exit;
-    } elseif (isset($_SESSION['iduser'])){
-      header('location: ../../controller/fetchTomcatToData.php');
+    } elseif (isset($_SESSION['iduser']) && !isset($_GET['capt1']) && !isset($_GET['capt2']) && !isset($_GET['capt3'])){
+      header('location: ../../../controller/fetchTomcatToData.php');
     } elseif(isset($_SESSION['iduser']) && isset($_GET['capt1']) && isset($_GET['capt2']) && isset($_GET['capt3'])){
       $Capt1 = $_GET['capt1'] / 10;
       $Capt2 = $_GET['capt2'] / 10;
