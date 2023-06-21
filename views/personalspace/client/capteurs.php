@@ -44,7 +44,7 @@
       </div>
       <div>
         <?php echo "Il fait ". $Capt3 . "dB"?>
-        <button class="bouton_req" href="../../../controller/sendingRequest.php?arg=dB">Demander dB</button>
+        <a href="../../../controller/sendingRequest.php?arg=dB"><button class="bouton_req">Demander dB</button></a>
       </div>
       <div class="bouton">
         <button>Accédez à vos résultats</button>
@@ -59,8 +59,8 @@
        </a>
       </div>
       <div>
-        <?php echo "Il fait ". $Capt2 . "% d'humidité"?>
-        <button class="bouton_req" href="../../../controller/sendingRequest.php?arg=hum">Demander %</button>
+        <?php echo "Il fait ". $Capt2 . "% d'humidité"?>$
+        <a href="../../../controller/sendingRequest.php?arg=hum"><button class="bouton_req">Demander %</button></a>
       </div>
       <div class="bouton">
         <button>Accédez à vos résultats</button>
@@ -76,7 +76,7 @@
       </div>
       <div>
         <?php echo "Il fait ". $Capt1 . "°C"?>
-        <button class="bouton_req" href="../../../controller/sendingRequest.php?arg=temp">Demander °C</button>
+        <a href="../../../controller/sendingRequest.php?arg=temp"><button class="bouton_req">Demander °C</button></a>
       </div>
       <div class="bouton">
         <button>Accédez à vos résultats</button>
