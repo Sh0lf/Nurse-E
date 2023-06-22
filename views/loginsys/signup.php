@@ -26,28 +26,28 @@
         <form action="../../controller/signup.inc.php" method="post" id="signup-form" enctype="multipart/form-data">
           <input type="number" name="idkit" value="<?php if (isset($_POST['idkit'])) echo $_POST['idkit']; ?>" placeholder="Veuillez noter l'id de votre kit :">
           <br>
-          <input type="text" name="nom" value="<?php if (isset($_POST['Nom'])) echo $_POST['Nom']; ?>" placeholder="Nom">
+          <input type="text" name="nom" value="<?php if (isset($_GET['nom'])) echo $_GET['nom']; ?>" placeholder="Nom">
           <br>
-          <input type="text" name="prenom" value="<?php if (isset($_POST['prenom'])) echo $_POST['prenom']; ?>" placeholder="Prénom">
+          <input type="text" name="prenom" value="<?php if (isset($_GET['prenom'])) echo $_GET['prenom']; ?>" placeholder="Prénom">
           <br>
-          <input type="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" placeholder="Adresse Mail">
+          <input type="email" name="email" value="<?php if (isset($_GET['email'])) echo $_GET['email']; ?>" placeholder="Adresse Mail">
           <br>
-          <input type="tel" name="phone" value="<?php if (isset($_POST['phone'])) echo $_POST['phone']; ?>" placeholder="Numéro de téléphone" pattern="[0-9]{10}">
+          <input type="tel" name="phone" value="<?php if (isset($_GET['phone'])) echo $_GET['phone']; ?>" placeholder="Numéro de téléphone" pattern="[0-9]{10}">
           <br>
-          <input type="radio" name="sexe" value="Homme" <?php if (isset($_POST['sexe']) && $_POST['sexe'] === 'Homme') echo 'checked'; ?>>
+          <input type="radio" name="sexe" value="Homme" <?php if (isset($_GET['sexe']) && $_GET['sexe'] === 'Homme') echo 'checked'; ?>>
           <label>Homme</label><br>
-          <input type="radio" name="sexe" id="lastsex" value="Femme" <?php if (isset($_POST['sexe']) && $_POST['sexe'] === 'Femme') echo 'checked'; ?>>
+          <input type="radio" name="sexe" id="lastsex" value="Femme" <?php if (isset($_GET['sexe']) && $_GET['sexe'] === 'Femme') echo 'checked'; ?>>
           <label>Femme</label><br>
-          <input type="text" name="username" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>" placeholder="Votre pseudo">
+          <input type="text" name="username" value="<?php if (isset($_GET['username'])) echo $_GET['username']; ?>" placeholder="Votre pseudo">
           <br>
           <input type="password" name="pwd" placeholder="Votre mot de passe"><br>
           <p id="note">*Au moins 8 caractères, 1 lettre majuscule et minuscule<br>ainsi qu'un caractère spécial et un chiffre</p>
           <input type="password" name="pwdrep" id="lastpwd" placeholder="Répétez le mot de passe">
           <br>
           <p style="font-weight:bold;">Etes-vous un médecin ?</p>
-          <input type="radio" name="role" value="client" <?php if (isset($_POST['role']) && $_POST['role'] === 'client') echo 'checked'; ?>>
+          <input type="radio" name="role" value="client" <?php if (isset($_GET['role']) && $_GET['role'] === 'client') echo 'checked'; ?>>
           <label>Non</label><br>
-          <input type="radio" name="role" value="médecin" <?php if (isset($_POST['role']) && $_POST['role'] === 'médecin') echo 'checked'; ?>
+          <input type="radio" name="role" value="médecin" <?php if (isset($_GET['role']) && $_GET['role'] === 'médecin') echo 'checked'; ?>
           <label>Oui</label><br><br>
           <label style="font-weight:bold;">Ajoutez une photo de profil :</label>
           <input type="file" id="pfp" name="pfp" accept="image/*">

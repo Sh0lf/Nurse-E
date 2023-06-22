@@ -39,7 +39,7 @@
             <a href="/views/medicalbot/medicobot.php">MédicoBot <i class="fas fa-caret-down"></i></a>
             <input type="checkbox" id="btn-2">
             <ul>
-                <li><a href="/views/error404.php">Vos analyses</a></li>
+                <li><a href="/views/personalspace/client/capteurs.php">Vos analyses</a></li>
                 <li><a href="/views/error404.php">Votre dossier</a></li>
             </ul></li>';
         } else {

@@ -23,32 +23,32 @@ if (isset($_POST["submit"])) {
   $idkit = test_input($_POST["idkit"]);
 
   if (EmptyInputSignup($username, $nom, $prenom, $email, $phone, $sexe, $pwd, $pwdrep, $role, $idkit) !== false){
-    header("location: ../views/loginsys/signup.php?error=emptyinput");
+    header("location: ../views/loginsys/signup.php?error=emptyinput&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
 
   if (invalidUid($username) !== false){
-    header("location: ../views/loginsys/signup.php?error=invaliduid");
+    header("location: ../views/loginsys/signup.php?error=invaliduid&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
   
   if (invalidEmail($email) !== false){
-    header("location: ../views/loginsys/signup.php?error=invalidemail");
+    header("location: ../views/loginsys/signup.php?error=invalidemail&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
 
   if (pwdMatch($pwd, $pwdrep) !== false){
-    header("location: ../views/loginsys/signup.php?error=pwdmissmatch");
+    header("location: ../views/loginsys/signup.php?error=pwdmissmatch&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
 
   if (uidExists($conn, $username, $email) !== false){
-    header("location: ../views/loginsys/signup.php?error=uidexists");
+    header("location: ../views/loginsys/signup.php?error=uidexists&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
 
   if (pwdStrengthChecker($pwd) !== false){
-    header("location: ../views/loginsys/signup.php?error=pwdstrength");
+    header("location: ../views/loginsys/signup.php?error=pwdstrength&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
 
@@ -60,13 +60,13 @@ if (isset($_POST["submit"])) {
   }
 
   if ($file_destination == false){
-    header("location: ../views/loginsys/signup.php?error=uploaderr");
+    header("location: ../views/loginsys/signup.php?error=uploader&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   } elseif ($file_destination == "badformat") {
-    header("location: ../views/loginsys/signup.php?error=badformat");
+    header("location: ../views/loginsys/signup.php?error=badformat&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   } elseif ($file_destination == "toobig") {
-    header("location: ../views/loginsys/signup.php?error=toobig");
+    header("location: ../views/loginsys/signup.php?error=toobig&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
 
@@ -94,7 +94,7 @@ if (isset($_GET["code"])) {
     $_SESSION["idkit"]=$result["KitDiagnostiqueidKitDiagnostique"];
     $_SESSION["pfp_path"] = $result["pfp_path"];
   } else {
-    header("location: ../views/loginsys/signup.php?error=stmtfailed");
+    header("location: ../views/loginsys/signup.php?error=stmtfailed&username=".$username."&nom=".$nom."&prenom=".$prenom."&email=".$email."&phone=".$phone."&sexe=".$sexe."&role=". $role."&idkit=".$idkit);
     exit();
   }
   header("location: ../views/loginsys/signup.php?error=none");
