@@ -29,21 +29,37 @@
 
     <?php
 include_once '../../../controller/dbh.inc.php';
-    $arg = $_GET["arg"];
-    $tr="";
-    switch($arg){
-        case "3":
-            $tr.="Capteur Temperature (C°)";
-            break;
-        case "4":
-            $tr.="Capteur Humidité (%)";
-            break;
-        case "10":
-            $tr.="Capteur Son (dB)";
-            break;
-        default:
-            $tr.="0";
-    }
+$arg = $_GET["arg"];
+$tr="";
+$tr1="";
+$tr2="";
+$tr1T="";
+$tr2T="";
+switch($arg){
+    case "3":
+        $tr.="Capteur Temperature (C°)";
+        $tr1.="4";
+        $tr1T.="Capteur Humidité (%)";
+        $tr2T.="Capteur Son (dB)";
+        $tr2.="10";
+        break;
+    case "4":
+        $tr.="Capteur Humidité (%)";
+        $tr1.="3";
+        $tr1T.="Capteur Temperature (C°)";
+        $tr2T.="Capteur Son (dB)";
+        $tr2.="10";
+        break;
+    case "10":
+        $tr.="Capteur Son (dB)";
+        $tr1.="4";
+        $tr1T.="Capteur Humidité (%)";
+        $tr2T.="Capteur Temperature (C°)";
+        $tr2.="3";
+        break;
+    default:
+        $tr.="0";
+}
 
 
 $sql = "SELECT Timestamp, Valeur FROM Valeur WHERE idCapteur = ?";
@@ -134,11 +150,17 @@ while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
         );
     </script>
     <div>
-        <div>
-            <button>
-
-            </button>
-            
+        <div class="box">
+            <a href="historique.php?arg=<?php echo $tr1?>">
+                <div class="bouton">
+                    <button><?php echo $tr1T?></button>
+                </div>
+            </a>
+            <a href="historique.php?arg=<?php echo $tr2?>">
+                <div class="bouton">
+                    <button><?php echo $tr2T?></button>
+                </div>
+            </a>
         </div>
     </div>
     <footer>
