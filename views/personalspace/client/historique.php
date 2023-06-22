@@ -29,18 +29,34 @@
 
     <?php
 include_once '../../../controller/dbh.inc.php';
+    $arg = $_GET["arg"];
+    $tr="";
+    switch($arg){
+        case "3":
+            $tr.="Capteur Temperature (C°)";
+            break;
+        case "4":
+            $tr.="Capteur CO2 (%)";
+            break;
+        case "10":
+            $tr.="Capteur Son (dB)";
+            break;
+        default:
+            $tr.="0";
+    }
 
-$sql = "SELECT Timestamp, Valeur FROM Valeur WHERE idCapteur = 4";
+
+$sql = "SELECT Timestamp, Valeur FROM Valeur WHERE idCapteur = ?";
 $stmt = $conn->prepare($sql);
 if (!$stmt) {
     header("location: ../views/loginsys/signup.php?error=stmtfailed");
     exit();
 }
-$stmt->execute();
+$stmt->execute(array($arg));
 
 while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $date[] = $data['Timestamp'];
-    $valeur[] = $data['Valeur'];
+    $valeur[] = $data['Valeur']/10;
 }
     ?>
 
@@ -51,7 +67,7 @@ while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             labels: labels,
             datasets: [{
                 type: 'bar',
-                label: 'My First dataset',
+                label: <?php echo json_encode($tr) ?>,
                             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)',
@@ -74,7 +90,7 @@ while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             },
             {
                 type: 'line',
-                label: 'My First dataset',
+                label: '',
                 backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)',
@@ -103,10 +119,10 @@ while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             options: {    
                 scales: {
                     y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                }
                 }
     }}
-        };
 
     </script>
     <script>
