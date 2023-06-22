@@ -11,3 +11,46 @@
     align-items: center !important;
     justify-content: center !important;
 }
+.bouton {
+    margin-top: 20px;
+    flex: 0 0 auto;
+  }
+  
+  .bouton button {
+    width: 300px;
+    padding: 13px 31px;
+    border-radius: 29px;
+    border: none;
+    color: white;
+    background-color: #43B1F8;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button{
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white;
+    background-color: #43B1F8;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ button:hover {
+    background-color: white;
+    color: #43B1F8;
+    border: 1px solid #43B1F8;
+  }
+  
+  .bouton button:hover {
+    background-color: white;
+    color: #43B1F8;
+    border: 1px solid #43B1F8;
+  }
+  .box{
+    display: flex;
+    justify-content: space-evenly;
+
+  }
