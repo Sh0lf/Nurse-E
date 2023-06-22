@@ -38,49 +38,50 @@
     <div class="subcontainer">
       <h1>Capteur sonore</h1>
       <div class="image">
-       <a href="/views/assets/Icon-son.png">
-        <img src="Icon-son.png" alt="Son">
-       </a>
+        <img src="/views/assets/Icon-son.png" alt="Son">
       </div>
       <div>
-        <?php echo "Il fait ". $Capt3 . "dB"?>
-        <a href="../../../controller/sendingRequest.php?arg=dB"><button class="bouton_req">Demander dB</button></a>
+        <?php echo "Il y a ". $Capt3 . "dB"?>
       </div>
-      <div class="bouton">
-        <button>Accédez à vos résultats</button>
-      </div>
+        <a href="../../../controller/sendingRequest.php?arg=dB"><div class = "petitbouton"><button>Demander dB</button></div></a>
+      <a href="historique.php?arg=10">
+        <div class="bouton">
+          <button>Accédez à vos résultats</button>
+        </div>
+      </a>
     </div>
      
     <div class="subcontainer">
       <h1>Capteur d'humidité</h1>
       <div class="image">
-       <a href="/views/assets/Icon-humidite.png">
-        <img src="Icon-humidite.png" alt="Humidité">
-       </a>
+        <img src="/views/assets/Icon-humidite.png" alt="Humidité">
       </div>
       <div>
-        <?php echo "Il fait ". $Capt2 . "% d'humidité"?>$
-        <a href="../../../controller/sendingRequest.php?arg=hum"><button class="bouton_req">Demander %</button></a>
+        <?php echo "Il y a ". $Capt2 . "% d'humidité"?>
       </div>
-      <div class="bouton">
-        <button>Accédez à vos résultats</button>
-      </div>
+        <a href="../../../controller/sendingRequest.php?arg=hum"><div class = "petitbouton"><button>Demander %</button> </div></a>
+      <a href="historique.php?arg=4">
+        <div class="bouton">
+          <button>Accédez à vos résultats</button>
+        </div>
+      </a>
+      
     </div> 
 
     <div class="subcontainer">
       <h1>Capteur de température</h1>
       <div class="image">
-       <a href="/views/assets/Icon-temperature.png">
-        <img src="Icon-temperature.png" alt="Température">
-       </a>
+        <img src="/views/assets/Icon-temperature.png" alt="Température">
       </div>
       <div>
         <?php echo "Il fait ". $Capt1 . "°C"?>
-        <a href="../../../controller/sendingRequest.php?arg=temp"><button class="bouton_req">Demander °C</button></a>
       </div>
-      <div class="bouton">
-        <button>Accédez à vos résultats</button>
-      </div>
+        <div class = "petitbouton"><a href="../../../controller/sendingRequest.php?arg=temp"><button>Demander °C</button></a></div>
+      <a href="historique.php?arg=3">
+        <div class="bouton">
+          <button>Accédez à vos résultats</button>
+        </div>
+      </a>
     </div> 
   </div>
  </body>

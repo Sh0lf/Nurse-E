@@ -38,7 +38,7 @@
 		    <div class="slide1">
 		    </div>
 			<div class="oe">
-				<a href="../../controller/creatediagnostique.php" class="bouton2">Lancer une diagnostique</a>
+				<a href="../../controller/creatediagnostique.php" class="bouton2">Lancer un diagnostic</a>
 			</div>
 		</div>
 	</div>

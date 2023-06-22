@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_GET["arg"])){
-    $arg = $_GET("arg");
+    $arg = $_GET["arg"];
     $trame = "1G05B2301000";
     switch($arg){
         case "temp":
@@ -27,8 +27,10 @@ if (isset($_GET["arg"])){
     if ($response === false) {
         echo 'Erreur cURL : ' . curl_error($ch);
     } else {
-        header("location: ../views/personalspace/client/capteurs.php?error=success");
+        header("location: ../views/personalspace/client/capteurs.php");
     }
 } else {
     header("location: ../views/personalspace/client/capteurs.php");
 }
+
+?>

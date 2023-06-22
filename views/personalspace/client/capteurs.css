@@ -62,14 +62,21 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.bouton_req {
+.petitbouton button{
+  margin: 10px;
   padding: 5px 10px;
   border-radius: 3px;
-  border: none;
   color: white;
   background-color: #43B1F8;
+  border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.petitbouton button:hover {
+  background-color: white;
+  color: #43B1F8;
+  border: 1px solid #43B1F8;
 }
 
 .bouton button:hover {

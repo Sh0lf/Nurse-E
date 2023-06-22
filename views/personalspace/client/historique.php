@@ -36,7 +36,7 @@ include_once '../../../controller/dbh.inc.php';
             $tr.="Capteur Temperature (C°)";
             break;
         case "4":
-            $tr.="Capteur CO2 (%)";
+            $tr.="Capteur Humidité (%)";
             break;
         case "10":
             $tr.="Capteur Son (dB)";

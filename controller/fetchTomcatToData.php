@@ -26,7 +26,13 @@ for($i=count($data_tab) - 4, $size=count($data_tab);$i<$size-1;$i++){
 function changeFormat($conn, $dataRow)
 {
     $trame = $dataRow;
+    $trame_type = substr($trame,0,1);
+	$object_num =  hexdec(substr($trame,1,4));
+    echo("$object_num $object_num ...<br />");
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) = sscanf($trame, "%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
+    echo(hexdec($c) . " " . hexdec($v) . "<br />");
+    echo gettype(hexdec($c)) . " " . gettype(hexdec($v)) . "<br />";
+
     addVal($conn, hexdec($c), hexdec($v));
 }
 

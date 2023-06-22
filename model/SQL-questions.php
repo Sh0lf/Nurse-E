@@ -5,7 +5,7 @@ include_once '../controller/dbh.inc.php';
 
 
 function createDiag($conn, $iduser){
-    $sql = "INSERT INTO Diagnostique(user_iduser) VALUES (?)";
+    $sql = "INSERT INTO Diagnostique(idUser) VALUES (?)";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../views/personalspace/client/client-personalspace.php?error=stmtfailed");
@@ -14,7 +14,7 @@ function createDiag($conn, $iduser){
 
     $stmt->execute(array($iduser));
 
-    $sql = "SELECT * FROM Diagnostique WHERE user_iduser = ?";
+    $sql = "SELECT * FROM Diagnostique WHERE idUser = ?";
     $stmt = $conn->prepare($sql);
     if (!$stmt) {
         header("location: ../views/personalspace/client/client-personalspace.php?error=stmtfailed");

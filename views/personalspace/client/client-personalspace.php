@@ -30,10 +30,10 @@
     <div class=container>
     <h1>Bonjour, <?php echo $_SESSION["name"]?></h1>
 
-    <a href="../../../controller/creatediagnostique.php" style="margin: 20px auto;"><button class="bigbutton"> Faire un diagnostique</button></a>
-    <a href="/views/personalspace/client/capteurs.php" style="margin: 20px auto;"><button class="bigbutton"> Accéder aux capteurs</button></a>
+    <a href="../../../controller/creatediagnostique.php"><button class="bigbutton"> Faire un diagnostique</button></a>
+    <a href="/views/personalspace/client/capteurs.php"><button class="bigbutton"> Accéder aux capteurs</button></a>
     <button class="bigbutton">Accéder à l'historique</button>
-    <a href="../profil.php" style="margin: 20px auto;"><button class="bigbutton"> Options</button></a>
+    <a href="../profil.php"><button class="bigbutton"> Options</button></a>
     </div>
 
     <footer>
